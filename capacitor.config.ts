@@ -1,9 +1,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-	appId: 'com.svelte.capacitor', // TODO: add your app id
-	appName: 'Svelte Capacitor',
-	webDir: 'public',
+	appId: 'com.sveltekit.capacitor', // TODO: add your app id
+	appName: 'SvelteKit Capacitor',
+	webDir: 'build',
 	bundledWebRuntime: false,
 	plugins: {
 		"SplashScreen": {
