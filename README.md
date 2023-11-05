@@ -87,10 +87,6 @@ The standard web inspector will also work for debugging and rewriting styling an
 
 You may use the address bar in the developer tools to navigate to direct views in your application, even without any tappable links to do so. This allows you to create hidden routes for testing.
 
-### Assets
-
-Place any assets, CSS, client JS, Images in the `assets` folder - not the public folder! On build and usage this will add everything to the public dist folder for copying to the device application. [See Vite.js on this settings](https://vitejs.dev/guide/assets.html#the-public-directory).
-
 ### Accessing Device APIs
 
 CapacitorJS is/was based on Cordova and has *complete* backwards compatibility with cordova plugins. To find plugins that allow you to access the device api's easier, attempt to find cordova or capacitor plugins. You will need to view their (capacitorjs) docs to learn how to properly accesss those.
