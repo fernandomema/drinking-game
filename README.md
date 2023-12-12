@@ -97,4 +97,4 @@ I would love to keep a collection of all the projects using this!
 
 -----
 
-This template was created by [Kevin Campos (Kesc23)](https://github.com/kesc23/) based on [Svelte Capacitor by drannex42](https://github.com/drannex42/svelte-capacitor).
+This template was created by [Kevin Campos (Kesc23)](https://kevincampos.com.br/) based on [Svelte Capacitor by drannex42](https://github.com/drannex42/svelte-capacitor).
