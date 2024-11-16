@@ -1,0 +1,45 @@
+{
+  "name": "Juegito",
+  "theme_color": "#794fea",
+  "background_color": "#794fea",
+  "short_name": "Juegito",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait",
+  "description": "A game to play with your friends",
+  "categories": [
+    "games",
+    "social"
+  ],
+  "icons": [
+    { 
+      "src": "/AppImages/ios/16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }, { 
+      "src": "/AppImages/ios/32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }, {
+      "src": "/AppImages/ios/64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },{
+      "src": "/AppImages/ios/128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "/AppImages/ios/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "/AppImages/ios/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },{
+      "src": "/AppImages/ios/1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<script lang="ts">
+    import AnimatedHeader from "$lib/components/AnimatedHeader.svelte";
+    import Splash from "$lib/components/Splash.svelte";
+    import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
+    import AddPlayerInput from "$lib/components/AddPlayerInput.svelte";
+    import PlayerList from "$lib/components/PlayerList.svelte";
+
+    let container: HTMLDivElement;
+    let players: any[] = [];
+
+    onMount(async () => {
+        container.classList.add('bg-[#794fea]', 'animate-circle-in-hesitate', 'flex', 'flex-col', 'items-center', 'justify-center', 'h-dvh', 'w-screen');
+        container.innerHTML = `<img src="/AppImages/ios/128.png" width="200px" alt="" class="absolute top-1/2 -translate-y-1/2">`;
+        await new Promise((resolve) => setTimeout(resolve, 4000));
+        container.querySelector('img')?.classList.add('animate-fade-out', 'duration-500', 'relative');
+        await new Promise((resolve) => setTimeout(resolve, 500 + 200));
+        container.innerHTML = `<div id="title" class="h-fit-content absolute top-1/2 flex w-screen -translate-y-1/2 animate-fade-in items-center justify-center text-center font-[Fredoka] text-6xl font-bold text-white transition-all duration-700">Let's add some players!</div>`;
+        const title = container.querySelector('#title');
+        await new Promise((resolve) => setTimeout(resolve, 2500));
+        title?.classList.add('translate-y-0', 'top-0');
+        title?.classList.remove('-translate-y-1/2', 'top-1/2');
+        await new Promise((resolve) => setTimeout(resolve, 800));
+        title?.classList.remove('absolute');
+        container.classList.remove('items-center', 'justify-center');
+        const playerListContainer = document.createElement('div');
+        playerListContainer.classList.add('transition-all', 'h-full');
+        container.appendChild(playerListContainer);
+        const playerList = new PlayerList({
+            target: playerListContainer,
+            props: {
+                players,
+            },
+        });
+        const input = new AddPlayerInput({
+            target: container,
+        });
+        playerList.$on('updatePlayers', (event: CustomEvent<{ players: any[] }>) => {
+            players = event.detail.players;
+        });
+        input.$on('submit', (event: CustomEvent<{ playerName: string }>) => {
+            console.log(event);
+            const playerName = event.detail.playerName;
+            if (playerName.length > 0 && !players.find((player) => player.name === playerName)) {
+                players.push({
+                    name: playerName,
+                });
+                playerList.$set({ players });
+            }
+        });
+        input.$on('play', () => {
+            if (players.length > 0) {
+                sessionStorage.setItem('players', JSON.stringify(players));
+                window.location.replace('/select-mode');
+            }
+        });
+    });
+    
+</script>
+
+<div class="flex h-dvh max-h-screen min-h-dvh w-full flex-col justify-between pb-5" bind:this={container}></div>

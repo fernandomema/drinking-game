@@ -16,8 +16,8 @@
 </script>
 
 
-<div out:fade class="w-screen h-screen flex items-center justify-center bg-[#794fea] absolute" class:in-circle-hesitate={!exitAnimation}>
-    <img src="/icn_mokel_red.png" width="200px" alt="">
+<div out:fade class="absolute flex h-screen w-screen items-center justify-center bg-[#794fea]" class:in-circle-hesitate={!exitAnimation}>
+    <img src="/AppImages/ios/256.png" width="200px" alt="">
 </div>
 
 <style>

@@ -1,6 +1,17 @@
 {
-	"/": [
-		"src/routes/+layout.js",
-		"src/routes/+layout.js"
+	"/(app)": [
+		"src/routes/(app)/+layout.ts",
+		"src/routes/(app)/+layout.ts"
+	],
+	"/": [],
+	"/(app)/add-players": [
+		"src/routes/(app)/+layout.ts"
+	],
+	"/(app)/play/[mode]": [
+		"src/routes/(app)/play/[mode]/+page.server.ts",
+		"src/routes/(app)/+layout.ts"
+	],
+	"/(app)/select-mode": [
+		"src/routes/(app)/+layout.ts"
 	]
 }
