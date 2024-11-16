@@ -41,7 +41,7 @@
     "@capacitor/core": "^6.0.0",
     "@capacitor/ios": "^6.0.0",
     "@midudev/tailwind-animations": "^0.1.0",
-    "@sentry/browser": "^8.33.0",
+    "@sentry/browser": "8.33.0",
     "@sentry/capacitor": "^1.0.1",
     "@use-gesture/vanilla": "^10.3.1",
     "transition-style": "^0.1.3"
