@@ -3,5 +3,7 @@ import { defineConfig } from 'vite';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 
 export default defineConfig({
-	plugins: [sveltekit(), SvelteKitPWA()],
+	plugins: [sveltekit(), SvelteKitPWA({
+		manifestFilename: 'static/manifest.json',
+	})],
 });
