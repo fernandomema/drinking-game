@@ -4,6 +4,9 @@
 
     export let ended = false;
     export let exitAnimation = false;
+
+
+    import logo from '$lib/images/AppImages/ios/256.png';
     
     onMount(() => {
         setTimeout(() => {
@@ -17,7 +20,7 @@
 
 
 <div out:fade class="absolute flex h-screen w-screen items-center justify-center bg-[#794fea]" class:in-circle-hesitate={!exitAnimation}>
-    <img src="/AppImages/ios/256.png" width="200px" alt="">
+    <img src={logo} width="200px" alt="">
 </div>
 
 <style>
