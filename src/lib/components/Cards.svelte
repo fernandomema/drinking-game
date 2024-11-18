@@ -4,9 +4,11 @@
 	import { fade } from 'svelte/transition';
     import { questions } from '$lib/questions';
     import '$lib/Shuffle';
+    import '$lib/Spintax';
     import { page } from '$app/stores';
     import { modes } from '$lib/modes';
     import { goto } from '$app/navigation';
+    import { getLocale } from '$lib/locales';
 
     const mode = $page.params.mode as string;
     const filteredQuestions = modes[mode].pickCards(questions);
@@ -14,13 +16,11 @@
     let Sentry: any;
     let ended = false;
 
+    let locale = 'en';
+
 	onMount(async () => {
         players = JSON.parse(sessionStorage.getItem('players') || '[]');
-		// preload images
-		for (let i = 0; i < 14; i++) {
-			let img = new Image();
-			img.src = `/svelte-swiper-cards/profiles/${i}.webp`;
-		}
+        locale = await getLocale();
         Sentry = await import('@sentry/capacitor');
 	});
 
@@ -41,13 +41,13 @@
         const player2 = shuffledPlayers[1];
         const shots = Math.floor(Math.random() * 5) + 1;
 		return {
-			question: filteredQuestions[index].question.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots.toString()),
-			rawQuestion: filteredQuestions[index].question,
+			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots.toString()).spintax(),
+			rawQuestion: filteredQuestions[index]?.locales[locale],
 		};
 	}
 </script>
 
-{#if players.length > 0}
+{#if players.length > 0 && Sentry}
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
             <div transition:fade={{ duration: 200 }} class="relative flex h-full w-full max-w-xl flex-col gap-2">

@@ -1,0 +1,18 @@
+{
+    "add_some_players": "Let's add some players!",
+    "select_play_mode": "Let's select a mode to play!",
+    "modes": {
+        "preparty": {
+            "title": "PreParty",
+            "description": "Best for animate the party. Light fun for any group."
+        },
+        "best-friends": {
+            "title": "Best Friends",
+            "description": "Best for playing with close friends. Let's get to know each other better."
+        },
+        "hot": {
+            "title": "Hot",
+            "description": "Oriented towards the most perverse questions, get ready to reveal your most intimate secrets."
+        }
+    }
+}

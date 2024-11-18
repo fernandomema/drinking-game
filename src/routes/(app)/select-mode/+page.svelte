@@ -5,25 +5,26 @@
     import PageContainer from "$lib/components/PageContainer.svelte";
     import { onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
+    import { _ } from "$lib/locales";
 
     let titleCentered = true;
     let titleStopedAnimating = false;
 
     const buttons = [{
-        text: 'Pre-Party',
+        text: $_('modes.preparty.title'),
         mode: 'preparty',
         icon: "/preparty.png",
-        description: 'Best for animate the party. Light fun for any group.', 
+        description: $_('modes.preparty.description'), 
     }, {
-        text: 'Best Friends',
+        text: $_('modes.best-friends.title'),
         mode: 'best-friends',
         icon: "/high-five.png",
-        description: 'Best for playing with close friends. Let\'s get to know each other better.',
+        description: $_('modes.best-friends.description'),
     }, {
-        text: 'Hot',
+        text: $_('modes.hot.title'),
         mode: 'hot',
         icon: "/plus-18-light.png",
-        description: 'Oriented towards the most perverse questions, get ready to reveal your most intimate secrets.',
+        description: $_('modes.hot.description'),
     }];
 
     onMount(async () => {
@@ -55,7 +56,7 @@
     <div 
         class="{titleCentered ? '-translate-y-1/2 top-1/2' : 'translate-y-0 top-0'} h-fit-content absolute flex w-screen animate-fade-in items-center justify-center text-center font-[Fredoka] text-6xl font-bold text-white transition-all duration-700"
     >
-        Let's select a mode to play!
+        {$_('select_play_mode')}
     </div>
     {#if titleStopedAnimating}
         <div class="flex h-screen w-screen flex-col items-center justify-center gap-5 p-4">
