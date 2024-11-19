@@ -10,6 +10,8 @@
     let titleCentered = true;
     let titleStopedAnimating = false;
 
+    let playerCount = 0;
+
     const buttons = [{
         text: $_('modes.preparty.title'),
         mode: 'preparty',
@@ -40,6 +42,8 @@
 	    App.addListener('backButton', async () => {
 		    window.history.back();
 	    });
+        playerCount = JSON.parse(sessionStorage.getItem('players') || '[]').length;
+        if (playerCount === 0) goto('/add-players');
     }
 
     const onClick = (event: MouseEvent) => {
@@ -61,7 +65,15 @@
     {#if titleStopedAnimating}
         <div class="flex h-screen w-screen flex-col items-center justify-center gap-5 p-4">
             {#each buttons as button, index}
-                <button in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: index * 250 }} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4" on:click={onClick} data-mode={button.mode} class:flex-row-reverse={index % 2 === 1}>
+                <button 
+                    in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: index * 250 }} 
+                    class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4" on:click={onClick} 
+                    data-mode={button.mode} 
+                    class:flex-row-reverse={index % 2 === 1}
+                    data-umami-event="start-game"
+                    data-umami-event-players={playerCount}
+                    data-umami-event-mode="{button.mode}"
+                >
                     <div class="flex aspect-square h-[90px] w-[90px] items-center justify-center rounded-full bg-white bg-opacity-10 p-2">
                         <img src={button.icon} alt="" class="h-full w-full">
                     </div>

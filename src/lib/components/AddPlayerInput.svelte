@@ -1,5 +1,6 @@
 <script lang="ts">
     import { createEventDispatcher, onMount } from "svelte";
+    import { _ } from "$lib/locales";
     
     export let value: string = '';
     export let players: any[] = [];
@@ -53,7 +54,7 @@
 </script>
 
 <div class="mb-[10px] flex h-[60px] w-full animate-fade-in gap-2 p-2">
-    <input use:focus on:keyup={keyUp} bind:value={value} bind:this={input} class="mb-0.5 h-[50px] w-full rounded-lg border-2 border-purple-200 bg-[#936ff5] bg-opacity-70 px-3 py-2 text-xl font-medium text-white placeholder-gray-200 outline-none transition-all duration-300 ease-in-out focus:border-purple-400" placeholder="Player name" />
+    <input use:focus on:keyup={keyUp} bind:value={value} bind:this={input} class="mb-0.5 h-[50px] w-full rounded-lg border-2 border-purple-200 bg-[#936ff5] bg-opacity-70 px-3 py-2 text-xl font-medium text-white placeholder-gray-200 outline-none transition-all duration-300 ease-in-out focus:border-purple-400" placeholder={$_('player_name')} />
     <button type="button" class="h-[50px] rounded-lg border-2 border-purple-200 bg-purple-600 px-3 py-2 text-sm font-medium text-white transition-all duration-300 ease-in-out hover:bg-purple-700" on:click={() => eventDispatcher('submit', { playerName: '' })}>
         {#if value && value.length > 0}
             <!-- svelte-ignore a11y-click-events-have-key-events -->

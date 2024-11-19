@@ -30,7 +30,8 @@
 	function onSwipe(cardInfo: SwipeEventData) {
 		console.log('swiped', cardInfo?.direction, 'on card', cardInfo?.data?.question);
         if (cardInfo?.direction == 'left') {
-            Sentry?.captureMessage('Disliked a card: ' + cardInfo?.data?.rawQuestion);
+            //Sentry?.captureMessage('Disliked a card: ' + cardInfo?.data?.rawQuestion);
+            window.umami.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
         }
 	}
 
@@ -42,7 +43,7 @@
         const shots = Math.floor(Math.random() * 5) + 1;
 		return {
 			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots.toString()).spintax(),
-			rawQuestion: filteredQuestions[index]?.locales[locale],
+			rawQuestion: filteredQuestions[index]?.locales['en'],
 		};
 	}
 </script>

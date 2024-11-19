@@ -28,6 +28,7 @@
   
   <svelte:head>
       {@html webManifest}
+      <script defer src="https://cloud.umami.is/script.js" data-website-id="2d4d3083-69a9-44c7-b25d-a4015eedffdb"></script>
   </svelte:head>
   
   <main>

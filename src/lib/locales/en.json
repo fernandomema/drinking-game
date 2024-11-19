@@ -1,6 +1,7 @@
 {
     "add_some_players": "Let's add some players!",
     "select_play_mode": "Let's select a mode to play!",
+    "player_name": "Player name",
     "modes": {
         "preparty": {
             "title": "PreParty",
