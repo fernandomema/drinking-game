@@ -2,6 +2,8 @@
     import { onMount } from 'svelte'
     import { pwaInfo } from 'virtual:pwa-info'
     import '../app.css';
+    import { PUBLIC_UMAMI_WEBSITE_ID	} from '$env/static/public';
+
     
     onMount(async () => {
       if (pwaInfo) {
@@ -24,13 +26,15 @@
     })
     
     $: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : ''
-  </script>
+</script>
   
-  <svelte:head>
-      {@html webManifest}
-      <script defer src="https://cloud.umami.is/script.js" data-website-id="2d4d3083-69a9-44c7-b25d-a4015eedffdb"></script>
-  </svelte:head>
+<svelte:head>
+    {@html webManifest}
+    {#if PUBLIC_UMAMI_WEBSITE_ID}
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="{PUBLIC_UMAMI_WEBSITE_ID}"></script>
+    {/if}
+</svelte:head>
   
-  <main>
+<main>
     <slot />
-  </main>
+</main>

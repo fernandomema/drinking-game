@@ -1,100 +1,62 @@
-![](/assets/svelte_cap.png)
-# SvelteKit + Capacitor (w/ live reload) Template
+<h1 align="center" id="title">Tragos Locos - Party drinking game</h1>
 
-This is a project template for [SvelteKit](https://kit.svelte.dev) + [CapacitorJS](https://capacitorjs.com) apps with live reload, granting the ability to quickly build production ready applications for iOS and Android at near-native performance using JavaScript (Svelte).
+<p align="center"><img src="https://socialify.git.ci/fernandomema/drinking-game/image?language=1&logo=https%3A%2F%2Fgithub.com%2Ffernandomema%2Fdrinking-game%2Fblob%2Fmaster%2Fstatic%2FAppImages%2Fios%2F256.png%3Fraw%3Dtrue&amp;name=1&amp;owner=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-## Changelog
+<p id="description">
+  Tragos locos is a drinking party game app designed to elevate your social gatherings with endless fun, laughter, and excitement. It offers a vast collection of hilarious questions, daring challenges, and playful punishments that keep the energy high and the connections stronger.
+</p>
 
-**v1.0.0** - Based on [Svelte Capacitor by drannex42](https://github.com/drannex42/svelte-capacitor).
-Has vite as the build manager, built in routing library, TypeScript, and aliases, all provided by sveltekit
+<h2>🚀 Demo</h2>
 
-## Setup
+[https://tragos-locos.servitimo.net](https://tragos-locos.servitimo.net) 
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+<h2>📦 Requirements</h2>
 
-### Get started
+- Node.js
+- npm
 
-Install the dependencies...
+<h2>🚀 Getting Started</h2>
+
+1. Clone the repository
 
 ```bash
-git clone "https://github.com/kesc23/sveltekit-capacitor.git"
-cd sveltekit-capacitor
+git clone https://github.com/fernandomema/drinking-game.git
+```
+
+2. Install dependencies
+
+```bash
 npm install
 ```
 
-### Run local dev server (no capacitor)
+3. Run the project
 
 ```bash
 npm run dev:start
 ```
 
-### Add your Capacitor platform
+4. Open the project in your browser
 
 ```bash
-npx cap add android // (or ios)
+open http://localhost:5173
 ```
 
-### Run local dev server (with capacitor)
+<h2>📚 Tech Stack</h2>
 
-Please see section below (Develop on your device with livereload)
+- [SvelteKit](https://kit.svelte.dev) - The core of the web site
+- [vite-pwa](https://github.com/antfu/vite-plugin-pwa) - PWA support
+- [TailwindCSS](https://tailwindcss.com) - CSS framework
+- [Svelte-i18n](https://github.com/kaisermann/svelte-i18n) - Internationalization support
+- [Umami.is](https://umami.is) - Analytics
+- [Sentry](https://sentry.io) - Error tracking
+- [Github Pages](https://pages.github.com) - Hosting
+- [PWABuilder](https://pwabuilder.com) - App Package generation
 
+<h2>📝 Contributing</h2>
 
-### Develop on your device with livereload (hot reload)
+Any contribution is welcome! Feel free to open an issue or a pull request.
 
-If you're only targeting Android, you only need to change the `server.url` section in `capacitor.config.json` to use `http://10.0.2.2:5001`, since [Android Studio already adds a `localhost` proxy](https://stackoverflow.com/questions/9808560/why-do-we-use-10-0-2-2-to-connect-to-local-web-server-instead-of-using-computer). Just remember to remove it when building your app for production.
+<h2>📝 License</h2>
 
-If you're targeting iOS or both, you will need to append your workstation IP to the `server.url` section in `capacitor.config.json` instead. To discover your workstation IP, just run `ifconfig` or find it on the network settings.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. 
 
-Tip: Remember you will need the `http://` before the server IP.
-
-Back in the root folder:
-
-`npm run dev:android` or `npm run dev:ios`
-
-This will run the capacitor/svelte project with a web view pointing to your workstation's IP. You should see the message `Welcome to Sveltekit!` if svelte loaded correctly.
-
-Try to change something in `src/routes/+page.svelte`, and you should see the content reload on your device.
-
-* You need to have an emulator/device connected to adb
-* Your device has to be connected to the same wifi network as your workstation.
-
-### Change Splash screen and app icon:
-
-* Add icon.png and splash.png to resources dir
-* Recomended size:
-  * Icon - 512x512
-  * Splash - 1920x1920
-* Next, run the following to generate all images then copy them into the native projects:
-
-```bash
-cordova-res ios --skip-config --copy
-cordova-res android --skip-config --copy
-```
-
-### To build a production application:
-
-**Remember to remove the `server.url` in `capacitor.config.json`**
-
-`npm run build:android` or `npm run build:ios`
-
-## Quick Tips
-
-### Developer Tools
-
-You can use any Chromium-based browser and use their Developer Tools (for Android atleast, have not tested iOS) to debug and access console commands on your personal device, by going to chrome://inspect#devices., edge://inspect#devices., vivaldi://inspect#devices., brave://inspect#devices, &c.
-
-The standard web inspector will also work for debugging and rewriting styling and html without using your IDE just like when building a normal website. This may have some issues with some forms of SVG-related svelte templating (I have had issues with using some chart libraries displaying in the web inspector), they will still show up on the device but not in the preview.
-
-You may use the address bar in the developer tools to navigate to direct views in your application, even without any tappable links to do so. This allows you to create hidden routes for testing.
-
-### Accessing Device APIs
-
-CapacitorJS is/was based on Cordova and has *complete* backwards compatibility with cordova plugins. To find plugins that allow you to access the device api's easier, attempt to find cordova or capacitor plugins. You will need to view their (capacitorjs) docs to learn how to properly accesss those.
-
-### Are you using this project! Let us know!
-
-I would love to keep a collection of all the projects using this!
-
------
-
-This template was created by [Kevin Campos (Kesc23)](https://kevincampos.com.br/) based on [Svelte Capacitor by drannex42](https://github.com/drannex42/svelte-capacitor).
