@@ -1,0 +1,14 @@
+[
+    {
+      "relation": [
+        "delegate_permission/common.handle_all_urls"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "net.servitimo.tragos_locos.twa",
+        "sha256_cert_fingerprints": [
+          "57:5F:2E:DB:2B:F9:AA:69:BB:E2:BD:B5:56:0B:BC:5D:37:AC:DD:65:B3:4B:3B:B0:78:84:0B:84:16:17:54:79"
+        ]
+      }
+    }
+  ]
