@@ -2,7 +2,7 @@
     import { onMount } from 'svelte'
     import { pwaInfo } from 'virtual:pwa-info'
     import '../app.css';
-    import { PUBLIC_UMAMI_WEBSITE_ID	} from '$env/static/public';
+    import { PUBLIC_UMAMI_WEBSITE_ID	} from '$lib/config';
 
     
     onMount(async () => {

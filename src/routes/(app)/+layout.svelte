@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
-	import { PUBLIC_SENTRY_DSN } from '$env/static/public';
+	import { PUBLIC_SENTRY_DSN } from '$lib/config';
 
 	export let data
 
