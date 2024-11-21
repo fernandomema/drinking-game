@@ -25,7 +25,7 @@
         <p class="text-gray-600 mb-6">
             Instala nuestra aplicación en tu dispositivo Android y disfruta de las funciones más recientes.
         </p>
-        <a href="#" class="inline-block bg-green-500 text-white px-6 py-2 rounded-md shadow hover:bg-green-600">
+        <a href="https://play.google.com/apps/testing/net.servitimo.tragos_locos.twa" class="inline-block bg-green-500 text-white px-6 py-2 rounded-md shadow hover:bg-green-600">
             Descargar App
         </a>
     </section>
