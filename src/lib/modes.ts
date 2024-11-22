@@ -37,7 +37,7 @@ export const modes: { [key: string]: Mode } = {
                     tags: ['preparty']
                 });
             }
-
+ 
             return finalQuestions;
         },
     },

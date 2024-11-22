@@ -3,7 +3,5 @@
 /android/
 /ios/
 
-/.svelte-kit
-
 .env
 .DS_Store

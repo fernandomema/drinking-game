@@ -1,1 +1,0 @@
-import{_ as e}from"./preload-helper.a4192956.js";import{r as p}from"./index.1ebb136f.js";const i=p("App",{web:()=>e(()=>import("./web.a1a265e2.js"),["./web.a1a265e2.js","./index.1ebb136f.js"],import.meta.url).then(r=>new r.AppWeb)});export{i as App};

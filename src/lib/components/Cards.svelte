@@ -48,6 +48,11 @@
 	}
 </script>
 
+<svelte:head>
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+</svelte:head>
+
 {#if players.length > 0 && Sentry}
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
@@ -61,6 +66,14 @@
                     >
                         👎
                     </button>
+                    <div>
+                        <script type="text/javascript">
+                            aclib.runBanner({
+                                zoneId: '9042294',
+                            });
+                        </script>
+                    </div>
+                    
                     <!-- <button
                         class="bottom-1 right-1 z-10 rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
                         on:click={() => swipe('right')}

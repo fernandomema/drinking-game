@@ -3,6 +3,8 @@
     import { pwaInfo } from 'virtual:pwa-info'
     import '../app.css';
     import { PUBLIC_UMAMI_WEBSITE_ID	} from '$lib/config';
+    import { OriginChecker } from '$lib/OriginChecker';
+    import { page } from '$app/stores';
 
     
     onMount(async () => {
@@ -30,9 +32,15 @@
   
 <svelte:head>
     {@html webManifest}
-    {#if PUBLIC_UMAMI_WEBSITE_ID}
+    {#if PUBLIC_UMAMI_WEBSITE_ID && OriginChecker.isProduction($page.url.href)}
         <script defer src="https://cloud.umami.is/script.js" data-website-id="{PUBLIC_UMAMI_WEBSITE_ID}"></script>
     {/if}
+
+    {#if OriginChecker.isDev($page.url.href)}
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>eruda.init();</script>
+    {/if}
+
 </svelte:head>
   
 <main>
