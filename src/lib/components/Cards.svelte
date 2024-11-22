@@ -68,10 +68,15 @@
                     </button>
                     <div>
                         <script type="text/javascript">
-                            aclib.runBanner({
-                                zoneId: '9042294',
-                            });
+                            atOptions = {
+                                'key' : '0ce0fa3ad64acf4687746e67bb37f5b0',
+                                'format' : 'iframe',
+                                'height' : 50,
+                                'width' : 320,
+                                'params' : {}
+                            };
                         </script>
+                        <script type="text/javascript" src="//www.highperformanceformat.com/0ce0fa3ad64acf4687746e67bb37f5b0/invoke.js"></script>
                     </div>
                     
                     <!-- <button
