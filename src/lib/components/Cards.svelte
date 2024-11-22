@@ -75,7 +75,7 @@
                         
                     </button> -->
                 </div>
-                {#if !OriginChecker.isProduction($page.url.href)}
+                {#if OriginChecker.isProduction($page.url.href)}
                     <div class="flex items-center justify-center rounded-2xl bg-white/50 p-3 px-4 text backdrop-blur-sm min-h-[50px] min-w-[320px]">
                         <script type="text/javascript">
                             atOptions = {
