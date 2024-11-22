@@ -62,7 +62,7 @@
                 <div class="flex gap-2">
 
                     <button
-                        class="bottom-1 left-1 z-10 rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
+                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
                         on:click={() => swipe('left')}
                     >
                         👎
@@ -75,8 +75,8 @@
                         
                     </button> -->
                 </div>
-                {#if OriginChecker.isProduction($page.url.href)}
-                    <div class="flex items-center justify-center rounded-full bg-white/50 p-3 px-4 text backdrop-blur-sm">
+                {#if !OriginChecker.isProduction($page.url.href)}
+                    <div class="flex items-center justify-center rounded-2xl bg-white/50 p-3 px-4 text backdrop-blur-sm min-h-[50px] min-w-[320px]">
                         <script type="text/javascript">
                             atOptions = {
                                 'key' : '0ce0fa3ad64acf4687746e67bb37f5b0',
