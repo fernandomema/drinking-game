@@ -1,8 +1,8 @@
 {
-  "name": "Juegito",
+  "name": "Tragos locos",
   "theme_color": "#794fea",
   "background_color": "#794fea",
-  "short_name": "Juegito",
+  "short_name": "Tragos locos",
   "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone",
   "start_url": "/intro",

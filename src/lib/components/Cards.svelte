@@ -9,6 +9,7 @@
     import { modes } from '$lib/modes';
     import { goto } from '$app/navigation';
     import { getLocale } from '$lib/locales';
+    import { OriginChecker } from '$lib/OriginChecker';
 
     const mode = $page.params.mode as string;
     const filteredQuestions = modes[mode].pickCards(questions);
@@ -66,7 +67,16 @@
                     >
                         👎
                     </button>
-                    <div>
+                    
+                    <!-- <button
+                        class="bottom-1 right-1 z-10 rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
+                        on:click={() => swipe('right')}
+                    >
+                        
+                    </button> -->
+                </div>
+                {#if OriginChecker.isProduction($page.url.href)}
+                    <div class="flex items-center justify-center rounded-full bg-white/50 p-3 px-4 text backdrop-blur-sm">
                         <script type="text/javascript">
                             atOptions = {
                                 'key' : '0ce0fa3ad64acf4687746e67bb37f5b0',
@@ -78,14 +88,7 @@
                         </script>
                         <script type="text/javascript" src="//www.highperformanceformat.com/0ce0fa3ad64acf4687746e67bb37f5b0/invoke.js"></script>
                     </div>
-                    
-                    <!-- <button
-                        class="bottom-1 right-1 z-10 rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
-                        on:click={() => swipe('right')}
-                    >
-                        
-                    </button> -->
-                </div>
+                {/if}
             </div>
 
             {#if thresholdPassed < 0}
