@@ -1,5 +1,16 @@
-  <!-- Header -->
-  <header class="bg-blue-600 text-white">
+
+<script>
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        if (window.umami) {
+            window.umami.track('visit join-beta-test');
+        }
+    });
+</script>
+
+<!-- Header -->
+<header class="bg-blue-600 text-white">
     <div class="container mx-auto py-6 px-4 text-center">
         <h1 class="text-3xl font-bold">¡Únete a Nuestro Programa de Testers!</h1>
         <p class="mt-2 text-lg">Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.</p>
@@ -14,7 +25,7 @@
         <p class="text-gray-600 mb-6">
             Accede a actualizaciones, instrucciones y novedades directamente desde nuestro grupo exclusivo.
         </p>
-        <a href="https://groups.google.com/forum/#!forum/tragos-locos-testers/join" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700">
+        <a href="https://groups.google.com/forum/#!forum/tragos-locos-testers/join" data-umami-event="join-google-group" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700">
             Unirme al Grupo
         </a>
     </section>
@@ -25,7 +36,7 @@
         <p class="text-gray-600 mb-6">
             Instala nuestra aplicación en tu dispositivo Android y disfruta de las funciones más recientes.
         </p>
-        <a href="https://play.google.com/apps/testing/net.servitimo.tragos_locos.twa" class="inline-block bg-green-500 text-white px-6 py-2 rounded-md shadow hover:bg-green-600">
+        <a href="https://play.google.com/apps/testing/net.servitimo.tragos_locos.twa" data-umami-event="join-playstore-beta" class="inline-block bg-green-500 text-white px-6 py-2 rounded-md shadow hover:bg-green-600">
             Descargar App
         </a>
     </section>
