@@ -8,6 +8,6 @@
     <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 </svelte:head>
 
-<div class="relative h-screen min-h-screen bg-[#794fea] pb-5 font-[Fredoka] font-bold text-white">
+<div class="relative h-screen min-h-screen bg-[#794fea] pb-safe font-[Fredoka] font-bold text-white">
     <Cards />
 </div>

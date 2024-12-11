@@ -27,6 +27,11 @@
         mode: 'hot',
         icon: "/plus-18-light.png",
         description: $_('modes.hot.description'),
+    }, {
+        text: $_('modes.christmas.title'),
+        mode: 'christmas',
+        icon: "/christmas.png",
+        description: $_('modes.christmas.description'),
     }];
 
     onMount(async () => {

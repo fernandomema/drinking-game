@@ -14,6 +14,10 @@
         "hot": {
             "title": "Hot",
             "description": "Oriented towards the most perverse questions, get ready to reveal your most intimate secrets."
+        },
+        "christmas": {
+            "title": "Christmas",
+            "description": "Best for Christmas parties. Let's get snow themed questions."
         }
     }
 }

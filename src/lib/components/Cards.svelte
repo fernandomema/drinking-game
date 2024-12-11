@@ -10,6 +10,7 @@
     import { goto } from '$app/navigation';
     import { getLocale } from '$lib/locales';
     import { OriginChecker } from '$lib/OriginChecker';
+    import BottomSheet from '$lib/components/BottomSheet.svelte';
 
     const mode = $page.params.mode as string;
     const filteredQuestions = modes[mode].pickCards(questions);
@@ -17,10 +18,13 @@
     let Sentry: any;
     let ended = false;
 
+    let showModal = false;
+
     let locale = 'en';
 
 	onMount(async () => {
         players = JSON.parse(sessionStorage.getItem('players') || '[]');
+        if (!players || players.length == 0) goto('/select-mode');
         locale = await getLocale();
         Sentry = await import('@sentry/capacitor');
 	});
@@ -32,16 +36,38 @@
 		console.log('swiped', cardInfo?.direction, 'on card', cardInfo?.data?.question);
         if (cardInfo?.direction == 'left') {
             //Sentry?.captureMessage('Disliked a card: ' + cardInfo?.data?.rawQuestion);
-            window.umami.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
+            window.umami?.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
         }
 	}
+
+    function weightedRandom() {
+        // Define the weights for each number, higher weights mean higher probability.
+        // Weights should decrease as numbers increase.
+        const weights = [5, 4, 3, 2, 1]; // Corresponding to numbers 1, 2, 3, 4, 5
+
+        // Calculate the total weight
+        const totalWeight = weights.reduce((acc, weight) => acc + weight, 0);
+
+        // Generate a random number between 0 and totalWeight
+        const random = Math.random() * totalWeight;
+
+        // Determine which number corresponds to the random value
+        let cumulativeWeight = 0;
+        for (let i = 0; i < weights.length; i++) {
+            cumulativeWeight += weights[i];
+            if (random < cumulativeWeight) {
+                return i + 1; // Numbers start from 1
+            }
+        }
+        return 1;
+    }
 
 	function cardData(index: number) {
         if (index >= filteredQuestions.length) return null;
 		const shuffledPlayers = players.shuffle();
         const player1 = shuffledPlayers[0];
         const player2 = shuffledPlayers[1];
-        const shots = Math.floor(Math.random() * 5) + 1;
+        const shots: number = weightedRandom();
 		return {
 			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots.toString()).spintax(),
 			rawQuestion: filteredQuestions[index]?.locales['en'],
@@ -49,23 +75,32 @@
 	}
 </script>
 
-<svelte:head>
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-
-</svelte:head>
-
 {#if players.length > 0 && Sentry}
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
-            <div transition:fade={{ duration: 200 }} class="relative flex h-full w-full max-w-xl flex-col gap-2">
+            <div transition:fade={{ duration: 200 }} class="relative flex md:flex-row h-full w-full max-w-xl flex-col gap-2">
                 <CardSwiper bind:swipe bind:thresholdPassed {cardData} {onSwipe} on:end={() => ended = true} />
-                <div class="flex gap-2">
+                <div class="flex md:flex-col gap-2">
 
                     <button
-                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
+                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
                         on:click={() => swipe('left')}
                     >
                         👎
+                    </button>
+
+                    <button
+                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
+                        on:click={() => showModal = true}
+                    >
+                        💬 
+                    </button>
+
+                    <button
+                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
+                        on:click={() => swipe('right')}
+                    >
+                        ⏩
                     </button>
                     
                     <!-- <button
@@ -116,3 +151,17 @@
         {/if}
     </div>
 {/if}
+
+<BottomSheet isOpen={showModal} onClose={() => (showModal = false)}>
+    <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center w-full">
+            
+            <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
+                Suggest a question
+            </h2>
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckWcrvzdB4R4fvBuSBTBg57D7KIivNPnDLQ1PdCAmd4aGnug/viewform?embedded=true" width="100%" height="450" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> 
+
+        </div>
+    </div>
+</BottomSheet>

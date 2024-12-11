@@ -30,5 +30,5 @@ export default {
     }
   },
 
-  plugins: [animations]
+  plugins: [animations, require("tailwindcss-safe-area")]
 };

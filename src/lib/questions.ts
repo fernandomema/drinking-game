@@ -29,7 +29,7 @@ export const questions: Question[] = [{
 }, {
     locales: {
         en: '{player1} drink {shots} shots of {player2} drink',
-        es: '{player1} bebe {shots} de la bebida de{player2}',
+        es: '{player1} bebe {shots} de la bebida de {player2}',
     },
     tags: ['preparty', 'challenge', 'punishment'],
 }, {
@@ -98,6 +98,12 @@ export const questions: Question[] = [{
         es: '{player1}, dale {shots} shots a alguien que te gustaria darle un beso o una patada pero no digas cual',
     },
     tags: ['+18-light', 'challenge'],
+},  {
+    locales: {
+        es: '{player1}, dale {shots} shots a alguien que te gustaria cojertela o darle una patada pero no digas cual',
+        en: "{player1}, give {shots} shots to someone you'd like to fuck or slap but don't say wich",
+    },
+    tags: ['+18', 'challenge'],
 }, {
     locales: {
         en: "(Dog|Cat) owner drink {shots} shots",
@@ -181,8 +187,8 @@ export const questions: Question[] = [{
     tags: ['challenge', 'preparty'],
 }, {
     locales: {
-        en: "{player1} you cannot talk during the next round. Drink {shots} each time you talk",
-        es: '{player1} no puedes hablar durante la siguiente ronda. Bebe {shots} cada vez que hablas',
+        en: "{player1} you cannot talk until you see your name again. Drink {shots} each time you talk",
+        es: '{player1} no puedes hablar hasta que vuelva a salir tu nombre. Bebe {shots} cada vez que hablas',
     },
     tags: ['event', 'preparty'],
 }, {
@@ -435,8 +441,8 @@ export const questions: Question[] = [{
     tags: ['christmas'],
 },{
     locales: {
-        en: "{player1}, you are a snowman,  act like melting dramatically the next time you drink", 
-        es: '{player1}, eres un muñeco de nieve, actúa como te derritieses dramaticamente la próxima vez que bebas',
+        en: "{player1}, you are a snowman,  act like you're melting dramatically the next time you drink", 
+        es: '{player1}, eres un muñeco de nieve, actúa como si te derritieses dramaticamente la próxima vez que bebas',
     },
     tags: ['christmas'],
 }, {
@@ -564,6 +570,24 @@ export const questions: Question[] = [{
         en: "{player1} drinks {shots} shots and distributes {shots}"
     },
     tags: ["preparty"]
+}, {
+    locales: {
+        es: "{player1}, si puedes tocarte la nariz con la lengua repartes {shots} tragos",
+        en: "{player1}, if you can touch your nose with your mouth, drink {shots} shots"
+    },
+    tags: ["preparty"],
+}, {
+    locales: {
+        es: "Sucesivamente, deletrea el nombre del jugador de tu derecha, quien se equivoque bebe {shots} tragos. Empieza {player1}",
+        en: "One by one, spell the name of the player on your right, who is wrong, drink {shots} shots. Starts {player1}"
+    },
+    tags: ["preparty"],
+}, {
+    locales: {
+        es: "El mas peludo bebe {shots} tragos",
+        en: "The most stupid player drinks {shots} shots"
+    },
+    tags: ["preparty", "drinkIf"],
 }];
 
 /*
@@ -1495,517 +1519,6 @@ rugby-game,,"¿Prefieres ver un partido de rugby o ganar la lotería? Voten todo
 ,,"¿Qué prefieres un año en prisión o vivir solo (a) en la Tierra?  Votad todos al mismo tiempo, la minoría bebe $ tragos.",14,0
 ,,"¿A quién prefieres Zach Galifianakis o Steve Carell? Votad todos al mismo tiempo, la minoría bebe $ tragos.",14,0
 ,,"¿A quién prefieres Jim Carrey o Mariah Carey? Votad todos al mismo tiempo, la minoría bebe $ tragos.",14,0
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""abandonar"", ""salmón"", ""Superman"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tumbar"", ""cura"", ""los Pitufos"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""estropear"", ""moco"", ""reina de Inglaterra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""abordar"", ""mosca"", ""Barack Obama""  y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ladrar"", ""concha"", ""Hillary Clinton""  y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""abusar"", ""antena"", ""Angela Merkel""  y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acelerar"", ""suicidio"", ""%s"", ""Robin Hood"", y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,3
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acompañar"", ""Lolita"", ""%s"", ""tanga"", y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,3
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acoger"", ""prisión"", ""Asterix""  y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acusar"", ""desvirgar"", ""Obelix"", y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""obstinado"", ""limusina"", ""%s"" y ""Idefix"", y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,3
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""activar"", ""%s"", ""Neo"" y ""Camembert"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""flatulento"", ""%s"", ""Iron Man"" y ""Camembert"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""admitir"", ""yoghurt"", ""%s"" y""Hulk"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""admirar"", ""%s"", ""Pink Floyd"" y ""pistacho"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""adoptar"", ""%s"", ""bacalao"" y ""Babar"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""adorar"", ""%s"", ""Eminem"" y ""bolas"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enviar"", ""%s"", ""Totally Spies"" y ""costra"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""airear"", ""coliflor"", ""%s"" y ""Jedi"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""visualizar"", ""pantufla"", ""Luke Skywalker"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""arrodillarse"", ""Luis Miguel"", ""Danonino"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""agitar"", ""%s"" y ""jirafa"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""grapadora"", ""sardina"", ""feto"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ayudar"", ""abuela"", ""costra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""afilar"", ""banana"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""amar"", ""ganglio"", ""%s"" y ""Dora la exploradora"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""alertar"", ""Marge Simpson"", ""corpiño"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""amarrar"", ""luna"", ""ciprina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""divertir"", ""peste"", ""costura"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso. ",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""animar"", ""riñón"", ""lechería"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""llamar"", ""Zidane"", ""%s"" y ""empanada"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""aprender"", ""volcán"", ""vómito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""arrancar"", ""baño"", ""gastroenteritis"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""regar"", ""ducha"", ""envía"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""aspirar"", ""higo"", ""arena"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""asesinar"", ""Papa Noel"", ""corrida"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""satisfacer"", ""cartas"", ""%s"" y ""pecado"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tragar"", ""marea"", ""%s"" y ""morcilla"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""confesar"", ""pipí"", ""verruga"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bañar"", ""fotocopia"", ""pedo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pasear"", ""eructo"", ""calabaza"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""barrer"", ""strip-tease"", ""pera de ducha"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""excitado"", ""%s"", ""pavo"" y ""playa"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""prohibir"", ""%s"", ""Bob Esponja"" y ""toga"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bautizar"", ""mayonesa"", ""%s"" y ""vaca"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""luchar"", ""guiso"", ""%s"" y ""padre"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""charlar"", ""calceta"", ""esperma"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""babear"", ""canción"", ""condón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tartamudear"", ""fiesta"", ""%s"" y ""juguete sexual"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bendecir"", ""%s"", ""Zoo"" y ""viga"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mecer"", ""%s"", ""Bee Gees"" y ""chorro"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bromear"", ""%s"", ""malvavisco"" y ""tortuga"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""beber"", ""LSD"", ""arco iris"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mal humor"", ""hoyo"", ""%s"" y ""salchicha"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tragar"", ""dormir"", ""mohoso"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""hervir"", ""mano"", ""orgasmo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""PornHub"", ""Pulgarcito"", ""brillar"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""arreglar"", ""pedo"", ""Rafiki"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cepillarme"", ""Tiger"", ""anal"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pastar"", ""cola de espera"", ""tallo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""moler"", ""caja de chocolates"", ""Barney"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""quemar"", ""chocolate"", ""cotonete"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""esconder"", ""simio"", ""ano"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acariciar"", ""cola"", ""ganado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""romper"", ""hoja"", ""albóndiga"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""celebrar"", ""Jesús"", ""%s"" y ""pino"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cantar"", ""porno"", ""Pikachu"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cargar"", ""p*to"", ""Charizard"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""encantar"", ""policía"", ""%s"" y ""fistfucking"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cazar"", ""dedo"", ""%s"" y ""zanahoria"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""castigar"", ""dentista"", ""%s"" y ""zanahoria"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cabalgar"", ""caña"", ""%s"" y ""hijo de p*t*"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""llorar"", ""clamidia"", ""marica"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""c*gar"", ""cera"", ""dolor"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""atrapar"", ""toallita húmeda"", ""Iron Man"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""circuncisión"", ""pescado"", ""cuchara"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""lustrar"", ""pirámide"", ""nalgas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gastar"", ""placa de sheriff"", ""%s"" y ""tobogán"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""parpadear"", ""sándwich"", ""el gato Silvestre"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""clonar"", ""chimpancé"", ""César"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""clavar"", ""Ratoncito"", ""desarmador"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""golpear"", ""skateboard"", ""Jennifer Aniston"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""atrapar"", ""nabo"", ""tetón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""recoger"", ""feto"", ""%s"" y ""jardín"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pegar"", ""sándwich"", ""Vegeta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""colorear"", ""almohada"", ""semilla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pedir"", ""pepinillo"", ""%s"" y ""Torre Eiffel"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""comentar"", ""fea"", ""%s"" y ""pelea"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""entender"", ""espárrago"", ""Don Juan"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""concebir"", ""tomate"", ""tubo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""concluir"", ""Flash Gordon"", ""%s"" y ""sierra de arco"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""confesar"", ""petanca"", ""excremento"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""congelar"", ""pito"", ""%s"" y ""cachorro"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""consumir"", ""kiwi"", ""%s"" y ""Linterna Verde"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""construir"", ""%s"", ""salchicha"" y""jacuzzi"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""consumir"", ""vampiro"", ""%s"" y ""salchichón"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""contemplar"", ""prepucio"", ""Lucky Luke"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""copiar"", ""carnes"", ""examen"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cosquillas"", ""pepinillo"", ""plaza San Pedro"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""corregir"", ""revolcón"", ""Catwoman"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acostarse"", ""palomitas"", ""de caballito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""coser"", ""Capitán Garfio"", ""imbécil"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""chillar"", ""salchichón"", ""prensa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""escupir"", ""agujero negro"", ""champiñón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""quemar"", ""Roquefort"", ""pezón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""fumar"", ""berenjena"", ""Lancelot"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""romper"", ""Quasimodo"", ""rodaja"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""copular"", ""fiesta"", ""Pokemon"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""crear"", ""Pitufina"", ""semen"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""morir"", ""hermana"", ""Lobezno"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gritar"", ""sandía"", ""sal gruesa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""criticar"", ""Justin Bieber"", ""tanga"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""morder"", ""Megan Fox"", ""melón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""recoger"", ""pelo del culo"", ""pecho"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""coser"", ""tostada"", ""viejito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cocinar"", ""nutria"", ""espermatozoide"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""curar"", ""hongo"", ""labio"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bailar"", ""gorila"", ""huevos"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""destapar"", ""rusa"", ""Emma Watson"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""decepcionar"", ""anal"", ""leche"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""descargar"", ""viga"", ""a voluntad"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""destrozar"", ""primo"", ""recto"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""rasgar"", ""vagina"", ""puente levadizo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""despegar"", ""parque"", ""ceja"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bromear"", ""ladrillo"", ""nariz"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""decorar"", ""cola"", ""piercing"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""recortar"", ""pie"", ""mousse de chocolate"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""defender"", ""gallo"", ""cigarro"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desafiar"", ""pino"", ""Snoop Dog"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""derribar"", ""Jacky Chan"", ""diente de leche"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""degustar"", ""gluten"", ""mapache"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desayunar"", ""diarrea"", ""charco"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""renunciar"", ""mascota"", ""pistola"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""demoler"", ""bebé"", ""WC"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desmontar"", ""baño"", ""erizo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""reparar"", ""Cancún"", ""misil"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desplumar"", ""T-rex"", ""swag"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desvirgar"", ""Mickael Jackson"", ""tortilla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desvestir"", ""Mickael Jordan"", ""enchufe anal"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desear"", ""trampolín"", ""autista"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dibujar"", ""p*ta"", ""isla flotante"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desatar"", ""abuela"", ""paracaídas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desatornillar"", ""peluche"", ""Ibiza"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""devorar"", ""albaricoque"", ""Jessica Biel"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""digerir"", ""ciprina"", ""tía"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cenar"", ""surf"", ""orina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dirigir"", ""calamar"", ""patinete eléctrico"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""divertir"", ""alcohol"", ""delfín"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""divorciar"", ""coyote"", ""ombligo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dedear"", ""Leonardo Di Caprio"", ""baño de pies"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dominar"", ""tijeras"", ""camarón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dar"", ""ciego"", ""caña de pescar"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dopar"", ""niño"", ""piojo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dormir"", ""hambre"", ""m*m*da"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""coquetear"", ""metralleta"", ""Scooby Doo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""adiestrar"", ""siameses"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""engañar"", ""nene"", ""cáscara de huevo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""endurecer"", ""erección"", ""discapacidad"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""deslumbrar"", ""copa"", ""caramelo suave"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""apartar"", ""dulce"", ""rata muerta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""intercambiar"", ""eyaculación"", ""misil"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""escapar"", ""pirámide"", ""marihuana"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""fallar"", ""Niagara"", ""piano"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""salpicar"", ""picadura"", ""mermelada"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""aclarar"", ""cintura"", ""sinagoga"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""aclarar"", ""tempestad"", ""poppers"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""aplastar"", ""dentadura"", ""orina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acariciar"", ""reptil"", ""Jean Dujardin"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""perder"", ""martes"", ""elefante"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""escurrir"", ""Elephant man"", ""serpiente"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""eyacular"", ""hippie"", ""langosta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""alargar"", ""mentira"", ""sodomía"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""eliminar"", ""100 cigarros"", ""gorra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""elegir"", ""nutria"", ""bacalao ahumado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""envolver"", ""tenedor"", ""Varsovia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""vergüenza"", ""básket"", ""fuma"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""contratar"", ""culo"", ""Paris Hilton"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""molestar"", ""senos"", ""ressort"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""besar"", ""Lassie"", ""supositorio"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mudarse"", ""tridente"", ""New York"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""impedir"", ""gas"", ""saxofon"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""apestar"", ""telé"", ""concha"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""patrón"", ""desatascador"", ""Cañón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pedir prestado"", ""huevo"", ""adolescente"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""alentar"", ""piojo"", ""Denis Brogniart"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enfadar"", ""kárate"", ""Película XX"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enfermar"", ""paloma"", ""pie descalzo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""humear"", ""tanga de hilo dental"", ""Jessica Alba"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ponerse"", ""flamenco"", ""Sean Penn"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""incendiar"", ""aguacate"", ""c*ñ*"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""meterle"", ""cubo"", ""aceite de oliva"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gritar"", ""erección furtiva"", ""vaselina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""quitar"", ""nudo"", ""camiseta verde"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""aburrí"", ""hoyo de pino"", ""coger"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""investigar"", ""cortina"", ""tequila"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enseñar"", ""dentadura"", ""patata"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""hechizar"", ""gofre"", ""ballena"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""entablar"", ""crepe"", ""columpio"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enterrar"", ""radio"", ""crema depilatoria"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""rodear"", ""bolsa de grasa"", ""plegaria"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""entrenar"", ""patata"", ""camisón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""entrar"", ""pierna"", ""pinta labios"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""envolver"", ""farmacia"", ""lápiz"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enviar"", ""hielo"", ""asado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""salir volando"", ""gay"", ""huevos"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enviar"", ""sarcófago"", ""liquido seminal"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""salvar"", ""pelo del culo"", ""espinaca"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""impresionar"", ""Brasil"", ""orgía"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""espiar"", ""aborto"", ""pediatra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""depilar"", ""lanzallamas"", ""Papel higiénico"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pelar"", ""casado"", ""sandwich"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""casarse"", ""halloween"", ""Sophie Marceau"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cansado"", ""galáctica"", ""doctor"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""equipar"", ""botón verde"", ""orgasmo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""secar"", ""estiércol"", ""píldora anticonceptiva"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""estornudar"", ""Pitufo"", ""enano de jardín"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""estirar"", ""computadora"", ""p*ut* virgen"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""asombrarse"", ""pene"", ""montaña rusa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ahogarse"", ""clítoris"", ""cacerola"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ahorcar"", ""chihuahua"", ""dulce de fresa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""estudiar"", ""poligamia"", ""Joaquín Sabina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""evolucionar"", ""estrella fugaz"", ""sexo oral"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""excitar"", ""mamada"", ""mejillones con patatas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""disculparse"", ""clorofila"", ""Mike Tyson"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enviar"", ""panda"", ""sierra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""explorar"", ""cráter"", ""pirómano"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""explotar"", ""stripper"", ""curling"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""extraer"", ""Mark Anthony"", ""pústula"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""filtrar"", ""llaga"", ""ninfómano"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""fisurar"", ""hígado"", ""urinal"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""flotar"", ""testículo"", ""planta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""fumar"", ""tourette"", ""trío"" y ""%s"", termine-la par #picoloapp... Ou finis ton verre",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desperdiciar"", ""col"", ""burdel"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ganar"", ""segundo hoyo"", ""caniche"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""galopar"", ""matadero"", ""coito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""guardar"", ""dulce"", ""béchamel"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""estacionar"", ""trompa"", ""urinal"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desperdiciar"", ""hongo"", ""Eddy Murphy"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""consentir"", ""chino"", ""pluma"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tirar gas"", ""botiquín"", ""granjero"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""congelar"", ""Zeus"", ""sida"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gemir"", ""garrote"", ""simulación"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pasar el rato"", ""síndrome de Down"", ""burbujas de jabón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""resbalar"", ""pluf"", ""parada de bus"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""inflar"", ""saco"", ""sexo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""probar"", ""tuba"", ""cornudo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""crecer"", ""monopatín"", ""pito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""rascar"", ""radiador"", ""pubis"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""grabar"", ""pubis"", ""chorreado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mordisquear"", ""píldora"", ""estimulo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""asar"", ""bistec de soja"", ""rueda grande"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""escalar"", ""teta"", ""tienda de campaña"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gruñir"", ""pañuelo"", ""lamida"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""regañar"", ""asqueroso"", ""clic-clac"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""engordar"", ""vodka"", ""cambio de aceite"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sanar"", ""Ron"", ""erótico"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gritar"", ""chupito"", ""mareado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""guiar"", ""Harry Potter"", ""pelicano"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""habituar"", ""paintball"", ""salsa de tomate"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""picar"", ""juego de cartas"", ""gorra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""atormentar"", ""buzón"", ""bocal"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acosar"", ""bucal"", ""jengibre"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""alojar"", ""10 000"", ""le gustan jóvenes"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""dudar"", ""fistfuck"", ""martillo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""humiliar"", ""justo"", ""sacudida"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gritar"", ""sismo"", ""camiseta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ignorar"", ""diente de león"", ""lengua"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""imitar"", ""margarita"", ""El chavo del 8 "" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""impresionar"", ""anaconda"", ""arenas movedizas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""imprimir"", ""mocasín"", ""quiste"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""informar"", ""nalgada"", ""lavaplatos"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""inundar"", ""basura"", ""lavanda"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""inquietarse"", ""diarrea"", ""tulipán"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""insistir"", ""malabarista"", ""castrar"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""prohibir"", ""tampón"", ""MacGyver"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""interview"", ""rinoplastia"", ""cuco"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""introducir"", ""cirugía"", ""lobo feroz"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""inventar"", ""fideo"", ""fermentación"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""investir"", ""Tadjikistan"", ""tribu Maorí"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""irritar"", ""bollo"", ""Pakistan"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tirar"", ""couscous"", ""murciélago"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""malabarear"", ""cromosoma"", ""avión"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""jugar"", ""monogamia"", ""pene gigante"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""gozar"", ""sábana"", ""depilación"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""jurar"", ""plumero"", ""Tasmania"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""disfrutar"", ""kétchup"", ""disco"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""claxonar"", ""koala"", ""Antártica"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""lamer"", ""fox terrier"", ""posición fetal"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""lavar"", ""nube"", ""cueva"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""lamer"", ""sol"", ""Donald Trump"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""liberar"", ""larva"", ""aire acondicionado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""despedir"", ""podóloga"", ""México"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""leer"", ""letras mayúsculas"", ""Witney Houston"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""entregar"", ""lémur"", ""yeso"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""masticar"", ""Biblia"", ""bici eléctrica"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""adelgazar"", ""ropa interior"", ""acabado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""comer"", ""teja"", ""facial"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""manifestar"", ""cocción"", ""pulmón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""faltar"", ""tejido"", ""matrimonio"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""maquillar"", ""orangután"", ""cohete"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""casarse"", ""bonobo"", ""Alejandro Sanz"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""masaje"", ""hormiga"", ""URSS"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mirar"", ""paraguas"", ""Martini"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mezclar"", ""chicharro"", ""cometa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""meter"", ""psicópata"", ""espinilla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""amenazar"", ""mormón"", ""pedo de babosa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""maullar"", ""babosa"", ""Patagonia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mimar"", ""araña"", ""incesto"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""adelgazar"", ""caracol"", ""maracas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""apostar"", ""hepatitis C"", ""saltamontes"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pudrir"", ""tráfico"", ""virgen"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""morder"", ""virgen"", ""enfermo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sonar"", ""gasolina"", ""Cristiano Ronaldo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""moler"", ""vinagre"", ""Londres"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mojar"", ""leoncinto"", """" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""moldear"", ""raviolis"", ""escalera"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""murmurar"", ""kanguro"", ""kamasutra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""nadar"", ""bosque"", ""reja"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""nacer"", ""vía láctea"", ""pastel"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""nevar"", ""leche"", ""Australia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""limpiar"", ""éxtasis"", ""alcantarilla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""negar"", ""miembro viril"", ""foca"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""manchar"", ""pajarito"", ""ciruela"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""alimentar"", ""vulva"", ""tomate"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ahogar"", ""ratoncito"", ""zumo de naranja"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""obedecer"", ""perro loco"", ""estudio"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""obligar"", ""hámster"", ""impresora"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""obsesionar"", ""Hiroshima"", ""collar hawaiano"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ofrecer"", ""colonoscopia"", ""Donald Trump"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""operar"", ""valija"", ""Nicolas Sarkozy"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ordenar"", ""muela del juicio"", ""Pascua"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""organizar"", ""cotonete"", ""Navidad"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""atreverse"", ""cerilla"", ""verano indio"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""olvidar"", ""calienta huevos"", ""mediterráneo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""abrir"", ""confesionario"", ""magrebí"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""remar"", ""5 estrellas"", ""muñeca"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""perdonar"", ""estómago"", ""desecho tóxico"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""perfumar"", ""muñeca inflable"", ""margarita"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""apostar"", ""atún"", ""enrabiado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""patrocinar"", ""pan"", ""Uzbekistán"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""compartir"", ""sémola"", ""Bolivia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""esperar"", ""cabello"", ""Japón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pagar"", ""anzuelo"", ""Chile"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pecado"", ""herrero"", ""dedo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pedalear"", ""espada"", ""Ámsterdam"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""peinar"", ""pato"", ""Julio Iglesias"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pintar"", ""Chile, ""Canadá"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pelar"", ""dedo del pie"", ""rosa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tomar"", ""avispa"", ""puente"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""penetrar"", ""avispón"", ""Yugi-oh"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""perforar"", ""puerco"", ""canalización"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""perder"", ""oreja"", ""Islandia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pesar"", ""dignidad"", ""cárcel"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""romper"", ""honor"", ""castillo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""fotocopiar"", ""coraje"", ""don juan"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""fotografiar"", ""garrapiñadas"", ""castillo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""engañar"", ""océano"", ""piedra papel o tijera"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pilotear"", ""suegra"", ""arco"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pellizcar"", ""palma"", ""catapulta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""orinar"", ""colonia"", ""solitaria"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""agradar"", ""uña"", ""lombriz"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bromear"", ""pasito"", ""tijerilla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""plantar"", ""Céline Dion"", ""patata"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""llorar"", ""saltamontes"", ""bukkake"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""bucear"", ""tren"", ""estrella"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pulir"", ""barricada"", ""pegamento"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""contaminar"", ""proteína"", ""guardabarros"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pulir"", ""ciencias"", ""sonajero"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""empollar"", ""médico"", ""hija"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""portar"", ""hombre"", ""cordón umbilical"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""póster"", ""reloj solar"", ""reunión"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""empujar"", ""leñador"", ""vela"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""practicar"", ""tonelada"", ""lavadora"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tomar"", ""electrodomésticos"", ""árbol joven"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""preparar"", ""velero"", ""reina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""apretar"", ""caravana"", ""contaminación"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""prestar"", ""antebrazo"", ""rabia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""prever"", ""vaselina"", ""horno"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pasear"", ""zodiaco"", ""aeropuerto"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""prometer"", ""temblor submarino"", ""oasis"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""probar"", torsión"", electricista"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""castigar"", ""baño"", ""patatas fritas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""acortar"", ""dromedario"", ""estudios"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""colgar"", ""champagne"", ""apache"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""compar"", ""écrémage"", ""souterrain"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""comprar"", ""miope"", ""prisma"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""rígido"", ""masa"", ""tesoro"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""frenar"", ""grasa de cerdo"", ""alcohólico"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""quejarse"", ""galaxia"", ""gota"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""llevar"", ""hielo"", ""entierro"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ablandar"", ""escritor"", ""cable"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""guardar"", ""pulgar"", ""Beatles"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""recordar"", ""colisión"", ""Perú"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""afeitar"", ""hipopótamo"", ""timbre"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tranquilizar"", ""yunque"", ""casa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""fallar"", ""pasta dental"", ""herida"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""rebotar"", ""telescopio"", ""castigo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""recalentar"", ""gatito"", ""microondas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""recitar"", ""corona"", ""trompeta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""reconciliar"", ""corpiño"", ""aspiradora"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""copiar"", ""humano"", ""terraza"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""contratar"", ""médico"", ""pollito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""retroceder"", ""publicidad"", ""gym"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""redactar"", ""facultad"", ""paleta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""caimán"", ""cocodrilo"", ""aclarar"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enfriar"", ""caimán"", ""alumbrar"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""rechazar"", ""buzo"", ""rancho"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""disfrutar"", ""demonio"", ""ciprina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""solucionar"", ""etiqueta"", ""demoníaco"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""lamentar"", ""Marzo"", ""tiburón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""unirse"", ""bozal"", ""deshidratado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""señalar"", ""Molière"", ""quiste"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""devolver"", ""edificio"", ""cabra"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""remediar"", ""leopardo"", ""vestimenta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""agradecer"", ""orquesta"", ""radical"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""remplazar"", ""soñar"", ""rábano"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""llenar"", ""cerámica"", ""ambulancia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""revólver"", ""venta al por menor"", ""ruleta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""conocer"", ""labio"", ""prisionero"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""negar"", ""chimenea"", ""erección"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""olfatear"", ""voluntad"", ""lata de pintura"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""derramar"", ""software"", ""zapatilla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""reparar"", ""líquido"", ""albañil"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""repartir"", ""equipo"", ""mosquitero"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""planchar"", ""ceja"", ""doméstico"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""pintar"", ""revista"", ""campamento"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""repetir"", ""poema"", ""látex"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""responder"", ""río"", ""skateboard"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""reservar"", ""ajedrez"", ""león"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""resistir"", ""feo"", ""claustrofobia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""resonar"", ""cueva"", ""pino"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""resolver"", ""inmortalidad"", ""suerte"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""respetar"", ""país"", ""minuto"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""respirar"", ""suerte"", ""orgullo gay"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""resplandecer"", ""bienestar"", ""claqué"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""juntar"", ""piel muerta"", ""Kim Kardashian"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""apretar"", ""pomada"", ""aro"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""resucitar"", ""arpón"", ""profesor"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""restablecer"", ""lavado"", ""oliva"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""retrasar"", ""cianuro"", ""calibre"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""retener"", ""brutalmente"", ""mosquito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""caer"", ""carretilla"", ""recién nacido"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""volver"", ""trapo"", ""camiseta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""encoger"", ""partición"", ""mina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""lograr"", ""pizarra"", ""bikini"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""revelar"", ""maíz"", ""self-service"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""soñar"", ""rótulo"", ""aspirina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""examinar"", ""chaleco"", ""verga"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""reír"", ""básket"", ""prepucio"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enjuagar"", ""deportista"", ""bechamel"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""reír"", ""tarta"", ""cangrejo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""arriesgar"", ""reloj de arena"", ""gelatina"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""roncar"", ""experiencia"", ""barbacoa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ronronear"", ""casino"", ""orangután"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""eructar"", ""húmedo"", ""tronco"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""rostizar"", ""mamut"", ""desodorante"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sonrojarse"", ""viaje"", ""Bill Clinton"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""quejarse"", ""acné"", ""nuca"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sacrificar"", ""urgencía"", ""cajón"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sangrar"", ""bruja"", ""waterpolo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""salar"", ""mocasín"", ""volley"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""salir"", ""jabalí"", ""jungla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ensuciar"", ""zambullida"", ""lesbiana"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""saluer"", ""pepita de oro"", ""chimenea"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""llorar"", ""esquí"", ""fuegos artificiales"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebok que contenga las palabras ""borracho"", ""mascota"", ""Transilvana"" y ""%s"", termínala por #picoloapp... si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebok que contenga las palabras ""olvidar"", ""arquitecta"", ""fosa nasal"" y ""%s"", termínala por #picoloapp... si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebok que contenga las palabras ""satisfacer"", ""limón"", ""orificio"" y ""%s"", termínala por #picoloapp... si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""saltar"", ""cartero"", ""fax"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""salvar"", ""manubrio"", ""Apocalipsis"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""enjabonar"", ""lunes"", ""presidente"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""saborear"", ""edad media"", ""cosquilla"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""escáner"", ""joya"", ""Caribe"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""cortar"", ""tío"", ""Mallorca"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""secar"", ""camping"", ""artista"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sacudir"", ""encías"", ""control"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ayudar"", ""maleta"", ""cuchara"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""seducir"", ""prima"", ""Guatemala"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sembrar"", ""asteroide"", ""Albert Einstein"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""señalar"", ""pan tostado"", ""walkie-talkie"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""beber"", ""Juegos Olímpicos"", ""papaya"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""esquiar"", ""sábana"", ""muleta"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sanar"", ""brazalete"", ""ninja"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sonar"", ""pirata"", ""equipaje"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""salir"", ""pinza de depilar"", ""quemado"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""soldar"", ""seda"", ""jeroglíficos"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""soplar"", ""calvo"", ""oso"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""desear"", ""corneta"", ""sordo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""aliviar"", ""erizo"", ""durito"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""levantar"", ""manguera"", ""crustáceo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""chupar"", ""submarino"", ""eléctrico"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sudar"", ""tía"", ""Torre de Pisa"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sofocar"", ""calzón"", ""piojo"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""sorprender"", ""diagonal"", ""detective"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""talar"", ""Canarias"", ""payaso"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""golpear"", ""libélula"", ""sierra de disco"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""burlarse"", ""gacela"", ""traje de baño"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""compactar"", ""garganta"", ""boomerang"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""llamar"", ""trillizos"", ""tanque"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tierno"", ""cañón"", ""pierna"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""probar"", ""arco"", ""niño pequeño"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mamar"", ""rata"", ""Ricky Martin"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""tirar"", ""caries"", ""monje"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""burlarme"", ""pastilla"", ""One Direction"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""limpiar"", ""diente"", ""Jennifer"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""ordeñar"", ""morsa"", ""lata"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""manosear"", ""cura"", ""cortacésped"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""mear"", ""parroquia"", ""Mongolia"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""vaciar"", ""balón"", ""mariscos"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""violar"", ""erizo"", ""Denzel Washington"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
-,,"%s, postea una frase tonta en Facebook que contenga las palabras ""vomitar"", ""museo"", ""tapas"" y ""%s"", termínala por #picoloapp... Si no termina tu vaso.",15,2
 white-black,,"¡Todo el mundo elige entre el color negro o blanco, aquellas o aquellos que pierdan beben $ tragos! (elige un color y comprenderas...)",23,0
 ,white-black,¡Blanco!,23,0
 ,white-black,¡Negro!,23,0

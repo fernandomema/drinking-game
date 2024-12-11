@@ -10,7 +10,7 @@
 </script>
 
 <!-- Header -->
-<header class="bg-blue-600 text-white">
+<header class="bg-purple-600 text-white">
     <div class="container mx-auto py-6 px-4 text-center">
         <h1 class="text-3xl font-bold">¡Únete a Nuestro Programa de Testers!</h1>
         <p class="mt-2 text-lg">Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.</p>
@@ -25,7 +25,7 @@
         <p class="text-gray-600 mb-6">
             Accede a actualizaciones, instrucciones y novedades directamente desde nuestro grupo exclusivo.
         </p>
-        <a href="https://groups.google.com/forum/#!forum/tragos-locos-testers/join" data-umami-event="join-google-group" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700">
+        <a href="https://groups.google.com/forum/#!forum/tragos-locos-testers/join" data-umami-event="join-google-group" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-md shadow hover:bg-purple-700">
             Unirme al Grupo
         </a>
     </section>
