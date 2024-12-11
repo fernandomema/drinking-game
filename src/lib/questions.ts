@@ -216,6 +216,19 @@ export const questions: Question[] = [{
         },
     }
 }, {
+    // estás obligado/a esperar 2 segundos entre cada palabra que pronuncies! $ tragos por cada falta
+    locales: { 
+        es: '{player1} estás obligado/a esperar 2 segundos entre cada palabra que pronuncies! {shots} tragos por cada falta.',
+        en: '{player1} you\'re obliged to wait 2 seconds between each word you pronounce! {shots} shots per miss.',
+    },
+    tags: ['event', 'preparty'],
+    end: {
+        locales: {
+            es: '{player1} ya no estás obligado/a esperar 2 segundos entre cada palabra que pronuncies!',
+            en: '{player1} you are no longer obliged to wait 2 seconds between each word you pronounce!',
+        },
+    }
+ }, {
     locales: {
         en: "{player1} speaks in another language until a new order",
         es: '{player1}, habla en otro idioma hasta nueva orden',
@@ -255,6 +268,18 @@ export const questions: Question[] = [{
         locales: {
             en: "{player1}, you can stop insulting with everything you say",
             es: '{player1}, puedes parar de insultar con todos lo que hablas',
+        },
+    }
+}, {
+    locales: {
+        es: 'Estais en una biblioteca! Todos debeis susurrar hasta nuevo aviso. El que hable mas alto de la cuenta bebe {shots} tragos',
+        en: "You are in a library! Everyone must shout until a new order. The one who speaks louder than the account takes {shots} shots",
+    },
+    tags: ['event', 'preparty'],
+    end: {
+        locales: {
+            es: "Ya no estais en una biblioteca, Puedes dejar de susurrar",
+            en: "You are not in a library anymore, you can stop shouting",
         },
     }
 }, {
@@ -588,7 +613,295 @@ export const questions: Question[] = [{
         en: "The most stupid player drinks {shots} shots"
     },
     tags: ["preparty", "drinkIf"],
-}];
+}, {
+    locales: {
+        en: "Whoever has been late the most to gatherings, drink {shots} shots",
+        es: 'El que más veces haya llegado tarde a reuniones, bebe {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+}, {
+    locales: {
+        en: "{player1}, do a cartwheel (or|and) drink {shots} shots",
+        es: '{player1}, haz una voltereta (o|y) bebe {shots} shots',
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "Everyone who has dyed their hair before, take {shots} shots",
+        es: 'Todos los que se hayan teñido el pelo alguna vez, beben {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "If you've ever faked liking a gift, drink {shots} shots",
+        es: 'Si alguna vez has fingido que te gusta un regalo, bebe {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "All who have a tattoo, drink {shots} shots",
+        es: 'Todos los que tengan un tatuaje, beben {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "Name a country that starts with (a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|k|r|s|t|u|v|w|x|y|z). The first to fail or repeat drinks {shots} shots",
+        es: 'Nombra un país que empiece con (a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|k|r|s|t|u|v|w|x|y|z). El primero en fallar o repetir bebe {shots} shots',
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "If you've ever fallen asleep at a party, drink {shots} shots",
+        es: 'Si alguna vez te has quedado dormido en una fiesta, bebe {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "Whoever has the oldest phone, drink {shots} shots",
+        es: 'El que tenga el móvil más viejo, bebe {shots} shots',
+    },
+    tags: ['vote', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, pick someone to dance with for 30 seconds or drink {shots} shots",
+        es: '{player1}, elige a alguien para bailar durante 30 segundos o bebe {shots} shots',
+    },
+    tags: ['challenge', 'preparty'],
+}, {
+    locales: {
+        en: "{player1}, give {shots} shots to the person you think (is the smartest|talks the most|will drink the most tonight)",
+        es: '{player1}, dale {shots} shots a la persona que crees que (es la más lista|habla más|beberá más esta noche)',
+    },
+    tags: ['preparty', '+18-light', '+18'],
+},{
+    locales: {
+        en: "If you've ever (cheated in a game|sneaked into a place|used someone else's password), drink {shots} shots",
+        es: "Si alguna vez (hiciste trampa en un juego|te colaste en un lugar|usaste la contraseña de alguien más), bebe {shots} shots",
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, who (has the best style|is the funniest|has the best laugh)? Give them {shots} shots",
+        es: '{player1}, ¿quién (tiene el mejor estilo|es el más divertido|tiene la mejor risa)? Dale {shots} shots',
+    },
+    tags: ['vote', 'preparty'],
+},{
+    locales: {
+        en: "If you (have a tattoo|can play an instrument|are wearing something blue), drink {shots} shots",
+        es: 'Si (tienes un tatuaje|puedes tocar un instrumento|llevas algo azul), bebe {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "Everyone who (has broken a bone|knows how to swim|has traveled to another country), take {shots} shots",
+        es: 'Todos los que (se han roto un hueso|saben nadar|han viajado a otro país), beben {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, pick (a word|a theme). Each player must say something related without repeating or hesitating. The loser drinks {shots} shots",
+        es: '{player1}, elige (una palabra|un tema). Cada jugador debe decir algo relacionado sin repetir ni dudar. El que pierda bebe {shots} shots',
+    },
+    tags: ['challenge', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, tell us (your biggest secret|the craziest thing you've done). If you don't, drink {shots} shots",
+        es: '{player1}, cuéntanos (tu mayor secreto|la locura más grande que has hecho). Si no quieres, bebe {shots} shots',
+    },
+    tags: ['preparty', '+18-light', '+18'],
+},{
+    locales: {
+        en: "{player1}, choose (two players|a pair). They must (hold hands for one minute|exchange seats). If they refuse, they take {shots} shots each",
+        es: '{player1}, elige (dos jugadores|una pareja). Deben (darse la mano por un minuto|intercambiar asientos). Si se niegan, toman {shots} shots cada uno',
+    },
+    tags: ['challenge', '+18-light', 'preparty'],
+},{
+    locales: {
+        en: "The (first|last) person to touch their nose drinks {shots} shots",
+        es: 'La (primera|última) persona en tocarse la nariz bebe {shots} shots',
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "If you've ever (sent a text you regret|been on a blind date|used a fake name), drink {shots} shots",
+        es: 'Si alguna vez (enviaste un mensaje del que te arrepientes|estuviste en una cita a ciegas|usaste un nombre falso), bebe {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+}, {
+    locales: {
+        en: "Anyone who (has an ex they still talk to|cried at a movie this year|has a crush on someone here), drink {shots} shots",
+        es: 'Cualquiera que (hable con un ex aún|haya llorado viendo una película este año|tenga un crush con alguien aquí), bebe {shots} shots',
+    },
+    tags: ['drinkIf'],
+},{
+    locales: {
+        en: "{player1}, call someone (outside the game|not in this room) and say ('I miss you.'|'I love you.') If you refuse, drink {shots} shots",
+        es: '{player1}, llama a alguien (fuera del juego|que no esté en esta habitación) y dile ("te echo de menos"|"te amo"). Si te niegas, bebe {shots} shots',
+    },
+    tags: ['+18-light', '+18'], 
+}, {
+    locales: {
+        en: "If you've (googled yourself|lied about your age|used someone else's Netflix account), drink {shots} shots",
+        es: 'Si alguna vez (te buscaste en Google|mentiste sobre tu edad|usaste la cuenta de Netflix de alguien más), bebe {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, describe (the worst date you've been on|your most embarrassing moment). If you skip, drink {shots} shots",
+        es: '{player1}, describe (la peor cita que tuviste|tu momento más vergonzoso). Si pasas, bebe {shots} shots',
+    },
+    tags: ['preparty', '+18-light'],
+},{
+    locales: {
+        en: "Everyone with (piercings|glasses|a middle name), take {shots} shots",
+        es: 'Todos los que (tengan piercings|usen gafas|tengan un segundo nombre), beben {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "If you've ever (fallen asleep in class|been kicked out of somewhere|used a fake ID), drink {shots} shots",
+        es: 'Si alguna vez (te quedaste dormido en clase|te echaron de algún lugar|usaste un DNI falso), bebe {shots} shots',
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, switch a piece of clothing with {player2}. If either refuses, drink {shots} shots each",
+        es: '{player1}, intercambia una prenda de ropa con {player2}. Si alguno se niega, toma {shots} shots cada uno',
+    },
+    tags: ['+18'],
+},{
+    locales: {
+        en: "{player1}, imitate (a celebrity|someone in the room). If nobody guesses right, drink {shots} shots",
+        es: '{player1}, imita a (un famoso|alguien de esta sala). Si nadie adivina, bebe {shots} shots',
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "{player1}, make up a (funny|weird) nickname for {player2}. If they reject it, they drink {shots} shots",
+        es: '{player1}, inventa un apodo (divertido|raro) para {player2}. Si lo rechaza, bebe {shots} shots',
+    },
+    tags: ['challenge'],
+},{
+    locales: {
+        en: "If you've ever (forgotten someone's name right after meeting them|pretended to like a gift), drink {shots} shots",
+        es: 'Si alguna vez (olvidaste el nombre de alguien justo después de conocerlo|fingiste que te gustaba un regalo), bebe {shots} shots',
+    },
+    tags: ['drinkIf'],
+},{
+    locales: {
+        en: "If you've ever (danced in the rain|sung karaoke|been caught talking to yourself), drink {shots} shots",
+        es: 'Si alguna vez (bailaste bajo la lluvia|cantaste karaoke|te pillaron hablando solo), bebe {shots} shots',
+    },
+    tags: ['drinkIf'],
+},{
+    locales: {
+        en: "{player1}, sing the chorus of a (popular|random) song. If you refuse, drink {shots} shots",
+        es: '{player1}, canta el estribillo de una canción (popular|al azar). Si te niegas, bebe {shots} shots',
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "{player1}, guess the favorite drink of {player2}. If you're wrong, drink {shots} shots",
+        es: '{player1}, adivina la bebida favorita de {player2}. Si te equivocas, bebe {shots} shots',
+    },
+    tags: ['preparty', '+18-light'],
+}, {
+    locales: {
+        en: "{player1}, guess {player2}'s (favorite color|birthday month|favorite season). If you're wrong, drink {shots} shots. If you're right, {player2} drinks {shots} shots",
+        es: '{player1}, adivina el (color favorito|mes de cumpleaños|estación favorita) de {player2}. Si fallas, bebe {shots} shots. Si aciertas, {player2} bebe {shots} shots',
+    },
+    tags: ['+18-light', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, tell us (your worst habit|something embarrassing about yourself). If you refuse, drink {shots} shots",
+        es: "{player1}, cuéntanos (tu peor hábito|algo vergonzoso sobre ti). Si te niegas, bebe {shots} shots",
+    },
+    tags: ['preparty', '+18-light'],
+},{
+    locales: {
+        en: "Everyone who (has traveled to another continent|speaks more than two languages|has an unusual talent), drink {shots} shots",
+        es: "Todos los que (hayan viajado a otro continente|hablen más de dos idiomas|tengan un talento inusual), beben {shots} shots",
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, share (the weirdest dream you've had|the last lie you told). If you skip, drink {shots} shots",
+        es: "{player1}, comparte (el sueño más raro que hayas tenido|la última mentira que dijiste). Si pasas, bebe {shots} shots",
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "If you've ever (faked being sick to skip school|gotten away with breaking something|used an excuse to avoid plans), drink {shots} shots",
+        es: "Si alguna vez (fingiste estar enfermo para faltar a clase|saliste impune después de romper algo|pusiste una excusa para evitar planes), bebe {shots} shots",
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, let {player2} (send a random emoji|scroll through your camera roll for 10 seconds). Refuse, and you both drink {shots} shots",
+        es: "{player1}, deja que {player2} (envíe un emoji al azar|revise tu galería durante 10 segundos). Si te niegas, ambos beben {shots} shots",
+    },
+    tags: ['+18-light', '+18'],
+},{
+    locales: {
+        en: "{player1}, trade (a random accessory|your seat) with {player2}. Refuse, and you both drink {shots} shots",
+        es: "{player1}, intercambia (un accesorio al azar|tu asiento) con {player2}. Si te niegas, ambos beben {shots} shots",
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "{player1}, guess (the favorite color|the biggest fear) of {player2}. Get it wrong, and drink {shots} shots",
+        es: "{player1}, adivina (el color favorito|el mayor miedo) de {player2}. Si fallas, bebe {shots} shots",
+    },
+    tags: ['preparty'],
+},{
+    locales: {
+        en: "{player1}, do (10 push-ups|a silly dance). Refuse, and drink {shots} shots",
+        es: "{player1}, haz (10 flexiones|un baile tonto). Si te niegas, bebe {shots} shots",
+    },
+    tags: ['preparty'],
+}, {
+    locales: {
+        en: "{player1}, share (the most rebellious thing you've done|a secret you've never told anyone). Refuse, and drink {shots} shots",
+        es: "{player1}, comparte (lo más rebelde que has hecho|un secreto que nunca le has contado a nadie). Si te niegas, bebe {shots} shots",
+    },
+    tags: ['+18-light'],
+},{
+    locales: {
+        en: "{player1}, di una cosa buena y una mala de {player2} y {player3}, pero no digas a cual pertenece cada una. Bebe {shots} shots",
+        es: "{player1}, di una cosa buena y una mala de {player2} y {player3}, pero no digas a cual pertenece cada una. Bebe {shots} shots",
+    },
+    tags: ['+18-light', 'preparty'],
+},{
+    locales: {
+        en: "If you've ever (pretended to know a song's lyrics|sang karaoke sober|been to a music festival), drink {shots} shots",
+        es: "Si alguna vez (fingiste saber la letra de una canción|cantaste karaoke sobrio|fuiste a un festival de música), bebe {shots} shots",
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "Everyone who (has a favorite guilty-pleasure movie|has ever cried during a kid's movie|prefers animated movies), take {shots} shots",
+        es: "Todos los que (tengan una película favorita que les dé vergüenza|hayan llorado viendo una película infantil|prefieran las películas animadas), beben {shots} shots",
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "If you've ever (accidentally texted the wrong person|misread a meme|used the wrong emoji in a conversation), drink {shots} shots",
+        es: "Si alguna vez (enviaste un mensaje al destinatario equivocado|entendiste mal un meme|usaste un emoji inadecuado en una conversación), bebe {shots} shots",
+    },
+    tags: ['drinkIf', 'preparty'],
+},{
+    locales: {
+        en: "{player1}, do your best impression of (a cartoon character|a celebrity). Refuse, and drink {shots} shots",
+        es: "{player1}, imita a (un personaje animado|un famoso). Si te niegas, bebe {shots} shots",
+    },
+    tags: ['preparty'],
+}, {
+    locales: {
+        en: "Everyone, take a photo of (the funniest thing in the room|your best dance move|someone laughing) and share it in the group chat",
+        es: "Todos, tómense una foto de (la cosa más graciosa en la sala|su mejor movimiento de baile|alguien riendo) y compártanla en el chat del grupo",
+    },
+    tags: ['preparty'],
+},];
 
 /*
 ,,%s si eres una mujer reparte $ tragos o tendrás que beberlos tú,1,1
@@ -1093,8 +1406,6 @@ timewatch,,"¡%s haz de reloj! Debes decir la hora cada minuto, $ tragos par cad
 ,timewatch,%s puedes dejar de ser reloj tick - tack.,2,1
 one-eyed,,¡%s estas tuerto/a! Cierra un ojo hasta nuevo aviso,2,1
 ,one-eyed,%s puedes volver a ver normalmente.,2,1
-wait-2secs,,¡%s estás obligado/a esperar 2 segundos entre cada palabra que pronuncies! $ tragos por cada falta.,2,1
-,wait-2secs,¡%s puedes hablar de nuevo normalmente!,2,1
 talkative,,¡%s seras un loro! No puedes quedarte más de 3 segundos sin hablar hasta nuevo aviso,2,1
 ,talkative,%s puedes de dejar de hablar sin parar y hablar normalmente. ,2,1
 sing123,,"%s debes ahora cantar todo lo que se dice con la tonadita de ""Un elefante se balanceaba sobre la tela de una araña"" hasta nuevo aviso.",2,1
