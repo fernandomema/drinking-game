@@ -70,7 +70,8 @@
         const shots: number = weightedRandom();
 		return {
 			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots.toString()).spintax(),
-			rawQuestion: filteredQuestions[index]?.locales['en'],
+			rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales)[0],
+            index: filteredQuestions[index].index,
 		};
 	}
 </script>
@@ -111,17 +112,21 @@
                     </button> -->
                 </div>
                 {#if OriginChecker.isProduction($page.url.href)}
-                    <div class="flex items-center justify-center rounded-2xl bg-white/50 p-3 px-4 text backdrop-blur-sm min-h-[50px] min-w-[320px]">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : '0ce0fa3ad64acf4687746e67bb37f5b0',
-                                'format' : 'iframe',
-                                'height' : 50,
-                                'width' : 320,
-                                'params' : {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//www.highperformanceformat.com/0ce0fa3ad64acf4687746e67bb37f5b0/invoke.js"></script>
+                    <div class="flex items-center justify-center rounded-2xl bg-white/50 p-3 px-4 text backdrop-blur-sm min-h-[50px] min-w-[320px] md:hidden">
+                        {#if Math.random() > 0.5}
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key' : '0ce0fa3ad64acf4687746e67bb37f5b0',
+                                    'format' : 'iframe',
+                                    'height' : 50,
+                                    'width' : 320,
+                                    'params' : {}
+                                };
+                            </script>
+                            <script type="text/javascript" src="//www.highperformanceformat.com/0ce0fa3ad64acf4687746e67bb37f5b0/invoke.js"></script>
+                        {:else}
+                            <script type="text/javascript" src="https://ap.lijit.com/www/delivery/fpi.js?z=1264479&width=320&height=100"></script>
+                        {/if}
                     </div>
                 {/if}
             </div>
@@ -142,6 +147,7 @@
                 </div>
                 <div class="h-[60px]">
                     <button
+                        transition:fade={{ duration: 600, delay: 2500 }}
                         class="bottom-1 left-1 z-10 w-full rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
                         on:click={() => goto('/select-mode')}
                     >   

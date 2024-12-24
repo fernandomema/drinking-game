@@ -1,5 +1,6 @@
 import { Question } from "./questions";
 import "$lib/Shuffle";
+import { randomizeQuestions } from "$lib/Shuffle";
 
 export type Mode = {
     name: string;
@@ -10,15 +11,17 @@ export const modes: { [key: string]: Mode } = {
     preparty: {
         name: 'Pre-Party',
         pickCards: (questions: Question[]) => {
+            questions.map((question, index) => {
+                question.index = index;
+                return question;
+            });
             const drinkIfQuestions = questions.filter((question) => question.tags.includes('drinkIf') && question.tags.includes('preparty')).slice(0, 10);
-            const commonQuestions = questions.filter((question) => question.tags.includes('preparty') && !question.tags.includes('drinkIf') && !question.tags.includes('event')).slice(0, 10);
+            const commonQuestions = randomizeQuestions(questions.filter((question) => question.tags.includes('preparty') && !question.tags.includes('drinkIf') && !question.tags.includes('event')));
             const eventQuestion = questions.filter((question) => question.tags.includes('event') && question.tags.includes('preparty'))[0];
-            let finalQuestions = [...drinkIfQuestions, ...commonQuestions];
+            let finalQuestions = randomizeQuestions([...drinkIfQuestions, ...commonQuestions.slice(0, 10)]);
             
             // random number between 4 and 8
             const eventPos = Math.floor(Math.random() * (8)) + 4;
-            
-            finalQuestions.shuffle();
 
             // Append question next to queston with next parameter
             finalQuestions.forEach((question, index) => {

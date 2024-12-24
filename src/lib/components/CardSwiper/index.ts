@@ -5,6 +5,7 @@
 export type CardData = {
 	question?: String;
 	rawQuestion?: String;
+	index?: number;
 };
 
 export type SwipeEventData = {

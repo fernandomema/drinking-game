@@ -73,6 +73,14 @@
 			currentZ--;
 			el.style.zIndex = currentZ.toString();
 
+			const seenCounts = JSON.parse(localStorage.getItem('seenCounts') || '{}');
+			const card = el === card1 ? card1Data : card2Data;
+			const globalCardIndex = card?.index?.toString() || 'undefined';
+			if (globalCardIndex) {
+				seenCounts[globalCardIndex.toString()] = (seenCounts[globalCardIndex.toString()] || 0) + 1;
+				localStorage.setItem('seenCounts', JSON.stringify(seenCounts));
+			}
+
 			el.classList.remove('transition-transform', 'duration-300');
 			el.style.transform = '';
 			if (card1Data === null && card2Data === null) {
