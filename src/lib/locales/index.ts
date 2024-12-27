@@ -15,7 +15,7 @@ init({
 export const getLocale = async (): Promise<string> => {
     return new Promise((resolve) => {
         locale.subscribe((locale) => {
-            resolve(locale?.substring(3, 5).toLowerCase() ?? 'en');
+            resolve(locale?.substring(3, 5).toLowerCase() || 'en');
         });
     });
 };

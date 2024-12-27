@@ -2,7 +2,7 @@
 	import { CardSwiper, type SwipeEventData } from '$lib/components/CardSwiper';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-    import { questions } from '$lib/questions';
+    import { questions, type Question } from '$lib/questions';
     import '$lib/Shuffle';
     import '$lib/Spintax';
     import { page } from '$app/stores';
@@ -13,7 +13,7 @@
     import BottomSheet from '$lib/components/BottomSheet.svelte';
 
     const mode = $page.params.mode as string;
-    let filteredQuestions;
+    let filteredQuestions: Question[] = [];
 	let players: any[] = [];
     let Sentry: any;
     let ended = false;
@@ -27,7 +27,6 @@
         if (!players || players.length == 0) goto('/select-mode');
         locale = await getLocale();
         filteredQuestions = modes[mode].pickCards(questions, locale);
-        console.log(filteredQuestions);
         Sentry = await import('@sentry/capacitor');
 	});
 
@@ -35,7 +34,6 @@
 	let thresholdPassed = 0;
 
 	function onSwipe(cardInfo: SwipeEventData) {
-		console.log('swiped', cardInfo?.direction, 'on card', cardInfo?.data?.question);
         if (cardInfo?.direction == 'left') {
             //Sentry?.captureMessage('Disliked a card: ' + cardInfo?.data?.rawQuestion);
             window.umami?.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
@@ -78,8 +76,7 @@
 		};
 	}
 </script>
-
-{#if filteredQuestions}
+{#if filteredQuestions && filteredQuestions.length > 0}
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
             <div transition:fade={{ duration: 200 }} class="relative flex md:flex-row h-full w-full max-w-xl flex-col gap-2">
