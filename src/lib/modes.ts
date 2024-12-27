@@ -153,7 +153,6 @@ function appendEventQuestions(questions: Question[], eventQuestion: Question): v
     const eventPos = Math.floor(questions.length / 4);
     const eventEndPos = Math.min(questions.length - eventPos, eventPos + 12);
 
-    console.log(eventQuestion);
     questions.splice(eventPos, 0, eventQuestion);
     if (eventQuestion.end) {
         questions.splice(eventEndPos, 0, {
