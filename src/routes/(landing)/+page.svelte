@@ -30,7 +30,7 @@
                 <!-- <img src="./dist/static/playstore.svg" class="h-32 py-6" alt=""> -->
                 
                 <div class="flex flex-wrap justify-center gap-3">
-                    <a href="https://play.google.com/apps/testing/net.servitimo.tragos_locos.twa">
+                    <a href="/join-beta-test">
                         <img src={playstoreBadge} class="h-20" alt="">
                     </a>
                     <button on:click={() => (isSheetOpen = true)}>
