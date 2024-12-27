@@ -13,7 +13,7 @@
     import BottomSheet from '$lib/components/BottomSheet.svelte';
 
     const mode = $page.params.mode as string;
-    const filteredQuestions = modes[mode].pickCards(questions);
+    let filteredQuestions;
 	let players: any[] = [];
     let Sentry: any;
     let ended = false;
@@ -26,6 +26,8 @@
         players = JSON.parse(sessionStorage.getItem('players') || '[]');
         if (!players || players.length == 0) goto('/select-mode');
         locale = await getLocale();
+        filteredQuestions = modes[mode].pickCards(questions, locale);
+        console.log(filteredQuestions);
         Sentry = await import('@sentry/capacitor');
 	});
 
@@ -67,16 +69,17 @@
 		const shuffledPlayers = players.shuffle();
         const player1 = shuffledPlayers[0];
         const player2 = shuffledPlayers[1];
-        const shots: number = weightedRandom();
+        const shots1: number = weightedRandom();
+        const shots2: number = weightedRandom();
 		return {
-			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots.toString()).spintax(),
+			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots1.toString()).replace('{shots2}', shots2.toString()).spintax(),
 			rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales)[0],
             index: filteredQuestions[index].index,
 		};
 	}
 </script>
 
-{#if players.length > 0 && Sentry}
+{#if filteredQuestions}
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
             <div transition:fade={{ duration: 200 }} class="relative flex md:flex-row h-full w-full max-w-xl flex-col gap-2">

@@ -1,11 +1,16 @@
 {
     "add_some_players": "Let's add some players!",
     "select_play_mode": "Let's select a mode to play!",
+    "adjust_settings": "What are we going to adjust?",
     "player_name": "Player name",
     "modes": {
         "preparty": {
             "title": "PreParty",
             "description": "Best for animate the party. Light fun for any group."
+        },
+        "crazy": {
+            "title": "Tragos Locos",
+            "description": "Take your party to the next level. The most daring questions. Only for the brave."
         },
         "best-friends": {
             "title": "Best Friends",

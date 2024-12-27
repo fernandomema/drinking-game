@@ -13,6 +13,7 @@
     let players: any[] = [];
 
     onMount(async () => {
+        players = JSON.parse(sessionStorage.getItem('players') || '[]');
         const AppSys = (await import('@capacitor/app')).App;
         AppSys.addListener('backButton', (data: any) => {
             AppSys.exitApp();

@@ -1,23 +1,28 @@
 {
-    "add_some_players": "Quien quiere jugar?",
-    "select_play_mode": "Como vamos a jugar?",
-    "player_name": "Nombre del/a jugador/a",
-    "modes": {
-        "preparty": {
-            "title": "Prefiesta",
-            "description": "La mejor opción para animar la fiesta. ¡Buenas jugadas para cualquier grupo!"
-        },
-        "best-friends": {
-            "title": "Best Friends",
-            "description": "Mejor para jugar con amigos cercanos. ¡Vamos a conocernos mejor!"
-        },
-        "hot": {
-            "title": "Hot",
-            "description": "Orientado a preguntas más perversas, ¿listo para revelar tus secretos más intimos?"
-        },
-        "christmas": {
-            "title": "Navidad",
-            "description": "Mejor para fiestas de Navidad. ¡Veamos preguntas relaccionadas con la nieve!"
-        }
+  "add_some_players": "Quien quiere jugar?",
+  "select_play_mode": "Como vamos a jugar?",
+  "adjust_settings": "Que vamos a ajustar?",
+  "player_name": "Nombre del/a jugador/a",
+  "modes": {
+    "preparty": {
+      "title": "Prefiesta",
+      "description": "La mejor opción para animar la fiesta. ¡Buenas jugadas para cualquier grupo!"
+    },
+    "crazy": {
+      "title": "Tragos Locos",
+      "description": "Lleva tu fiesta al siguiente nivel. Las preguntas más atrevidas. Solo para los valientes."
+    },
+    "best-friends": {
+      "title": "Best Friends",
+      "description": "Mejor para jugar con amigos cercanos. ¡Vamos a conocernos mejor!"
+    },
+    "hot": {
+      "title": "Hot",
+      "description": "Orientado a preguntas más perversas, ¿listo para revelar tus secretos más intimos?"
+    },
+    "christmas": {
+      "title": "Navidad",
+      "description": "Mejor para fiestas de Navidad. ¡Veamos preguntas relaccionadas con la nieve!"
     }
+  }
 }

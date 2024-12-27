@@ -1,6 +1,11 @@
+import { crazyQuestions } from "./crazyQuestions";
+import { hotQuestions } from "./hotQuestions";
+
+export type Tag = 'preparty' | '+18' | '+18-light' | 'challenge' | 'groupChallenge' | 'punishment' | 'groupPunishment' | 'reward' | 'drinkIf' | 'vote' | 'truth' | 'event' | 'christmas' | 'crazy';
+
 export type Question = {
     index?: number;
-    tags: ('preparty' | '+18' | '+18-light' | 'challenge' | 'groupChallenge' | 'punishment' | 'groupPunishment' | 'reward' | 'drinkIf' | 'vote' | 'truth' | 'event' | 'christmas')[];
+    tags: Tag[];
     next?: {
         locales: {
             [key: string]: string;
@@ -4719,7 +4724,7 @@ export const questions: Question[] = [{
         es: 'A cada turno, bebe en tragos la cantidad de puntos que te falten en tu carnet de conducir, {player1} empiezas.',
     },
     tags: ['preparty'],
-}];
+}, ...crazyQuestions, ...hotQuestions];
 
 /*
 

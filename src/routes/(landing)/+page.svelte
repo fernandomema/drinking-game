@@ -7,6 +7,7 @@
     import { questions } from '$lib/questions';
     import AddToHomeScreenBottomSheet from '$lib/components/BottomSheets/AddToHomeScreenBottomSheet.svelte';
     import QuestionsCounters from '$lib/components/landingBlocks/QuestionsCounters.svelte';
+    import Steps from '$lib/components/landingBlocks/Steps.svelte';
     
     let isSheetOpen = false;
 </script>
@@ -85,6 +86,8 @@
         </div>
 
     </main>
+
+    <Steps />
 
     <QuestionsCounters />
     

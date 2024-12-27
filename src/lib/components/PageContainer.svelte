@@ -3,6 +3,6 @@
 
 </script>
 
-<div transition:fade {...$$restProps} class="h-dvh max-h-screen min-h-dvh w-full bg-[#794fea] font-[Fredoka] font-bold text-white {$$props.class}" > 
+<div {...$$restProps} class="h-dvh max-h-screen min-h-dvh w-full bg-[#794fea] custom-bg font-[Fredoka] font-bold text-white {$$props.class}" > 
     <slot />
 </div>

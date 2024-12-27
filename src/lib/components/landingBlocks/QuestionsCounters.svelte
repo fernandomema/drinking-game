@@ -5,8 +5,8 @@
         name: "Pre-Party",
         count: questions.filter(q => q.tags.includes('preparty')).length,
     }, {
-        name: "BestFriends",
-        count: questions.filter(q => q.tags.includes('+18-light')).length,
+        name: "Tragos Locos",
+        count: questions.filter(q => q.tags.includes('crazy')).length,
     }, {
         name: "18+",
         count: questions.filter(q => q.tags.includes('+18')).length,
