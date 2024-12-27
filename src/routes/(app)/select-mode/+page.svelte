@@ -71,7 +71,7 @@
         {$_('select_play_mode')}
     </div>
     {#if titleStopedAnimating}
-        <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px]">
+        <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px] max-w-lg">
             {#each  Object.entries(modes) as [modeKey, mode], index}
                 <button 
                     in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: index * 250 }} 

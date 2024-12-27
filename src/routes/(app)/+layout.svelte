@@ -23,7 +23,7 @@
 </script>
 
 {#key data.url}
-	<div class="h-dvh w-full bg-[#794fea]">
+	<div class="h-safe-screen w-full bg-[#794fea]">
 		<div
 			in:fade={{ duration: 300, delay: 300 }}
 			out:fade={{ duration: 300 }}

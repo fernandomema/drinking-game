@@ -32,14 +32,16 @@
         }
     };
 </script>
-<PageContainer class="flex flex-col items-center justify-center pb-5">
+<PageContainer class="flex flex-col items-center justify-end">
     <div 
         class="{titleCentered ? '-translate-y-1/2 top-1/2' : 'translate-y-0 top-0'} h-fit-content absolute flex w-screen animate-fade-in items-center justify-center text-center font-[Fredoka] text-6xl font-bold text-white transition-all duration-700"
     >
         {$_('add_some_players')}
     </div>
     {#if titleStopedAnimating}
-        <PlayerList bind:players={players} bind:inputToFocus={inputElement} />
-        <AddPlayerInput bind:players={players} on:play={play} bind:input={inputElement} />
+        <div class="max-w-lg flex flex-col items-center justify-center w-full pb-safe">
+            <PlayerList bind:players={players} bind:inputToFocus={inputElement} />
+            <AddPlayerInput bind:players={players} on:play={play} bind:input={inputElement} />
+        </div>
     {/if}
 </PageContainer>

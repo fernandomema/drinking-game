@@ -42,7 +42,7 @@
         {$_('adjust_settings')}
     </div>
     {#if titleStopedAnimating}
-        <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px] animate-fade-in font-semibold">
+        <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px] animate-fade-in font-semibold max-w-lg">
             <button on:click={() => modals.suggestQuestion = true} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
                 <div class="flex w-full flex-col justify-center text-left">
                     <div class="text-3xl">Suggest new questions</div>

@@ -67,10 +67,12 @@
 		const shuffledPlayers = players.shuffle();
         const player1 = shuffledPlayers[0];
         const player2 = shuffledPlayers[1];
+        const player3 = shuffledPlayers[2];
+        const player4 = shuffledPlayers[3];
         const shots1: number = weightedRandom();
         const shots2: number = weightedRandom();
 		return {
-			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2.name).replace('{shots}', shots1.toString()).replace('{shots2}', shots2.toString()).spintax(),
+			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2?.name).replace('{player3}', player3?.name).replace('{player4}', player4?.name).replace('{shots}', shots1.toString()).replace('{shots2}', shots2.toString()).spintax(),
 			rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales)[0],
             index: filteredQuestions[index].index,
 		};
