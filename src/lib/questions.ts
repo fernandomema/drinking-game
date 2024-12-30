@@ -1,11 +1,12 @@
 import { crazyQuestions } from "./crazyQuestions";
 import { hotQuestions } from "./hotQuestions";
+import { TeamQuestions } from "./TeamQuestions";
 
-export type Tag = 'preparty' | '+18' | '+18-light' | 'challenge' | 'groupChallenge' | 'punishment' | 'groupPunishment' | 'reward' | 'drinkIf' | 'vote' | 'truth' | 'event' | 'christmas' | 'crazy';
+export type Tag = 'preparty' | '+18' | '+18-light' | 'challenge' | 'groupChallenge' | 'punishment' | 'groupPunishment' | 'reward' | 'drinkIf' | 'vote' | 'truth' | 'event' | 'christmas' | 'crazy' | 'teams';
 
 export type Question = {
     index?: number;
-    tags: Tag[];
+    tags?: Tag[];
     next?: {
         locales: {
             [key: string]: string;
@@ -213,7 +214,7 @@ export const questions: Question[] = [{
 }, {
     locales: {
         en: "{player1} repeats everything {player2} says until a new order. If you forget, take {shots}",
-        es: '{player1} repite todo lo que diga {jugador2} hasta nueva orden. Si te olvidas tomas {shots}',
+        es: '{player1} repite todo lo que diga {player2} hasta nueva orden. Si te olvidas tomas {shots}',
     },
     tags: ['event', 'preparty'],
     end: {
@@ -339,7 +340,7 @@ export const questions: Question[] = [{
         en: "{player1}, if you smoke, take a whole cigarette to the trash or take {shots}. If you don't, you can deal them",
         es: '{player1}, si fumas tira un cigarrillo entero a la basura o recibe {shots}. Si no, puedes repartirlos',
     },
-    tags: ['event', 'preparty'],
+    tags: ['preparty'],
 }, {
     locales: {
         en: "{player1}, show us your last photo on the gallery or take {shots}.",
@@ -421,6 +422,12 @@ export const questions: Question[] = [{
     locales: {
         es: '{player1}, eres el grinch, todo el mundo tiene que odiarte hasta nueva orden',
         en: '{player1}, you are the grinch, everyone has to hate you until a new order',
+    },
+    end: {
+        locales: {
+            es: '{player1}, ya no eres el grinch',
+            en: '{player1}, you are no longer the grinch',
+        },
     },
     tags: ['christmas', 'event'],
 }, {
@@ -814,8 +821,8 @@ export const questions: Question[] = [{
     tags: ['preparty', '+18-light'],
 }, {
     locales: {
-        en: "{player1}, guess {player2}'s (favorite color|birthday month|favorite season). If you're wrong, drink {shots} shots. If you're right, {player2} drinks {shots} shots",
-        es: '{player1}, adivina el (color favorito|mes de cumpleaños|estación favorita) de {player2}. Si fallas, bebe {shots} shots. Si aciertas, {player2} bebe {shots} shots',
+        en: "{player1}, guess {player2}'s (favorite color|birthday month|favorite season). If you're wrong, drink {shots} shots. If you're right, {player2} drinks {shots2} shots",
+        es: '{player1}, adivina el (color favorito|mes de cumpleaños|estación favorita) de {player2}. Si fallas, bebe {shots} shots. Si aciertas, {player2} bebe {shots2} shots',
     },
     tags: ['+18-light', 'preparty'],
 }, {
@@ -922,14 +929,8 @@ export const questions: Question[] = [{
     tags: ['preparty'],
 }, {
     locales: {
-        es: '{player1} hace beber {shots} tragos a {player2} o {shots} tragos a {player3}',
-        en: '{player1} deals {shots} shots to {player2} or {shots} shots to {player3}',
-    },
-    tags: ['preparty'],
-}, {
-    locales: {
-        es: '{player1} reparte {shots} tragos sino {player2} reparte {shots} tragos',
-        en: '{player1} deals {shots} shots or {player2} deals {shots} shots',
+        es: '{player1} hace beber {shots} tragos a {player2} o {shots2} tragos a {player3}',
+        en: '{player1} deals {shots} shots to {player2} or {shots2} shots to {player3}',
     },
     tags: ['preparty'],
 }, {
@@ -1666,8 +1667,8 @@ export const questions: Question[] = [{
     tags: ['preparty'],
 }, {
     locales: {
-        es: 'El Anfitrión de la fiesta reparte {shots} tragos, si nadie es anfitrión, {player1} repartes {shots} tragos',
-        en: 'The Host of the party deals {shots} shots, if no one is the host, {player1} deals {shots} shots',
+        es: 'El Anfitrión de la fiesta reparte {shots} tragos, si nadie es anfitrión, {player1} repartes {shots2} tragos',
+        en: 'The Host of the party deals {shots} shots, if no one is the host, {player1} deals {shots2} shots',
     },
     tags: ['preparty'],
 }, {
@@ -1864,8 +1865,8 @@ export const questions: Question[] = [{
     tags: ['preparty'],
 }, {
     locales: {
-        es: '{player1}, si has bebido más que {shots} copas puedes repartir {shots} tragos.',
-        en: '{player1}, if you have drunk more than {shots} glasses you can deal {shots} shots.',
+        es: '{player1}, si has bebido más que {player2}, puedes repartir {shots} tragos.',
+        en: '{player1}, if you have drunk more than {player2}, you can deal {shots} shots.',
     },
     tags: ['preparty'],
 }, {
@@ -2176,7 +2177,7 @@ export const questions: Question[] = [{
     tags: ['preparty'],
 }, {
     locales: {
-        es: '¡{player1} si tu edad es un número par bebe {shots} tragos, {shots} tragos si es impar!',
+        es: '¡{player1} si tu edad es un número par bebe {shots} tragos, {shots2} tragos si es impar!',
     },
     tags: ['preparty'],
 }, {
@@ -3018,32 +3019,32 @@ export const questions: Question[] = [{
     locales: {
         es: 'Los que hayan tenido suerte ligando en la discoteca reparten {shots} tragos.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si no estás en contra de pagar por sexo.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si nunca has donado sangre (¡Maldito bastardo!).',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si nunca has visto ningún capítulo de South Park.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe si tienes más de 2 títulos superiores.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Las mujeres con pintalabios rojo beben {shots} tragos.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si tu nombre Facebook no es el verdadero.',
@@ -3088,7 +3089,7 @@ export const questions: Question[] = [{
     locales: {
         es: 'Los jugadores que vivan solos beben {shots} tragos.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Las tres personas más jóvenes eligen un jugador que deberá beber {shots} tragos.',
@@ -3103,32 +3104,32 @@ export const questions: Question[] = [{
     locales: {
         es: 'Los amantes del vino beben {shots} tragos.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si miras a menudo "Los Kardashians".',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Si estas tomando whisky estás de suerte, bebes {shots} tragos.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si tus calcetines son blancos.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has estado en el paro.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Los que no son vegetarianos beben {shots} tragos.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si aún no has descargado Tragos Locos.',
@@ -3148,77 +3149,77 @@ export const questions: Question[] = [{
     locales: {
         es: 'Bebe {shots} tragos si has coqueteado con la pareja de un(a) amigo(a).',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has ido a un bar de strip-tease.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has intentado escaparte de un control policial.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has besado a alguien de tu mismo sexo.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has besado con lengua a alguien del mismo sexo.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has falsificado alguna firma.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si puedes chuparte el dedo gordo de tu pie.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si slguna vez te has inventado alguna excusa para no ir al trabajo.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has tenido sexo en las últimas  48h.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si crees que alguien en esta fiesta es muy soso o poco gracioso.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si piensas que hay alguien en esta fiesta que es súper imbécil.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si no te gusta tu suegra.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si tienes mal beber.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Reparte {shots} tragos si has tenido sexo más de dos veces en los últimos 7 días.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si entre tus amigos tienes un o una ex.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: '{player1}, bebe 3 vasos seguidos o puntúa Tragos Locos con 5 estrellas en el store ;)',
@@ -3228,7 +3229,7 @@ export const questions: Question[] = [{
     locales: {
         es: 'Bebe {shots} tragos si piensas que TODOS los otros jugadores son geniales.',
     },
-    tags: ['preparty'],
+    tags: ['preparty', 'drinkIf'],
 }, {
     locales: {
         es: 'Reparte {shots} tragos si te comes las uñas.',
@@ -4724,7 +4725,7 @@ export const questions: Question[] = [{
         es: 'A cada turno, bebe en tragos la cantidad de puntos que te falten en tu carnet de conducir, {player1} empiezas.',
     },
     tags: ['preparty'],
-}, ...crazyQuestions, ...hotQuestions];
+}, ...crazyQuestions, ...hotQuestions, ...TeamQuestions];
 
 /*
 

@@ -30,5 +30,9 @@ export default {
     }
   },
 
+  safelist: [
+    "underline", "decoration-pink-500", "decoration-blue-500"
+  ],
+
   plugins: [animations, require("tailwindcss-safe-area")]
 };

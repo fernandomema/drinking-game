@@ -8,8 +8,11 @@
         name: "Tragos Locos",
         count: questions.filter(q => q.tags.includes('crazy')).length,
     }, {
-        name: "18+",
+        name: "Hot",
         count: questions.filter(q => q.tags.includes('+18')).length,
+    }, {
+        name: "Teams",
+        count: questions.filter(q => q.tags.includes('teams')).length,
     }, {
         name: "Christmas",
         count: questions.filter(q => q.tags.includes('christmas')).length,

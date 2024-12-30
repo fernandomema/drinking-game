@@ -26,12 +26,14 @@
         players = JSON.parse(sessionStorage.getItem('players') || '[]');
         if (!players || players.length == 0) goto('/select-mode');
         locale = await getLocale();
-        filteredQuestions = modes[mode].pickCards(questions, locale);
+        filteredQuestions = modes[mode].pickCards(questions, locale, players);
         Sentry = await import('@sentry/capacitor');
 	});
 
 	let swipe: (direction?: 'left' | 'right') => void;
+    let undoSwipe: () => void;
 	let thresholdPassed = 0;
+    let lastStatus;
 
 	function onSwipe(cardInfo: SwipeEventData) {
         if (cardInfo?.direction == 'left') {
@@ -63,18 +65,11 @@
     }
 
 	function cardData(index: number) {
-        if (index >= filteredQuestions.length) return null;
-		const shuffledPlayers = players.shuffle();
-        const player1 = shuffledPlayers[0];
-        const player2 = shuffledPlayers[1];
-        const player3 = shuffledPlayers[2];
-        const player4 = shuffledPlayers[3];
-        const shots1: number = weightedRandom();
-        const shots2: number = weightedRandom();
 		return {
-			question: filteredQuestions[index]?.locales[locale]?.replace('{player1}', player1.name).replace('{player2}', player2?.name).replace('{player3}', player3?.name).replace('{player4}', player4?.name).replace('{shots}', shots1.toString()).replace('{shots2}', shots2.toString()).spintax(),
+			question: filteredQuestions[index]?.locales[locale],
 			rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales)[0],
             index: filteredQuestions[index].index,
+            tags: filteredQuestions[index].tags,
 		};
 	}
 </script>
@@ -82,7 +77,7 @@
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
             <div transition:fade={{ duration: 200 }} class="relative flex md:flex-row h-full w-full max-w-xl flex-col gap-2">
-                <CardSwiper bind:swipe bind:thresholdPassed {cardData} {onSwipe} on:end={() => ended = true} />
+                <CardSwiper bind:swipe bind:undoSwipe bind:thresholdPassed bind:lastStatus {cardData} {onSwipe} on:end={() => ended = true} />
                 <div class="flex md:flex-col gap-2">
 
                     <button
@@ -94,9 +89,9 @@
 
                     <button
                         class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
-                        on:click={() => showModal = true}
+                        on:click={() => undoSwipe()}
                     >
-                        💬 
+                        {lastStatus ? '⏪' : '🔒'}
                     </button>
 
                     <button
@@ -105,6 +100,14 @@
                     >
                         ⏩
                     </button>
+
+                    <button
+                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
+                        on:click={() => showModal = true}
+                    >
+                        💬 
+                    </button>
+
                     
                     <!-- <button
                         class="bottom-1 right-1 z-10 rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"

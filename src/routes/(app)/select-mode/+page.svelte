@@ -29,6 +29,11 @@
         mode: 'hot',
         icon: "/plus-18-light.png",
         description: $_('modes.hot.description'),
+    },{
+        text: $_('modes.teams.title'),
+        mode: 'teams',
+        icon: "/teams.png",
+        description: $_('modes.teams.description'),
     }, {
         text: $_('modes.christmas.title'),
         mode: 'christmas',

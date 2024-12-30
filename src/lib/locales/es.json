@@ -20,6 +20,10 @@
       "title": "Hot",
       "description": "Orientado a preguntas más perversas, ¿listo para revelar tus secretos más intimos?"
     },
+    "teams": {
+      "title": "Equipos",
+      "description": "¿Demasiados jugadores? ¡Hagamos equipos y juguemos! La mejor manera de jugar con mucha gente."
+    },
     "christmas": {
       "title": "Navidad",
       "description": "Mejor para fiestas de Navidad. ¡Veamos preguntas relaccionadas con la nieve!"
