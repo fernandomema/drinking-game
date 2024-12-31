@@ -65,9 +65,10 @@
     }
 
 	function cardData(index: number) {
+        if (!filteredQuestions[index]) return null;
 		return {
 			question: filteredQuestions[index]?.locales[locale],
-			rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales)[0],
+			rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales || [])[0],
             index: filteredQuestions[index].index,
             tags: filteredQuestions[index].tags,
 		};

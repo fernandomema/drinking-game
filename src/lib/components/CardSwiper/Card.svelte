@@ -6,7 +6,7 @@
 
 	export let question: string = '';
 	export let backgroundColor: string = 'white';
-	export let tags: string[] = [];
+	export let tags: string[] | undefined = [];
 	export let main = false;
 
 	let background = '';
@@ -15,8 +15,8 @@
 
 	$: {
 		background = '';
-		if (tags.includes('christmas')) background = 'christmas';
-		if (tags.includes('event') && main) {
+		if (tags?.includes('christmas')) background = 'christmas';
+		if (tags?.includes('event') && main) {
 			background = 'skulls';
 			animateTada = true;
 			setTimeout(() => {

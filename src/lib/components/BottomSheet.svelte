@@ -33,13 +33,14 @@
           <p class="text-center">Your content here</p>
         </slot>
     
-        <!-- Close button -->
-        <button
-          class="mt-4 w-full py-2 bg-purple-500 text-white rounded"
-          on:click={closeSheet}
-        >
-          {$_('close')}
-        </button>
+        <slot name="footer" closeSheet={closeSheet}>
+          <button
+            class="mt-4 w-full py-2 bg-purple-500 text-white rounded"
+            on:click={closeSheet}
+          >
+            {$_('close')}
+          </button>
+        </slot>
       </div>
   </div>
 {/if}

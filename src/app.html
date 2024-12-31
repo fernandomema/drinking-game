@@ -13,6 +13,9 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover" class="overflow-auto">
+		<div id="applixir_vanishing_div" hidden>
+			<iframe id="applixir_parent" ></iframe>
+	   	</div>
 		<div style="display: contents">%sveltekit.body%</div>
 
 		<!-- <script>
@@ -43,5 +46,6 @@
 				height: calc(100% + (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)));
 			}
 		</style>
+		<script type="text/javascript" src="https://cdn.applixir.com/applixir.sdk4.0m.js" ></script>   
 	</body>
 </html>

@@ -3,6 +3,7 @@
 	import { DragGesture, type FullGestureState } from '@use-gesture/vanilla';
 	import type { CardData, Direction, SwipeEventData } from '.';
 	import Card from './Card.svelte';
+    import { invokeVideoAd } from '$lib/Applixir';
 
 	let container: HTMLElement;
 	let eventDispatcher = createEventDispatcher();
@@ -94,6 +95,7 @@
 			el.style.transform = '';
 			if (card1Data === null && card2Data === null) {
 				eventDispatcher('end');
+				invokeVideoAd({});
 			}
 		}, 350);
 	};

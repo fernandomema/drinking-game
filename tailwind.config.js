@@ -1,5 +1,5 @@
 import animations from '@midudev/tailwind-animations'
-import { fade } from 'svelte/transition';
+const { addDynamicIconSelectors } = require("@iconify/tailwind");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -34,5 +34,9 @@ export default {
     "underline", "decoration-pink-500", "decoration-blue-500"
   ],
 
-  plugins: [animations, require("tailwindcss-safe-area")]
+  plugins: [
+    animations, 
+    require("tailwindcss-safe-area"),
+    addDynamicIconSelectors(),
+  ]
 };
