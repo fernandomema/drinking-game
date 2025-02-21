@@ -22,6 +22,10 @@
 	});
 </script>
 
+<svelte:head>
+	<meta name="robots" content="noindex, nofollow" />
+</svelte:head>
+
 {#key data.url}
 	<div class="h-safe-screen w-full bg-[#794fea]">
 		<div

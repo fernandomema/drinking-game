@@ -33,6 +33,9 @@ jobs:
           PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.PUBLIC_UMAMI_WEBSITE_ID }}
         run: npm run build:app
 
+      - name: postbuild
+        run: npm run postbuild
+
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
