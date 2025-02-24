@@ -28,5 +28,44 @@
             "title": "Christmas",
             "description": "The christmas is here! Let's have fun with chsitmas themed questions."
         }
+    },
+    "blog": {
+        "title": "Blog",
+        "description": "Blog to show fun things about Tragos Locos app and more.",
+        "latest_posts": "Latest posts",
+        "read_more": "Read more"
+    },
+    "landing": {
+        "title": "Tragos Locos",
+        "slogan": "Liven up your party, unleash the fun!",
+        "description": "Tired of the same old party games? Looking to spice up your social gatherings? Look no further! Tragos locos is designed to take your parties to new heights.",
+        "question_counts": {
+            "title": "We have a lot of questions",
+            "description": "So you can play again and again with new and fun questions."
+        },
+        "steeps": {
+            "title": "How it works?",
+            "description": "Follow these simple steps to start playing and take your social gatherings to the next level.",
+            "step_1": {
+                "title": "Download the app",
+                "description": "Get it from your favorite store or as a PWA."
+            },
+            "step_2": {
+                "title": "Open it",
+                "description": "Start the app on your device."
+            },
+            "step_3": {
+                "title": "Add the player names",
+                "description": "All set to have fun!"
+            },
+            "step_4": {
+                "title": "Select the game mode",
+                "description": "Choose between the different modes available."
+            },
+            "step_5": {
+                "title": "Play and have fun!",
+                "description": "Enjoy the best game experience."
+            }
+        }
     }
 }

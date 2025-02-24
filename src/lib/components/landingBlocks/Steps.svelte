@@ -1,28 +1,30 @@
 <script>
+    import { _ } from "$lib/locales";
+
     const steps = [
         {
-            title: "Descarga la app",
-            description: "Consíguela en tu tienda favorita o como PWA.",
+            title: $_("landing.steeps.step_1.title"),
+            description: $_("landing.steeps.step_1.description"),
             icon: "📲",
         },
         {
-            title: "Ábrela",
-            description: "Inicia la app en tu dispositivo.",
+            title: $_("landing.steeps.step_2.title"),
+            description: $_("landing.steeps.step_2.description"),
             icon: "📂",
         },
         {
-            title: "Agrega los nombres de los jugadores",
-            description: "¡Todos listos para la diversión!",
+            title: $_("landing.steeps.step_3.title"),
+            description: $_("landing.steeps.step_3.description"),
             icon: "📝",
         },
         {
-            title: "Selecciona el modo de juego",
-            description: "Elige entre los diferentes modos disponibles.",
+            title: $_("landing.steeps.step_4.title"),
+            description: $_("landing.steeps.step_4.description"),
             icon: "🎮",
         },
         {
-            title: "¡Juega y diviértete!",
-            description: "Disfruta de la mejor experiencia de juego.",
+            title: $_("landing.steeps.step_5.title"),
+            description: $_("landing.steeps.step_5.description"),
             icon: "🎉",
         },
     ];
@@ -30,10 +32,10 @@
 
 <div class="bg-white py-16 px-6">
     <h2 class="text-center text-3xl font-extrabold text-gray-800 sm:text-4xl">
-        Cómo Funciona
+        {$_("landing.steeps.title")}
     </h2>
     <p class="mt-4 text-center text-lg text-gray-600">
-        Sigue estos sencillos pasos para empezar a jugar y llevar tus reuniones al siguiente nivel.
+        {$_("landing.steeps.description")}
     </p>
 
     <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

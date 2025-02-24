@@ -1,3 +1,7 @@
+<script>
+    import Footer from "$lib/components/Footer.svelte";
+
+</script>
 <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
     <header class="flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10">
       <a class="break-words" aria-label="Tragos locos blog" href="/">
@@ -102,3 +106,5 @@
       </div>
     </footer>
   </section>
+
+  <Footer></Footer>

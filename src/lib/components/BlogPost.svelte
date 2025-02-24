@@ -4,7 +4,8 @@
     export let title: string;
     export let seoTitle: string;
     export let lang;
-    export let date: date;
+    export let date: Date;
+    export let modifiedDate: Date = date;
     export let description: string;
     export let image: string;
     export let tags: string[];
@@ -20,14 +21,14 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": title,
-        "datePublished": "2023-08-05T00:00:00.000Z",
-        "dateModified": "2023-08-05T00:00:00.000Z",
+        "datePublished": date.toISOString(),
+        "dateModified": modifiedDate.toISOString(),
         "description": description,
-        "image": "/static/images/twitter-card.png",
+        "image": image,
         "url": url,
         "author": [{
             "@type": "Person",
-            "name": "Tails Azimuth"
+            "name": "Fernando Merino"
         }]
     }
 
@@ -122,6 +123,7 @@
             {/if}   
           <div class="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
             <div class="prose dark:prose-invert max-w-none pt-10 pb-8">
+              <img src={image} alt={title} class="w-full rounded-lg shadow-md mb-4">
               <slot></slot>
             </div>
             <div class="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">

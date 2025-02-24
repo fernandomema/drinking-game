@@ -49,6 +49,8 @@
         <script>eruda.init();</script>
     {/if}
 
+    <title>Tragos Locos</title>
+
 </svelte:head>
   
 <slot />

@@ -1,5 +1,15 @@
 <script lang="ts">
+    import { _ } from "$lib/locales";
+
     let posts = [{
+        title: "Las Mejores Apps y Juegos para una Noche de Fiesta y Bebidas 🍹🎉",
+        seoTitle: "mejores-apps-y-juegos-para-noche-de-fiesta-y-bebidas",
+        description: "¿Buscas las mejores apps y juegos para animar tu fiesta? Aquí te traemos una lista de las opciones más divertidas para que nadie se aburra. Desde retos alocados hasta preguntas incómodas, estas apps harán que tu noche sea épica. ¡Vamos allá! 🚀",
+        date: "2025-02-24",
+        url: "/blog/es/mejores-apps-y-juegos-para-noche-de-fiesta-y-bebidas",
+        image: "/blog/best-apps-and-games-for-a-night-of-drinking-and-partying/cover.webp",
+        tags: ["informative"],
+    },{
         title: "Que es Tragos Locos?",
         description: "Descubre la aplicación Tragos Locos. ¿Qué es? ¿Cómo funciona? ¿Y por qué deberías usarla? Publicado para todos los que estén interesados en aprender más sobre la aplicación Tragos Locos.",
         date: "2025-02-21",
@@ -26,8 +36,12 @@
 
 <div class="divide-y divide-gray-200 dark:divide-gray-700">
   <div class="space-y-2 pt-6 pb-8 md:space-y-5">
-    <h1 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">Latest</h1>
-    <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">Blog para mostrar cosas divertidas sobre la aplicación Tragos Locos y más</p>
+    <h1 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+        {$_('blog.latest_posts')}
+    </h1>
+    <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
+        {$_('blog.description')}
+    </p>
   </div>
   <ul class="divide-y divide-gray-200 dark:divide-gray-700">
     {#each posts as post}
@@ -55,7 +69,9 @@
                             <div class="prose max-w-none text-gray-500 dark:text-gray-400">{post.description}</div>
                         </div>
                         <div class="text-base leading-6 font-medium">
-                            <a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" aria-label="Read more: &quot;{post.title}&quot;" href={post.url}>Read more →</a>
+                            <a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" aria-label="Read more: &quot;{post.title}&quot;" href={post.url}>
+                                {$_('blog.read_more')} →
+                            </a>
                         </div>
                     </div>
                 </div>
