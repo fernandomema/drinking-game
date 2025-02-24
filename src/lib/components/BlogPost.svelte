@@ -68,6 +68,8 @@
     <meta name="language" content={lang} />
     <meta name="lang:alternate" content={lang} />
 
+    <title>{title} | Tragos Locos</title>
+
 </svelte:head>
 
 <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
@@ -127,7 +129,7 @@
               <slot></slot>
             </div>
             <div class="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-              <a class="break-words" target="_blank" rel="noopener noreferrer" href="https://github.com/fernandomema/drinking-game/blob/master/src/routes/(blog)/blog/{seoTitle}/%2Bpage.svelte">View on GitHub</a>
+              <a class="break-words" target="_blank" rel="noopener noreferrer" href="https://github.com/fernandomema/drinking-game/blob/master/src/routes/(blog)/blog/{lang}/{seoTitle}/%2Bpage.svelte">View on GitHub</a>
             </div>
             <div class="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300" id="comment">
                 <div id="disqus_thread"></div>
