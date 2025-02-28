@@ -1,71 +1,76 @@
 {
-    "add_some_players": "Let's add some players!",
-    "select_play_mode": "Let's select a mode to play!",
-    "adjust_settings": "What are we going to adjust?",
-    "player_name": "Player name",
-    "modes": {
-        "preparty": {
-            "title": "PreParty",
-            "description": "Best for animate the party. Light fun for any group."
-        },
-        "crazy": {
-            "title": "Tragos Locos",
-            "description": "Take your party to the next level. The most daring questions. Only for the brave."
-        },
-        "best-friends": {
-            "title": "Best Friends",
-            "description": "Best for playing with close friends. Let's get to know each other better."
-        },
-        "hot": {
-            "title": "Hot",
-            "description": "Oriented towards the most perverse questions, get ready to reveal your most intimate secrets."
-        },
-        "teams": {
-            "title": "Teams",
-            "description": "Too many payers? Let's make teams and play! The best way to play with a lot of people."
-        },
-        "christmas": {
-            "title": "Christmas",
-            "description": "The christmas is here! Let's have fun with chsitmas themed questions."
-        }
+  "add_some_players": "Let's add some players!",
+  "select_play_mode": "Let's select a mode to play!",
+  "adjust_settings": "What are we going to adjust?",
+  "player_name": "Player name",
+  "modes": {
+    "preparty": {
+      "title": "PreParty",
+      "description": "Best for animate the party. Light fun for any group."
     },
-    "blog": {
-        "title": "Blog",
-        "description": "Blog to show fun things about Tragos Locos app and more.",
-        "latest_posts": "Latest posts",
-        "read_more": "Read more"
+    "crazy": {
+      "title": "Tragos Locos",
+      "description": "Take your party to the next level. The most daring questions. Only for the brave."
     },
-    "landing": {
-        "title": "Tragos Locos",
-        "slogan": "Liven up your party, unleash the fun!",
-        "description": "Tired of the same old party games? Looking to spice up your social gatherings? Look no further! Tragos locos is designed to take your parties to new heights.",
-        "question_counts": {
-            "title": "We have a lot of questions",
-            "description": "So you can play again and again with new and fun questions."
-        },
-        "steeps": {
-            "title": "How it works?",
-            "description": "Follow these simple steps to start playing and take your social gatherings to the next level.",
-            "step_1": {
-                "title": "Download the app",
-                "description": "Get it from your favorite store or as a PWA."
-            },
-            "step_2": {
-                "title": "Open it",
-                "description": "Start the app on your device."
-            },
-            "step_3": {
-                "title": "Add the player names",
-                "description": "All set to have fun!"
-            },
-            "step_4": {
-                "title": "Select the game mode",
-                "description": "Choose between the different modes available."
-            },
-            "step_5": {
-                "title": "Play and have fun!",
-                "description": "Enjoy the best game experience."
-            }
-        }
+    "best-friends": {
+      "title": "Best Friends",
+      "description": "Best for playing with close friends. Let's get to know each other better."
+    },
+    "hot": {
+      "title": "Hot",
+      "description": "Oriented towards the most perverse questions, get ready to reveal your most intimate secrets."
+    },
+    "teams": {
+      "title": "Teams",
+      "description": "Too many payers? Let's make teams and play! The best way to play with a lot of people."
+    },
+    "christmas": {
+      "title": "Christmas",
+      "description": "The christmas is here! Let's have fun with chsitmas themed questions."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Blog to show fun things about Tragos Locos app and more.",
+    "latest_posts": "Latest posts",
+    "read_more": "Read more"
+  },
+  "landing": {
+    "title": "Tragos Locos",
+    "slogan": "Liven up your party, unleash the fun!",
+    "description": "Tired of the same old party games? Looking to spice up your social gatherings? Look no further! Tragos locos is designed to take your parties to new heights.",
+    "question_counts": {
+      "title": "We have a lot of questions",
+      "description": "So you can play again and again with new and fun questions."
+    },
+    "steeps": {
+      "title": "How it works?",
+      "description": "Follow these simple steps to start playing and take your social gatherings to the next level.",
+      "step_1": {
+        "title": "Download the app",
+        "description": "Get it from your favorite store or as a PWA."
+      },
+      "step_2": {
+        "title": "Open it",
+        "description": "Start the app on your device."
+      },
+      "step_3": {
+        "title": "Add the player names",
+        "description": "All set to have fun!"
+      },
+      "step_4": {
+        "title": "Select the game mode",
+        "description": "Choose between the different modes available."
+      },
+      "step_5": {
+        "title": "Play and have fun!",
+        "description": "Enjoy the best game experience."
+      }
+    }
+  },
+  "bottomNavbar": {
+    "players": "Players",
+    "modes": "Modes",
+    "settings": "Settings"
+  }
 }

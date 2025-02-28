@@ -10,6 +10,8 @@
     import { modes } from "$lib/modes";
     import BottomSheet from "$lib/components/BottomSheet.svelte";
     import { invokeVideoAd } from "$lib/Applixir";
+    import { OriginChecker } from "$lib/OriginChecker";
+    import { page } from "$app/stores";
 
     let titleCentered = true;
     let titleStopedAnimating = false;
@@ -102,9 +104,11 @@
                     </div>
                 </button>
             {/each}
-            <button class="w-full text-center bg-purple-500" on:click={() => showPremiumModal = true}>
-                Test premium
-            </button>
+            {#if OriginChecker.isDev($page.url.href)}
+                <button class="w-full text-center bg-purple-500" on:click={() => showPremiumModal = true}>
+                    Test premium
+                </button>
+            {/if}
         </div>
     {/if}
 </PageContainer>

@@ -30,43 +30,47 @@
     }
   },
   "blog": {
-        "title": "Blog",
-        "description2": "Blog para mostrar cosas divertidas sobre la aplicación Tragos Locos y más.",
-        "latest_posts": "Ultimas publicaciones",
-        "read_more": "Leer más"
+    "title": "Blog",
+    "description2": "Blog para mostrar cosas divertidas sobre la aplicación Tragos Locos y más.",
+    "latest_posts": "Ultimas publicaciones",
+    "read_more": "Leer más"
   },
   "landing": {
-        "title": "Tragos Locos",
-        "slogan": "Vive la fiesta, desafía la vida!",
-        "description": "Cansado de los mismos juegos de fiesta? ¿Buscas darle sabor a tus reuniones sociales? ¡No busques más! Tragos locos está diseñado para llevar tus fiestas a nuevas alturas.",
-        "question_counts": {
-            "title": "Tenemos un montón de preguntas",
-            "description": "Para que puedas jugar y jugar siempre con nuevas preguntas emocionantes."
-        },
-        "steeps": {
-            "title": "Cómo Funciona",
-            "description": "Sigue estos sencillos pasos para empezar a jugar y llevar tus reuniones al siguiente nivel.",
-            "step_1": {
-                "title": "Descarga la app",
-                "description": "Consíguela en tu tienda favorita o como PWA."
-            },
-            "step_2": {
-                "title": "Ábrela",
-                "description": "Inicia la app en tu dispositivo."
-            },
-            "step_3": {
-                "title": "Agrega los nombres de los jugadores",
-                "description": "¡Todos listos para la diversión!"
-            },
-            "step_4": {
-                "title": "Selecciona el modo de juego",
-                "description": "Elige entre los diferentes modos disponibles."
-            },
-            "step_5": {
-                "title": "¡Juega y diviértete!",
-                "description": "Disfruta de la mejor experiencia de juego."
-            }
-        }
+    "title": "Tragos Locos",
+    "slogan": "Vive la fiesta, desafía la vida!",
+    "description": "Cansado de los mismos juegos de fiesta? ¿Buscas darle sabor a tus reuniones sociales? ¡No busques más! Tragos locos está diseñado para llevar tus fiestas a nuevas alturas.",
+    "question_counts": {
+      "title": "Tenemos un montón de preguntas",
+      "description": "Para que puedas jugar y jugar siempre con nuevas preguntas emocionantes."
+    },
+    "steeps": {
+      "title": "Cómo Funciona",
+      "description": "Sigue estos sencillos pasos para empezar a jugar y llevar tus reuniones al siguiente nivel.",
+      "step_1": {
+        "title": "Descarga la app",
+        "description": "Consíguela en tu tienda favorita o como PWA."
+      },
+      "step_2": {
+        "title": "Ábrela",
+        "description": "Inicia la app en tu dispositivo."
+      },
+      "step_3": {
+        "title": "Agrega los nombres de los jugadores",
+        "description": "¡Todos listos para la diversión!"
+      },
+      "step_4": {
+        "title": "Selecciona el modo de juego",
+        "description": "Elige entre los diferentes modos disponibles."
+      },
+      "step_5": {
+        "title": "¡Juega y diviértete!",
+        "description": "Disfruta de la mejor experiencia de juego."
+      }
     }
-    
+  },
+  "bottomNavbar": {
+    "players": "Jugadores",
+    "modes": "Modos",
+    "settings": "Ajustes"
+  }
 }

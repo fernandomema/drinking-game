@@ -44,6 +44,7 @@
     "@capacitor/app": "^6.0.1",
     "@capacitor/core": "^6.0.0",
     "@capacitor/ios": "^6.0.0",
+    "@capacitor/share": "^6.0.3-dev-2141-20240903T111835.0",
     "@midudev/tailwind-animations": "^0.1.0",
     "@sentry/browser": "8.33.0",
     "@sentry/capacitor": "^1.0.1",

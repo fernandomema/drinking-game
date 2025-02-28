@@ -3,451 +3,541 @@ import { Question } from "./questions";
 export const crazyQuestions: Question[] = [{
     locales: {
         es: '{player1} imita a alguien cagando, sino bebes {shots} tragos',
+        en: '{player1} mimics someone pooping, otherwise drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} enséñanos tus huevos o bebe {shots} tragos',
+        en: '{player1} shows us your balls or drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡La última persona en gritar "pu*ta"", termina su copa!',
+        en: 'The last person to shout "pu*ta" finishes their drink!',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} desafía a {player2} a un pulso, el perdedor bebe {shots} tragos. Si crees que tus brazos no tienen mucha fuerza,  bebe {shots2} tragos',
+        en: '{player1} challenges {player2} to an arm-wrestling match, the loser drinks {shots} shots. If you think your arms are not strong, drink {shots2} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'La última persona en gritar "{player1} cómeme los huevos!"", bebe {shots} tragos',
+        en: 'The last person to shout "{player1} lick my balls!" drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'La primera persona que eructe, reparte {shots} tragos',
+        en: 'The first person to burp, distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'El último en haber perdido la virginidad reparte {shots} tragos',
+        en: 'The last person to lose their virginity distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'El último en haberse masturbado reparte {shots} tragos.',
+        en: 'The last person to have masturbated distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} te tienes que sacar un moco, sino bebes {shots} tragos',
+        en: '{player1} needs to pick a booger, otherwise drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si tienes menos de 2 testículos repartes {shots} tragos',
+        en: '{player1}, if you have less than 2 testicles, distribute {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, muestra tus pelos púbicos o bebe {shots} tragos',
+        en: '{player1}, show your pubic hair or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Si de aquí al final del juego, alguien se tira un pedo sonoro,  la persona podrá repartir 10 tragos.',
+        en: 'If anyone farts loudly before the end of the game, they can distribute 10 shots.',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Duelo entre {player1} y {player2}, el más músculoso bebe {shots} tragos',
+        en: 'Duel between {player1} and {player2}, the more muscular one drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Duelo entre {player1} y {player2}, el último en haber cagado reparte {shots} tragos',
+        en: 'Duel between {player1} and {player2}, the last one to have pooped distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'El último en haber hecho una mamada reparte {shots} tragos',
+        en: 'The last person to perform a blowjob distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si has hecho una mamada,  bebes {shots} tragos',
+        en: '{player1}, if you have given a blowjob, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} lame el suelo o bebe {shots} tragos',
+        en: '{player1} lick the floor or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} y {player2} concurso de abdominales, el perdedor bebe {shots} tragos o renuncien y bebed {shots2} tragos',
+        en: '{player1} and {player2} abs contest, the loser drinks {shots} shots or quits and drinks {shots2} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'El último en haberse masturbado bebe {shots} tragos.',
+        en: 'The last person to have masturbated drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, sacude tu cabeza entre el culo de {player2} o bebe {shots} tragos',
+        en: '{player1}, shake your head between {player2}’s buttocks or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, añade un poco de tu bebida en el vaso de cada jugador.',
+        en: '{player1}, add a bit of your drink to each player’s glass',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todo el mundo añade un poco de su bebida en el vaso de {player1}',
+        en: 'Everyone adds a bit of their drink to {player1}’s glass',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} lame la oreja de {player2} o bebe {shots} tragos',
+        en: '{player1} lick {player2}’s ear or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} y {player2} se tienen que quitar los pantalones.',
+        en: '{player1} and {player2} have to take off their pants',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, termina tu bebida o llénala hasta el borde.',
+        en: '{player1}, finish your drink or fill it to the brim',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, toma las copas de tus vecinos y oblígalos a beber {shots} tragos del vaso de otro jugador.',
+        en: '{player1}, take your neighbors’ glasses and make them drink {shots} shots from another player’s glass',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'La primera persona que diga el año de nacimiento de Jesús reparte {shots} tragos',
+        en: 'The first person to say the year of Jesus’ birth distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} pon un cubito de hielo en tus pantalones o sujetador durante 5 minutos',
+        en: '{player1}, put an ice cube in your pants or bra for 5 minutes',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} pellizca los pezones de {player2} o bebe {shots} tragos',
+        en: '{player1} pinch {player2}’s nipples or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} muestra tu hermoso culo a todo el mundo o termina tu bebida',
+        en: '{player1} show your beautiful butt to everyone or finish your drink',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} bebe {shots} tragos del revés (con las manos en el suelo y las piernas en el aire). {player2} y {player3} te van a ayudar a sostenerte.',
+        en: '{player1} drink {shots} shots upside down (hands on the floor, legs in the air). {player2} and {player3} will help you stay up',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que, con mucho gusto,  se acostarían con el que está a su izquierda,  beben {shots} tragos.',
+        en: 'Everyone who would gladly sleep with the person on their left drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que, con mucho gusto,  se acostarían con el que está a su derecha,  beben {shots} tragos.',
+        en: 'Everyone who would gladly sleep with the person on their right drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que miran su papel higiénico después de cagar, beben {shots} tragos',
+        en: 'Everyone who looks at their toilet paper after pooping drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} si has imaginado a tu primo/a masturbándose, bebe {shots} tragos.',
+        en: '{player1} if you have imagined your cousin masturbating, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se han acostado con alguien hace menos que una semana, beben {shots} tragos',
+        en: 'Everyone who has slept with someone less than a week ago drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si has jugado a los novios con un primo/a,  bebes {shots} tragos',
+        en: '{player1}, if you have played boyfriend/girlfriend with a cousin, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si has limpiado semen con un calcetín,  bebes {shots} tragos',
+        en: '{player1}, if you have cleaned semen with a sock, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} pon tu dedo en la nariz de {player2} sino bebe {shots} tragos',
+        en: '{player1}, put your finger in {player2}’s nose or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, bebe tantos tragos como el número de pollas que hayas chupado.',
+        en: '{player1}, drink as many shots as the number of cocks you have sucked',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'La persona que pueda tener un orgasmos más rápido, reparte {shots} tragos',
+        en: 'The person who can have an orgasm the fastest distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se han acostado con 2 personas diferentes el mismo día, beben {shots} tragos.',
+        en: 'Everyone who has slept with 2 different people on the same day drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se han acostado con 2 personas diferentes la misma semana, beben {shots} tragos',
+        en: 'Everyone who has slept with 2 different people in the same week drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, tócale los genitales a {player2} sino todo el mundo bebe {shots} tragos',
+        en: '{player1}, touch {player2}’s genitals or everyone drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan recibido una llamada erótica, levantad vuestros vasos y decid "Que viva el culo"" y hasta el fondo.',
+        en: 'Everyone who has received an erotic call, raise your glasses and say "Long live the butt" and drink up',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que intentaron acostarse con alguien esta noche reparten {shots} tragos',
+        en: 'Everyone who tried to sleep with someone tonight distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que han engañado a su pareja reparten {shots} tragos',
+        en: 'Everyone who has cheated on their partner distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} tiene que hacer una flexión con una sola mano o bebe {shots} tragos',
+        en: '{player1} has to do a one-handed push-up or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Gracias por las Sex-Simbols! Los fans de Carmen Electra, Pamela Anderson o Paris Hilton beben {shots} tragos.',
+        en: 'Thanks for the Sex Symbols! Fans of Carmen Electra, Pamela Anderson, or Paris Hilton drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} imita el sonido de una garganta profunda y bebe {shots} tragos',
+        en: '{player1} imitate a deep throat sound and drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, finge masturbarte durante 10 segundos',
+        en: '{player1}, pretend to masturbate for 10 seconds',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si has mostrado tu pene o tus pelotas en snapchat!',
+        en: 'Drink {shots} shots if you have shown your penis or balls on Snapchat!',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} bebe {shots} tragos sin tocar con tus labios el vaso.',
+        en: '{player1} drink {shots} shots without touching the glass with your lips',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} debes colocar algo comestible en el vaso de {player2}, el/ella tiene que terminar su vaso para poder quitarlo.',
+        en: '{player1} must place something edible in {player2}’s glass, they have to finish their glass to remove it',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Concurso de beber entre {player1} y {player2} , bébete tu vaso de un solo trago,  el vencedor gana inmunidad durante 8 minutos.',
+        en: 'Drinking contest between {player1} and {player2}, drink your glass in one gulp, the winner gets immunity for 8 minutes',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan masturbado con la revista Playboy beben {shots} tragos',
+        en: 'Everyone who has masturbated with Playboy magazine drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} deja que alguien te ponga un vello púbico en tu bebida sino termínala de una sola vez!',
+        en: '{player1} let someone put a pubic hair in your drink or finish it all at once!',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan puesto un dedo en el culo beben {shots} tragos',
+        en: 'Everyone who has put a finger in their butt drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, bebe en tragos el número de veces que te masturbaste los últimos 7 días',
+        en: '{player1}, drink as many shots as the number of times you masturbated in the last 7 days',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan acostado con prostitutas reparten {shots} tragos',
+        en: 'Everyone who has slept with prostitutes distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} bebe {shots} tragos como un gato (no toques con los labios).',
+        en: '{player1} drink {shots} shots like a cat (without touching with your lips)',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan masturbando frente un dibujo animado beben {shots} tragos',
+        en: 'Everyone who has masturbated to a cartoon drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, o dejas a {player2} cambiar tu foto de perfil Facebook hasta el final del juego o terminas tu bebida.',
+        en: '{player1}, either let {player2} change your Facebook profile picture until the end of the game or finish your drink',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, di el nombre de "{player2}"" eructando o bebe {shots} tragos.',
+        en: '{player1}, say "{player2}’s" name by burping or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, puedes decidir entre poner más alcohol en tu bebida o beber {shots} tragos',
+        en: '{player1}, you can choose to add more alcohol to your drink or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si bebes {shots} tragos,  {player2} y {player3} tienen que beberse el doble.',
+        en: '{player1}, if you drink {shots} shots, {player2} and {player3} have to drink double.',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡El próximo jugador que tenga que beber triplicará su número de tragos!',
+        en: 'The next player who has to drink will triple their number of shots!',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡El próximo jugador que tenga que beber cuadruplicará su número de tragos!',
+        en: 'The next player who has to drink will quadruple their number of shots!',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Para las mujeres, la última en haber tenido la regla bebe {shots} tragos',
+        en: 'For women, the last one to have had their period drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se tiraron un pedo o han eructado durante esta fiesta beben {shots} tragos',
+        en: 'Anyone who has farted or burped during this party drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, tienes que dejar que otro jugador haga fotos sexuales con tu móvil sino bebes {shots} tragos',
+        en: '{player1}, you have to let another player take sexy photos with your phone or drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'El último jugador en haber probado la lubricación vaginal reparte {shots} tragos',
+        en: 'The last player to have tasted vaginal lubrication distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Si tu primera vez fue con una prostituta reparte {shots} tragos.',
+        en: 'If your first time was with a prostitute, distribute {shots} shots.',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan tenido más relaciones largas que sexo ocasional, beben {shots} tragos!',
+        en: 'Anyone who has had more long-term relationships than casual sex drinks {shots} shots!',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Para los chicos, si tu pene mide menos de 24cm,  bebes {shots} tragos',
+        en: 'For the guys, if your penis is less than 24cm, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Si hoy cagaste, bebes {shots} tragos',
+        en: 'If you pooped today, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} elige entre beber {shots} tragos o besar los pies de {player2}',
+        en: '{player1}, choose between drinking {shots} shots or kissing {player2}\'s feet',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si haces 15 flexiones,  {player2} beberá {shots} tragos',
+        en: '{player1}, if you do 15 push-ups, {player2} will drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, bebe {shots} tragos pasando tu brazo+vaso por debajo de tu pierna.',
+        en: '{player1}, drink {shots} shots by passing your arm+glass under your leg.',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Entre {player1} y {player2} , la persona más estúpida bebe {shots} tragos',
+        en: 'Between {player1} and {player2}, the dumbest one drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si {player2} cuenta hasta 50 antes de que puedas dar 10 vueltas sobre ti mismo,  terminarás su bebida.',
+        en: '{player1}, if {player2} counts to 50 before you can spin 10 times, you\'ll finish their drink.',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si has vomitado sobre alguien bebe {shots} tragos,  en el caso contrario repártelos.',
+        en: '{player1}, if you have vomited on someone, drink {shots} shots, otherwise distribute them.',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan masturbado pensando en un/a amigo/a beben {shots} tragos',
+        en: 'Anyone who has masturbated thinking about a friend drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'El primer jugador en haber hecho un snapchat reparte {shots} tragos',
+        en: 'The first player to have sent a Snapchat distributes {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si le has partido la cara a alguien,  bebes {shots} tragos',
+        en: '{player1}, if you have punched someone, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, si te partieron la cara reparte {shots} tragos',
+        en: '{player1}, if you got punched, distribute {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan hecho un caca-ducha (cagar sin limpiarse e ir directamente a la ducha) beben {shots} tragos',
+        en: 'Anyone who has done a poop-shower (pooping without wiping and going straight to the shower) drinks {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Si has tragado esperma bebes {shots} tragos (de alcohol ja ja)',
+        en: 'If you have swallowed sperm, drink {shots} shots (of alcohol haha)',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Si has dado dinero a un vagabundo bebe {shots} tragos',
+        en: 'If you have given money to a homeless person, drink {shots} shots',
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan espiado a su vecino/a para verlo/la desnudo/a beben {shots} tragos.',
+        en: 'Anyone who has spied on their neighbor to see them naked drinks {shots} shots.',
     },
     tags: ['crazy'],
 },{

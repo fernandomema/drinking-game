@@ -3,256 +3,307 @@ import { Question } from "./questions";
 export const TeamQuestions: Question[] = [{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el apellido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s last name?',
     },
     tags: ['teams'],
 },{
     locales: {
-        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un margen de error de más o menos 5,  cuál es el número de conquistas de {player1}?',
+        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un margen de error de más o menos 5, cuál es el número de conquistas de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: With a margin of error of plus or minus 5, what is the number of {player1}\'s conquests?',
     },
     tags: ['teams'],
 },{
     locales: {
-        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un margen de error de más o menos 1 cm,  cuál es el tamaño de {player1}?',
+        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un margen de error de más o menos 1 cm, cuál es el tamaño de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: With a margin of error of plus or minus 1 cm, what is the size of {player1}?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el lugar de nacimiento de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Where was {player1} born?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el género literario preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite literary genre?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la parte del cuerpo que a {player1} más le interesa de una persona?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is the body part that interests {player1} the most in a person?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el animal preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite animal?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Qué talla de zapatos usa {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What shoe size does {player1} wear?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el sabor de helado preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite ice cream flavor?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Dónde canta {player1} con más frecuencia?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Where does {player1} sing most often?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} es diestro o zurdo?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Is {player1} right-handed or left-handed?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la fecha de nacimiento de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s date of birth?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el signo astrológico de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s astrological sign?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la cerveza favorita de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite beer?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el color preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite color?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la bebida alcohólica preferida de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite alcoholic drink?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la comida preferida de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite food?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el postre preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite dessert?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cómo se llama el último/a ex de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is the name of {player1}\'s last ex?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la estación del año favorita de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite season?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la dirección (la calle) donde vive {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is the address (the street) where {player1} lives?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el carácter de personalidad más importante de {player1} según él /ella?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is the most important personality trait of {player1} according to them?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál fue el peso de {player1} al nacer?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What was {player1}\'s birth weight?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el día favorito de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite day?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el mes preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite month?',
     },
     tags: ['teams'],
 },{
     locales: {
-        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuándo fue la última vez {player1} se marsturbó?',
+        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuándo fue la última vez {player1} se masturbó?',
+        en: 'Team {team1}, question with {shots} drinks at stake: When was the last time {player1} masturbated?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuándo fue la última vez que {player1} fue a un restaurante?',
+        en: 'Team {team1}, question with {shots} drinks at stake: When was the last time {player1} went to a restaurant?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere lo salado o lo dulce?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Does {player1} prefer savory or sweet?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere el zumo de naranja o de piña?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Does {player1} prefer orange juice or pineapple juice?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere comer pizza o hamburguesa?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Does {player1} prefer eating pizza or hamburgers?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere por detrás o una mamada?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Does {player1} prefer from behind or a blowjob?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la marca de perfume preferida de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite perfume brand?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la joya o accesorio preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite jewelry or accessory?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la talla de bañador o bikini de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s swimsuit or bikini size?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿A qué edad fue el primer beso de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: At what age was {player1}\'s first kiss?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Dónde le gustaba pasar sus vacaciones de la infancia a {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Where did {player1} like to spend their childhood vacations?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Dónde tiene previsto pasar sus próximas vacaciones {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Where does {player1} plan to spend their next vacation?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el coche preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite car?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál era la asignatura que más odiaba {player1} en el colegio?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What was the subject {player1} hated the most in school?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el peor defecto de {player1} según él / ella?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s worst flaw according to them?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cómo se llama la persona con la que {player1} tuvo su primera cita?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is the name of the person {player1} had their first date with?',
     },
     tags: ['teams'],
 },{
     locales: {
-        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere los/las rubios/as,  los/las morenos/as o los /las pelirrojos/as?',
+        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere los/las rubios/as, los/las morenos/as o los /las pelirrojos/as?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Does {player1} prefer blondes, brunettes, or redheads?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Qué desayunó {player1} esta mañana?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What did {player1} have for breakfast this morning?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿De qué color es la ropa interior de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What color is {player1}\'s underwear?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere el helado de fresa o de chocolate?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Does {player1} prefer strawberry or chocolate ice cream?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} prefiere las hamburguesas o la pizza?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Does {player1} prefer hamburgers or pizza?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Quién es el actor favorito de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Who is {player1}\'s favorite actor?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la emisora de radio favorita de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite radio station?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el programa preferido de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite show?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la posición sexual favorita de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite sexual position?',
     },
     tags: ['teams'],
 },{
     locales: {
-        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un error de 30 minutos más o menos,  cuál es la hora exacta de la última ducha de {player1}?',
+        es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un error de 30 minutos más o menos, cuál es la hora exacta de la última ducha de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: With an error margin of plus or minus 30 minutes, what is the exact time of {player1}\'s last shower?',
     },
     tags: ['teams'],
 },{

@@ -11,6 +11,7 @@
     import { getLocale } from '$lib/locales';
     import { OriginChecker } from '$lib/OriginChecker';
     import BottomSheet from '$lib/components/BottomSheet.svelte';
+    import InGameBanner from './InGameBanner.svelte';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -135,6 +136,7 @@
                         {/if}
                     </div>
                 {/if}
+                <InGameBanner />
             </div>
 
             {#if thresholdPassed < 0}

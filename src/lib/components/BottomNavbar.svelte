@@ -1,17 +1,18 @@
 <script lang="ts">
+    import { _ } from "$lib/locales";
+
     export let activeItem = 'modes';
 
     const items = [{
         id: 'players',
-        text: 'Players',
+        text: $_('bottomNavbar.players'),
         href: '/add-players',
     }, {
-        id: 'modes',
-        text: 'Modes',
+        text: $_('bottomNavbar.modes'), 
         href: '/select-mode',
     }, {
         id: 'settings',
-        text: 'Settings',
+        text: $_('bottomNavbar.settings'),
         href: '/settings',
     }]
 </script>
