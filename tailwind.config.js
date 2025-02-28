@@ -1,5 +1,5 @@
 import animations from '@midudev/tailwind-animations'
-const { addDynamicIconSelectors } = require("@iconify/tailwind");
+const { addIconSelectors } = require("@iconify/tailwind");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -37,6 +37,6 @@ export default {
   plugins: [
     animations, 
     require("tailwindcss-safe-area"),
-    addDynamicIconSelectors(),
+    addIconSelectors(["tabler", "solar"]),
   ]
 };

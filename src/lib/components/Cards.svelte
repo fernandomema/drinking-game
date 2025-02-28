@@ -12,6 +12,7 @@
     import { OriginChecker } from '$lib/OriginChecker';
     import BottomSheet from '$lib/components/BottomSheet.svelte';
     import InGameBanner from './InGameBanner.svelte';
+    import PremiumFeatureBottomSheet from './BottomSheets/PremiumFeatureBottomSheet.svelte';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -19,7 +20,9 @@
     let Sentry: any;
     let ended = false;
 
-    let showModal = false;
+    let showSuggestModal = false;
+    let showContextModal = false;
+    let showPremiumModal = false;
 
     let locale = 'en';
 
@@ -83,32 +86,43 @@
                 <div class="flex md:flex-col gap-2">
 
                     <button
-                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
+                        class="app-icon-mask flex items-center justify-center bottom-1 left-1 z-10 rounded-2xl bg-white/75 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
                         on:click={() => swipe('left')}
                     >
-                        👎
+                        <span class="iconify-mask solar--dislike-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     </button>
 
                     <button
-                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
+                        class="app-icon-mask flex items-center justify-center bottom-1 left-1 z-10 rounded-2xl bg-white/75 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
                         on:click={() => undoSwipe()}
                     >
-                        {lastStatus ? '⏪' : '🔒'}
+                        {#if lastStatus}
+                            <span class="iconify-mask solar--double-alt-arrow-left-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                        {:else}
+                            <span class="iconify-mask solar--lock-keyhole-minimalistic-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                        {/if}
                     </button>
 
                     <button
-                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
+                        class="app-icon-mask flex items-center justify-center bottom-1 left-1 z-10 rounded-2xl bg-white/75 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
                         on:click={() => swipe('right')}
                     >
-                        ⏩
+                        <span class="iconify-mask solar--double-alt-arrow-right-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     </button>
 
                     <button
+                        class="app-icon-mask flex items-center justify-center bg-white bottom-1 left-1 z-10 rounded-2xl bg-white/75 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
+                        on:click={() => showContextModal = true}
+                    >
+                        <span class="iconify-mask solar--menu-dots-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                    </button>
+
+                    <!-- <button
                         class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
                         on:click={() => showModal = true}
                     >
                         💬 
-                    </button>
+                    </button> -->
 
                     
                     <!-- <button
@@ -167,7 +181,7 @@
     </div>
 {/if}
 
-<BottomSheet isOpen={showModal} onClose={() => (showModal = false)}>
+<BottomSheet isOpen={showSuggestModal} onClose={() => (showSuggestModal = false)}>
     <div class="flex flex-col items-center">
         <div class="flex flex-col items-center w-full">
             
@@ -180,3 +194,38 @@
         </div>
     </div>
 </BottomSheet>
+<BottomSheet isOpen={showContextModal} onClose={() => (showContextModal = false)}>
+    <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center w-full">
+            
+            <!-- item list {Suggest questions, cast to screen, etc} -->
+            <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
+                More options
+            </h2>
+
+            <div class="flex flex-col items-center w-full gap-2 mt-4">
+                <button on:click={() => {showContextModal = false; showSuggestModal = true;}} class="flex items-center w-full">
+                    <span class="iconify iconify-mask solar--chat-round-dots-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                    <span class="text-xl text-gray-700 font-normal ml-2">Suggest a question</span>
+                </button>
+                <button on:click={() => {showContextModal = false; showPremiumModal = true;}} class="flex items-center w-full">
+                    <span class="iconify iconify-mask solar--screencast-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                    <span class="text-xl text-gray-700 font-normal ml-2">Cast to screen</span>
+                </button>
+                <!-- Share -->
+                <button class="flex items-center w-full">
+                    <span class="iconify iconify-mask solar--share-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                    <span class="text-xl text-gray-700 font-normal ml-2">Share this game</span>
+                </button>
+                <!-- Rate -->
+                <button class="flex items-center w-full">
+                    <span class="iconify iconify-mask solar--star-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                    <span class="text-xl text-gray-700 font-normal ml-2">Rate this game</span>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</BottomSheet>
+
+<PremiumFeatureBottomSheet bind:showPremiumModal={showPremiumModal} />

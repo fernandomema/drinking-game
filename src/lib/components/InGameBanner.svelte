@@ -2,6 +2,7 @@
     import { Capacitor } from "@capacitor/core";
     import BottomSheet from "./BottomSheet.svelte";
     import { Share } from '@capacitor/share';
+    import { shareApp } from "$lib/utils/Share";
 
     const banners = [{
         id: 'laught',
@@ -38,16 +39,6 @@
       randomizeBanner();
     };
 
-    const share = async () => {
-        if (!await Share.canShare().then(v => v.value)) return;
-        await Share.share({
-            title: '¡Únete a la fiesta con Tragos Locos! 🎉',
-            text: '¿Estás listo para reírte y beber con los panas? ¡Descarga ya Tragos Locos y juega ahora mismo! 🍻🔥',
-            url: 'https://tragos-locos.servitimo.net',
-            dialogTitle: '¡Comparte la diversión con tus colegas!',
-        });
-    };
-
     const rate = async () => {
         
     };
@@ -73,7 +64,7 @@
 {:else if banner == 'share'}
     <div class="w-full h-[50px] bg-gradient-to-r from-pink-500 to-purple-500 text-white flex items-center justify-between px-4 rounded-lg shadow-lg animate-pulse">
         <span class="text-sm font-bold">¡Comparte la diversión! 🎉</span>
-        <button on:click={share} class="bg-white text-purple-600 text-xs font-bold px-3 py-1 rounded-full shadow-md hover:bg-gray-200">📢 ¡Compártelo!</button>
+        <button on:click={shareApp} class="bg-white text-purple-600 text-xs font-bold px-3 py-1 rounded-full shadow-md hover:bg-gray-200">📢 ¡Compártelo!</button>
     </div>
 {:else if banner == 'premium'}
     <div class="w-full h-[50px] bg-gradient-to-r from-green-400 to-blue-500 text-white flex items-center justify-between px-4 rounded-lg shadow-lg">
