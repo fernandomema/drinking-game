@@ -164,23 +164,7 @@
             <div class="pt-4 xl:pt-8">
               <a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" aria-label="Back to the blog" href="/blog">← Back to the blog</a>
             </div>
-            <RelatedBlogPosts relatedPosts={[
-              {
-                  title: 'Consejos para Tragos Locos',
-                  slug: 'consejos-tragos-locos',
-                  image: '/images/consejos-tragos-locos.jpg',
-              },
-              {
-                  title: 'Nuevos Modos de Juego',
-                  slug: 'nuevos-modos-juego',
-                  image: '/images/nuevos-modos-juego.jpg',
-              },
-              {
-                  title: 'Tragos Locos en tu Fiesta',
-                  slug: 'tragos-locos-fiesta',
-                  image: '/images/tragos-locos-fiesta.jpg',
-              },
-          ]} />
+            <RelatedBlogPosts relatedPosts={[]} />
           </footer>
         </div>
       </div>
