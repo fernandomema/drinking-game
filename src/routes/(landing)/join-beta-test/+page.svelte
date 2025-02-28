@@ -9,6 +9,26 @@
     });
 </script>
 
+<svelte:head>
+    <title>Únete al Programa de Testers</title>
+    <meta name="description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tragoslocos.com/join-beta-test">
+    <meta property="og:title" content="Únete al Programa de Testers">
+    <meta property="og:description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
+    <meta property="og:image" content="https://tragoslocos.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tragoslocos.com/join-beta-test">
+    <meta property="twitter:title" content="Únete al Programa de Testers">
+    <meta property="twitter:description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
+    <meta property="twitter:image" content="https://tragoslocos.com/og-image.png">
+
+</svelte:head>
+
 <!-- Header -->
 <header class="bg-purple-600 text-white">
     <div class="container mx-auto py-6 px-4 text-center">
