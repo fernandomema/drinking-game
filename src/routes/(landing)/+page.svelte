@@ -109,8 +109,8 @@
 
     <Steps />
 
-    <!--
     <QuestionsCounters />
+    <!--
     <section class="mt-10 bg-purple-100 py-16">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-extrabold text-center mb-6 text-gray-800 sm:text-4xl">Preguntas Frecuentes</h2>
