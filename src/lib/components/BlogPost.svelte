@@ -130,7 +130,7 @@
               <slot></slot>
             </div>
             <div class="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-              <a class="break-words" target="_blank" rel="noopener noreferrer" href="https://github.com/fernandomema/drinking-game/blob/master/src/routes/(blog)/blog/{lang}/{seoTitle}/%2Bpage.svelte">View on GitHub</a>
+              <a class="break-words" target="_blank" rel="noopener noreferrer" href="https://github.com/fernandomema/drinking-game/blob/master/src/lib/data/blogPosts/{lang}/{seoTitle}/">View on GitHub</a>
             </div>
             <div class="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300" id="comment">
                 <div id="disqus_thread"></div>
