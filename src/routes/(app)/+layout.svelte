@@ -5,6 +5,16 @@
     import { OriginChecker } from '$lib/OriginChecker';
 	import { page } from '$app/stores';
 
+	
+
+	import { App } from '@capacitor/app';
+	import { browser } from '$app/environment';
+	if (browser) {
+	    App.addListener('backButton', async () => {
+			window.history.back();
+	    });
+	}
+
 	export let data
 
 	onMount(async () => {

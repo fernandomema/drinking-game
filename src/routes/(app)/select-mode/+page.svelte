@@ -12,7 +12,8 @@
     import { page } from "$app/stores";
     import PremiumFeatureBottomSheet from "$lib/components/BottomSheets/PremiumFeatureBottomSheet.svelte";
     import InGameBanner from "$lib/components/InGameBanner.svelte";
-
+    import { initialize, interstitial, rewardVideo, showConsent } from "$lib/Admob";
+    
     let titleCentered = true;
     let titleStopedAnimating = false;
 
@@ -28,6 +29,8 @@
         if (window.location.href.includes('premiumDemo')) {
             showPremiumModal = true;
         }
+        await initialize();
+        showConsent();
     });
 
     if (browser) {
@@ -49,7 +52,7 @@
 
 </script>
 
-<PageContainer class="flex flex-col items-center pb-5 overflow-auto relative pb-[50px]">
+<PageContainer class="relative flex flex-col items-center overflow-auto pb-5 pb-[50px]">
     <div 
         class:absolute={!titleStopedAnimating}
         class="{titleCentered ? '-translate-y-1/2 top-1/2' : 'translate-y-0 top-0'} h-fit-content flex w-screen animate-fade-in items-center justify-center text-center font-[Fredoka] text-6xl font-bold text-white transition-all duration-700"
@@ -91,7 +94,7 @@
 
 
 {#if titleStopedAnimating}
-    <div class="animate-slide-up-fade animation-duration-1200">
+    <div class="animation-duration-1200 animate-slide-up-fade">
         <BottomNavbar/>
     </div>
 {/if}
