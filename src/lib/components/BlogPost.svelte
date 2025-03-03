@@ -127,7 +127,7 @@
           <div class="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
             <div class="prose dark:prose-invert max-w-none pt-10 pb-8">
               <img src={image} alt={title} class="w-full rounded-lg shadow-md mb-4">
-              <slot></slot>
+              <slot name="post"></slot>
             </div>
             <div class="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
               <a class="break-words" target="_blank" rel="noopener noreferrer" href="https://github.com/fernandomema/drinking-game/blob/master/src/lib/data/blogPosts/{lang}/{seoTitle}/">View on GitHub</a>
@@ -165,6 +165,7 @@
               <a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" aria-label="Back to the blog" href="/blog">← Back to the blog</a>
             </div>
             <RelatedBlogPosts relatedPosts={[]} />
+            <slot name="sidebar"></slot>
           </footer>
         </div>
       </div>

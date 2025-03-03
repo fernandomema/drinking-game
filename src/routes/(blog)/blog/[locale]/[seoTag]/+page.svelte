@@ -20,6 +20,11 @@
         tags={post.tags}
         lang={post.lang}
     >
-        <svelte:component this={post.component} />
+        <div slot="post">
+            <svelte:component this={post.component} />
+        </div>
+        <div slot="sidebar">
+            
+        </div>
     </BlogPost>
 {/if}
