@@ -69,7 +69,7 @@
     <meta name="language" content={lang} />
     <meta name="lang:alternate" content={lang} />
 
-    <title>{title} | Tragos Locos</title>
+    <title>{title} | Blog Tragos Locos</title>
 
 </svelte:head>
 

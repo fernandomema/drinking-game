@@ -1,6 +1,8 @@
 <script>
     import Footer from "$lib/components/Footer.svelte";
+    import { fly } from 'svelte/transition'
 
+    export let data
 </script>
 <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
     <header class="flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10">
@@ -25,9 +27,14 @@
         <span hidden="" style="position:fixed;top:1px;left:1px;width:1px;height:0;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none"></span>
       </div>
     </header>
-    <main class="mb-auto">
-      <slot></slot>
-    </main>
+    {#key data.url}
+      <main class="mb-auto" 
+        in:fly={{ x: -200, duration: 300, delay: 300 }}
+        out:fly={{ x: 200, duration: 300 }}
+      >
+        <slot></slot>
+      </main>
+    {/key}
     <footer>
       <div class="mt-16 flex flex-col items-center">
         <div class="mb-3 flex space-x-4">

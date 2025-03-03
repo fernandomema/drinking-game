@@ -31,7 +31,7 @@
   },
   "blog": {
     "title": "Blog",
-    "description2": "Blog para mostrar cosas divertidas sobre la aplicación Tragos Locos y más.",
+    "description": "Blog para mostrar cosas divertidas sobre la aplicación Tragos Locos y más.",
     "latest_posts": "Ultimas publicaciones",
     "read_more": "Leer más"
   },
