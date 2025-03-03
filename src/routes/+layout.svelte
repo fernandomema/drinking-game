@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte'
     import { pwaInfo } from 'virtual:pwa-info'
     import '../app.css';
@@ -42,11 +42,6 @@
     {@html webManifest}
     {#if PUBLIC_UMAMI_WEBSITE_ID && OriginChecker.isProduction($page.url.href)}
         <script defer src="https://cloud.umami.is/script.js" data-website-id="{PUBLIC_UMAMI_WEBSITE_ID}"></script>
-    {/if}
-
-    {#if OriginChecker.isDev($page.url.href)}
-        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-        <script>eruda.init();</script>
     {/if}
 
     <title>Tragos Locos</title>

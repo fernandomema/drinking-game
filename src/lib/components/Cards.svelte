@@ -9,12 +9,11 @@
     import { modes } from '$lib/modes';
     import { goto } from '$app/navigation';
     import { getLocale } from '$lib/locales';
-    import { OriginChecker } from '$lib/OriginChecker';
     import BottomSheet from '$lib/components/BottomSheet.svelte';
     import InGameBanner from './InGameBanner.svelte';
     import PremiumFeatureBottomSheet from './BottomSheets/PremiumFeatureBottomSheet.svelte';
     import { shareApp } from '$lib/utils/Share';
-    import { Team } from '$lib/types/Team';
+    import type { Team } from '$lib/types/Team';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -45,36 +44,13 @@
 	let swipe: (direction?: 'left' | 'right') => void;
     let undoSwipe: () => void;
 	let thresholdPassed = 0;
-    let lastStatus;
+    let lastStatus: any;
 
 	function onSwipe(cardInfo: SwipeEventData) {
         if (cardInfo?.direction == 'left') {
-            //Sentry?.captureMessage('Disliked a card: ' + cardInfo?.data?.rawQuestion);
             umami?.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
         }
 	}
-
-    function weightedRandom() {
-        // Define the weights for each number, higher weights mean higher probability.
-        // Weights should decrease as numbers increase.
-        const weights = [5, 4, 3, 2, 1]; // Corresponding to numbers 1, 2, 3, 4, 5
-
-        // Calculate the total weight
-        const totalWeight = weights.reduce((acc, weight) => acc + weight, 0);
-
-        // Generate a random number between 0 and totalWeight
-        const random = Math.random() * totalWeight;
-
-        // Determine which number corresponds to the random value
-        let cumulativeWeight = 0;
-        for (let i = 0; i < weights.length; i++) {
-            cumulativeWeight += weights[i];
-            if (random < cumulativeWeight) {
-                return i + 1; // Numbers start from 1
-            }
-        }
-        return 1;
-    }
 
 	function cardData(index: number) {
         if (!filteredQuestions[index]) return null;
@@ -85,6 +61,11 @@
             tags: filteredQuestions[index].tags,
 		};
 	}
+
+    function clickShareApp() {
+        shareApp();
+        umami?.track('share-game', {origin: 'context-menu'});
+    }
 </script>
 {#if filteredQuestions && filteredQuestions.length > 0}
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
@@ -125,20 +106,6 @@
                         <span class="iconify-mask solar--menu-dots-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     </button>
 
-                    <!-- <button
-                        class="bottom-1 left-1 z-10 rounded-2xl bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm w-full md:h-full"
-                        on:click={() => showModal = true}
-                    >
-                        💬 
-                    </button> -->
-
-                    
-                    <!-- <button
-                        class="bottom-1 right-1 z-10 rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
-                        on:click={() => swipe('right')}
-                    >
-                        
-                    </button> -->
                 </div>
                 <InGameBanner />
             </div>
@@ -179,7 +146,7 @@
                 Suggest a question
             </h2>
             
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckWcrvzdB4R4fvBuSBTBg57D7KIivNPnDLQ1PdCAmd4aGnug/viewform?embedded=true" width="100%" height="450" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> 
+            <iframe title="suggest a question iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSckWcrvzdB4R4fvBuSBTBg57D7KIivNPnDLQ1PdCAmd4aGnug/viewform?embedded=true" width="100%" height="450" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> 
 
         </div>
     </div>
@@ -188,7 +155,6 @@
     <div class="flex flex-col items-center">
         <div class="flex flex-col items-center w-full">
             
-            <!-- item list {Suggest questions, cast to screen, etc} -->
             <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
                 More options
             </h2>
@@ -209,7 +175,7 @@
                     <span class="text-xl text-gray-700 font-normal ml-2">Cast to screen</span>
                 </button>
                 <!-- Share -->
-                <button om:click={() => {shareApp();umami?.track('share-game', {origin: 'context-menu'})}} class="flex items-center w-full">
+                <button on:click={clickShareApp} class="flex items-center w-full">
                     <span class="iconify iconify-mask solar--share-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     <span class="text-xl text-gray-700 font-normal ml-2">Share this game</span>
                 </button>
@@ -228,51 +194,51 @@
 
 <BottomSheet isOpen={showTeamsModal} onClose={() => (showTeamsModal = false)}>
     <div class="flex flex-col items-center">
-      <div class="flex flex-col items-center w-full">
-        <!-- Title -->
-        <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
-          Team Players
-        </h2>
-  
-        <!-- Teams and Players -->
-        <div class="flex flex-col items-center w-full gap-4 mt-4">
-            {#each teams as team}
-                <div class="w-full bg-purple-100 p-2 rounded-lg">
-                    <h3 class="text-xl font-semibold text-center font-semibold text-gray-800 mb-4 underline decoration-${team.color}-500">{team.name}</h3>
-                    <ul class="list-none">
-                        {#each team.players as player}
-                            <li class="text-gray-700 text-md flex items-center gap-2 flex justify-between">
-                                <div class="flex gap-2 items-center">
-                                    <span class="bg-glass iconify iconify-mask solar--user-rounded-bold-duotone block w-[40px] h-[40px]"></span> 
-                                    <span class="text-lg">{player.name}</span>
-                                </div>
-                                <div class="bg-purple-200 rounded-lg p-2">
-                                    <span class="bg-glass iconify iconify-mask solar--card-transfer-bold-duotone block w-[40px] h-[40px]"></span> 
-                                </div>
-                            </li>
-                        {/each}
-                    </ul>
-                </div>
-            {/each}
-        </div>
-
-        <div class="flex flex-col items-center justify-center gap-2 mt-4 w-full">
-            <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
-                <span class="iconify iconify-mask solar--shuffle-bold-duotone block w-[40px] h-[40px]"></span>
-                <span>Randomize teams</span>
-            </button>
-            <div class="flex gap-2 w-full">
-                <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
-                    <span class="iconify iconify-mask solar--cloud-upload-bold-duotone block w-[40px] h-[40px]"></span>
-                    Save Team
-                </button>
-                <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
-                    <span class="iconify iconify-mask solar--cloud-download-bold-duotone block w-[40px] h-[40px]"></span>
-                    Load team
-                </button>
+        <div class="flex flex-col items-center w-full">
+            <!-- Title -->
+            <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
+                Team Players
+            </h2>
+    
+            <!-- Teams and Players -->
+            <div class="flex flex-col items-center w-full gap-4 mt-4">
+                {#each teams as team}
+                    <div class="w-full bg-purple-100 p-2 rounded-lg">
+                        <h3 class="text-xl font-semibold text-center font-semibold text-gray-800 mb-4 underline decoration-${team.color}-500">{team.name}</h3>
+                        <ul class="list-none">
+                            {#each team.players as player}
+                                <li class="text-gray-700 text-md flex items-center gap-2 flex justify-between">
+                                    <div class="flex gap-2 items-center">
+                                        <span class="bg-glass iconify iconify-mask solar--user-rounded-bold-duotone block w-[40px] h-[40px]"></span> 
+                                        <span class="text-lg">{player.name}</span>
+                                    </div>
+                                    <div class="bg-purple-200 rounded-lg p-2">
+                                        <span class="bg-glass iconify iconify-mask solar--card-transfer-bold-duotone block w-[40px] h-[40px]"></span> 
+                                    </div>
+                                </li>
+                            {/each}
+                        </ul>
+                    </div>
+                {/each}
             </div>
-        </div>
 
-      </div>
+            <div class="flex flex-col items-center justify-center gap-2 mt-4 w-full">
+                <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
+                    <span class="iconify iconify-mask solar--shuffle-bold-duotone block w-[40px] h-[40px]"></span>
+                    <span>Randomize teams</span>
+                </button>
+                <div class="flex gap-2 w-full">
+                    <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
+                        <span class="iconify iconify-mask solar--cloud-upload-bold-duotone block w-[40px] h-[40px]"></span>
+                        Save Team
+                    </button>
+                    <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
+                        <span class="iconify iconify-mask solar--cloud-download-bold-duotone block w-[40px] h-[40px]"></span>
+                        Load team
+                    </button>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </BottomSheet>

@@ -129,7 +129,7 @@
 
 	export let onSwipe: ((cardInfo: SwipeEventData) => void) | undefined = undefined;
 
-	export let cardData: (index: number) => CardData;
+	export let cardData: (index: number) => CardData|null;
 
 	export let minSwipeDistance: number = 0.5;
 	export let minSwipeVelocity: number = 0.5;

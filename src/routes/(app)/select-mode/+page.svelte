@@ -4,12 +4,10 @@
 	import { browser } from '$app/environment';
     import PageContainer from "$lib/components/PageContainer.svelte";
     import { onMount } from "svelte";
-    import { fade, fly } from "svelte/transition";
+    import { fly } from "svelte/transition";
     import { _ } from "$lib/locales";
     import BottomNavbar from "$lib/components/BottomNavbar.svelte";
     import { modes } from "$lib/modes";
-    import BottomSheet from "$lib/components/BottomSheet.svelte";
-    import { invokeVideoAd } from "$lib/Applixir";
     import { OriginChecker } from "$lib/OriginChecker";
     import { page } from "$app/stores";
     import PremiumFeatureBottomSheet from "$lib/components/BottomSheets/PremiumFeatureBottomSheet.svelte";
