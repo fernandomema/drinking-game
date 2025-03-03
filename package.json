@@ -50,6 +50,7 @@
     "@midudev/tailwind-animations": "^0.1.0",
     "@sentry/browser": "8.33.0",
     "@sentry/capacitor": "^1.0.1",
+    "@types/umami": "^2.10.0",
     "@use-gesture/vanilla": "^10.3.1",
     "svelte-i18n": "^4.0.1",
     "tailwindcss-safe-area": "^0.6.0",

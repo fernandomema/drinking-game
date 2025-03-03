@@ -13,6 +13,7 @@
     import { OriginChecker } from "$lib/OriginChecker";
     import { page } from "$app/stores";
     import PremiumFeatureBottomSheet from "$lib/components/BottomSheets/PremiumFeatureBottomSheet.svelte";
+    import InGameBanner from "$lib/components/InGameBanner.svelte";
 
     let titleCentered = true;
     let titleStopedAnimating = false;
@@ -62,7 +63,7 @@
             {#each  Object.entries(modes).filter(e => !e[1].isEnabled || e[1].isEnabled()) as [modeKey, mode], index}
                 <button 
                     in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: index * 250 }} 
-                    class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4" on:click={onClick} 
+                    class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-[794fea] bg-opacity-20 backdrop-blur-lg p-4 border border-solid border-white border-opacity-20 shadow" on:click={onClick} 
                     data-mode={modeKey} 
                     class:flex-row-reverse={index % 2 === 1}
                     data-umami-event="start-game"
@@ -78,11 +79,14 @@
                     </div>
                 </button>
             {/each}
+            <InGameBanner />
             {#if OriginChecker.isDev($page.url.href)}
                 <button class="w-full text-center bg-purple-500" on:click={() => showPremiumModal = true}>
                     Test premium
                 </button>
             {/if}
+
+            
         </div>
     {/if}
 </PageContainer>

@@ -76,6 +76,7 @@ export const modes: { [key: string]: Mode } = {
             randomizedPlayers?.forEach((player, index) => {
                 teams[index % 2].players.push(player);
             });
+            localStorage.setItem('teams', JSON.stringify(teams));
             return getModeQuestions(questions, {
                 gameMode: 'teams',
                 mode: 'basic',

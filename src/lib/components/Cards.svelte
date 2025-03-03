@@ -13,6 +13,8 @@
     import BottomSheet from '$lib/components/BottomSheet.svelte';
     import InGameBanner from './InGameBanner.svelte';
     import PremiumFeatureBottomSheet from './BottomSheets/PremiumFeatureBottomSheet.svelte';
+    import { shareApp } from '$lib/utils/Share';
+    import { Team } from '$lib/types/Team';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -23,8 +25,12 @@
     let showSuggestModal = false;
     let showContextModal = false;
     let showPremiumModal = false;
+    let showTeamsModal = false;
 
     let locale = 'en';
+
+    let teams: Team[] = [];
+    let umami: umami.umami | undefined;
 
 	onMount(async () => {
         players = JSON.parse(sessionStorage.getItem('players') || '[]');
@@ -32,6 +38,8 @@
         locale = await getLocale();
         filteredQuestions = modes[mode].pickCards(questions, locale, players);
         Sentry = await import('@sentry/capacitor');
+        teams = JSON.parse(localStorage.getItem('teams') || '[]');
+        umami = window.umami;
 	});
 
 	let swipe: (direction?: 'left' | 'right') => void;
@@ -42,7 +50,7 @@
 	function onSwipe(cardInfo: SwipeEventData) {
         if (cardInfo?.direction == 'left') {
             //Sentry?.captureMessage('Disliked a card: ' + cardInfo?.data?.rawQuestion);
-            window.umami?.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
+            umami?.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
         }
 	}
 
@@ -132,24 +140,6 @@
                         
                     </button> -->
                 </div>
-                {#if OriginChecker.isProduction($page.url.href)}
-                    <div class="flex items-center justify-center rounded-2xl bg-white/50 p-3 px-4 text backdrop-blur-sm min-h-[50px] min-w-[320px] md:hidden">
-                        {#if Math.random() > 0.5}
-                            <script type="text/javascript">
-                                atOptions = {
-                                    'key' : '0ce0fa3ad64acf4687746e67bb37f5b0',
-                                    'format' : 'iframe',
-                                    'height' : 50,
-                                    'width' : 320,
-                                    'params' : {}
-                                };
-                            </script>
-                            <script type="text/javascript" src="//www.highperformanceformat.com/0ce0fa3ad64acf4687746e67bb37f5b0/invoke.js"></script>
-                        {:else}
-                            <script type="text/javascript" src="https://ap.lijit.com/www/delivery/fpi.js?z=1264479&width=320&height=100"></script>
-                        {/if}
-                    </div>
-                {/if}
                 <InGameBanner />
             </div>
 
@@ -204,6 +194,12 @@
             </h2>
 
             <div class="flex flex-col items-center w-full gap-2 mt-4">
+                {#if teams.length > 0}
+                    <button on:click={() => {showContextModal = false; showTeamsModal = true;umami?.track('open-teams-modal')}} class="flex items-center w-full">
+                        <span class="iconify iconify-mask solar--users-group-two-rounded-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
+                        <span class="text-xl text-gray-700 font-normal ml-2">Team Players</span>
+                    </button>
+                {/if}
                 <button on:click={() => {showContextModal = false; showSuggestModal = true;}} class="flex items-center w-full">
                     <span class="iconify iconify-mask solar--chat-round-dots-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     <span class="text-xl text-gray-700 font-normal ml-2">Suggest a question</span>
@@ -213,7 +209,7 @@
                     <span class="text-xl text-gray-700 font-normal ml-2">Cast to screen</span>
                 </button>
                 <!-- Share -->
-                <button class="flex items-center w-full">
+                <button om:click={() => {shareApp();umami?.track('share-game', {origin: 'context-menu'})}} class="flex items-center w-full">
                     <span class="iconify iconify-mask solar--share-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     <span class="text-xl text-gray-700 font-normal ml-2">Share this game</span>
                 </button>
@@ -229,3 +225,54 @@
 </BottomSheet>
 
 <PremiumFeatureBottomSheet bind:showPremiumModal={showPremiumModal} />
+
+<BottomSheet isOpen={showTeamsModal} onClose={() => (showTeamsModal = false)}>
+    <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center w-full">
+        <!-- Title -->
+        <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
+          Team Players
+        </h2>
+  
+        <!-- Teams and Players -->
+        <div class="flex flex-col items-center w-full gap-4 mt-4">
+            {#each teams as team}
+                <div class="w-full bg-purple-100 p-2 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center font-semibold text-gray-800 mb-4 underline decoration-${team.color}-500">{team.name}</h3>
+                    <ul class="list-none">
+                        {#each team.players as player}
+                            <li class="text-gray-700 text-md flex items-center gap-2 flex justify-between">
+                                <div class="flex gap-2 items-center">
+                                    <span class="bg-glass iconify iconify-mask solar--user-rounded-bold-duotone block w-[40px] h-[40px]"></span> 
+                                    <span class="text-lg">{player.name}</span>
+                                </div>
+                                <div class="bg-purple-200 rounded-lg p-2">
+                                    <span class="bg-glass iconify iconify-mask solar--card-transfer-bold-duotone block w-[40px] h-[40px]"></span> 
+                                </div>
+                            </li>
+                        {/each}
+                    </ul>
+                </div>
+            {/each}
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-2 mt-4 w-full">
+            <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
+                <span class="iconify iconify-mask solar--shuffle-bold-duotone block w-[40px] h-[40px]"></span>
+                <span>Randomize teams</span>
+            </button>
+            <div class="flex gap-2 w-full">
+                <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
+                    <span class="iconify iconify-mask solar--cloud-upload-bold-duotone block w-[40px] h-[40px]"></span>
+                    Save Team
+                </button>
+                <button class="bg-purple-700 text-white px-6 py-2 rounded-md w-full flex items-center justify-center gap-2">
+                    <span class="iconify iconify-mask solar--cloud-download-bold-duotone block w-[40px] h-[40px]"></span>
+                    Load team
+                </button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+</BottomSheet>
