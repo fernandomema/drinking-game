@@ -577,8 +577,7 @@ export const questions: Question[] = [{
         en: "{player1} if you are a woman, distribute {shots} shots or you will have to drink them yourself"
     },
     tags: ["preparty"]
-},
-{
+}, {
     locales: {
         es: "El/la último/a en levantarse bebe {shots} tragos",
         en: "The last person to stand up drinks {shots} shots"
@@ -596,8 +595,7 @@ export const questions: Question[] = [{
         en: "{player1} if you are a (woman|man), distribute {shots} shots or you will have to drink them yourself"
     },
     tags: ["preparty"]
-},
-{
+}, {
     locales: {
         es: "El/la último/a en levantarse bebe {shots} tragos",
         en: "The last person to stand up drinks {shots} shots"
@@ -2058,441 +2056,529 @@ export const questions: Question[] = [{
 }, {
     locales: {
         es: '¡Aquellas y aquellos que conocen a alguno de los fundadores de Tragos Locos beben {shots} tragos!',
+        en: 'Those who know any of the founders of Tragos Locos drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Aquellas o aquellos que hayan peleado en un Ring de Boxeo beben {shots} tragos!',
+        en: 'Those who have fought in a Boxing Ring drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1} haz 6 abdominales y bebe un trago entre cada una!',
+        en: '{player1} do 6 sit-ups and take a drink between each one!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1} paséate entre los jugadores y da una palmadita en la espalda a quienes deberán beber dos tragos!',
+        en: '{player1} walk around the players and pat on the back those who will have to drink two shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Los Jugadores con más estudios que {player1} beben {shots} tragos!',
+        en: 'Players with more education than {player1} drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Las personas que no puedan juntar sus dos manos detrás de la espalda (una desde arriba, otra desde abajo) beben {shots} tragos!',
+        en: 'People who cannot join their hands behind their back (one from above, one from below) drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡El jugador que esté a la derecha de la persona que acaba de leer este mensaje bebe {shots} tragos!',
+        en: 'The player to the right of the person who just read this message drinks {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡El jugador que esté a la derecha de la persona que acaba de leer este mensaje reparte {shots} tragos!',
+        en: 'The player to the right of the person who just read this message gives out {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡El jugador que está a la izquierda de la persona que acaba de leer este mensaje reparte {shots} tragos!',
+        en: 'The player to the left of the person who just read this message gives out {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡El jugador que está a la izquierda de la persona que acaba de leer este mensaje bebe {shots} tragos!',
+        en: 'The player to the left of the person who just read this message drinks {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Cada uno bebe el mismo número de tragos que años haya pasado en la Universidad!',
+        en: 'Everyone drinks as many shots as years they spent in University!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Aquellas y aquellos que contengan la letra A en su nombre beben {shots} tragos!',
+        en: 'Those who have the letter A in their name drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Aquellas y aquellos que contengan la letra F en su nombre beben {shots} tragos!',
+        en: 'Those who have the letter F in their name drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Aquellas y aquellos que contengan la letra S en su nombre beben {shots} tragos!',
+        en: 'Those who have the letter S in their name drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Aquellas y aquellos que contengan la letra O en su nombre beben {shots} tragos!',
+        en: 'Those who have the letter O in their name drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Los hijos únicos beben {shots} tragos!',
+        en: 'Only children drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Las personas que han repetido un año escolar beben {shots} tragos!',
+        en: 'People who have repeated a school year drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1} reparte en tragos el número de hermanos y hermanas que tengas!',
+        en: '{player1} give out as many shots as siblings you have!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1} bebes en tragos el mismo número de países, que hayas visitado!',
+        en: '{player1} drink as many shots as countries you have visited!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Los que son buenos trabajando con actividades manuales beben {shots} tragos!',
+        en: 'Those who are good at working with their hands drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Los que tengan los brazos delgados beben {shots} tragos! Será un buen ejercicio.',
+        en: 'Those with thin arms drink {shots} shots! It will be a good exercise.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Los barbudos beben {shots} tragos!',
+        en: 'The bearded ones drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Las y los que hayan cagado en el mar beben {shots} tragos!',
+        en: 'Those who have pooped in the sea drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Aquellas y aquellos que han cagado en la calle beben {shots} tragos, panda de cerdos!',
+        en: 'Those who have pooped in the street drink {shots} shots, you bunch of pigs!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1} si tu edad es un número par bebe {shots} tragos, {shots2} tragos si es impar!',
+        en: '{player1} if your age is an even number drink {shots} shots, {shots2} shots if it\'s odd!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Elegid a la persona con más mal humor y que beba {shots} tragos!',
+        en: 'Choose the person with the worst mood and have them drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1} , {player2} te va a pellizcar el culo sino te toca beber {shots} tragos!',
+        en: '{player1}, {player2} will pinch your butt unless you drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Aquellos jugadores que han llegado tarde a la partida de Tragos Locos beben {shots} tragos!',
+        en: 'Those players who arrived late to the Tragos Locos game drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡La primera persona en haber tenido la idea de jugar a Tragos Locos puede repartir {shots} tragos!',
+        en: 'The first person who had the idea to play Tragos Locos can give out {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Las mujeres beben {shots} tragos!',
+        en: 'Women drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Los hombres beben {shots} tragos!',
+        en: 'Men drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Quien haya leído el libro "La casa de los espíritus" bebe {shots} tragos!',
+        en: 'Whoever has read the book "The House of the Spirits" drinks {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡La última persona en haber ido a un parque de atracciones reparte {shots} tragos!',
+        en: 'The last person to have gone to an amusement park gives out {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Quien haya vivido en más de 3 ciudades beben {shots} tragos!',
+        en: 'Those who have lived in more than 3 cities drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1}, di una virtud de cada uno de los jugadores y bebe un trago por cada virtud que digas!',
+        en: '{player1}, say one virtue of each player and take a drink for each virtue you mention!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1}, di un defecto de cada jugador y bebe un trago por cada defecto!',
+        en: '{player1}, say one flaw of each player and take a drink for each flaw!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Quien haya tenido sueños eróticos con alguno de los presentes bebe {shots} tragos!',
+        en: 'Whoever has had erotic dreams about anyone present drinks {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Los que se hayan despertado hablando en medio de la noche beben {shots} tragos!',
+        en: 'Those who have woken up talking in the middle of the night drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '{player1}, bebe 3 chupitos seguidos o reparte {shots} tragos',
+        en: '{player1}, drink 3 shots in a row or give out {shots} shots'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '{player1} debes beber {shots} tragos mientras que {player2} te sopla a la oreja',
+        en: '{player1} you must drink {shots} shots while {player2} blows in your ear'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Los que sean más altos que {player1} beben la diferencia de centímetros en tragos (ej. 5cm = 5 tragos).',
+        en: 'Those who are taller than {player1} drink the difference in centimeters in shots (e.g. 5cm = 5 shots).'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '{player1}, invita un o una amigo/a a esta fiesta o bebe {shots} tragos',
+        en: '{player1}, invite a friend to this party or drink {shots} shots'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¿A quién le gusta acariciar a los gatos? Pues bebed {shots} tragos',
+        en: 'Who likes to pet cats? Well, drink {shots} shots'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Quien no pueda meterse todo el borde de su vaso en la boca bebe {shots} tragos.',
+        en: 'Whoever cannot fit the entire rim of their glass in their mouth drinks {shots} shots.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Quien tenga pelo entre las cejas bebe {shots} tragos',
+        en: 'Whoever has hair between their eyebrows drinks {shots} shots'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'El último que haya tocado la pantalla de su teléfono bebe {shots} tragos',
+        en: 'The last person to have touched their phone screen drinks {shots} shots'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1}, finge ser una serpiente durante 5 largos segundos o bebes {shots} tragos!',
+        en: '{player1}, pretend to be a snake for 5 long seconds or drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1}, imita una babosa durante 5 largos segundos o bebes {shots} tragos!',
+        en: '{player1}, imitate a slug for 5 long seconds or drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1}, imita una tortuga durante 5 largos segundos o bebes {shots} tragos!',
+        en: '{player1}, imitate a turtle for 5 long seconds or drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡{player1} haz una mueca mientras {player2} te toma una foto, y bebe {shots} tragos!',
+        en: '{player1} make a face while {player2} takes a photo of you, and drink {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Quien haya nacido a 100 kilómetros de aquí o más bebe {shots} tragos!',
+        en: 'Whoever was born 100 kilometers from here or more drinks {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Quien haya nacido a 50 kilómetros de aquí o menos repárten {shots} tragos!',
+        en: 'Whoever was born 50 kilometers from here or less gives out {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: '¡Quien haya utilizado la frase "mejor quedamos como amigos" beben {shots} tragos!',
+        en: 'Whoever has used the phrase "let\'s just be friends" drinks {shots} shots!'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si dejas la puerta abierta cuando vas al baño en tu casa.',
+        en: 'Drink {shots} shots if you leave the door open when you go to the bathroom at home.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si tuviste un orgasmo hoy.',
+        en: 'Drink {shots} shots if you had an orgasm today.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si alguna vez has conducido por una rotonda al revés.',
+        en: 'Drink {shots} shots if you have ever driven around a roundabout in the wrong direction.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has tenido sexo con alguien por las razones equivocadas.',
+        en: 'Drink {shots} shots if you have had sex with someone for the wrong reasons.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si te encanta el sabor de los genitales de tu pareja',
+        en: 'Drink {shots} shots if you love the taste of your partner\'s genitals'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si alguna vez has pasado 3 días sin lavarte',
+        en: 'Drink {shots} shots if you have ever gone 3 days without washing yourself'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si alguna vez has enviado a alguien al hospital.',
+        en: 'Drink {shots} shots if you have ever sent someone to the hospital.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has comparado el tamaño de tu pene (o el de tu pareja) con tus amigos',
+        en: 'Drink {shots} shots if you have compared the size of your penis (or your partner\'s) with your friends'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si tu amor platónico esta hoy aquí',
+        en: 'Drink {shots} shots if your crush is here today'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si quieres pasar el resto de tu vida con tu pareja, finge beber en el peor de los casos.',
+        en: 'Drink {shots} shots if you want to spend the rest of your life with your partner, pretend to drink at worst.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si alguna vez le has mentido a alguien que esté hoy aquí para no ir a una de sus fiestas o reuniones.',
+        en: 'Drink {shots} shots if you have ever lied to someone who is here today to avoid going to one of their parties or gatherings.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Los jugadores que no votaron durante las últimas elecciones reparten {shots} tragos',
+        en: 'Players who didn\'t vote in the last election give out {shots} shots'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si siempre te lavas las manos al salir del baño, bebe {shots} tragos si estás fingiendo',
+        en: 'Drink {shots} shots if you always wash your hands after using the bathroom, drink {shots} shots if you\'re pretending'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si  has enviado alguna solicitud a un programa de televisión.',
+        en: 'Drink {shots} shots if you have ever applied to a TV show.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has robado algo a uno de los jugadores presentes.',
+        en: 'Drink {shots} shots if you have stolen something from one of the players present.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has trabajado ilegalmente',
+        en: 'Drink {shots} shots if you have worked illegally'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si le has sacado dinero de la cartera a tu novio/a sin decírselo.',
+        en: 'Drink {shots} shots if you have taken money from your boyfriend/girlfriend\'s wallet without telling them.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has mentido sobre el tamaño de tu pene o del pene de tu pareja .',
+        en: 'Drink {shots} shots if you have lied about the size of your penis or your partner\'s penis.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si la policia te ha hecho algún tipo de control',
+        en: 'Drink {shots} shots if the police have ever stopped you for any kind of check'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si te han arrestado',
+        en: 'Drink {shots} shots if you have been arrested'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si alguna vez te has puesto la ropa interior de tu pareja',
+        en: 'Drink {shots} shots if you have ever worn your partner\'s underwear'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si eres mujer y has usado un bóxer o una camiseta de tu pareja como pijama',
+        en: 'Drink {shots} shots if you are a woman and have used your partner\'s boxer shorts or t-shirt as pajamas'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si aceptas tener sexo con cualquier persona por 10.000 dólares.',
+        en: 'Drink {shots} shots if you would accept having sex with anyone for $10,000.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has tenido sueños eróticos esta semana.',
+        en: 'Drink {shots} shots if you have had erotic dreams this week.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has visto a alguno de los jugadores desnudo/a.',
+        en: 'Drink {shots} shots if you have seen any of the players naked.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has tenido sexo en el trabajo o universidad',
+        en: 'Drink {shots} shots if you have had sex at work or university'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has bebido alcohol solo/a',
+        en: 'Drink {shots} shots if you have drunk alcohol alone'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si te duermes enseguida después de hacer el amor',
+        en: 'Drink {shots} shots if you fall asleep right after making love'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si la última película que has visto era una película romántica.',
+        en: 'Drink {shots} shots if the last movie you watched was a romantic movie.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si la última película que has visto era de acción.',
+        en: 'Drink {shots} shots if the last movie you watched was an action movie.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si has medido tu pene o el de tu pareja.',
+        en: 'Drink {shots} shots if you have measured your penis or your partner\'s.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si te has despertado en la cama de alguien preguntándote como llegaste ahí.',
+        en: 'Drink {shots} shots if you have woken up in someone\'s bed wondering how you got there.'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si alguna vez has tenido sexo en el agua',
+        en: 'Drink {shots} shots if you have ever had sex in water'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Bebe {shots} tragos si le dices a tu pareja "te quiero" a cada llamada telefónica (o casi).',
+        en: 'Drink {shots} shots if you tell your partner "I love you" on every phone call (or almost).'
     },
     tags: ['preparty'],
 }, {
     locales: {
         es: 'Los idiotas que dicen "comparte" cuando uno come patatillas beben {shots} tragos',
+        en: 'The idiots who say "share" when someone eats chips drink {shots} shots'
     },
     tags: ['preparty'],
 }, {
@@ -4725,6 +4811,96 @@ export const questions: Question[] = [{
         es: 'A cada turno, bebe en tragos la cantidad de puntos que te falten en tu carnet de conducir, {player1} empiezas.',
     },
     tags: ['preparty'],
+}, {
+    locales: {
+        es: "{player1}, cuenta la historia más vergonzosa de tu vida o bebe {shots} tragos",
+        en: "{player1}, tell the most embarrassing story of your life or drink {shots}"
+    },
+    tags: ["preparty"]
+},{
+    locales: {
+        es: "Todos los que hayan fingido estar enfermos para faltar al trabajo o escuela, beban {shots} tragos",
+        en: "Everyone who has ever faked being sick to skip work or school, drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "{player1}, imita a otra persona del grupo durante 30 segundos",
+        en: "{player1}, imitate another person in the group for 30 seconds"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Todos los que hayan enviado un mensaje al contacto equivocado y se hayan arrepentido, beban {shots} tragos",
+        en: "Everyone who has sent a message to the wrong person and regretted it, drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "{player1}, deja que el grupo revise tu historial de búsqueda reciente o bebe {shots} tragos",
+        en: "{player1}, let the group check your recent search history or drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "{player1} y {player2} intercambien zapatos por el resto del juego",
+        en: "{player1} and {player2} exchange shoes for the rest of the game"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Todos los que hayan bailado frente al espejo usando un cepillo como micrófono, beban {shots} tragos",
+        en: "Everyone who has danced in front of the mirror using a brush as a microphone, drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Todos los que hayan comido directamente del refrigerador a medianoche, repartan {shots} tragos",
+        en: "Everyone who has eaten directly from the fridge at midnight, give out {shots} drinks"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Todos los que tengan una anécdota divertida con {player1} que el resto no conozca, beban {shots} tragos",
+        en: "Everyone who has a funny anecdote with {player1} that others don't know about, drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Toma {shots} tragos si alguna vez has mentido sobre conocer a un famoso",
+        en: "Take {shots} drinks if you've ever lied about meeting a celebrity"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Las personas que han pasado más de 3 horas seguidas en redes sociales, beban {shots} tragos",
+        en: "People who have spent more than 3 consecutive hours on social media, drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Todos los que se han quedado dormidos en un lugar inapropiado, repartan {shots} tragos",
+        en: "Everyone who has fallen asleep in an inappropriate place, give out {shots} drinks"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Todos los que crean que {player1} sería el mejor compañero de aventuras, beban {shots} tragos",
+        en: "Everyone who thinks {player1} would be the best adventure buddy, drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "{player1}, cuenta un talento oculto que tengas o bebe {shots} tragos",
+        en: "{player1}, share a hidden talent you have or drink {shots}"
+    },
+    tags: ["preparty"]
+}, {
+    locales: {
+        es: "Todos los que hayan intentado aprender un idioma y lo hayan abandonado, beban {shots} tragos",
+        en: "Everyone who has tried to learn a language and given up, drink {shots}"
+    },
+    tags: ["preparty"]
 }, ...crazyQuestions, ...hotQuestions, ...TeamQuestions];
 
 /*

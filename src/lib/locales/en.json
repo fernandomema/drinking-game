@@ -72,5 +72,6 @@
     "players": "Players",
     "modes": "Modes",
     "settings": "Settings"
-  }
+  },
+  "end_of_game": "End of the game!"
 }

@@ -29,9 +29,11 @@
         <div class="w-16 h-1 bg-gray-300 rounded mx-auto mb-4"></div>
     
         <!-- Content slot -->
-        <slot>
-          <p class="text-center">Your content here</p>
-        </slot>
+         <div class="overflow-y-auto max-h-[80vh]">
+           <slot>
+             <p class="text-center">Your content here</p>
+           </slot>
+         </div>
     
         <slot name="footer" closeSheet={closeSheet}>
           <button

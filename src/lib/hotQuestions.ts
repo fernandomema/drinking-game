@@ -3,536 +3,643 @@ import { Question } from "./questions";
 export const hotQuestions: Question[] = [{
     locales: {
         es: '{player1}, si eres una chica lámete el dedo eróticamente. Si eres hombre,  finge dar placer con tu lengua entre 2 dedos o sino bebes {shots} tragos',
+        en: '{player1}, if you\'re a girl, lick your finger suggestively. If you\'re a man, pretend to please with your tongue between 2 fingers or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido sexo en un lugar público, bebe {shots} tragos',
+        en: 'Everyone who has had intimate relations in a public place, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, finge tener un orgasmo durante 10 segundos.',
+        en: '{player1}, pretend to have a moment of pleasure for 10 seconds.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan hecho un trío, bebe {shots} tragos',
+        en: 'Everyone who has been involved in a threesome, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todas la chicas deben enseñar su ropa interior.',
+        en: 'All the girls must show their undergarments.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1} y {player2} daos una caricia.',
+        en: '{player1} and {player2} give each other a caress.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido sexo frente un cámara reparten {shots} tragos',
+        en: 'Everyone who has been intimate in front of a camera gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan pensado en otra persona durante el coito reparten {shots} tragos',
+        en: 'Everyone who has thought about someone else during intimacy gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que tengan ganas de hacer el amor con una persona presente en la sala beben {shots} tragos',
+        en: 'Everyone who has feelings for someone in the room drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Toma {shots} tragos si alguna vez lo has hecho en la primera cita.',
+        en: 'Take {shots} drinks if you\'ve ever been intimate on the first date.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Las personas a las que les gustan las mamadas, beben {shots} tragos',
+        en: 'People who enjoy oral pleasure, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que se han filmado teniendo sexo reparten {shots} tragos',
+        en: 'Everyone who has filmed themselves being intimate gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que crean que {player1} es increíble en la cama, beben {shots} tragos',
+        en: 'Everyone who thinks {player1} is amazing in bed, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, chúpale el dedo a {player2},  sino bebes {shots} tragos',
+        en: '{player1}, suck {player2}\'s finger, or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que han practicado sexo anal, beben {shots} tragos',
+        en: 'Everyone who has practiced rear intimacy, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que lleven camisa, desabrocharos los botones y bebed un trago por cada botón',
+        en: 'Everyone wearing a shirt, unbutton your buttons and drink one sip for each button'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, quítale una prenda a {player2},  sino bebes {shots} tragos',
+        en: '{player1}, remove an item of clothing from {player2}, or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos a los que hayan sorprendido masturbándose beben {shots} tragos',
+        en: 'Everyone who has been caught self-pleasuring drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que se afeítan/depilan sus partes íntimas reparten {shots} tragos',
+        en: 'Everyone who shaves/waxes their private areas gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si no has consultado una página web porno desde hace más de 2 semanas',
+        en: 'Drink {shots} if you haven\'t visited an adult website in more than 2 weeks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que disfrutan escuchando guarradas en la cama, reparten {shots} tragos',
+        en: 'Everyone who enjoys hearing dirty talk in bed, gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¿{player1}, cuántos vasos debes beber para animarte a tener sexo con {player2}? Responde o bebe {shots} tragos',
+        en: '{player1}, how many glasses must you drink to be willing to be intimate with {player2}? Answer or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, de todas las personas que están jugando,  ¿Quién crees que la chupa mejor? Responde o bebe {shots} tragos',
+        en: '{player1}, of all the people playing, who do you think is best at oral activities? Answer or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que han practicado juegos de rol en la cama, reparten {shots} tragos',
+        en: 'Everyone who has practiced role-playing in bed, gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, da {shots} tragos a la persona más sexy',
+        en: '{player1}, give {shots} drinks to the sexiest person'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que han tenido sexo con una persona y no recuerden su nombre deben beber {shots} tragos',
+        en: 'Everyone who has been intimate with someone and doesn\'t remember their name must drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que han tenido sexo en un hotel, beben {shots} tragos',
+        en: 'Everyone who has been intimate in a hotel, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, imita la posición del perrito durante 5 segundos o bebe {shots} tragos',
+        en: '{player1}, imitate the doggy position for 5 seconds or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que nunca han tenido sexo en un coche, beben {shots} tragos',
+        en: 'Everyone who has never been intimate in a car, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, di algo sexual que nunca has hecho,  todos los que lo hayan hecho,  beben {shots} tragos',
+        en: '{player1}, say something intimate that you\'ve never done, everyone who has done it, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, si nos enseñas una teta,  {player2} bebe {shots} tragos,  sino bebes {shots2} tragos.',
+        en: '{player1}, if you show us your chest, {player2} drinks {shots}, otherwise you drink {shots2}.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, {player2} y {player3} fingid hacer un trío,  sino todos beben {shots} tragos.',
+        en: '{player1}, {player2} and {player3} pretend to have a threesome, otherwise everyone drinks {shots}.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, elige entre beber {shots} tragos o besar los pies de {player2}',
+        en: '{player1}, choose between drinking {shots} or kissing {player2}\'s feet'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, si le das un beso a {player2},  todo el mundo bebe {shots} tragos.',
+        en: '{player1}, if you give a kiss to {player2}, everyone drinks {shots}.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos beben en tragos el equivalente de los orgasmos que hayan tenido esta semana (la masturbación cuenta)',
+        en: 'Everyone drinks the equivalent of the personal moments they\'ve had this week (self-pleasure counts)'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que no hayan tenido sexo esta semana beben {shots} tragos',
+        en: 'Everyone who hasn\'t been intimate this week drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido sexo con una persona 5 años mayor, beben {shots} tragos',
+        en: 'Everyone who has been intimate with someone 5 years older, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido sexo con una persona 5 años menor, beben {shots} tragos',
+        en: 'Everyone who has been intimate with someone 5 years younger, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Si {player1} y {player2} se morrean, cada uno reparte {shots} tragos,  si no todo el mundo bebe {shots2} tragos',
+        en: 'If {player1} and {player2} make out, each gives out {shots} drinks, if not everyone drinks {shots2}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan enviado o hayan recibido un mensaje erótico, beben {shots} tragos',
+        en: 'Everyone who has sent or received a suggestive message, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'El primer jugador en mostrar un mensaje sexual, reparte {shots} tragos',
+        en: 'The first player to show a suggestive message, gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido dificultades sexuales, beben {shots} tragos',
+        en: 'Everyone who has had intimate difficulties, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido una aventura sexual con otro jugador beben {shots} tragos',
+        en: 'Everyone who has had an intimate adventure with another player drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan sido sorprendidos por sus padres mientras follaban, beben {shots} tragos',
+        en: 'Everyone who has been caught by their parents while being intimate, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, si no has hecho el amor más de 4 veces en un mismo día,  bebes {shots} tragos,  sino repartelos',
+        en: '{player1}, if you haven\'t been intimate more than 4 times in one day, drink {shots}, otherwise give them out'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido fantasías con la pareja de un/una amigo/a, beben {shots} tragos',
+        en: 'Everyone who has had fantasies about a friend\'s partner, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan enviado fotos eróticas, beben {shots} tragos',
+        en: 'Everyone who has sent suggestive photos, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan lamido comida del cuerpo de su pareja, beben {shots} tragos',
+        en: 'Everyone who has licked food from their partner\'s body, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan follado en el cama de sus padres, beben {shots} tragos',
+        en: 'Everyone who has been intimate in their parents\' bed, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan gritando el nombre de su pareja mientras follan, beben {shots} tragos',
+        en: 'Everyone who has shouted their partner\'s name during intimacy, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que han tenido un orgasmo en menos que tres minutos de penetración sexual beben {shots} tragos',
+        en: 'Everyone who has reached a peak in less than three minutes of intimate contact drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan follado con la regla, beben {shots} tragos',
+        en: 'Everyone who has been intimate during menstruation, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'El / la más hábil haciendo el amor entre {player1} y {player2}, bebe {shots} tragos',
+        en: 'The most skilled at intimacy between {player1} and {player2}, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que follaron por primera vez con un amigo por diversión, beben {shots} tragos',
+        en: 'Everyone who was first intimate with a friend for fun, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Las chicas que sufrieron durante su primera vez {shots} tragos',
+        en: 'Girls who had discomfort during their first time {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, si el hecho de acostarte con {player2} no te molesta,  reparte {shots} tragos',
+        en: '{player1}, if the idea of being intimate with {player2} doesn\'t bother you, give out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, si has estado secretamente enamorado/a de {player2},  bebe {shots} tragos',
+        en: '{player1}, if you\'ve been secretly in love with {player2}, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, pellizca los pezones de {player2},  sino el/ella bebe {shots} tragos',
+        en: '{player1}, pinch {player2}\'s chest, otherwise they drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan introducido algún objeto sexual en su pareja, beben {shots} tragos',
+        en: 'Everyone who has introduced an intimate object to their partner, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan utilizado una página web de contactos, beben {shots} tragos',
+        en: 'Everyone who has used a dating website, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que se hayan acostado con alguien que haya conocido en una web de contactos, beben {shots} tragos',
+        en: 'Everyone who has been intimate with someone they met on a dating site, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'La última persona en haber consultado una web porno, reparte {shots} tragos',
+        en: 'The last person to have visited an adult website, gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'El o la que se haya acostado con más personas por una web de contactos, reparte {shots} tragos',
+        en: 'The person who has been intimate with the most people from dating sites, gives out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan arañado o hayan recibido cachetazos de una pareja, beben {shots} tragos',
+        en: 'Everyone who has scratched or received slaps from a partner, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido un consolador en su manos beben {shots} tragos',
+        en: 'Everyone who has held an adult toy in their hands drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan utilizado juguetes sexuales mientras follaban, beben {shots} tragos',
+        en: 'Everyone who has used adult toys during intimacy, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que se excitan durante un masaje profesional, beben {shots} tragos',
+        en: 'Everyone who gets excited during a professional massage, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡{player1}, lame la nariz de {player2} o bebe {shots} tragos!',
+        en: '{player1}, lick {player2}\'s nose or drink {shots}!'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡Todos los que hayan escupido sobre los genitales de alguien, beben {shots} tragos!',
+        en: 'Everyone who has spit on someone\'s private parts, drink {shots}!'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan practicado sexo oral hace menos de 30 días beben {shots} tragos',
+        en: 'Everyone who has practiced oral intimacy less than 30 days ago drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, hazle un masaje a {player2} o bebe {shots} tragos',
+        en: '{player1}, give {player2} a massage or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, {player2} te tiene que tocar los genitales, sino bebes {shots} tragos',
+        en: '{player1}, {player2} has to touch your private area, otherwise you drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan hecho una mamada hace menos de una semana, beben {shots} tragos',
+        en: 'Everyone who has performed oral acts less than a week ago, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan tenido un objeto en el ano o la vagina, beben {shots} tragos',
+        en: 'Everyone who has had an object in private areas, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, dale un beso en la nariz a {player2} o bebe {shots} tragos',
+        en: '{player1}, give {player2} a kiss on the nose or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡Todos los que hayan insultado a su pareja durante el acto sexual beben {shots} tragos, panda de pervertidos!',
+        en: 'Everyone who has insulted their partner during intimate moments drinks {shots}, you bunch of perverts!'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡{player1}, elige a dos personas que se tienen que besar,  sino deberán beber {shots} tragos!',
+        en: '{player1}, choose two people who have to kiss, otherwise they will have to drink {shots}!'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡Todos los que hayan visto un amigo/a engañar a su pareja, beben {shots} tragos!',
+        en: 'Everyone who has seen a friend cheat on their partner, drink {shots}!'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡Maldita sea la Traición!Todos los que hayan salido con el/ la ex de un/a amigo/a, beben {shots} tragos',
+        en: 'Damn Betrayal! Everyone who has dated a friend\'s ex, drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, si durante tu última relación sexual usaste protección,  repartes {shots} tragos,  sino son para ti.',
+        en: '{player1}, if during your last intimate encounter you used protection, give out {shots} drinks, otherwise they\'re for you.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¿{player1}, prefieres una relación oral,  anal o vaginal? Responde y toma {shots} tragos',
+        en: '{player1}, do you prefer oral, rear or frontal relations? Answer and take {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todos los que hayan sido insultados durante el acto sexual beben {shots} tragos',
+        en: 'Everyone who has been insulted during intimate moments drinks {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡Bebe {shots} tragos si te gustan que te miren mientras follas!',
+        en: 'Drink {shots} if you like being watched during intimate moments!'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si te gustaría follar viendo una película porno',
+        en: 'Drink {shots} if you would like to be intimate while watching an adult film'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si te gusta follar y ver una película porno al mismo tiempo.',
+        en: 'Drink {shots} if you like being intimate and watching an adult film at the same time.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si quieres acostarte con alguien en este mismo instante.',
+        en: 'Drink {shots} if you want to be intimate with someone at this very moment.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si te gusta que te toquen el ano durante el sexo.',
+        en: 'Drink {shots} if you like having your rear touched during intimacy.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si te gusta jugar con el ano de tu compañero/ a durante la penetración',
+        en: 'Drink {shots} if you like playing with your partner\'s rear during intimacy'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si te gusta que te azoten durante el sexo.',
+        en: 'Drink {shots} if you like being spanked during intimate moments.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Los pícaros/as que ya hayan tenido una experiencia sexual con ambos géneros beben {shots} tragos',
+        en: 'The mischievous ones who have had intimate experiences with both genders drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Las mujeres que ya hayan tenido un orgasmo vaginal beben {shots} tragos',
+        en: 'Women who have had a frontal peak drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si ya has tenido un orgasmo anal!',
+        en: 'Drink {shots} if you have already had a rear peak!'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '¡Para las parejas interraciales! Si te has acostado con una persona de color diferente repartes {shots} tragos',
+        en: 'For interracial couples! If you\'ve been intimate with a person of a different color, give out {shots} drinks'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si alguna vez te has disfrazado por el morbo sexual con tu pareja.',
+        en: 'Drink {shots} if you\'ve ever dressed up for intimate excitement with your partner.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si alguna vez has visto gente teniendo sexo en la calle.',
+        en: 'Drink {shots} if you\'ve ever seen people being intimate in the street.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si las últimas tres veces que tuviste sexo fue casual.',
+        en: 'Drink {shots} if the last three times you were intimate it was casual.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si has recibido un masaje que ha terminado en sexo casual...',
+        en: 'Drink {shots} if you\'ve received a massage that ended in casual intimacy...'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si has dado un masaje que ha terminado en sexo casual...',
+        en: 'Drink {shots} if you\'ve given a massage that ended in casual intimacy...'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, lame la boca de uno de los jugadores o bebe {shots} tragos.',
+        en: '{player1}, lick the mouth of one of the players or drink {shots}.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, lame el cuello de uno de los jugadores o bebe {shots} tragos',
+        en: '{player1}, lick the neck of one of the players or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: 'Todo el mundo toma {shots} tragos. Excepto {player1}, que va a darle un beso a cada jugador.',
+        en: 'Everyone takes {shots} drinks. Except {player1}, who will give a kiss to each player.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, besa a {player2} o bebe {shots} tragos',
+        en: '{player1}, kiss {player2} or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, puedes besar la persona que quieras o si no beber {shots} tragos',
+        en: '{player1}, you can kiss whoever you want or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, tienes que quitarle una prenda a {player2} o beber {shots} tragos',
+        en: '{player1}, you have to remove an item of clothing from {player2} or drink {shots}'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, pásale un hielo a {player2} con tu boca o bebe {shots} tragos.',
+        en: '{player1}, pass an ice cube to {player2} with your mouth or drink {shots}.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, comienza a beber {shots} tragos,  si eres un hombre describe la mejor chupada que te han hecho. Si eres una mujer cuéntanos como las haces.',
+        en: '{player1}, start drinking {shots}, if you\'re a man describe the best oral experience you\'ve had. If you\'re a woman tell us how you do them.'
     },
     tags: ['+18'],
 },{
     locales: {
         es: '{player1}, empiece a beber {shots} tragos. Si eres una mujer describe el mejor cunilingus que te han hecho. Si eres un hombre cuéntanos como lo haces.',
+        en: '{player1}, start drinking {shots}. If you\'re a woman describe the best oral experience you\'ve had. If you\'re a man tell us how you do it.'
     },
     tags: ['+18'],
 },{

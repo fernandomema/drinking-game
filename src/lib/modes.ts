@@ -246,7 +246,25 @@ function fillPlaceholders(questions: Question[], options: {
     questions.forEach((question) => {
         for (let loopLocale of Object.keys(question.locales)) {
             if (!options.locale || options.locale === loopLocale) {
-                question.locales[loopLocale] = fillPlayersPlaceholdersText(question.locales[loopLocale], options.orderedPlayers || options.players?.shuffle() || []);
+                let shuffledPlayers = options.orderedPlayers || options.players?.shuffle() || [];
+                if (options.teams) {
+                    // Shuffle players making sure all odd numbers are players from one team and even numbers are players from the other
+                    let team1: any[] = JSON.parse(JSON.stringify(options.teams[0].players.shuffle()));
+                    let team2: any[] = JSON.parse(JSON.stringify(options.teams[1].players.shuffle()));
+                    console.log('team1', team1);
+                    const playersCount = options.players.length;
+                    shuffledPlayers = [];
+                    let team = Math.floor(Math.random() * 2) + 1;
+                    for (let i = 0; i < playersCount; i++) {
+                        team = team == 1 ? 2 : 1;
+                        if (team == 1) {
+                            shuffledPlayers.push(team1.shift());
+                        } else {
+                            shuffledPlayers.push(team2.shift());
+                        }
+                    }
+                }
+                question.locales[loopLocale] = fillPlayersPlaceholdersText(question.locales[loopLocale], shuffledPlayers);
                 question.locales[loopLocale] = fillShotsPlaceholdersText(question.locales[loopLocale]);
                 if (options.teams) {
                     question.locales[loopLocale] = fillTeamsPlaceholdersText(question.locales[loopLocale], options.teams.shuffle());

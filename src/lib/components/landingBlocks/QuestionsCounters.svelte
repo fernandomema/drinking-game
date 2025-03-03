@@ -1,23 +1,30 @@
 <script lang="ts">
-    import { _ } from "$lib/locales";
+    import { _, getLocale } from "$lib/locales";
     import { questions } from "$lib/questions";
+    import { onMount } from "svelte";
 
-    let questionsCount = [{
-        name: $_("modes.preparty.title"),
-        count: questions.filter(q => q.tags.includes('preparty')).length,
-    }, {
-        name: $_("modes.crazy.title"),
-        count: questions.filter(q => q.tags.includes('crazy')).length,
-    }, {
-        name: $_("modes.hot.title"),
-        count: questions.filter(q => q.tags.includes('+18')).length,
-    }, {
-        name: $_("modes.teams.title"),
-        count: questions.filter(q => q.tags.includes('teams')).length,
-    }, {
-        name: $_("modes.christmas.title"),
-        count: questions.filter(q => q.tags.includes('christmas')).length,
-    }];
+    let questionsCount: any[] = [];
+    
+    onMount(async () => {
+        const locale = await getLocale();
+        questionsCount = [{
+            name: $_("modes.preparty.title"),
+            count: questions.filter(q => q.tags.includes('preparty') && q.locales[locale]).length,
+        }, {
+            name: $_("modes.crazy.title"),
+            count: questions.filter(q => q.tags.includes('crazy') && q.locales[locale]).length,
+        }, {
+            name: $_("modes.hot.title"),
+            count: questions.filter(q => q.tags.includes('+18') && q.locales[locale]).length,
+        }, {
+            name: $_("modes.teams.title"),
+            count: questions.filter(q => q.tags.includes('teams') && q.locales[locale]).length,
+        }, {
+            name: $_("modes.christmas.title"),
+            count: questions.filter(q => q.tags.includes('christmas') && q.locales[locale]).length,
+        }];
+    });
+    
 </script>
 
 <section class="mt-10 bg-purple-100">

@@ -543,156 +543,187 @@ export const crazyQuestions: Question[] = [{
 },{
     locales: {
         es: 'El primer jugador en mostrar sus genitales reparte {shots} tragos',
+        en: 'The first player to show their genitals gives out {shots} drinks'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Bebe {shots} tragos si anoche viste una página porno.',
+        en: 'Drink {shots} if you watched porn last night.'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Los que hayan orinando en sus pantalones este año beben {shots} tragos',
+        en: 'Those who have urinated in their pants this year drink {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan meado en el lavabo beben {shots} tragos',
+        en: 'Everyone who has peed in the sink drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan meado en el fregadero beben {shots} tragos',
+        en: 'Everyone who has peed in the kitchen sink drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan tragado su propio vómito beben {shots} tragos',
+        en: 'Everyone who has swallowed their own vomit drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que hayan tenido fanatasías con un personaje de dibujos animados beben {shots} tragos',
+        en: 'Everyone who has had fantasies about a cartoon character drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan mirado el ano en el espejo beben {shots} tragos',
+        en: 'Everyone who has looked at their anus in the mirror drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se afeitan, se recortan o se depilan el ano beben {shots} tragos',
+        en: 'Everyone who shaves, trims or waxes their anus drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} huele las axilas de {player2} o bebe {shots} tragos',
+        en: '{player1} smells {player2}\'s armpits or drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} rasca la espalda de {player2} o bebe {shots} tragos',
+        en: '{player1} scratches {player2}\'s back or drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} elige entre beber 1 trago de cada vaso o beber 5 tragos del tuyo.',
+        en: '{player1} chooses between drinking 1 sip from each glass or 5 sips from their own.'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'En modo insoportable! {player1} y {player2} echen un pulso, los jugadores serán el jurado. El perdedor bebe {shots} tragos',
+        en: 'Insufferable mode! {player1} and {player2} arm wrestle, the other players will be the jury. The loser drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1} huele la ropa interior de {player2} o bebe {shots} tragos',
+        en: '{player1} smells {player2}\'s underwear or drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan metido un dedo en su propio culo beben {shots} tragos',
+        en: 'Everyone who has stuck a finger in their own ass drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '{player1}, da 5 vueltas sobre ti mismo y bebe por cada estúpido que se burle de ti.',
+        en: '{player1}, spin around 5 times and drink for each stupid person who makes fun of you.'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que han probado algunas gotas de orina durante los preliminares sexuales beben {shots} tragos',
+        en: 'Everyone who has tasted drops of urine during sexual foreplay drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso de estupidez entre {player1} y {player2}! El que dé la bofetada más grande gana. El otro bebe {shots} tragos',
+        en: 'Stupidity contest between {player1} and {player2}! Whoever gives the biggest slap wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso de estupidez entre {player1} y {player2}! El que dé la paliza más grande gana. El otro bebe {shots} tragos',
+        en: 'Stupidity contest between {player1} and {player2}! Whoever gives the biggest beating wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
-        es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que levante los brazos en alto el mayor tiempo gana.  bebe {shots} tragos',
+        es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que levante los brazos en alto el mayor tiempo gana. bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who keeps their arms raised the longest wins. The loser drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que se quede más tiempo sobre una pierna gana. El perdedor bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who stands on one leg the longest wins. The loser drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que pase más tiempo girando sobre si misma gana. El otro bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who spends the most time spinning wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso hasta el finl del juego entre {player1} y {player2}! La persona que pase más tiempo haciendo flexiones gana. El otro bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who spends the most time doing push-ups wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que pase más tiempo repitiendo "Me gusta la sodomía"" gana. El otro bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who spends the most time repeating "I like sodomy" wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que pase más tiempo repitiendo "soy feo"" gana. El otro bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who spends the most time repeating "I am ugly" wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que pase más tiempo repitiendo "soy un estúpido"" gana. El otro bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who spends the most time repeating "I am stupid" wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso hasta el final del juego entre {player1} y {player2}! La persona que pase más tiempo sentado gana. El otro bebe {shots} tragos',
+        en: 'Contest until the end of the game between {player1} and {player2}! The person who spends the most time sitting wins. The other drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso de estupidez! {player1} y {player2} deben enviar mensajes a diferentes personas en 1 minuto, el que más envie gana! El perdedor bebe {shots} tragos',
+        en: 'Stupidity contest! {player1} and {player2} must send messages to different people in 1 minute, whoever sends the most wins! The loser drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡Concurso de estupidez hasta el final del juego! {player1} y {player2} deben sostener su lengua entre dos dedos hasta que uno de los dos se rinda, el perdedor bebe {shots} tragos',
+        en: 'Stupidity contest until the end of the game! {player1} and {player2} must hold their tongue between two fingers until one of them gives up, the loser drinks {shots}'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: '¡{player1} pesa las pelotas de uno de los jugadores o bebe {shots} tragos!',
+        en: '{player1} weighs the balls of one of the players or drinks {shots}!'
     },
     tags: ['crazy'],
 },{
     locales: {
         es: 'Todos los que se hayan tirado un pedo durante el acto sexual beben {shots} tragos! Los pedos vaginales cuentan.',
+        en: 'Everyone who has farted during sex drinks {shots}! Vaginal farts count.'
     },
     tags: ['crazy'],
 },{

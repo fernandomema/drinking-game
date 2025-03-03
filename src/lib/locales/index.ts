@@ -1,4 +1,4 @@
-import { addMessages, getLocaleFromNavigator, init, locale } from 'svelte-i18n';
+import { addMessages, getLocaleFromNavigator, getLocaleFromQueryString, init, locale } from 'svelte-i18n';
 import es from './es.json';
 import en from './en.json';
 
@@ -9,7 +9,7 @@ addMessages('es', es);
 
 init({
     fallbackLocale: 'en',
-    initialLocale: getLocaleFromNavigator(),
+    initialLocale: getLocaleFromQueryString('locale') || getLocaleFromNavigator(),
 });
 
 export const getLocale = async (): Promise<string> => {

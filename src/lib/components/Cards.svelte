@@ -14,11 +14,11 @@
     import PremiumFeatureBottomSheet from './BottomSheets/PremiumFeatureBottomSheet.svelte';
     import { shareApp } from '$lib/utils/Share';
     import type { Team } from '$lib/types/Team';
+    import { _ } from '$lib/locales';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
 	let players: any[] = [];
-    let Sentry: any;
     let ended = false;
 
     let showSuggestModal = false;
@@ -36,7 +36,6 @@
         if (!players || players.length == 0) goto('/select-mode');
         locale = await getLocale();
         filteredQuestions = modes[mode].pickCards(questions, locale, players);
-        Sentry = await import('@sentry/capacitor');
         teams = JSON.parse(localStorage.getItem('teams') || '[]');
         umami = window.umami;
 	});
@@ -120,14 +119,14 @@
             {/if}
         {:else}
             <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',8640489,document.createElement('script'))</script>
-            <div in:fade={{ duration: 200, delay: 200 }} class="flex h-full w-full flex-col">
-                <div class="flex h-full w-full flex-col items-center justify-center text-center text-7xl">
-                    End of the game!
+            <div in:fade={{ duration: 200, delay: 200 }} class="flex h-full w-full flex-col gap-4">
+                <div class="rounded-3xl flex h-full w-full flex-col items-center justify-center text-center text-7xl bg-[794fea] backdrop-blur-lg border-2 border-solid border-white border-opacity-20 shadow">
+                    {$_('end_of_game')}
                 </div>
-                <div class="h-[60px]">
+                <div class="h-[60px] mb-2">
                     <button
                         transition:fade={{ duration: 600, delay: 2500 }}
-                        class="bottom-1 left-1 z-10 w-full rounded-full bg-white/50 p-3 px-4 text-3xl backdrop-blur-sm"
+                        class="w-full rounded-3xl p-3 px-4 text-3xl bg-[794fea] backdrop-blur-lg border-2 border-solid border-white border-opacity-20 shadow"
                         on:click={() => goto('/select-mode')}
                     >   
                         Back to mode selection
