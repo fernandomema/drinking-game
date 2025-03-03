@@ -183,3 +183,25 @@
         <a href="/" class="bg-purple-700 text-white py-2 px-6 rounded-lg text-lg font-semibold hover:bg-purple-800 transition">Descargar para Android</a>
     </div>
 </section>
+
+<section class="py-12 px-6">
+    <div class="container mx-auto text-left">
+      <details class="mb-6">
+        <summary class="text-2xl font-semibold text-purple-600 cursor-pointer">Todo lo que Necesitas Saber sobre el Cóctel Explosión Tropical 🍹🎉</summary>
+        <p class="text-lg text-gray-700 mt-4">El Cóctel Explosión Tropical es la bebida perfecta para cualquier fiesta, reunión o evento donde quieras sorprender a tus invitados con un trago único y lleno de sabor. Este cóctel se destaca por sus colores vibrantes, su mezcla de sabores tropicales y su toque chispeante, lo que lo convierte en la elección ideal para aquellos que buscan algo fuera de lo común. Si eres un amante de las bebidas refrescantes y originales, este cóctel se convertirá rápidamente en tu favorito. Con su base de ron blanco, licor de maracuyá y curaçao azul, el Cóctel Explosión Tropical ofrece una experiencia sensorial completa.</p>
+  
+        <p class="text-lg text-gray-700 mt-4">La clave para que este cóctel sea tan especial es su combinación de sabores exóticos, como el maracuyá y la piña, que transportan a cualquier persona a una isla tropical con solo un sorbo. Además, el toque efervescente de los Peta Zetas lo convierte en una opción divertida y dinámica, perfecta para animar cualquier fiesta. No solo es un cóctel delicioso, sino también visualmente impresionante, ideal para aquellos que aman las bebidas que hacen un gran impacto al servirlas.</p>
+  
+        <p class="text-lg text-gray-700 mt-4">El Cóctel Explosión Tropical también es una excelente opción para quienes están buscando recetas fáciles y rápidas de preparar. Con solo unos pocos ingredientes clave y algunos pasos sencillos, puedes crear una bebida digna de cualquier bar de alta gama. A medida que más personas se interesan en crear sus propios cócteles en casa, recetas como la del Explosión Tropical se están convirtiendo en las más buscadas en plataformas de recetas y blogs. Los ingredientes básicos, como el ron, el licor de maracuyá y el curaçao azul, son fáciles de conseguir en la mayoría de las tiendas especializadas en licores, lo que hace que esta bebida sea accesible para todos.</p>
+  
+        <p class="text-lg text-gray-700 mt-4">Además, al preparar esta bebida, no solo estás sirviendo un cóctel delicioso, sino también creando una experiencia para tus invitados. El proceso de preparar y servir el Cóctel Explosión Tropical se convierte en una actividad social, en la que todos pueden participar y disfrutar del espectáculo visual que ofrece este trago. La granadina, al ser vertida lentamente, crea un efecto degradado impresionante que hará que tus amigos se sorprendan antes de probar la bebida.</p>
+  
+        <p class="text-lg text-gray-700 mt-4">Si estás buscando añadir un toque único y divertido a tu fiesta, el Cóctel Explosión Tropical es definitivamente la opción ideal. Con su sabor refrescante y efervescente, es perfecto para cualquier tipo de evento, desde fiestas informales hasta celebraciones especiales. Ya sea que estés organizando una fiesta de verano o una reunión con amigos, este cóctel siempre será un éxito garantizado. Además, al combinarlo con juegos como Tragos Locos, puedes asegurarte de que tu fiesta será la más épica y memorable.</p>
+  
+        <p class="text-lg text-gray-700 mt-4">No solo los cócteles como el Explosión Tropical están ganando popularidad, sino que las apps como Tragos Locos también se están convirtiendo en una tendencia en fiestas y reuniones. Con Tragos Locos, puedes agregar una capa extra de diversión a cualquier evento, haciendo que cada ronda de tragos sea más emocionante y llena de risas. La aplicación es perfecta para aquellos que quieren llevar su fiesta al siguiente nivel, con desafíos y preguntas que mantendrán a todos entretenidos mientras disfrutan de sus bebidas favoritas.</p>
+  
+        <p class="text-lg text-gray-700 mt-4">Si quieres estar al tanto de las últimas tendencias en cócteles y juegos para fiestas, asegúrate de seguir explorando más recetas de cócteles como el Explosión Tropical y juegos interactivos como Tragos Locos. Con estas herramientas, nunca más tendrás que preocuparte por la falta de ideas para tu próxima fiesta o reunión.</p>
+      </details>
+    </div>
+</section>
+  
