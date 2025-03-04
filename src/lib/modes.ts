@@ -102,6 +102,19 @@ export const modes: { [key: string]: Mode } = {
             });
         }
     },
+    drinkIf: {
+        menuPriority: MenuPriority.SpecialMode,
+        icon: '/drink-if.png',
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            return getModeQuestions(questions, {
+                gameMode: 'drinkIf',
+                mode: 'basic',
+                locale,
+                players
+            });
+        },
+        isEnabled: () => false
+    }
 }
 
 function getModeQuestions(questions: Question[], options: {
