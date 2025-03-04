@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import RelatedBlogPosts from "./RelatedBlogPosts.svelte";
+    import { SchemaGenerator } from "$lib/utils/SchemaGenerator";
 
     export let title: string;
     export let seoTitle: string;
@@ -44,6 +45,18 @@
 
 <svelte:head>
     {@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}
+    {@html `<script type="application/ld+json">${JSON.stringify(
+      SchemaGenerator.getBreadcrumbs([{
+        name: "Blog",
+        url: "/blog"
+      }, {
+        name: lang,
+        url: "/blog/" + lang
+      }, {
+        name: title,
+        url: "/blog/" + lang + "/" + seoTitle
+      }])
+    )}</script>`}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
