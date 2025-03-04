@@ -1,3 +1,35 @@
+<script>
+
+    import { SchemaGenerator } from "$lib/utils/SchemaGenerator";
+
+</script>
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(SchemaGenerator.getProduct({
+        name: "Tragos Locos",
+        description: "La app perfecta para tus fiestas sociales",
+        image: "https://tragos-locos.servitimo.net/blog/what-is-tragos-locos/cover.png",
+        url: "https://tragos-locos.servitimo.net/",
+        review: {
+            name: "Review de Tragos Locos",
+            author: {
+                name: "Fernando Merino",
+            },
+            positiveItems: [
+                "Multiples idiomas",
+                "Diversidad de modos de juegos",
+                "Soporte para chromecast",
+                "Disponible en todas las plataformas",
+                "Diseño atractivo",
+                "Eventos de tempodara"
+            ],
+            negativeItems: [
+                "No es apto para todas las edades",
+                "No siempre es inclusivo en sus preguntas"
+            ]
+        }
+    }))}</script>`}
+</svelte:head>
+
 <section>
     <h2 class="text-2xl font-semibold text-purple-700">La Experiencia de Fiesta Definitiva</h2>
     <p class="mt-4 text-gray-700">¿Estás cansado de fiestas predecibles que carecen de emoción? <strong>Tragos Locos</strong> está aquí para revolucionar tus reuniones sociales, convirtiéndolas en noches inolvidables llenas de risas, sorpresas y pura diversión.</p>
