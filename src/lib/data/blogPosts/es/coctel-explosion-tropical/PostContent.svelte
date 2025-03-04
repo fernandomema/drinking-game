@@ -10,7 +10,7 @@
         },
         "datePublished": "2025-02-26",
         "description": "Un cóctel vibrante con colores psicodélicos, sabor tropical y un toque chispeante gracias a los caramelos efervescentes.",
-        "image": "URL_DE_LA_IMAGEN_DEL_CÓCTEL",
+        "image": "https://tragos-locos.servitimo.net/blog/coctel-explosion-tropical/cover.webp",
         "recipeCategory": "Cócteles",
         "recipeCuisine": "Tropical",
         "keywords": "cóctel tropical, bebida alcohólica, cóctel loco, tragos originales, fiesta",
