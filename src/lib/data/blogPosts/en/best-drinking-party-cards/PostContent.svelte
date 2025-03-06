@@ -2,42 +2,85 @@
     import Faqs from "$lib/components/landingBlocks/Faqs.svelte";
     import { questions } from "$lib/questions";
     
-    // Get a selection of interesting cards from different categories
-    const prepartyCards = questions
-        .filter(q => q.tags?.includes('preparty') && q.locales.en)
+    // Create a seed based on the current date (YYYYMMDD format)
+    const today = new Date();
+    const dateSeed = parseInt(
+        `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`
+    );
+    
+    // Simple seeded random function
+    function seededRandom(seed: number) {
+        const x = Math.sin(seed) * 10000;
+        return x - Math.floor(x);
+    }
+    
+    // Fisher-Yates shuffle with seed
+    function shuffleWithSeed<T>(array: T[], seed: number): T[] {
+        const result = [...array];
+        let currentSeed = seed;
+        
+        for (let i = result.length - 1; i > 0; i--) {
+            currentSeed = (currentSeed * 9301 + 49297) % 233280;
+            const randomIndex = Math.floor((currentSeed / 233280) * (i + 1));
+            [result[i], result[randomIndex]] = [result[randomIndex], result[i]];
+        }
+        
+        return result;
+    }
+    
+    // Filter and shuffle questions with our seed
+    const filteredQuestions = {
+        preparty: questions.filter(q => q.tags?.includes('preparty') && q.locales.en),
+        challenge: questions.filter(q => q.tags?.includes('challenge') && q.locales.en),
+        truth: questions.filter(q => q.tags?.includes('truth') && q.locales.en),
+        hot: questions.filter(q => q.tags?.includes('+18') && q.locales.en),
+        vote: questions.filter(q => q.tags?.includes('vote') && q.locales.en),
+        christmas: questions.filter(q => q.tags?.includes('christmas') && q.locales.en)
+    };
+    
+    // Shuffle and select cards for each category
+    const prepartyCards = shuffleWithSeed(filteredQuestions.preparty, dateSeed)
         .slice(0, 5)
         .map(q => q.locales.en);
     
-    const challengeCards = questions
-        .filter(q => q.tags?.includes('challenge') && q.locales.en)
+    const challengeCards = shuffleWithSeed(filteredQuestions.challenge, dateSeed + 1)
         .slice(0, 5)
         .map(q => q.locales.en);
     
-    const truthCards = questions
-        .filter(q => q.tags?.includes('truth') && q.locales.en)
+    const truthCards = shuffleWithSeed(filteredQuestions.truth, dateSeed + 2)
         .slice(0, 3)
         .map(q => q.locales.en);
     
-    const hotCards = questions
-        .filter(q => q.tags?.includes('+18') && q.locales.en)
+    const hotCards = shuffleWithSeed(filteredQuestions.hot, dateSeed + 3)
         .slice(0, 3)
         .map(q => q.locales.en);
     
-    const voteCards = questions
-        .filter(q => q.tags?.includes('vote') && q.locales.en)
+    const voteCards = shuffleWithSeed(filteredQuestions.vote, dateSeed + 4)
         .slice(0, 3)
         .map(q => q.locales.en);
     
-    const christmasCards = questions
-        .filter(q => q.tags?.includes('christmas') && q.locales.en)
+    const christmasCards = shuffleWithSeed(filteredQuestions.christmas, dateSeed + 5)
         .slice(0, 3)
         .map(q => q.locales.en);
+    
+    // Format date for display
+    const formattedDate = today.toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
 </script>
 
 <div class="max-w-3xl mx-auto p-6">
     <p class="mb-6 text-lg text-gray-700">
         Ready to take your party to the next level? Drinking card games are the perfect way to break the ice, get everyone laughing, and create unforgettable memories. In this guide, we'll share the best drinking party cards from <span class="font-bold text-purple-600">Tragos Locos</span> that will make your next gathering legendary! 🎉
     </p>
+    
+    <div class="bg-purple-100 p-3 rounded-lg mb-6 text-center">
+        <p class="text-purple-800">
+            <span class="font-semibold">🔄 Cards updated daily!</span> Today's selection: {formattedDate}
+        </p>
+    </div>
     
     <section class="mb-10">
         <h2 class="text-2xl font-semibold text-purple-600 mb-4">Why Drinking Party Cards Make Every Gathering Better</h2>
@@ -59,7 +102,7 @@
         <div class="grid gap-4 mt-6">
             {#each prepartyCards as card, i}
                 <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-purple-500 hover:shadow-lg transition-shadow">
-                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{shots}', '2')}</p>
+                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{player3}', '[Player 3]').replace(/{shots[2]?}/g, '2')}</p>
                 </div>
             {/each}
         </div>
@@ -75,7 +118,7 @@
         <div class="grid gap-4 mt-6">
             {#each challengeCards as card, i}
                 <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
-                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{shots}', '2')}</p>
+                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{player3}', '[Player 3]').replace(/{shots[2]?}/g, '2')}</p>
                 </div>
             {/each}
         </div>
@@ -91,7 +134,7 @@
         <div class="grid gap-4 mt-6">
             {#each truthCards as card, i}
                 <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-500 hover:shadow-lg transition-shadow">
-                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{shots}', '2')}</p>
+                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{player3}', '[Player 3]').replace(/{shots[2]?}/g, '2')}</p>
                 </div>
             {/each}
         </div>
@@ -107,7 +150,7 @@
         <div class="grid gap-4 mt-6">
             {#each hotCards as card, i}
                 <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-red-500 hover:shadow-lg transition-shadow">
-                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{shots}', '2')}</p>
+                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{player3}', '[Player 3]').replace(/{shots[2]?}/g, '2')}</p>
                 </div>
             {/each}
         </div>
@@ -123,7 +166,7 @@
         <div class="grid gap-4 mt-6">
             {#each voteCards as card, i}
                 <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-yellow-500 hover:shadow-lg transition-shadow">
-                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{shots}', '2')}</p>
+                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{player3}', '[Player 3]').replace(/{shots[2]?}/g, '2')}</p>
                 </div>
             {/each}
         </div>
@@ -139,7 +182,7 @@
         <div class="grid gap-4 mt-6">
             {#each christmasCards as card, i}
                 <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-teal-500 hover:shadow-lg transition-shadow">
-                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{shots}', '2')}</p>
+                    <p class="text-gray-800">{card.replace('{player1}', '[Player 1]').replace('{player2}', '[Player 2]').replace('{player3}', '[Player 3]').replace(/{shots[2]?}/g, '2')}</p>
                 </div>
             {/each}
         </div>
@@ -226,4 +269,9 @@
             }
         ]} />
     </section>
+    
+    <div class="text-sm text-gray-500 text-center mt-8 border-t pt-4">
+        <p>Cards are refreshed daily. Come back tomorrow for new card suggestions!</p>
+        <p>Last updated: {formattedDate}</p>
+    </div>
 </div>
