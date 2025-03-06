@@ -1,5 +1,8 @@
 <script lang="ts">
-    const faqs =[{
+    import { _ } from "$lib/locales";
+
+    export let design = 'landing';
+    export let faqs =[{
         title: "¿Cómo puedo descargar la app?",
         content: "Puedes conseguir la app en tu tienda de aplicaciones favorita o como PWA desde nuestro sitio web."
     }, {
@@ -68,20 +71,37 @@
     }
 </script>
 
-<section class="py-16">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-extrabold text-center mb-6 text-gray-800 sm:text-4xl">Preguntas Frecuentes</h2>
-        <p class="text-center text-lg text-gray-600 mb-8">Resuelve tus dudas aquí. Si tienes más preguntas, no dudes en contactarnos.</p>
-        <div class="space-y-6">
+{#if design == 'landing'}
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-center mb-6 text-gray-800 sm:text-4xl">Preguntas Frecuentes</h2>
+            <p class="text-center text-lg text-gray-600 mb-8">Resuelve tus dudas aquí. Si tienes más preguntas, no dudes en contactarnos.</p>
+            <div class="space-y-6">
+                {#each faqs as faq}
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-semibold text-purple-600">{faq.title}</h3>
+                        <p class="mt-2 text-sm text-gray-600">{faq.content}</p>
+                    </div>
+                {/each}
+            </div>
+        </div>
+    </section>
+{:else}
+    <section class="">
+        <h3 class="text-2xl font-semibold text-purple-800">{ $_('faqs.title') }</h3>
+        <div class="space-y-2 mt-4 w-full">
             {#each faqs as faq}
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 class="text-lg font-semibold text-purple-600">{faq.title}</h3>
-                    <p class="mt-2 text-sm text-gray-600">{faq.content}</p>
+                <div class="border rounded-lg p-4">
+                    <button class="w-full text-left font-semibold text-lg flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        {faq.title}
+                        <span class="ml-2">&#9662;</span>
+                    </button>
+                    <p class="mt-1 hidden text-gray-600">{faq.content}</p>
                 </div>
             {/each}
         </div>
-    </div>
-</section>
+    </section>
+{/if}
 
 <svelte:head>
     {@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}
