@@ -85,6 +85,8 @@
     "title": "Ready to start playing?",
     "text": "Download the app now and start enjoying the best party games.",
     "action": "Download now"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions"
   }
-
 }
