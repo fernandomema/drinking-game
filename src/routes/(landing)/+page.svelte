@@ -13,6 +13,7 @@
     import { onMount } from "svelte";
     import Quiz from "$lib/components/landingBlocks/Quiz.svelte";
     import Laughts from "$lib/components/landingBlocks/Laughts.svelte";
+    import Faqs from "$lib/components/landingBlocks/Faqs.svelte";
     
     let isSheetOpen = false;
 
@@ -109,92 +110,35 @@
 
     <Steps />
 
-    <QuestionsCounters />
-    <!--
-    <section class="mt-10 bg-purple-100 py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-extrabold text-center mb-6 text-gray-800 sm:text-4xl">Preguntas Frecuentes</h2>
-            <p class="text-center text-lg text-gray-600 mb-8">Resuelve tus dudas aquí. Si tienes más preguntas, no dudes en contactarnos.</p>
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 class="text-lg font-semibold text-purple-600">¿Cómo puedo descargar la app?</h3>
-                    <p class="mt-2 text-sm text-gray-600">Puedes conseguir la app en tu tienda de aplicaciones favorita o como PWA desde nuestro sitio web.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 class="text-lg font-semibold text-purple-600">¿Qué tipos de juegos ofrece la app?</h3>
-                    <p class="mt-2 text-sm text-gray-600">Nuestra app ofrece una variedad de juegos para tus fiestas: Tragos Locos, Preguntas Picantes, Juegos en Equipos, y más.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 class="text-lg font-semibold text-purple-600">¿Se puede jugar en grupos grandes?</h3>
-                    <p class="mt-2 text-sm text-gray-600">¡Claro! La app está diseñada para adaptarse a cualquier tamaño de grupo, desde pequeños hasta grandes reuniones.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 class="text-lg font-semibold text-purple-600">¿Hay alguna opción de prueba gratis?</h3>
-                    <p class="mt-2 text-sm text-gray-600">Sí, ofrecemos una versión de prueba con acceso limitado a algunas de nuestras preguntas y modos de juego.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 class="text-lg font-semibold text-purple-600">¿Cuántas personas pueden jugar al mismo tiempo?</h3>
-                    <p class="mt-2 text-sm text-gray-600">Puedes jugar con tantas como quieras personas en un mismo juego, ¡el límite lo pone la diversión!</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <h3 class="text-lg font-semibold text-purple-600">¿Es seguro para todos los públicos?</h3>
-                    <p class="mt-2 text-sm text-gray-600">Nuestra app tiene diferentes modos de juego, algunos de ellos están destinados solo a adultos, y otros son aptos para todo público.</p>
-                </div>
+    <section class="bg-purple-500 text-white py-16 text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-4">
+                ¡Descarga Tragos Locos y empieza la fiesta!
+            </h2>
+            <p class="text-lg mb-6">
+                Reta a tus amigos, ríe sin parar y haz que cada noche sea inolvidable. ¡Solo necesitas la app y una bebida en la mano! 🍻🎉
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
+                    <span class="iconify-mask solar--download-bold-duotone block w-[40px] h-[40px] bg-purple-500"></span>
+                    <span>Descargar ahora</span>
+                </a>
             </div>
         </div>
     </section>
     
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "¿Cómo puedo descargar la app?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Puedes conseguir la app en tu tienda de aplicaciones favorita o como PWA desde nuestro sitio web."
-                    }
-                }, {
-                    "@type": "Question",
-                    "name": "¿Qué tipos de juegos ofrece la app?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Nuestra app ofrece una variedad de juegos para tus fiestas: Tragos Locos, Preguntas Picantes, Juegos en Equipos, y más."
-                    }
-                }, {
-                    "@type": "Question",
-                    "name": "¿Se puede jugar en grupos grandes?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "¡Claro! La app está diseñada para adaptarse a cualquier tamaño de grupo, desde pequeños hasta grandes reuniones."
-                    }
-                }, {
-                    "@type": "Question",
-                    "name": "¿Hay alguna opción de prueba gratis?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Sí, ofrecemos una versión de prueba con acceso limitado a algunas de nuestras preguntas y modos de juego."
-                    }
-                }, {
-                    "@type": "Question",
-                    "name": "¿Cuántas personas pueden jugar al mismo tiempo?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Puedes jugar con tantas como quieras personas en un mismo juego, ¡el límite lo pone la diversión!"
-                    }
-                }, {
-                    "@type": "Question",
-                    "name": "¿Es seguro para todos los públicos?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Nuestra app tiene diferentes modos de juego, algunos de ellos están destinados solo a adultos, y otros son aptos para todo público."
-                    }
-                }
-            ]
-        }
-    </script>
+
+    <div class="bg-purple-100">
+        <QuestionsCounters />
+    </div>
+
+    <Laughts />
+    
+    <div class="bg-purple-100">
+        <Faqs></Faqs>
+    </div>
+
+    <!--
 
      <section class="text-center py-16">
         <h2 class="text-3xl font-extrabold text-gray-800">¿Listo para llevar tu fiesta al siguiente nivel?</h2>
@@ -483,9 +427,9 @@
       
     <section class="py-16 bg-purple-600 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-extrabold mb-6">¿Listo para comenzar a jugar?</h2>
-            <p class="text-lg mb-6">Descarga la app ahora y empieza a disfrutar de los mejores juegos en grupo.</p>
-            <a href="/" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">Descargar ahora</a>
+            <h2 class="text-3xl font-extrabold mb-6">{ $_('cta.title') }</h2>
+            <p class="text-lg mb-6">{ $_('cta.text') }</p>
+            <a href="/" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">{ $_('cta.action') }</a>
         </div>
     </section>
     
