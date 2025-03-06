@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import { _ } from '$lib/locales';
   
     let count = 0;
     let loading = false;
@@ -46,17 +47,17 @@
     });
   </script>
   
-  <section class="bg-purple-100 py-16">
+  <section class="bg-purple-500 py-16">
     <div class="container mx-auto text-center">
       <!-- Título -->
-      <h2 class="text-3xl font-bold text-purple-600 mb-4">¡Risas en aumento!</h2>
+      <h2 class="text-3xl font-bold text-white mb-4">{$_('laughts.title')}</h2>
   
       <!-- Descripción -->
-      <p class="text-lg text-gray-700 mb-6">Cada vez que alguien se ríe, el contador sube. ¿Quién será el primero en llegar a 100 risas?</p>
+      <p class="text-lg text-gray-50 mb-6">{$_('laughts.description')}</p>
   
       <!-- Contador -->
-      <div class="text-4xl font-semibold text-purple-600 mb-6">
-        <span>{loading ? 'Cargando...' : count}</span> <span>Risas</span>
+      <div class="text-4xl font-semibold text-white mb-6">
+        <span>{loading ? 'Cargando...' : count}</span> <span>{$_('laughts.laughts')}</span>
       </div>
   
     {#if showButton}
@@ -67,14 +68,14 @@
             on:click={incrementCounter}
             disabled={loading}
             >
-            ¡Ríe!
+            {$_('laughts.laught')}
             </button>
         </div>
     {/if}
   
       <!-- Mensaje de carga -->
       {#if loading}
-        <div class="mt-4 text-sm text-gray-500">Actualizando contador...</div>
+        <div class="mt-4 text-sm text-gray-500">{$_('laughts.loading')}</div>
       {/if}
     </div>
   </section>
