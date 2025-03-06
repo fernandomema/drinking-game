@@ -12,7 +12,7 @@ export const postData: PostData = {
     title: "The Best Drinking Party Cards to Spice Up Your Night 🍻🔥",
     seoTag: "best-drinking-party-cards",
     description: "Looking for the ultimate drinking party cards to make your night unforgettable? Check out our collection of the best cards from Tragos Locos that will have everyone laughing, drinking, and creating memories that will last a lifetime!",
-    date: new Date("2025-03-10"),
+    date: new Date("2025-03-07"),
     modifiedDate: today, // This will update automatically each day
     image: "/blog/best-drinking-party-cards/cover.webp",
     tags: ["informative", "party", "drinking games"],
