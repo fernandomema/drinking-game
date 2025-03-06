@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import RelatedBlogPosts from "./RelatedBlogPosts.svelte";
     import { SchemaGenerator } from "$lib/utils/SchemaGenerator";
+    import type { PostData } from "$lib/types/PostData";
 
     export let title: string;
     export let seoTitle: string;
@@ -11,6 +12,7 @@
     export let description: string;
     export let image: string;
     export let tags: string[];
+    export let relatedBlogPosts: PostData[] | undefined = undefined;
     export let author: {
         name: string;
         avatar: string;
@@ -177,7 +179,9 @@
             <div class="pt-4 xl:pt-8">
               <a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" aria-label="Back to the blog" href="/blog">← Back to the blog</a>
             </div>
-            <RelatedBlogPosts relatedPosts={[]} />
+            {#if relatedBlogPosts}
+              <RelatedBlogPosts relatedPosts={relatedBlogPosts} locale={lang} />
+            {/if}
             <slot name="sidebar"></slot>
           </footer>
         </div>
