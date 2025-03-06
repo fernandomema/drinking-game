@@ -10,6 +10,10 @@
     const post = BlogUtilities.getPostBySlug(locale, seoTag);
 </script>
 
+<svelte:head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8150780288925197" crossorigin="anonymous"></script>
+</svelte:head>
+
 {#if post}
     <BlogPost 
         title={post.title}
