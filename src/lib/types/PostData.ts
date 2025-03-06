@@ -5,6 +5,7 @@ export type PostData = {
     seoTag: string;
     description: string;
     date: Date;
+    modifiedDate?: Date;
     image: string;
     tags: string[];
     lang: string;

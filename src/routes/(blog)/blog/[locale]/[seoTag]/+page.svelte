@@ -16,6 +16,7 @@
         seoTitle={post.seoTag}
         description={post.description}
         date={post.date}
+        modifiedDate={post.modifiedDate}
         image={post.image}
         tags={post.tags}
         lang={post.lang}
