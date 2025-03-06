@@ -20,6 +20,7 @@
         image={post.image}
         tags={post.tags}
         lang={post.lang}
+        relatedBlogPosts={post.relatedPosts}
     >
         <div slot="post">
             <svelte:component this={post.component} />

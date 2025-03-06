@@ -9,5 +9,6 @@ export type PostData = {
     image: string;
     tags: string[];
     lang: string;
+    relatedPosts?: PostData[]
     component: any;
 }
