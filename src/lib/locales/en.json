@@ -73,5 +73,18 @@
     "modes": "Modes",
     "settings": "Settings"
   },
-  "end_of_game": "End of the game!"
+  "end_of_game": "End of the game!",
+  "laughts": {
+    "loading": "Loading...",
+    "laught": "Laugh!",
+    "laughts": "Laughs",
+    "description": "Every time someone laughs, the counter goes up. Who will be the first to reach 100 laughs?",
+    "title": "Laughter is growing!"
+  },
+  "cta": {
+    "title": "Ready to start playing?",
+    "text": "Download the app now and start enjoying the best party games.",
+    "action": "Download now"
+  }
+
 }

@@ -72,5 +72,17 @@
     "players": "Jugadores",
     "modes": "Modos",
     "settings": "Ajustes"
+  },
+  "laughts": {
+    "loading": "Cargando...",
+    "laught": "¡Ríe!",
+    "laughts": "Risas",
+    "description": "Cada vez que alguien se ríe, el contador sube. ¿Quién será el primero en llegar a 100 risas?",
+    "title": "¡Risas en aumento!"
+  },
+  "cta": {
+    "title": "¿Listo para comenzar a jugar?",
+    "text": "Descarga la app ahora y empieza a disfrutar de los mejores juegos en grupo.",
+    "action": "Descargar ahora"
   }
 }
