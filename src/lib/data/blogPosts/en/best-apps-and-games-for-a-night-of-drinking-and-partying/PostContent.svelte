@@ -1,3 +1,37 @@
+<script lang="ts">
+    import Faqs from "$lib/components/landingBlocks/Faqs.svelte";
+    import { SchemaGenerator } from "$lib/utils/SchemaGenerator";
+
+    const productSchema = SchemaGenerator.getProduct({
+        name: "Tragos Locos",
+        description: "The perfect app for an unforgettable party night.",
+        image: "https://tragos-locos.servitimo.net/blog/what-is-tragos-locos/cover.png",
+        url: "https://tragos-locos.servitimo.net/",
+        review: {
+            name: "Tragos Locos review",
+            author: {
+                name: "Fernando Merino",
+            },
+            positiveItems: [
+                "Multiple languages",
+                "Diversity of game modes",
+                "Chromecast support",
+                "Available on all platforms",
+                "Attractive design",
+                "Seasonal gamemodes",
+            ],
+            negativeItems: [
+                "Not suitable for all ages",
+                "Not always inclusive in its questions"
+            ]
+        }
+    })
+</script>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(productSchema)}</script>`}
+</svelte:head>
+
 <section class="">
         
     <div class="text-gray-800 space-y-4">
@@ -186,6 +220,16 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <div class="mt-8">
+        <Faqs design="blog" faqs={[{
+            title: "¿Wich is the best fun drinking party game?",
+            content: "Tragos Locos is the best drinking party game. It's perfect for parties of any size. You can play with friends, family, or just yourself. It's a great way to have fun and relax."
+        }, {
+            title: "Is tragos locos better than picolo?",
+            content: "Tragos Locos is better than Picolo. It's more fun, more varied, and more exciting. It's perfect for parties of any size."
+        }]}></Faqs>
     </div>
 
 </section>
