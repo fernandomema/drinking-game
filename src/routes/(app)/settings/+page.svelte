@@ -45,12 +45,12 @@
         <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px] animate-fade-in font-semibold max-w-lg">
             <button on:click={() => modals.suggestQuestion = true} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
                 <div class="flex w-full flex-col justify-center text-left">
-                    <div class="text-3xl">Suggest new questions</div>
+                    <div class="text-3xl">{$_('suggest_questions_title')}</div>
                 </div>
             </button>
             <button on:click={() => modals.sendFeedback = true} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
                 <div class="flex w-full flex-col justify-center text-left">
-                    <div class="text-3xl">Send feedback</div>
+                    <div class="text-3xl">{$_('send_feedback_title')}</div>
                 </div>
             </button>
         </div>
@@ -69,7 +69,7 @@
         <div class="flex flex-col items-center w-full">
             
             <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
-                Suggest a question
+                {$_('suggest_question')}
             </h2>
             
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckWcrvzdB4R4fvBuSBTBg57D7KIivNPnDLQ1PdCAmd4aGnug/viewform?embedded=true" width="100%" height="450" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> 
@@ -80,7 +80,7 @@
 
 <BottomSheet isOpen={modals.sendFeedback} onClose={() => (modals.sendFeedback = false)}>
     <h2 class="text-xl font-bold text-gray-800 text-center mb-4">
-        Suggest a question
+        {$_('send_feedback')}
     </h2>
 
     <iframe height="450" style="border:none;width:100%;" id="feedback-tragos-locos-1ass6s" src="https://noteforms.com/forms/feedback-tragos-locos-1ass6s"></iframe><script type="text/javascript" onload="initEmbed('feedback-tragos-locos-1ass6s')" src="https://noteforms.com/widgets/iframe.min.js"></script>

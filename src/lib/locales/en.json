@@ -88,5 +88,27 @@
   },
   "faqs": {
     "title": "Frequently Asked Questions"
+  },
+  "close": "Close",
+  "suggest_question": "Suggest a question",
+  "send_feedback": "Send feedback",
+  "suggest_questions_title": "Suggest new questions",
+  "send_feedback_title": "Send feedback",
+  "premium_test": "Test premium",
+  "join_beta": {
+    "title": "Join Our Tester Program!",
+    "subtitle": "Be among the first to test our app and help us improve.",
+    "group_title": "1. Join our Google Group",
+    "group_description": "Access updates, instructions, and news directly from our exclusive group.",
+    "group_button": "Join Group",
+    "app_title": "2. Download the App on Play Store",
+    "app_description": "Install our app on your Android device and enjoy the latest features.",
+    "app_button": "Download App",
+    "thanks_title": "Thank you for being part of our community!",
+    "thanks_description": "Your help is key to improving our application.",
+    "copyright": "© 2024 Byte-Bop. All rights reserved."
+  },
+  "bottomSheet": {
+    "defaultContent": "Your content here"
   }
 }
