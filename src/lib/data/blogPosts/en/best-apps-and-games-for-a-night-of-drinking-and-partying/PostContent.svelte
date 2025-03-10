@@ -32,9 +32,20 @@
     {@html `<script type="application/ld+json">${JSON.stringify(productSchema)}</script>`}
 </svelte:head>
 
-<section class="">
-        
-    <div class="text-gray-800 space-y-4">
+<section class="space-y-8">
+    <!-- Add a table of contents -->
+    <div class="bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">Table of Contents</h2>
+        <ul class="space-y-2">
+            <li><a href="#introduction" class="text-purple-600 hover:text-purple-800">Introduction</a></li>
+            <li><a href="#top-apps" class="text-purple-600 hover:text-purple-800">Top Drinking Game Apps</a></li>
+            <li><a href="#comparison" class="text-purple-600 hover:text-purple-800">App Comparison Guide</a></li>
+            <li><a href="#safety" class="text-purple-600 hover:text-purple-800">Safety Tips</a></li>
+            <li><a href="#faqs" class="text-purple-600 hover:text-purple-800">Frequently Asked Questions</a></li>
+        </ul>
+    </div>
+
+    <div id="introduction" class="text-gray-800 space-y-4">
         <p class="text-lg">
             Planning a party night with friends? 🔥🍻 Nothing makes a gathering more fun than a good drinking game. Whether you're at home, at a bar, or outdoors, drinking game apps have revolutionized how we enjoy the night, offering challenges, dares, and tons of fun without the need for cards or extra accessories.
         </p>
@@ -47,189 +58,310 @@
             From <strong>Tragos Locos</strong>, the most complete app with multiple game modes and customizable options, to classics like <strong>Picolo</strong> and <strong>King’s Cup</strong>, here are the highest-rated apps that will guarantee you an unforgettable night. Find the one that suits your party and get ready for a night of laughter, challenges, and tons of fun! 🚀🎉
         </p>
     </div>
-    
+
+    <!-- Add a new section before the apps -->
+    <div class="bg-yellow-50 p-6 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">Why Use Drinking Game Apps? 🤔</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>No need to carry cards or physical games</li>
+            <li>Always updated with new content and challenges</li>
+            <li>Perfect for both small and large groups</li>
+            <li>Track drinks and maintain responsible consumption</li>
+            <li>Available in multiple languages</li>
+            <li>Great ice-breakers for new groups</li>
+        </ul>
+    </div>
+
     <!-- Tragos Locos -->
-    <div class="mt-8 bg-purple-100 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold text-purple-800">1. Tragos Locos 🎭🔥</h3>
-        <p class="mt-2 text-gray-700">Tragos Locos is the ultimate app for an unforgettable party night. With multiple game modes, unexpected challenges, and spicy questions, this app adapts to any setting. Whether you're with friends or meeting new people, Tragos Locos will guarantee laughs and epic moments. 🥂</p>
-        
-        <!--<div class="mt-4 grid grid-cols-2 gap-4">
-            <img src="screenshot1.jpg" alt="Tragos Locos Screenshot 1" class="rounded-lg shadow">
-            <img src="screenshot2.jpg" alt="Tragos Locos Screenshot 2" class="rounded-lg shadow">
-        </div>-->
+    <div class="mt-8">
+        <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-t-2xl p-1">
+            <div class="bg-white rounded-t-xl p-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                        1. Tragos Locos
+                    </h3>
+                    <div class="flex space-x-2">
+                        <span class="text-3xl">🎭</span>
+                        <span class="text-3xl">🔥</span>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex items-center space-x-2">
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">#1 Party App</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">4.8 ⭐</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Most Popular</span>
+                </div>
 
-        <h4 class="mt-4 text-lg font-semibold text-purple-700">Pros:</h4>
-        <div class="grid grid-cols-2 gap-2">
-            <div class="bg-green-200 p-3 rounded-lg">🎉 Great variety of game modes</div>
-            <div class="bg-green-200 p-3 rounded-lg">🔥 Fun and original challenges</div>
-            <div class="bg-green-200 p-3 rounded-lg">📸 Social media sharing feature</div>
-            <div class="bg-green-200 p-3 rounded-lg">💡 Intuitive and easy-to-use interface</div>
+                <p class="mt-4 text-gray-700 text-lg leading-relaxed">
+                    The ultimate party companion that's revolutionizing drinking games. With its diverse game modes, 
+                    creative challenges, and constant updates, Tragos Locos stands out as the most complete party app 
+                    in 2025. Perfect for any group size and occasion! 
+                </p>
+            </div>
         </div>
         
-        <h4 class="mt-4 text-lg font-semibold text-purple-700">Cons:</h4>
-        <div class="grid grid-cols-2 gap-2">
-            <div class="bg-red-200 p-3 rounded-lg">📶 Requires internet connection</div>
-            <div class="bg-red-200 p-3 rounded-lg">🎭 Could be too daring for some groups</div>
+        <div class="bg-gradient-to-r from-purple-500 to-indigo-600 p-6 rounded-b-2xl">
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                    <h4 class="text-white text-xl font-semibold">✨ Highlights</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🎮</span>
+                            <span>Multiple exciting game modes</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🌍</span>
+                            <span>Available in multiple languages</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">👥</span>
+                            <span>Perfect for any group size</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🔄</span>
+                            <span>Regular content updates</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-3">
+                    <h4 class="text-white text-xl font-semibold">⚡ Features</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Chromecast Support
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Offline Mode
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Custom Rules
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Party Statistics
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <!-- Picolo -->
-    <div class="mt-8 bg-blue-100 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold text-blue-800">2. Picolo 🍻</h3>
-        <p class="mt-2 text-gray-700">Picolo is a party game based on quick questions and challenges. You just need to enter the names of the players and let the app handle the rest. Ideal for those looking for a dynamic and easy-to-understand game.</p>
-        
-        <h4 class="mt-4 text-lg font-semibold text-blue-700">Pros:</h4>
-        <div class="grid grid-cols-2 gap-2">
-            <div class="bg-green-200 p-3 rounded-lg">🔹 Easy and fast to play</div>
-            <div class="bg-green-200 p-3 rounded-lg">🍹 No accessories or setup required</div>
-            <div class="bg-green-200 p-3 rounded-lg">🔄 Variety of random challenges</div>
+    <div class="mt-8">
+        <div class="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-t-2xl p-1">
+            <div class="bg-white rounded-t-xl p-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                        2. Picolo
+                    </h3>
+                    <div class="flex space-x-2">
+                        <span class="text-3xl">🍻</span>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex items-center space-x-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Simple & Fun</span>
+                    <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium">4.5 ⭐</span>
+                </div>
+
+                <p class="mt-4 text-gray-700 text-lg leading-relaxed">
+                    A straightforward party game that keeps things simple yet entertaining. Perfect for those who want 
+                    quick setup and easy-to-follow rules. While fun, it might not offer the depth and variety that 
+                    Tragos Locos provides.
+                </p>
+            </div>
         </div>
         
-        <h4 class="mt-4 text-lg font-semibold text-blue-700">Cons:</h4>
-        <div class="grid grid-cols-2 gap-2">
-            <div class="bg-red-200 p-3 rounded-lg">🔺 Can get repetitive</div>
-            <div class="bg-red-200 p-3 rounded-lg">⚠️ Some questions might be too daring</div>
+        <div class="bg-gradient-to-r from-blue-500 to-cyan-500 p-6 rounded-b-2xl">
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                    <h4 class="text-white text-xl font-semibold">✨ Highlights</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🎯</span>
+                            <span>Quick to start</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">📱</span>
+                            <span>Simple interface</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🎲</span>
+                            <span>Basic game mechanics</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <!-- Kings Cup -->
-    <div class="mt-8 bg-green-100 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold text-green-800">3. King’s Cup 👑🍷</h3>
-        <p class="mt-2 text-gray-700">King’s Cup is a digital version of the popular card game. Each player draws a card and follows the rule assigned, which may include drinking, setting rules, or doing crazy challenges.</p>
-        
-        <h4 class="mt-4 text-lg font-semibold text-green-700">Pros:</h4>
-        <div class="grid grid-cols-2 gap-2">
-            <div class="bg-green-200 p-3 rounded-lg">🃏 Based on a classic party game</div>
-            <div class="bg-green-200 p-3 rounded-lg">🥳 Perfect for large groups</div>
-            <div class="bg-green-200 p-3 rounded-lg">🛠️ Can be customized with your own rules</div>
+    <div class="mt-8">
+        <div class="bg-gradient-to-r from-green-500 to-teal-500 rounded-t-2xl p-1">
+            <div class="bg-white rounded-t-xl p-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
+                        3. King’s Cup
+                    </h3>
+                    <div class="flex space-x-2">
+                        <span class="text-3xl">👑</span>
+                        <span class="text-3xl">🍷</span>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex items-center space-x-2">
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Classic Party Game</span>
+                    <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">4.7 ⭐</span>
+                </div>
+
+                <p class="mt-4 text-gray-700 text-lg leading-relaxed">
+                    A digital version of the popular card game. Each player draws a card and follows the rule assigned, which may include drinking, setting rules, or doing crazy challenges.
+                </p>
+            </div>
         </div>
         
-        <h4 class="mt-4 text-lg font-semibold text-green-700">Cons:</h4>
-        <div class="grid grid-cols-2 gap-2">
-            <div class="bg-red-200 p-3 rounded-lg">🃏 Can be complicated for those who don't know the rules</div>
-            <div class="bg-red-200 p-3 rounded-lg">🍺 Not as fun in small groups</div>
+        <div class="bg-gradient-to-r from-green-500 to-teal-500 p-6 rounded-b-2xl">
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                    <h4 class="text-white text-xl font-semibold">✨ Highlights</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🃏</span>
+                            <span>Based on a classic party game</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🥳</span>
+                            <span>Perfect for large groups</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🛠️</span>
+                            <span>Can be customized with your own rules</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-3">
+                    <h4 class="text-white text-xl font-semibold">⚡ Features</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Easy to Learn
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Multiple Game Modes
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Party Statistics
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Social Media Sharing
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <!-- Drink Roulette -->
-    <div class="mt-8 bg-red-100 p-6 rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold text-red-800">4. Drink Roulette 🎰🥂</h3>
-        <p class="mt-2 text-gray-700">Drink Roulette is an app that mixes luck and fun. Players spin the wheel and must complete the challenge or punishment indicated. Perfect for those who enjoy the thrill of chance.</p>
-        
-        <h4 class="mt-4 text-lg font-semibold text-red-700">Pros:</h4>
-        <ul class="list-disc pl-6 text-gray-700">
-            <li>🎰 Dynamic and exciting</li>
-            <li>🥂 Fun and varied challenges</li>
-            <li>💥 Ideal for breaking the ice</li>
-        </ul>
-        
-        <h4 class="mt-4 text-lg font-semibold text-red-700">Cons:</h4>
-        <ul class="list-disc pl-6 text-gray-700">
-            <li>⚠️ Can be extreme for some players</li>
-            <li>🎯 Depends heavily on luck</li>
-        </ul>
-    </div>
-
     <div class="mt-8">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-2">App Comparison for Your Party</h3>
-        <p class="text-gray-600 mb-4">
-            Not sure which app to choose? Here's a comparison table with the key features of each app to help you make the best decision.
-        </p>
-        <div class="overflow-x-auto">
-            <table class="min-w-full bg-white rounded-lg shadow-md">
-                <thead>
-                    <tr class="bg-gray-100">
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">App</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Game Modes</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Availability</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Highlighted Features</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b">
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm font-medium text-gray-900">Tragos Locos</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Multiple modes</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Free (with in-app purchases)</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">iOS and Android</div>
-                        </td>
+        <div class="bg-gradient-to-r from-red-500 to-orange-500 rounded-t-2xl p-1">
+            <div class="bg-white rounded-t-xl p-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                        4. Drink Roulette
+                    </h3>
+                    <div class="flex space-x-2">
+                        <span class="text-3xl">🎰</span>
+                        <span class="text-3xl">🥂</span>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex items-center space-x-2">
+                    <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium">Thrilling Challenge</span>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">4.6 ⭐</span>
+                </div>
 
-
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Random challenges, customizable</div>
-                        </td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm font-medium text-gray-900">Picolo</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Quick questions and challenges</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Free</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">iOS and Android</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Easy-to-use, dynamic</div>
-                        </td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm font-medium text-gray-900">King’s Cup</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Card-based game rules</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Free (with in-app purchases)</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">iOS and Android</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Customizable rules</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm font-medium text-gray-900">Drink Roulette</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Spin the wheel and complete challenges</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Free (with in-app purchases)</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">iOS and Android</div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-500">Exciting and random</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                <p class="mt-4 text-gray-700 text-lg leading-relaxed">
+                    An app that mixes luck and fun. Players spin the wheel and must complete the challenge or punishment indicated. Perfect for those who enjoy the thrill of chance.
+                </p>
+            </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-500 to-orange-500 p-6 rounded-b-2xl">
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-3">
+                    <h4 class="text-white text-xl font-semibold">✨ Highlights</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🎰</span>
+                            <span>Dynamic and exciting</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">🥂</span>
+                            <span>Fun and varied challenges</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-white">
+                            <span class="text-lg">💥</span>
+                            <span>Ideal for breaking the ice</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-3">
+                    <h4 class="text-white text-xl font-semibold">⚡ Features</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Random Challenges
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Social Media Sharing
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Party Statistics
+                        </div>
+                        <div class="bg-white/20 backdrop-blur-sm p-2 rounded-lg text-white text-sm">
+                            Offline Mode
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="mt-8">
-        <Faqs design="blog" faqs={[{
-            title: "¿Wich is the best fun drinking party game?",
-            content: "Tragos Locos is the best drinking party game. It's perfect for parties of any size. You can play with friends, family, or just yourself. It's a great way to have fun and relax."
-        }, {
-            title: "Is tragos locos better than picolo?",
-            content: "Tragos Locos is better than Picolo. It's more fun, more varied, and more exciting. It's perfect for parties of any size."
-        }]}></Faqs>
+    <!-- Add a safety section -->
+    <div id="safety" class="bg-red-50 p-6 rounded-lg mt-8">
+        <h2 class="text-2xl font-bold text-red-800 mb-4">🚨 Party Safety Tips</h2>
+        <p class="mb-4">While these apps are designed for entertainment, always remember to:</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Drink responsibly and know your limits</li>
+            <li>Have a designated driver or use ride-sharing services</li>
+            <li>Stay hydrated with water between drinks</li>
+            <li>Never pressure others to drink</li>
+            <li>Keep emergency contacts handy</li>
+        </ul>
     </div>
 
+    <!-- Enhance FAQs section -->
+    <div id="faqs" class="mt-8">
+        <Faqs design="blog" faqs={[
+            {
+                title: "What is the best drinking game app for 2025?",
+                content: "Tragos Locos is currently the top-rated drinking game app for 2025, offering the most diverse range of games, multiple languages, and regular content updates. It's particularly popular for its variety of game modes and user-friendly interface."
+            },
+            {
+                title: "Are drinking game apps safe to use?",
+                content: "When used responsibly, drinking game apps are safe and fun. Always follow the recommended safety guidelines, know your limits, and ensure everyone in the group is comfortable with the challenges."
+            },
+            {
+                title: "Which app is best for large groups?",
+                content: "Tragos Locos is definitely the best choice for large groups, offering specific modes and features designed for bigger parties. Its Chromecast support and party statistics make it perfect for managing and entertaining large gatherings, while keeping everyone engaged and involved."
+            },
+            {
+                title: "Are these apps free to use?",
+                content: "Most drinking game apps offer free versions with basic features. Premium features and additional content are usually available through in-app purchases."
+            },
+            {
+                title: "Do I need internet connection to play these games?",
+                content: "While some apps require internet connection for updates and new content, many offer offline modes for uninterrupted play. Tragos Locos and King's Cup both have offline features."
+            }
+        ]}></Faqs>
+    </div>
 </section>
