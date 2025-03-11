@@ -114,6 +114,28 @@ export const modes: { [key: string]: Mode } = {
             });
         },
         isEnabled: () => false
+    },
+    roulette: {
+        menuPriority: MenuPriority.GeneralMode,
+        icon: '/roulette.png',
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            if (!players || players.length === 0) return [];
+            
+            // Create 20 roulette cards
+            const rouletteCards: Question[] = [];
+            for (let i = 0; i < 20; i++) {
+                rouletteCards.push({
+                    locales: {
+                        en: "ROULETTE",
+                        es: "RULETA"
+                    },
+                    tags: ['roulette'],
+                    type: 'roulette'
+                });
+            }
+            
+            return rouletteCards;
+        }
     }
 }
 

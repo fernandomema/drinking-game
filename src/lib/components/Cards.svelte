@@ -15,6 +15,7 @@
     import { shareApp } from '$lib/utils/Share';
     import type { Team } from '$lib/types/Team';
     import { _ } from '$lib/locales';
+    import RouletteCard from './RouletteCard.svelte';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -53,12 +54,13 @@
 
 	function cardData(index: number) {
         if (!filteredQuestions[index]) return null;
-		return {
-			question: filteredQuestions[index]?.locales[locale],
-			rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales || [])[0],
+        return {
+            question: filteredQuestions[index]?.locales[locale],
+            rawQuestion: filteredQuestions[index]?.locales['en'] || Object.values(filteredQuestions[index]?.locales || [])[0],
             index: filteredQuestions[index].index,
             tags: filteredQuestions[index].tags,
-		};
+            type: filteredQuestions[index].type
+        };
 	}
 
     function clickShareApp() {
@@ -70,7 +72,12 @@
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
             <div transition:fade={{ duration: 200 }} class="relative flex md:flex-row h-full w-full max-w-xl flex-col gap-2">
-                <CardSwiper bind:swipe bind:undoSwipe bind:thresholdPassed bind:lastStatus {cardData} {onSwipe} on:end={() => ended = true} />
+                {#if mode === 'roulette'}
+                    <RouletteCard {players} />
+                {:else}
+                    <CardSwiper bind:swipe bind:undoSwipe bind:thresholdPassed bind:lastStatus {cardData} {onSwipe} on:end={() => ended = true} />
+                {/if}
+                
                 <div class="flex md:flex-col gap-2">
 
                     <button
