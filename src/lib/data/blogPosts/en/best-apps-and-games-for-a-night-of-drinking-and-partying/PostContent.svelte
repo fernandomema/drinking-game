@@ -60,7 +60,7 @@
     </div>
 
     <!-- Add a new section before the apps -->
-    <div class="bg-yellow-50 p-6 rounded-lg">
+    <div class="bg-yellow-50 p-6 rounded-lg" id="top-apps">
         <h2 class="text-2xl font-bold mb-4">Why Use Drinking Game Apps? 🤔</h2>
         <ul class="list-disc pl-6 space-y-2">
             <li>No need to carry cards or physical games</li>
@@ -325,6 +325,105 @@
             </div>
         </div>
     </div>
+
+     <!-- App Comparison -->
+     <div id="comparison" class="mt-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">App Comparison Guide 📊</h2>
+        <p class="text-gray-600 mb-6">
+            Not sure which app to choose? Here's a detailed comparison of the most important features to help you make the best decision for your party needs.
+        </p>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white rounded-lg shadow-md">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">App</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Game Modes</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Availability</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Features</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4">
+                            <div class="text-sm font-medium text-gray-900">Tragos Locos</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Multiple modes</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Free (with in-app purchases)</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">iOS & Android</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Chromecast, offline mode, custom rules</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4">
+                            <div class="text-sm font-medium text-gray-900">Picolo</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Questions & challenges</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Free (with ads)</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">iOS & Android</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Quick setup, simple interface</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4">
+                            <div class="text-sm font-medium text-gray-900">King's Cup</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Card-based</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Free (with ads)</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">iOS & Android</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Classic party game, customizable</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4">
+                            <div class="text-sm font-medium text-gray-900">Drink Roulette</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Wheel of fortune</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Free (with ads)</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">iOS & Android</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm text-gray-500">Random challenges, luck-based</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-8 bg-purple-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-purple-800 mb-4">Our Recommendation 🏆</h3>
+            <p class="text-gray-700">
+                While all apps offer unique experiences, <strong>Tragos Locos</strong> stands out as the most complete option with its diverse game modes, regular updates, and premium features like Chromecast support. However, if you prefer simplicity, Picolo might be your best choice, while King's Cup offers a more traditional experience, and Drink Roulette adds an element of chance to your party.
+            </p>
+        </div>
+    </div>
+
 
     <!-- Add a safety section -->
     <div id="safety" class="bg-red-50 p-6 rounded-lg mt-8">
