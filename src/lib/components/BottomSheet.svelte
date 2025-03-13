@@ -31,7 +31,7 @@
         <!-- Content slot -->
          <div class="overflow-y-auto max-h-[80vh]">
            <slot>
-             <p class="text-center">Your content here</p>
+             <p class="text-center">{$_('bottomSheet.defaultContent')}</p>
            </slot>
          </div>
     
