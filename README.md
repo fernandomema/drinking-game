@@ -5,6 +5,13 @@
 <p id="description">
   Tragos locos is a drinking party game app designed to elevate your social gatherings with endless fun, laughter, and excitement. It offers a vast collection of hilarious questions, daring challenges, and playful punishments that keep the energy high and the connections stronger.
 </p>
+<h2>📸 Screenshots</h2>
+
+<p align="center">
+  <img src="https://github.com/fernandomema/drinking-game/blob/master/static/AppImages/screenshot1.png?raw=true" alt="screenshot1" width="250"/>
+  <img src="https://github.com/fernandomema/drinking-game/blob/master/static/AppImages/screenshot2.png?raw=true" alt="screenshot2" width="250"/>
+  <img src="https://github.com/fernandomema/drinking-game/blob/master/static/AppImages/screenshot3.png?raw=true" alt="screenshot3" width="250"/>
+</p>
 
 <h2>🚀 Demo</h2>
 
