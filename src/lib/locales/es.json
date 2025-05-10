@@ -84,5 +84,30 @@
     "title": "¿Listo para comenzar a jugar?",
     "text": "Descarga la app ahora y empieza a disfrutar de los mejores juegos en grupo.",
     "action": "Descargar ahora"
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes"
+  },
+  "close": "Cerrar",
+  "suggest_question": "Sugerir una pregunta",
+  "send_feedback": "Enviar comentarios",
+  "suggest_questions_title": "Sugerir nuevas preguntas",
+  "send_feedback_title": "Enviar comentarios",
+  "premium_test": "Probar premium",
+  "join_beta": {
+    "title": "¡Únete a Nuestro Programa de Testers!",
+    "subtitle": "Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.",
+    "group_title": "1. Únete a nuestro Grupo de Google",
+    "group_description": "Accede a actualizaciones, instrucciones y novedades directamente desde nuestro grupo exclusivo.",
+    "group_button": "Unirme al Grupo",
+    "app_title": "2. Descarga la App en Play Store",
+    "app_description": "Instala nuestra aplicación en tu dispositivo Android y disfruta de las funciones más recientes.",
+    "app_button": "Descargar App",
+    "thanks_title": "¡Gracias por ser parte de nuestra comunidad!",
+    "thanks_description": "Tu ayuda es clave para mejorar nuestra aplicación.",
+    "copyright": "© 2024 Byte-Bop. Todos los derechos reservados."
+  },
+  "bottomSheet": {
+    "defaultContent": "Tu contenido aquí"
   }
 }
