@@ -83,7 +83,7 @@
             <InGameBanner />
             {#if OriginChecker.isDev($page.url.href)}
                 <button class="w-full text-center bg-purple-500" on:click={() => showPremiumModal = true}>
-                    Test premium
+                    {$_('premium_test')}
                 </button>
             {/if}
 
