@@ -68,6 +68,19 @@
       }
     }
   },
+  "landingPage": {
+    "download_title": "Download Tragos Locos and start the party!",
+    "download_desc": "Challenge your friends, laugh non-stop and make every night unforgettable. All you need is the app and a drink in your hand! 🍻🎉",
+    "download_now": "Download now",
+    "steps_title": "How do you play Tragos Locos?",
+    "steps_subtitle": "3 simple steps to start the madness with your friends!",
+    "step1_title": "1. Create a game",
+    "step1_desc": "Enter the names of the players.",
+    "step2_title": "2. Select a mode",
+    "step2_desc": "Choose the game mode that suits you best or you feel like playing.",
+    "step3_title": "3. Start drinking!",
+    "step3_desc": "Answer cards, complete challenges and drink according to the rules."
+  },
   "bottomNavbar": {
     "players": "Players",
     "modes": "Modes",

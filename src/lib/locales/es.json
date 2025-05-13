@@ -68,6 +68,19 @@
       }
     }
   },
+  "landingPage": {
+    "download_title": "¡Descarga Tragos Locos y empieza la fiesta!",
+    "download_desc": "Reta a tus amigos, ríe sin parar y haz que cada noche sea inolvidable. ¡Solo necesitas la app y una bebida en la mano! 🍻🎉",
+    "download_now": "Descargar ahora",
+    "steps_title": "¿Cómo se juega Tragos Locos?",
+    "steps_subtitle": "¡3 pasos simples para empezar la locura con tus amigos!",
+    "step1_title": "1. Crea una partida",
+    "step1_desc": "Introduce los nombres de los jugadores.",
+    "step2_title": "2. Selecciona un modo",
+    "step2_desc": "Selecciona el modo de juego que mas te convenga o te apetezca.",
+    "step3_title": "3. ¡Empieza a beber!",
+    "step3_desc": "Responde tarjetas, cumple retos y bebe según las reglas."
+  },
   "bottomNavbar": {
     "players": "Jugadores",
     "modes": "Modos",

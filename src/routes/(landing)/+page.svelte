@@ -90,8 +90,8 @@
     <!-- Steps Section -->
     <section class="bg-gradient-to-b from-purple-700 to-purple-900 text-white py-16 px-4 md:px-10">
         <div class="max-w-5xl mx-auto text-center mb-12">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4">¿Cómo se juega Tragos Locos?</h2>
-            <p class="text-lg md:text-xl text-purple-200">¡3 pasos simples para empezar la locura con tus amigos!</p>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">{$_('landingPage.steps_title')}</h2>
+            <p class="text-lg md:text-xl text-purple-200">{$_('landingPage.steps_subtitle')}</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-10 items-start max-w-6xl mx-auto">
@@ -102,8 +102,8 @@
                         <video preload="none" src="/steps/step1.webm" autoplay loop muted playsinline class="rounded-xl" />
                     </IphoneMockup>
                 </div>
-                <h3 class="text-xl font-semibold mt-6">1. Crea una partida</h3>
-                <p class="text-purple-200 mt-2 text-sm text-center max-w-xs">Introduce los nombres de los jugadores.</p>
+                <h3 class="text-xl font-semibold mt-6">{$_('landingPage.step1_title')}</h3>
+                <p class="text-purple-200 mt-2 text-sm text-center max-w-xs">{$_('landingPage.step1_desc')}</p>
             </div>
 
             <!-- Paso 2 -->
@@ -113,8 +113,8 @@
                         <video preload="none" src="/steps/step2.webm" autoplay loop muted playsinline class="rounded-xl" />
                     </IphoneMockup>
                 </div>
-                <h3 class="text-xl font-semibold mt-6">2. Selecciona un modo</h3>
-                <p class="text-purple-200 mt-2 text-sm text-center max-w-xs">Selecciona el modo de juego que mas te convenga o te apetezca.</p>
+                <h3 class="text-xl font-semibold mt-6">{$_('landingPage.step2_title')}</h3>
+                <p class="text-purple-200 mt-2 text-sm text-center max-w-xs">{$_('landingPage.step2_desc')}</p>
             </div>
 
             <!-- Paso 3 -->
@@ -124,8 +124,8 @@
                         <video preload="none" src="/steps/step3.webm" autoplay loop muted playsinline class="rounded-xl" />
                     </IphoneMockup>
                 </div>
-                <h3 class="text-xl font-semibold mt-6">3. ¡Empieza a beber!</h3>
-                <p class="text-purple-200 mt-2 text-sm text-center max-w-xs">Responde tarjetas, cumple retos y bebe según las reglas.</p>
+                <h3 class="text-xl font-semibold mt-6">{$_('landingPage.step3_title')}</h3>
+                <p class="text-purple-200 mt-2 text-sm text-center max-w-xs">{$_('landingPage.step3_desc')}</p>
             </div>
         </div>
     </section>
@@ -133,15 +133,15 @@
     <section class="bg-purple-500 text-white py-16 text-center">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-4xl font-bold mb-4">
-                ¡Descarga Tragos Locos y empieza la fiesta!
+                {$_('landingPage.download_title')}
             </h2>
             <p class="text-lg mb-6">
-                Reta a tus amigos, ríe sin parar y haz que cada noche sea inolvidable. ¡Solo necesitas la app y una bebida en la mano! 🍻🎉
+                {$_('landingPage.download_desc')}
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="/" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
                     <span class="iconify-mask solar--download-bold-duotone block w-[40px] h-[40px] bg-purple-500"></span>
-                    <span>Descargar ahora</span>
+                    <span>{$_('landingPage.download_now')}</span>
                 </a>
             </div>
         </div>
