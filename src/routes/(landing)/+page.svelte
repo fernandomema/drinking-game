@@ -130,6 +130,45 @@
         </div>
     </section>
 
+    <!-- Features Section -->
+    <section class="bg-purple-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-purple-900 mb-4">{$_('landingPage.features_title')}</h2>
+                <p class="text-lg text-purple-700">{$_('landingPage.features_subtitle')}</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl text-purple-600 solar--cup-star-bold-duotone"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-900 mb-2">{$_('landingPage.feature1_title')}</h3>
+                    <p class="text-gray-600">{$_('landingPage.feature1_desc')}</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl text-purple-600 solar--users-group-rounded-bold-duotone"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-900 mb-2">{$_('landingPage.feature2_title')}</h3>
+                    <p class="text-gray-600">{$_('landingPage.feature2_desc')}</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl text-purple-600 solar--gamepad-bold-duotone"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-900 mb-2">{$_('landingPage.feature3_title')}</h3>
+                    <p class="text-gray-600">{$_('landingPage.feature3_desc')}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="bg-purple-500 text-white py-16 text-center">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-4xl font-bold mb-4">

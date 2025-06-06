@@ -1,4 +1,4 @@
-import { BreadcrumbList, Product, WithContext } from "schema-dts"
+import { BreadcrumbList, Product, Recipe, WithContext } from "schema-dts"
 
 export class SchemaGenerator {
     public static getBreadcrumbs(items: {name: string, url: string}[]): WithContext<BreadcrumbList> {
@@ -74,5 +74,63 @@ export class SchemaGenerator {
         }
 
         return productschema;
+    }
+
+    public static getRecipe(recipe: {
+        name: string,
+        description: string,
+        image: string,
+        url: string,
+        datePublished: string,
+        author: {
+            name: string,
+            url?: string
+        },
+        prepTime: string,
+        totalTime: string,
+        recipeYield: string,
+        recipeCategory: string[],
+        recipeCuisine: string[],
+        recipeIngredient: string[],
+        recipeInstructions: string[],
+        aggregateRating?: {
+            ratingValue: number,
+            ratingCount: number
+        }
+    }): WithContext<Recipe> {
+        const recipeSchema: WithContext<Recipe> = {
+            "@context": "https://schema.org",
+            "@type": "Recipe",
+            "name": recipe.name,
+            "description": recipe.description,
+            "image": recipe.image,
+            "url": recipe.url,
+            "datePublished": recipe.datePublished,
+            "author": {
+                "@type": "Person",
+                "name": recipe.author.name,
+                ...(recipe.author.url && { url: recipe.author.url })
+            },
+            "prepTime": recipe.prepTime,
+            "totalTime": recipe.totalTime,
+            "recipeYield": recipe.recipeYield,
+            "recipeCategory": recipe.recipeCategory,
+            "recipeCuisine": recipe.recipeCuisine,
+            "recipeIngredient": recipe.recipeIngredient,
+            "recipeInstructions": recipe.recipeInstructions.map((step) => ({
+                "@type": "HowToStep",
+                "text": step
+            }))
+        }
+
+        if (recipe.aggregateRating) {
+            recipeSchema.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": recipe.aggregateRating.ratingValue,
+                "ratingCount": recipe.aggregateRating.ratingCount
+            }
+        }
+
+        return recipeSchema;
     }
 }

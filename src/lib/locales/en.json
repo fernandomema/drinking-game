@@ -69,6 +69,14 @@
     }
   },
   "landingPage": {
+    "features_title": "Featured Highlights",
+    "features_subtitle": "Discover everything you can do with Tragos Locos",
+    "feature1_title": "Fun Guaranteed",
+    "feature1_desc": "Fun and dynamic games that will keep everyone entertained for hours",
+    "feature2_title": "Perfect for Groups",
+    "feature2_desc": "Ideal for small and large parties, with special team modes",
+    "feature3_title": "Easy to Use",
+    "feature3_desc": "Intuitive interface that lets you start playing in seconds",
     "download_title": "Download Tragos Locos and start the party!",
     "download_desc": "Challenge your friends, laugh non-stop and make every night unforgettable. All you need is the app and a drink in your hand! 🍻🎉",
     "download_now": "Download now",

@@ -69,6 +69,14 @@
     }
   },
   "landingPage": {
+    "features_title": "Características Destacadas",
+    "features_subtitle": "Descubre todo lo que puedes hacer con Tragos Locos",
+    "feature1_title": "Diversión Garantizada",
+    "feature1_desc": "Juegos divertidos y dinámicos que mantendrán a todos entretenidos durante horas",
+    "feature2_title": "Perfecto para Grupos",
+    "feature2_desc": "Ideal para fiestas pequeñas y grandes, con modos especiales para equipos",
+    "feature3_title": "Fácil de Usar",
+    "feature3_desc": "Interfaz intuitiva que te permite empezar a jugar en segundos",
     "download_title": "¡Descarga Tragos Locos y empieza la fiesta!",
     "download_desc": "Reta a tus amigos, ríe sin parar y haz que cada noche sea inolvidable. ¡Solo necesitas la app y una bebida en la mano! 🍻🎉",
     "download_now": "Descargar ahora",

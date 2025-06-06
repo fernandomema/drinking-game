@@ -9,13 +9,15 @@
     import BottomNavbar from "$lib/components/BottomNavbar.svelte";
     import Featurebase from "$lib/components/Featurebase.svelte";
     import BottomSheet from "$lib/components/BottomSheet.svelte";
+    import LanguageSelector from "$lib/components/BottomSheets/LanguageSelector.svelte";
 
     let titleCentered = true;
     let titleStopedAnimating = false;
 
     const modals = {
         suggestQuestion: false,
-        sendFeedback: false
+        sendFeedback: false,
+        languageSelector: false
     };
 
     onMount(async () => {
@@ -53,6 +55,12 @@
                     <div class="text-3xl">Send feedback</div>
                 </div>
             </button>
+            <!-- Language -->
+            <button on:click={() => modals.languageSelector = true} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
+                <div class="flex w-full flex-col justify-center text-left">
+                    <div class="text-3xl">Language</div>
+                </div>
+            </button>
         </div>
     {/if}
 </PageContainer>
@@ -85,3 +93,13 @@
 
     <iframe height="450" style="border:none;width:100%;" id="feedback-tragos-locos-1ass6s" src="https://noteforms.com/forms/feedback-tragos-locos-1ass6s"></iframe><script type="text/javascript" onload="initEmbed('feedback-tragos-locos-1ass6s')" src="https://noteforms.com/widgets/iframe.min.js"></script>
 </BottomSheet>
+
+<LanguageSelector
+    isOpen={modals.languageSelector}
+    onClose={() => (modals.languageSelector = false)}
+    onLanguageSelected={(language) => {
+        // Handle the language selection
+        console.log("Selected language:", language);
+        modals.languageSelector = false;
+    }}
+/>
