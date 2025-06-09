@@ -32,6 +32,22 @@
         <meta name="language" content={locale} />
         <meta name="lang:alternate" content={locale} />
     {/if}
+
+    <title>{$_('landing.title')} | {$_('landing.slogan')}</title>
+    <meta name="description" content={$_('landing.description')} />
+    <meta name="keywords" content="Tragos Locos, drinking game, party game, fun app, juegos para beber" />
+    <link rel="canonical" href="https://tragos-locos.servitimo.net" />
+
+    <meta property="og:title" content={$_('landing.slogan')} />
+    <meta property="og:description" content={$_('landing.description')} />
+    <meta property="og:image" content="https://tragos-locos.servitimo.net/og-image.png" />
+    <meta property="og:url" content="https://tragos-locos.servitimo.net" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={$_('landing.slogan')} />
+    <meta name="twitter:description" content={$_('landing.description')} />
+    <meta name="twitter:image" content="https://tragos-locos.servitimo.net/og-image.png" />
 </svelte:head>
 
 <div class="bg-gray-50">

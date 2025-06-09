@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tragos-locos.servitimo.net/sitemap.xml
