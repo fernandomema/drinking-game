@@ -3,21 +3,42 @@
     import PageContainer from "$lib/components/PageContainer.svelte";
     import BottomNavbar from "$lib/components/BottomNavbar.svelte";
     import { _ } from "$lib/locales";
+    import { modes } from "$lib/modes";
+    import { fly, fade } from "svelte/transition";
 
     let titleCentered = true;
     let titleStopedAnimating = false;
+    let search = "";
+    let selectedFilter = "todos";
 
-    const moreModes = Array.from({ length: 20 }, (_, i) => ({
-        title: `Mode ${i + 1}`,
-        description: 'Coming soon',
-        icon: '/preparty.png'
-    }));
+    // Generar lista de modos igual que en /select-mode
+    const modeEntries = Object.entries(modes).filter(e => !e[1].isEnabled || e[1].isEnabled());
+    
+    // Categorías para el filtro
+    const categorias = [
+        { id: "todos", nombre: "Todos" },
+        { id: "general", nombre: "General" },
+        { id: "especiales", nombre: "Especiales" }
+    ];
 
     onMount(async () => {
         await new Promise((resolve) => setTimeout(resolve, 2500));
         titleCentered = false;
         await new Promise((resolve) => setTimeout(resolve, 800));
         titleStopedAnimating = true;
+    });
+
+    // Filtrar por categoría y búsqueda
+    $: filteredModes = modeEntries.filter(([modeKey, mode]) => {
+        const title = $_(`modes.${modeKey}.title`).toLowerCase();
+        const desc = $_(`modes.${modeKey}.description`).toLowerCase();
+        const searchMatch = !search || title.includes(search.toLowerCase()) || desc.includes(search.toLowerCase());
+        
+        if (selectedFilter === "todos") return searchMatch;
+        if (selectedFilter === "general") return searchMatch && mode.menuPriority === 0;
+        if (selectedFilter === "especiales") return searchMatch && (mode.menuPriority === 1 || mode.menuPriority === 2);
+        
+        return searchMatch;
     });
 </script>
 
@@ -28,20 +49,94 @@
     >
         {$_('explore_modes')}
     </div>
+
     {#if titleStopedAnimating}
-        <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px] max-w-lg">
-            {#each moreModes as mode, index}
-                <div class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-[794fea] bg-opacity-20 backdrop-blur-lg p-4 border border-solid border-white border-opacity-20">
-                    <div class="flex aspect-square h-[90px] w-[90px] items-center justify-center rounded-full bg-white bg-opacity-10 p-2">
-                        <img src={mode.icon} alt="" class="h-full w-full" />
-                    </div>
-                    <div class="flex w-full flex-col justify-center">
-                        <div class="text-3xl">{mode.title}</div>
-                        <div class="text-md text-justify font-[Ubuntu] font-normal leading-tight">{mode.description}</div>
-                    </div>
+        <!-- Buscador con fondo y efectos visuales -->
+        <div class="w-full flex flex-col items-center mt-4 relative px-4" in:fade={{ duration: 500, delay: 200 }}>
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl rounded-3xl"></div>
+            <div class="relative w-full max-w-md z-10">
+                <input
+                    type="text"
+                    placeholder="Buscar modo..."
+                    bind:value={search}
+                    class="w-full rounded-xl px-4 py-3 bg-white/10 backdrop-blur-md text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all shadow-lg"
+                />
+                <div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/70">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
                 </div>
-            {/each}
+            </div>
+            
+            <!-- Filtros por categorías -->
+            <div class="flex space-x-2 mt-4 mb-4">
+                {#each categorias as categoria}
+                    <button 
+                        class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border 
+                              {selectedFilter === categoria.id 
+                                ? 'bg-purple-600 text-white border-purple-400' 
+                                : 'bg-white/10 text-white/80 border-white/10 hover:bg-white/20'}"
+                        on:click={() => selectedFilter = categoria.id}
+                    >
+                        {categoria.nombre}
+                    </button>
+                {/each}
+            </div>
         </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        {#if filteredModes.length === 0}
+            <div class="w-full p-8 text-center text-white/80 mt-8" in:fade>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-purple-400/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 class="text-xl font-bold mb-2">No se encontraron modos</h3>
+                <p>Intenta con otra búsqueda o selecciona otra categoría</p>
+            </div>
+        {:else}
+            <!-- Grid layout mejorado -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 w-full max-w-7xl">
+                {#each filteredModes as [modeKey, mode], index}
+                    <div 
+                        in:fly={{ y: 50, delay: index * 100, duration: 400 }}
+                        class="group transform transition-all duration-500 hover:scale-105 hover:rotate-1"
+                    >
+                        <div class="relative h-56 rounded-3xl overflow-hidden bg-gradient-to-br from-[#794fea]/50 to-[#9969F8]/50 backdrop-blur-lg border border-white/20 hover:border-white/40 p-6 transition-all duration-500 flex flex-col items-center text-center shadow-xl hover:shadow-2xl">
+                            <!-- Fondo decorativo animado -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-purple-500/10 blur-xl group-hover:bg-purple-500/20 transition-all duration-500"></div>
+                            
+                            <!-- Contenido -->
+                            <div class="relative z-10 flex flex-col items-center">
+                                <!-- Icono con efecto de brillo -->
+                                <div class="flex items-center justify-center w-20 h-20 rounded-2xl bg-white/15 mb-4 group-hover:scale-110 group-hover:bg-white/25 transition-all duration-500 shadow-lg relative overflow-hidden">
+                                    <div class="absolute inset-0 opacity-0 group-hover:opacity-30 bg-gradient-to-r from-transparent via-white/80 to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-1500 ease-in-out"></div>
+                                    <img src={mode.icon} alt="" class="w-12 h-12" />
+                                </div>
+                                
+                                <!-- Contenido centrado con mejor espaciado -->
+                                <div class="flex-1 flex flex-col justify-center items-center space-y-3 mb-6">
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-purple-100 transition-colors duration-300">
+                                        {$_(`modes.${modeKey}.title`)}
+                                    </h3>
+                                    <p class="text-sm text-white/80 font-[Ubuntu] group-hover:text-white transition-all duration-300 line-clamp-3">
+                                        {$_(`modes.${modeKey}.description`)}
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Decoración esquina -->
+                            <div class="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-150 group-hover:bg-purple-300 transition-all duration-500 shadow-lg shadow-purple-500/20"></div>
+                            
+                            <!-- Pill de categoría (movida a la esquina superior) -->
+                            <div class="absolute top-4 left-4 px-3 py-1 text-xs rounded-full bg-black/30 backdrop-blur-sm text-white/90 border border-white/20 z-20 shadow-md">
+                                {mode.menuPriority === 0 ? 'Modo General' : mode.menuPriority === 1 ? 'Estacional' : 'Especial'}
+                            </div>
+                        </div>
+                    </div>
+                {/each}
+            </div>
+        {/if}
     {/if}
 </PageContainer>
 
@@ -50,3 +145,37 @@
         <BottomNavbar/>
     </div>
 {/if}
+
+<style>
+    @keyframes slide-up-fade {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-slide-up-fade {
+        animation: slide-up-fade 1.2s ease-out forwards;
+    }
+    
+    .animation-duration-1200 {
+        animation-duration: 1.2s;
+    }
+    
+    /* Mejoras visuales */
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>
