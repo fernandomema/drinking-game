@@ -43,7 +43,7 @@
       "title": "We have a lot of questions",
       "description": "So you can play again and again with new and fun questions."
     },
-    "steeps": {
+  "steeps": {
       "title": "How it works?",
       "description": "Follow these simple steps to start playing and take your social gatherings to the next level.",
       "step_1": {
@@ -66,6 +66,20 @@
         "title": "Play and have fun!",
         "description": "Enjoy the best game experience."
       }
+    },
+    "stores": {
+      "get_it_on": "Get it on",
+      "download_on": "Download on",
+      "open_as": "Open as",
+      "google_play": "Google Play",
+      "app_store": "App Store",
+      "web_app": "Web App"
+    },
+    "share_fun": {
+      "title": "Show us your fun!",
+      "description": "Are you enjoying the app? We want to see it! Send us your photos and share your best moments with the community. Be part of our story!",
+      "button": "Send us your photos!",
+      "footer": "Share your most epic moments with us and be part of the community. We're waiting for your photos! \ud83d\udcf8"
     }
   },
   "landingPage": {
@@ -87,7 +101,9 @@
     "step2_title": "2. Select a mode",
     "step2_desc": "Choose the game mode that suits you best or you feel like playing.",
     "step3_title": "3. Start drinking!",
-    "step3_desc": "Answer cards, complete challenges and drink according to the rules."
+    "step3_desc": "Answer cards, complete challenges and drink according to the rules.",
+    "welcome_title": "Welcome to the Ultimate Party!",
+    "organize_best_app_title": "The Best App to Organize Your Party"
   },
   "bottomNavbar": {
     "players": "Players",
@@ -100,7 +116,8 @@
     "laught": "Laugh!",
     "laughts": "Laughs",
     "description": "Every time someone laughs, the counter goes up. Who will be the first to reach 100 laughs?",
-    "title": "Laughter is growing!"
+    "title": "Laughter is growing!",
+    "multiply_title": "Laughs that multiply!"
   },
   "cta": {
     "title": "Ready to start playing?",
@@ -109,5 +126,10 @@
   },
   "faqs": {
     "title": "Frequently Asked Questions"
+  },
+  "footer": {
+    "blog": "Blog",
+    "about_app": "About the App",
+    "privacy_policy": "Privacy Policy"
   }
 }
