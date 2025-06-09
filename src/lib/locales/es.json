@@ -123,6 +123,9 @@
     "text": "Descarga la app ahora y empieza a disfrutar de los mejores juegos en grupo.",
     "action": "Descargar ahora"
   },
+  "banners": {
+    "streak": "¡Llevas {days} días en racha! Llega a 15 para obtener una semana de Premium gratis."
+  },
   "footer": {
     "blog": "Blog",
     "about_app": "Sobre la App",

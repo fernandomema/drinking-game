@@ -127,6 +127,9 @@
   "faqs": {
     "title": "Frequently Asked Questions"
   },
+  "banners": {
+    "streak": "You're on a {days}-day streak! Reach 15 to get one week of Premium free."
+  },
   "footer": {
     "blog": "Blog",
     "about_app": "About the App",
