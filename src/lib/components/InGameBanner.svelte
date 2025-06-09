@@ -3,6 +3,8 @@
     import BottomSheet from "./BottomSheet.svelte";
     import { Share } from '@capacitor/share';
     import { shareApp } from "$lib/utils/Share";
+    import { getDaysPlayed } from "$lib/UserInfo";
+    import { _ } from '$lib/locales';
 
     const banners = [{
         id: 'laught',
@@ -15,7 +17,10 @@
         enabled: true,
     }, {
         id: 'suggest',
-        enabled: () => true, 
+        enabled: () => true,
+    }, {
+        id: 'streak',
+        enabled: () => getDaysPlayed() > 0,
     }];
     let showPremiumModal = false;
 
@@ -27,8 +32,9 @@
     const randomizeBanner = () => {
         banner = getRandomBanner().id;
     };
-    
+
     export let banner: string = getRandomBanner().id;
+    let daysPlayed: number = getDaysPlayed();
 
     const laught = async () => {
       try {
@@ -65,6 +71,10 @@
     <div class="w-full h-[50px] bg-gradient-to-r from-pink-500 to-purple-500 text-white flex items-center justify-between px-4 rounded-lg shadow-lg animate-pulse">
         <span class="text-sm font-bold">¡Comparte la diversión! 🎉</span>
         <button on:click={shareApp} class="bg-white text-purple-600 text-xs font-bold px-3 py-1 rounded-full shadow-md hover:bg-gray-200">📢 ¡Compártelo!</button>
+    </div>
+{:else if banner == 'streak'}
+    <div class="w-full h-[60px] bg-blue-100 text-black flex items-center justify-between px-4 rounded-lg shadow-lg">
+        <span class="text-sm font-bold text-gray-700">{$_('banners.streak', { days: daysPlayed })}</span>
     </div>
 {:else if banner == 'premium'}
     <div class="w-full h-[50px] bg-gradient-to-r from-green-400 to-blue-500 text-white flex items-center justify-between px-4 rounded-lg shadow-lg">
