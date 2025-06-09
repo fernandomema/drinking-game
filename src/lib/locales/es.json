@@ -28,6 +28,10 @@
     "christmas": {
       "title": "Navidad",
       "description": "Mejor para fiestas de Navidad. ¡Veamos preguntas relaccionadas con la nieve!"
+    },
+    "drinkIf": {
+      "title": "Drink If",
+      "description": "Lee la carta y bebe si se aplica a ti. Perfecto para romper el hielo."
     }
   },
   "blog": {
