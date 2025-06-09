@@ -62,9 +62,9 @@
     {#if titleStopedAnimating && Object.entries(modes)}
         <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px] max-w-lg">
             {#each  Object.entries(modes).filter(e => !e[1].isEnabled || e[1].isEnabled()) as [modeKey, mode], index}
-                <button 
-                    in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: index * 250 }} 
-                    class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-[794fea] bg-opacity-20 backdrop-blur-lg p-4 border border-solid border-white border-opacity-20 shadow" on:click={onClick} 
+                <button
+                    in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: index * 250 }}
+                    class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-[794fea] bg-opacity-20 backdrop-blur-lg p-4 border border-solid border-white border-opacity-20 shadow" on:click={onClick}
                     data-mode={modeKey} 
                     class:flex-row-reverse={index % 2 === 1}
                     data-umami-event="start-game"
@@ -80,6 +80,9 @@
                     </div>
                 </button>
             {/each}
+            <button class="w-full text-center bg-white bg-opacity-10 rounded-2xl p-4" on:click={() => goto('/explore-modes')}>
+                {$_('explore_modes')}
+            </button>
             <InGameBanner />
             {#if OriginChecker.isDev($page.url.href)}
                 <button class="w-full text-center bg-purple-500" on:click={() => showPremiumModal = true}>
