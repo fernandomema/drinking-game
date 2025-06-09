@@ -1,13 +1,18 @@
 <script lang="ts">
     import { BlogUtilities } from "$lib/utils/BlogUtilities";
     import { page } from '$app/stores';
+    import { browser } from "$app/environment";
     import { getLocaleFromString } from "$lib/types/Locales";
     import BlogPost from "$lib/components/BlogPost.svelte";
 
     const locale = getLocaleFromString($page.params.locale);
     const seoTag = $page.params.seoTag;
 
-    const post = BlogUtilities.getPostBySlug(locale, seoTag);
+    let preview = false;
+    let post = BlogUtilities.getPostBySlug(locale, seoTag);
+
+    $: preview = browser && $page.url.searchParams.has('preview');
+    $: post = BlogUtilities.getPostBySlug(locale, seoTag, preview);
 </script>
 
 <svelte:head>
