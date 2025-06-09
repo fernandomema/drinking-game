@@ -6,8 +6,7 @@
     import { BlogUtilities } from "$lib/utils/BlogUtilities";
 
     const locale = getLocaleFromString($page.params.locale);
-    const preview = $page.url.searchParams.has('preview');
-    const posts: PostData[] = BlogUtilities.getPosts(locale, preview);
+    const posts: PostData[] = BlogUtilities.getPosts(locale);
 </script>
 
 <svelte:head>
