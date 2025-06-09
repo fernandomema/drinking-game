@@ -43,7 +43,7 @@
       "title": "Tenemos un montón de preguntas",
       "description": "Para que puedas jugar y jugar siempre con nuevas preguntas emocionantes."
     },
-    "steeps": {
+  "steeps": {
       "title": "Cómo Funciona",
       "description": "Sigue estos sencillos pasos para empezar a jugar y llevar tus reuniones al siguiente nivel.",
       "step_1": {
@@ -66,6 +66,20 @@
         "title": "¡Juega y diviértete!",
         "description": "Disfruta de la mejor experiencia de juego."
       }
+    },
+    "stores": {
+      "get_it_on": "Consíguelo en",
+      "download_on": "Descargar en",
+      "open_as": "Abrir como",
+      "google_play": "Google Play",
+      "app_store": "App Store",
+      "web_app": "Web App"
+    },
+    "share_fun": {
+      "title": "¡Muéstranos tu diversión!",
+      "description": "¿Estás disfrutando de la app? ¡Queremos verlo! Envíanos tus fotos y comparte tus mejores momentos con la comunidad. ¡Sé parte de nuestra historia!",
+      "button": "¡Envíanos tus Fotos!",
+      "footer": "Comparte tus momentos más épicos con nosotros y sé parte de la comunidad. ¡Estamos esperando tus fotos! \ud83d\udcf8"
     }
   },
   "landingPage": {
@@ -87,7 +101,9 @@
     "step2_title": "2. Selecciona un modo",
     "step2_desc": "Selecciona el modo de juego que mas te convenga o te apetezca.",
     "step3_title": "3. ¡Empieza a beber!",
-    "step3_desc": "Responde tarjetas, cumple retos y bebe según las reglas."
+    "step3_desc": "Responde tarjetas, cumple retos y bebe según las reglas.",
+    "welcome_title": "¡Bienvenidos a la Fiesta Definitiva!",
+    "organize_best_app_title": "La Mejor App para Organizar tu Fiesta"
   },
   "bottomNavbar": {
     "players": "Jugadores",
@@ -99,11 +115,17 @@
     "laught": "¡Ríe!",
     "laughts": "Risas",
     "description": "Cada vez que alguien se ríe, el contador sube. ¿Quién será el primero en llegar a 100 risas?",
-    "title": "¡Risas en aumento!"
+    "title": "¡Risas en aumento!",
+    "multiply_title": "¡Risas que se multiplican!"
   },
   "cta": {
     "title": "¿Listo para comenzar a jugar?",
     "text": "Descarga la app ahora y empieza a disfrutar de los mejores juegos en grupo.",
     "action": "Descargar ahora"
+  },
+  "footer": {
+    "blog": "Blog",
+    "about_app": "Sobre la App",
+    "privacy_policy": "Política de Privacidad"
   }
 }

@@ -80,8 +80,8 @@
                     <a href="/join-beta-test" class="bg-black text-white rounded-xl px-4 py-2 w-48 flex items-center gap-3 shadow-lg hover:bg-gray-800 transition">
                         <span class="iconify tabler--brand-google-play text-3xl"></span>
                         <div class="text-left leading-tight">
-                        <span class="text-xs text-gray-300 block">Consíguelo en</span>
-                        <span class="text-sm font-semibold">Google Play</span>
+                        <span class="text-xs text-gray-300 block">{$_('landing.stores.get_it_on')}</span>
+                        <span class="text-sm font-semibold">{$_('landing.stores.google_play')}</span>
                         </div>
                     </a>
 
@@ -89,8 +89,8 @@
                     <button on:click={() => (isSheetOpen = true)} class="bg-black text-white rounded-xl px-4 py-2 w-48 flex items-center gap-3 shadow-lg hover:bg-gray-800 transition">
                         <span class="iconify tabler--brand-apple text-3xl"></span>
                         <div class="text-left leading-tight">
-                        <span class="text-xs text-gray-300 block">Descargar en</span>
-                        <span class="text-sm font-semibold">App Store</span>
+                        <span class="text-xs text-gray-300 block">{$_('landing.stores.download_on')}</span>
+                        <span class="text-sm font-semibold">{$_('landing.stores.app_store')}</span>
                         </div>
                     </button>
 
@@ -98,8 +98,8 @@
                     <a href="/intro" class="bg-purple-700 text-white rounded-xl px-4 py-2 w-48 flex items-center gap-3 shadow-lg hover:bg-purple-800 transition">
                         <span class="iconify solar--monitor-smartphone-bold-duotone text-3xl"></span>
                         <div class="text-left leading-tight">
-                        <span class="text-xs text-gray-200 block">Abrir como</span>
-                        <span class="text-sm font-semibold">Web App</span>
+                        <span class="text-xs text-gray-200 block">{$_('landing.stores.open_as')}</span>
+                        <span class="text-sm font-semibold">{$_('landing.stores.web_app')}</span>
                         </div>
                     </a>
                 </div>
@@ -250,36 +250,36 @@
       <section class="mt-10 py-16 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
         <div class="container mx-auto px-6 text-center">
           <h2 class="text-4xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-pink-200">
-            ¡Muéstranos tu diversión!
+            {$_('landing.share_fun.title')}
           </h2>
           <p class="text-lg mb-8 animate__animated animate__fadeIn animate__delay-1s">
-            ¿Estás disfrutando de la app? ¡Queremos verlo! Envíanos tus fotos y comparte tus mejores momentos con la comunidad. ¡Sé parte de nuestra historia!
+            {$_('landing.share_fun.description')}
           </p>
           
           <div class="flex justify-center items-center space-x-6">
             <a href="mailto:tuemail@dominio.com?subject=Imágenes para la comunidad" class="bg-white text-purple-600 px-10 py-5 rounded-lg text-xl font-semibold shadow-xl transform transition-all hover:scale-110 hover:bg-purple-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 animate__animated animate__bounceIn animate__delay-2s">
-              ¡Envíanos tus Fotos!
+              {$_('landing.share_fun.button')}
             </a>
           </div>
       
           <div class="mt-8">
-            <p class="text-sm">Comparte tus momentos más épicos con nosotros y sé parte de la comunidad. ¡Estamos esperando tus fotos! 📸</p>
+            <p class="text-sm">{$_('landing.share_fun.footer')}</p>
           </div>
         </div>
       </section>
 
     <section class="bg-pink-100 py-16">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-pink-600">¡Risas en aumento!</h2>
-            <p class="text-lg text-gray-700 mb-6">Cada vez que alguien se ríe, el contador sube. ¿Quién será el primero en llegar a 100 risas?</p>
+            <h2 class="text-3xl font-bold text-pink-600">{$_('laughts.title')}</h2>
+            <p class="text-lg text-gray-700 mb-6">{$_('laughts.description')}</p>
             <div class="text-4xl font-semibold text-purple-600">
-            <span id="counter">0</span> <span>Risas</span>
+            <span id="counter">0</span> <span>{$_('laughts.laughts')}</span>
             </div>
         </div>
     </section>
     <section class="bg-purple-600 py-16" style="background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent); background-size: 50px 50px;">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">¡Risas que se multiplican!</h2>
+            <h2 class="text-3xl font-bold text-white mb-6">{$_('laughts.multiply_title')}</h2>
             <p class="text-lg text-white mb-6">Haz que tus risas cuenten mientras juegas con tus amigos.</p>
         </div>
     </section>
@@ -373,7 +373,7 @@
     </section>
     <section class="bg-purple-600 text-white py-16">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">¡Bienvenidos a la Fiesta Definitiva!</h2>
+            <h2 class="text-3xl font-bold mb-6">{$_('landingPage.welcome_title')}</h2>
             <p class="text-lg mb-6">Si buscas una fiesta única y llena de energía, estás en el lugar adecuado. Nuestra plataforma está diseñada para ofrecerte experiencias increíbles, desde eventos temáticos hasta juegos interactivos para grupos de amigos. ¡Todo lo que necesitas para pasarla genial está aquí!</p>
             <p class="text-lg">Nuestra misión es crear un ambiente de diversión constante, con actividades de fiesta que nunca olvidarán. Organizamos eventos para jóvenes, adultos y todos aquellos que deseen disfrutar de un ambiente festivo y lleno de música. Cada vez que interactúas con nuestra plataforma, la fiesta sigue creciendo. ¡Únete y prepárate para una noche inolvidable!</p>
             <p class="text-lg">Ya sea que estés buscando un modo de fiesta tranquilo o algo completamente salvaje, tenemos opciones para todos. ¡Haz clic, interactúa y prepárate para la fiesta de tu vida!</p>
@@ -448,7 +448,7 @@
     </section>
     <section class="bg-purple-100 text-gray-800 py-16">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-purple-600 mb-6">La Mejor App para Organizar tu Fiesta</h2>
+            <h2 class="text-3xl font-bold text-purple-600 mb-6">{$_('landingPage.organize_best_app_title')}</h2>
             <p class="text-lg mb-6">Nuestra App no solo es perfecta para jugar, sino también para organizar todo tipo de fiestas. ¿Buscas una forma rápida y eficiente de tenerlo todo bajo control? Con nuestra aplicación, puedes gestionar tu fiesta desde cualquier lugar y en cualquier momento. ¡Es el mejor asistente de fiesta que podrías tener!</p>
             <p class="text-lg mb-6">Nuestra app te permite acceder a una amplia variedad de juegos como "Tragos Locos", gestionar los detalles del evento, invitar a amigos, y mucho más. Además, te ofrece recomendaciones basadas en el tamaño de tu grupo, el tipo de fiesta y tus preferencias personales.</p>
             <p class="text-lg mb-6">Con funciones avanzadas como seguimiento en tiempo real, opciones de personalización y un diseño amigable, nuestra app es todo lo que necesitas para asegurarte de que tu fiesta sea todo un éxito. ¡Hazla épica con "Tragos Locos" y otros juegos increíbles!</p>
