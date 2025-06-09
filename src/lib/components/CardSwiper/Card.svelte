@@ -1,6 +1,7 @@
 <script lang="ts">
     import src from "@midudev/tailwind-animations";
     import { onMount } from "svelte";
+    import { impact } from "$lib/utils/haptics";
 
 	export let element: HTMLElement;
 
@@ -22,11 +23,9 @@
 			setTimeout(() => {
 				animateTada = false;
 			}, 1000);
-			if (window.navigator?.vibrate) {
-				navigator.vibrate([200, 100, 200]);
-			}
-		}
-	}
+                        impact();
+                }
+        }
 </script>
 
 <div

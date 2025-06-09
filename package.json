@@ -43,6 +43,7 @@
     "@capacitor/android": "^6.0.0",
     "@capacitor/app": "^6.0.1",
     "@capacitor/core": "^6.0.0",
+    "@capacitor/haptics": "^6.0.1",
     "@capacitor/ios": "^6.0.0",
     "@capacitor/share": "^6.0.3-dev-2141-20240903T111835.0",
     "@iconify-json/solar": "^1.2.2",
