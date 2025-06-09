@@ -48,6 +48,17 @@
     <meta name="twitter:title" content={$_('landing.slogan')} />
     <meta name="twitter:description" content={$_('landing.description')} />
     <meta name="twitter:image" content="https://tragos-locos.servitimo.net/og-image.png" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "Tragos Locos",
+            "operatingSystem": "iOS, Android, Web",
+            "applicationCategory": "GameApplication",
+            "description": "Tragos locos is a drinking party game app designed to elevate your social gatherings with endless fun."
+        }
+    </script>
 </svelte:head>
 
 <div class="bg-gray-50">
