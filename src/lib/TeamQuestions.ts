@@ -319,341 +319,409 @@ export const TeamQuestions: Question[] = [{
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuándo fue la última noche que {player1} acabó mal por culpa del alcohol?',
+        en: 'Team {team1}, question with {shots} drinks at stake: When was the last night {player1} got drunk and felt sick?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un margen de error de más o menos un mes,  cuándo fue la última vez que {player1} vomitó?',
+        en: 'Team {team1}, question with {shots} drinks at stake: With a margin of error of about a month, when was the last time {player1} threw up?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuándo fue la última vez que {player1} tuvo sexo?',
+        en: 'Team {team1}, question with {shots} drinks at stake: When was the last time {player1} had sex?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuándo fue la última vez que {player1} tomó drogas?',
+        en: 'Team {team1}, question with {shots} drinks at stake: When was the last time {player1} took drugs?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el deporte favorito de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite sport?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿En qué idioma le gustaría hablar perfectamente a {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Which language would {player1} like to speak fluently?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿En qué país le gustaría vivir a {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: In which country would {player1} like to live?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la ciudad favorita de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite city?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Con un margen de error de más o menos 2,  cuántos países ha visitado {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: With a margin of error of plus or minus 2, how many countries has {player1} visited?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el último diploma de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s highest degree?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuántos hermanos y hermanas tiene {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: How many brothers and sisters does {player1} have?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la parte del cuerpo que más odia {player1} sobre si mismo/misma?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Which body part does {player1} hate the most about themselves?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la parte del cuerpo que más le gusta a {player1} sobre sí mismo/misma?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Which body part does {player1} like the most about themselves?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el aspecto personal que más odia {player1} de sí mismo/misma?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What personal trait does {player1} dislike most about themselves?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el aspecto personal que más aprecia {player1} de sí mismo/misma?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What personal trait does {player1} appreciate most about themselves?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuántos niños desearía tener {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: How many children would {player1} like to have?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el segundo nombre de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s middle name?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el próximo país que a {player1} le gustaría visitar?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Which country would {player1} like to visit next?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el último libro que leyó {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What was the last book {player1} read?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuándo fue la última vez que {player1} fue al cine?',
+        en: 'Team {team1}, question with {shots} drinks at stake: When was the last time {player1} went to the movies?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la última película que vió {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What was the last movie {player1} watched?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la última película que vió {player1} en en el cine?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What was the last movie {player1} saw at the theater?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Dondé fue la última vez que {player1} tuvo sexo?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Where was the last place {player1} had sex?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Quién fue la última persona de la que {player1} estuvo enamorado/a?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Who was the last person {player1} was in love with?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Comó se llama la última persona con quien {player1} hizo el amor?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is the name of the last person {player1} made love with?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la asignatura preferida de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite school subject?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿De qué color es el abrigo de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What color is {player1}\'s coat?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Qué prefiere {player1} : un trío o un fin de semana en Roma con amigos?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What does {player1} prefer: a threesome or a weekend in Rome with friends?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la fantasía sexual de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s sexual fantasy?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Qué poder mágico le gustaría tener a {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What magical power would {player1} like to have?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿En qué ciudad {player1} fue a la escuela primaria?',
+        en: 'Team {team1}, question with {shots} drinks at stake: In which city did {player1} attend primary school?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : Con un margen de error de más o menos 0.5,  ¿Qué nota media {player1} sacó en el selectividad?',
+        en: 'Team {team1}, question with {shots} drinks at stake: With a margin of ±0.5, what was {player1}\'s average score on the college entrance exam?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿decid un alimento que {player1} odia?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Name a food that {player1} hates?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es el trabajo de los sueños de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s dream job?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿A qué edad tuvo {player1} su primera eyaculación o menstruación?',
+        en: 'Team {team1}, question with {shots} drinks at stake: At what age did {player1} have their first ejaculation or menstruation?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿A qué edad tuvo {player1} su primera experiencia sexual?',
+        en: 'Team {team1}, question with {shots} drinks at stake: At what age did {player1} have their first sexual experience?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿A qué edad tuvo {player1} su primera relación sexual (con penetración por supuesto)?',
+        en: 'Team {team1}, question with {shots} drinks at stake: At what age did {player1} first have intercourse?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿A qué edad tuvo {player1} su primera cita?',
+        en: 'Team {team1}, question with {shots} drinks at stake: At what age did {player1} go on their first date?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿A qué edad se subió {player1} a un avión por primera vez?',
+        en: 'Team {team1}, question with {shots} drinks at stake: At what age did {player1} first get on an airplane?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuántas veces se presentó al examen de conducir {player1} para aprobarlo?',
+        en: 'Team {team1}, question with {shots} drinks at stake: How many times did {player1} take the driving test before passing?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuántos permisos (caza,  camión,  moto,  pesca ....) tiene {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: How many licenses (hunting, truck, motorcycle, fishing, etc.) does {player1} have?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuál es la canción favorita de {player1}?',
+        en: 'Team {team1}, question with {shots} drinks at stake: What is {player1}\'s favorite song?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Cuántos orgasmos tuvo {player1} hoy?',
+        en: 'Team {team1}, question with {shots} drinks at stake: How many orgasms did {player1} have today?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Alguna vez {player1} ha hecho una rotonda en sentido contrario?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Has {player1} ever driven the wrong way around a roundabout?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿Ha pasado alguna vez {player1} 3 días sin lavarse?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Has {player1} ever gone 3 days without showering?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, pregunta con {shots} tragos en juego : ¿{player1} ha enviado a alguien al hospital?',
+        en: 'Team {team1}, question with {shots} drinks at stake: Has {player1} ever sent someone to the hospital?',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, cada vez que {player1} bebe un trago,  todos tienen que beber durante 30 segundos.',
+        en: 'Team {team1}, every time {player1} drinks, everyone must drink for 30 seconds.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, cada vez que {player1} bebe un trago,  todos deben hacer dos flexiones y beber durante 30 segundos.',
+        en: 'Team {team1}, whenever {player1} drinks, everyone must do two push-ups and drink for 30 seconds.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, hacerle una pregunta a {player1} que tiene que responder o acabarse su copa.',
+        en: 'Team {team1}, ask {player1} a question they must answer or finish their drink.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, {player1} elige algo que hayas hecho,  si uno de vosotros también lo hizo,  todos beben {shots} tragos.',
+        en: 'Team {team1}, {player1} chooses something they\'ve done. If any of you have also done it, everyone drinks {shots} shots.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, {player1}, elige algo que nunca hayas hecho,  si uno vosotros lo ha hecho,  todos beben {shots} tragos.',
+        en: 'Team {team1}, {player1} chooses something they\'ve never done. If any of you have done it, everyone drinks {shots} shots.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, sucesivamente nombrar un objeto rojo en el cuarto,  todos los miembros del equipo contrario beberán un trago por cada objeto.',
+        en: 'Team {team1}, take turns naming a red object in the room. The opposing team drinks once for each item.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, sucesivamente nombrar las conquistas de {player1} sin equivocarte,  todos los miembros de su equipo beberán cada vez un trago.',
+        en: 'Team {team1}, take turns naming {player1}\'s conquests without repeating. Each time you do, your team drinks.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, sucesivamente,  cita a uno de los protagonistas de "Juego de Tronos" sin equivocarte,  todos los miembros del equipo contrario beberán un trago por cada personaje.',
+        en: 'Team {team1}, take turns naming a character from "Game of Thrones" without repeating. The opposing team drinks for each name.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, sucesivamente nombra a uno de los protagonistas de " Sexo en Nueva York" sin equivocarte,  todos los miembros del equipo contrario beberán un trago por cada personaje.',
+        en: 'Team {team1}, take turns naming a character from "Sex and the City" without repeating. The opposing team drinks for each name.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, uno de vosotros puede dejar su vaso a {player1} que se tendrá que beber la mitad.',
+        en: 'Team {team1}, one of you may give your glass to {player1}, who must drink half of it.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, si llegan a nombrar 10 películas en las que Brad Pitt sea el protagonista,  {player1} se acabará su bebida,  en caso contrario todos beben {shots} tragos.',
+        en: 'Team {team1}, if you can name 10 movies starring Brad Pitt, {player1} finishes their drink; otherwise everyone drinks {shots} shots.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, si llegan a nombrar 10 películas en las que Monica Belluci sea la protagonista,  {player1} se acaba su bebida,  en caso contrario todos beben {shots} tragos.',
+        en: 'Team {team1}, if you can name 10 movies starring Monica Bellucci, {player1} finishes their drink; otherwise everyone drinks {shots} shots.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, nombrad a una Hada Madrina que repartirá un trago a cada minuto a quien quiera hasta el final del juego.',
+        en: 'Team {team1}, choose a Fairy Godmother who will give a drink every minute to whomever they want until the end of the game.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, sucesivamente cita una enfermedad que {player1} haya tenido (sin equivocarse),  todos los miembros del equipo contrario beberán un trago por cada enfermedad (6 máximo).',
+        en: 'Team {team1}, take turns naming an illness {player1} has had. The opposing team drinks for each one (up to 6).',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, si hay alguien del equipo que haya engañado a su pareja,  el equipo contrario bebe {shots} tragos,  en el caso contrario beben vosotros.',
+        en: 'Team {team1}, if anyone on your team has cheated on their partner, the other team drinks {shots} shots; otherwise your team drinks.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, sucesivamente nombrará un arma medieval (sin equivocarse),  todos los miembros del equipo de enfrente beberán un trago por cada arma (6 máximo)',
+        en: 'Team {team1}, take turns naming a medieval weapon without repeating. The other team drinks once per weapon (max 6).',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, sucesivamente haced un ruido con una parte de tu cuerpo (bofetadas y azotes no cuentan). Por cada ruido el equipo contrario bebe {shots} tragos.',
+        en: 'Team {team1}, take turns making a sound with a body part (no slaps). For each sound the opposing team drinks {shots} shots.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, selecciona a uno de tus oponentes,  que acabará una de las bebidas de su equipo.',
+        en: 'Team {team1}, choose one opponent to finish one of their team\'s drinks.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, si uno de los jugadores lame la frente de un compañero con toda la lengua,  el equipo contrario bebe {shots} tragos. En el caso contrario todos beben {shots2} tragos!',
+        en: 'Team {team1}, if one player licks a teammate\'s forehead with their whole tongue, the opposing team drinks {shots} shots. Otherwise everyone drinks {shots2} shots!',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, si uno de los jugadores acaricia el trasero desnudo de un compañero,  el equipo contrario bebe {shots} tragos. En el caso contrario todos beben {shots2} tragos.',
+        en: 'Team {team1}, if a player caresses a teammate\'s bare butt, the opposing team drinks {shots} shots. Otherwise everyone drinks {shots2} shots.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: 'Equipo {team1}, si uno de los jugadores besa a un compañero en la boca,  el equipo contrario bebe {shots} tragos. En el caso contrario todos beben {shots2} tragos.',
+        en: 'Team {team1}, if one player kisses a teammate on the mouth, the opposing team drinks {shots} shots. Otherwise everyone drinks {shots2} shots.',
     },
     tags: ['teams'],
 },{
     locales: {
         es: '¿Estáis dispuestos a hacer un sacrificio? Equipo {team1}, si uno de vosotros termina su bebida,  el equipo contrario bebe {shots} tragos sino todos beben {shots2} tragos.',
+        en: 'Ready for a sacrifice? Team {team1}, if one of you finishes their drink, the other team drinks {shots} shots, otherwise you all drink {shots2} shots.',
     },
     tags: ['teams'],
 },{
