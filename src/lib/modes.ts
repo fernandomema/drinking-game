@@ -2,9 +2,7 @@ import { Question, Tag } from "./questions";
 import "$lib/Shuffle";
 import '$lib/Spintax';
 import { randomizeQuestions } from "$lib/Shuffle";
-import { get } from "svelte/store";
 import { _ } from "$lib/locales";
-import { text } from "@sveltejs/kit";
 import { Team } from "./types/Team";
 import { getRandomizedTeamNames, getRandomTeamName } from "./TeamNames";
 import { getLocaleFromString } from "./types/Locales";
@@ -19,13 +17,17 @@ export type Mode = {
     menuPriority: MenuPriority;
     icon: string;
     isEnabled?: () => boolean;
-    pickCards: (questions: Question[], locale?: string, players?: any[]) => Question[]; 
+    pickCards: (questions: Question[], locale?: string, players?: any[]) => Question[];
+    isPublic?: boolean;
+    isFeatured?: boolean;
 }
 
 export const modes: { [key: string]: Mode } = {
     preparty: {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/preparty.png',
+        isPublic: true,
+        isFeatured: true,
         pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             return getModeQuestions(questions, {
                 gameMode: 'preparty',
@@ -38,6 +40,8 @@ export const modes: { [key: string]: Mode } = {
     crazy: {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/crazy.png',
+        isPublic: true,
+        isFeatured: true,
         pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             return getModeQuestions(questions, {
                 gameMode: 'crazy',
@@ -50,6 +54,8 @@ export const modes: { [key: string]: Mode } = {
     'best-friends': {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/high-five.png',
+        isPublic: true,
+        isFeatured: true,
         pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             return getModeQuestions(questions, {
                 gameMode: 'bestFriends',
@@ -62,17 +68,22 @@ export const modes: { [key: string]: Mode } = {
     hot: {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/plus-18-light.png',
-        pickCards: (questions: Question[], locale?: string) => {
+        isPublic: true,
+        isFeatured: true,
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             return getModeQuestions(questions, {
                 gameMode: '+18',
                 mode: 'basic',
-                locale
+                locale,
+                players
             });
         }
     },
     teams: {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/teams.png',
+        isPublic: true,
+        isFeatured: true,
         pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             const teamNames = getRandomizedTeamNames(getLocaleFromString(locale));
             const teams: Team[] = [{
@@ -101,6 +112,8 @@ export const modes: { [key: string]: Mode } = {
     christmas: {
         menuPriority: MenuPriority.SeasonalMode,
         icon: '/christmas.png',
+        isPublic: false,
+        isFeatured: true,
         isEnabled: () => {
             const date = new Date();
             return (date.getMonth() === 11) || (date.getMonth() === 0 && date.getDate() <= 15);
@@ -117,6 +130,8 @@ export const modes: { [key: string]: Mode } = {
     drinkIf: {
         menuPriority: MenuPriority.SpecialMode,
         icon: '/drink-if.png',
+        isPublic: true,
+        isFeatured: false,
         pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             return getModeQuestions(questions, {
                 gameMode: 'drinkIf',
