@@ -8,6 +8,7 @@
 
     import { App } from '@capacitor/app';
     import { browser } from '$app/environment';
+    import { getLocale } from '$lib/locales';
     
     if (browser) {
         App.addListener('backButton', async () => {
@@ -16,6 +17,9 @@
     }
 
     onMount(async () => {
+      const lang = await getLocale()
+      document.documentElement.setAttribute('lang', lang)
+
       if (pwaInfo) {
         const { registerSW } = await import('virtual:pwa-register')
         registerSW({
