@@ -1,6 +1,7 @@
 <script lang="ts">
     import { createEventDispatcher, onMount } from "svelte";
     import { _ } from "$lib/locales";
+    import { impact } from "$lib/utils/haptics";
     
     export let value: string = '';
     export let players: any[] = [];
@@ -40,11 +41,13 @@
 
     const clickAddPlayer = () => {
         addPlayer(value);
+        impact();
         value = '';
         input?.focus();
     };
 
     const clickPlay = () => {
+        impact();
         eventDispatcher('play');
     };
     
