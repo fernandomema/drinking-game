@@ -6,9 +6,7 @@
 
     const locale = getLocaleFromString($page.params.locale);
     const seoTag = $page.params.seoTag;
-    const preview = $page.url.searchParams.has('preview');
-
-    const post = BlogUtilities.getPostBySlug(locale, seoTag, preview);
+    const post = BlogUtilities.getPostBySlug(locale, seoTag);
 </script>
 
 <svelte:head>
