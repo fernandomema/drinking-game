@@ -47,6 +47,18 @@ export const modes: { [key: string]: Mode } = {
             });
         }
     },
+    'best-friends': {
+        menuPriority: MenuPriority.GeneralMode,
+        icon: '/high-five.png',
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            return getModeQuestions(questions, {
+                gameMode: 'bestFriends',
+                mode: 'basic',
+                locale,
+                players
+            });
+        }
+    },
     hot: {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/plus-18-light.png',
