@@ -15,6 +15,7 @@
             
             <div class="flex space-x-6 text-gray-200">
                 <a href="/blog" class="hover:text-gray-50">Blog</a>
+                <a href="/sobre-la-app" class="hover:text-gray-50">Sobre la App</a>
                 <a href="/privacy-policy" class="hover:text-gray-50">Privacy Policy</a>
             </div>
 
