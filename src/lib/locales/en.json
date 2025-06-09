@@ -28,6 +28,10 @@
     "christmas": {
       "title": "Christmas",
       "description": "The christmas is here! Let's have fun with chsitmas themed questions."
+    },
+    "drinkIf": {
+      "title": "Drink If",
+      "description": "Read the card and drink if it applies to you. Perfect to break the ice."
     }
   },
   "blog": {
