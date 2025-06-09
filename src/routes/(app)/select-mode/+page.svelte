@@ -50,6 +50,8 @@
         });
     };
 
+    // Solo mostrar modos destacados en select-mode
+    const modeEntries = Object.entries(modes).filter(e => (e[1].isFeatured !== false) && (!e[1].isEnabled || e[1].isEnabled()));
 </script>
 
 <PageContainer class="relative flex flex-col items-center overflow-auto pb-5 pb-[50px]">
@@ -59,9 +61,9 @@
     >
         {$_('select_play_mode')}
     </div>
-    {#if titleStopedAnimating && Object.entries(modes)}
+    {#if titleStopedAnimating && modeEntries}
         <div class="flex w-full flex-col items-center justify-center gap-5 p-4 mt-[20px] max-w-lg">
-            {#each  Object.entries(modes).filter(e => !e[1].isEnabled || e[1].isEnabled()) as [modeKey, mode], index}
+            {#each  modeEntries as [modeKey, mode], index}
                 <button
                     in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: index * 250 }}
                     class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-[794fea] bg-opacity-20 backdrop-blur-lg p-4 border border-solid border-white border-opacity-20 shadow" on:click={onClick}
