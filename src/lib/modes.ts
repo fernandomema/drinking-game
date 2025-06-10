@@ -83,7 +83,7 @@ export const modes: { [key: string]: Mode } = {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/crown.png',
         isPublic: true,
-        isFeatured: true,
+        isFeatured: false,
         pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             return getModeQuestions(questions, {
                 gameMode: 'preparty',
@@ -181,7 +181,7 @@ export const modes: { [key: string]: Mode } = {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/duel.png',
         isPublic: true,
-        isFeatured: true,
+        isFeatured: false,
         pickCards: (questions: Question[], locale?: string, players?: any[]) => {
             return getModeQuestions(questions, {
                 gameMode: 'duel',
