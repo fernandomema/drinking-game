@@ -41,6 +41,10 @@
     "duel": {
       "title": "Duel",
       "description": "1v1 challenges. Loser drinks."
+    },
+    "cascade": {
+      "title": "Cascade Drinking",
+      "description": "One action triggers another. Keep the chain going!"
     }
   },
   "blog": {

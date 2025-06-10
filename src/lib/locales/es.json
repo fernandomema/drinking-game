@@ -135,6 +135,10 @@
     "duel": {
       "title": "Duelos",
       "description": "Enfrentamientos 1v1 donde el perdedor bebe."
+    },
+    "cascade": {
+      "title": "Cascada de Bebida",
+      "description": "Una acción desencadena otra en cadena. ¡No la rompas!"
     }
   },
   "blog": {

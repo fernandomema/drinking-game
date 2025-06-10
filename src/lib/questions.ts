@@ -4,6 +4,7 @@ import { TeamQuestions } from "./TeamQuestions";
 import { BestFriendsQuestions } from "./BestFriendsQuestions";
 import { ResurrectionFestQuestions } from "./ResurrectionFestQuestions";
 import { DuelQuestions } from "./DuelQuestions";
+import { CascadeQuestions } from "./CascadeQuestions";
 
 export type Tag =
   | 'preparty'
@@ -23,7 +24,11 @@ export type Tag =
   | 'teams'
   | 'bestFriends'
   | 'resurrectionFest'
-  | 'duel';
+  | 'duel'
+  | 'cascade'
+  | 'cascade-trigger'
+  | 'cascade-effect'
+  | 'cascade-end';
 
 export type Question = {
     index?: number;
@@ -4928,7 +4933,8 @@ export const questions: Question[] = [{
   ...crazyQuestions,
   ...hotQuestions,
   ...TeamQuestions,
-  ...ResurrectionFestQuestions
+  ...ResurrectionFestQuestions,
+  ...CascadeQuestions
 ];
 
 /*
