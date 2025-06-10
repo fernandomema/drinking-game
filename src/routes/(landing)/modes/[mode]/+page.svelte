@@ -5,6 +5,7 @@
   import { onMount } from 'svelte';
 import RelatedModes from '$lib/components/RelatedModes.svelte';
 import Footer from '$lib/components/Footer.svelte';
+import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
 import '$lib/Shuffle';
   let modeKey: string = '';
   let mode: Mode | null = null;
@@ -87,6 +88,13 @@ import '$lib/Shuffle';
     <title>{$_(`modes.${modeKey}.title`)} | Tragos Locos</title>
     <meta name="description" content={$_(`modes.${modeKey}.description`)} />
     <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+    {@html `<script type="application/ld+json">${JSON.stringify(
+      SchemaGenerator.getBreadcrumbs([
+        { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
+        { name: $_('modes_page.title'), url: 'https://tragos-locos.servitimo.net/modes/' },
+        { name: $_(`modes.${modeKey}.title`), url: `https://tragos-locos.servitimo.net/modes/${modeKey}/` }
+      ])
+    )}</script>`}
   {/if}
 </svelte:head>
 

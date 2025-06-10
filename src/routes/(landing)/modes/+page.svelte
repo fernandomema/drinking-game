@@ -2,6 +2,7 @@
   import { _ } from '$lib/locales';
   import { modes } from '$lib/modes';
   import Footer from '$lib/components/Footer.svelte';
+  import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
 
   const modeEntries = Object.entries(modes).filter(([key, mode]) => mode.isPublic ?? true);
 </script>
@@ -10,6 +11,12 @@
   <title>{$_('modes_page.title')} | Tragos Locos</title>
   <meta name="description" content={$_('modes_page.description')} />
   <link rel="canonical" href="https://tragos-locos.servitimo.net/modes/" />
+  {@html `<script type="application/ld+json">${JSON.stringify(
+    SchemaGenerator.getBreadcrumbs([
+      { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
+      { name: $_('modes_page.title'), url: 'https://tragos-locos.servitimo.net/modes/' }
+    ])
+  )}</script>`}
 </svelte:head>
 
 <header class="flex items-center w-full bg-white justify-between py-4 px-4">
