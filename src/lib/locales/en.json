@@ -137,6 +137,10 @@
   "faqs": {
     "title": "Frequently Asked Questions"
   },
+  "modes_page": {
+    "title": "Game Modes",
+    "description": "Discover all the game modes available in Tragos Locos."
+  },
   "banners": {
     "streak": "You're on a {days}-day streak! Reach 15 to get one week of Premium free."
   },
