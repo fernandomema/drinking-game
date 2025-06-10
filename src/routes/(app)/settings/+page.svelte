@@ -13,11 +13,13 @@
 
     let titleCentered = true;
     let titleStopedAnimating = false;
+    let redeemCode = '';
 
     const modals = {
         suggestQuestion: false,
         sendFeedback: false,
-        languageSelector: false
+        languageSelector: false,
+        applyCode: false
     };
 
     onMount(async () => {
@@ -25,8 +27,14 @@
         titleCentered = false;
         await new Promise((resolve) => setTimeout(resolve, 800));
         titleStopedAnimating = true;
-        
+
     });
+
+    const handleRedeem = () => {
+        console.log('Redeeming code:', redeemCode);
+        redeemCode = '';
+        modals.applyCode = false;
+    };
 
     if (browser) {
 	    App.addListener('backButton', async () => {
@@ -59,6 +67,11 @@
             <button on:click={() => modals.languageSelector = true} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
                 <div class="flex w-full flex-col justify-center text-left">
                     <div class="text-3xl">Language</div>
+                </div>
+            </button>
+            <button on:click={() => modals.applyCode = true} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
+                <div class="flex w-full flex-col justify-center text-left">
+                    <div class="text-3xl">Apply a code</div>
                 </div>
             </button>
         </div>
@@ -103,3 +116,14 @@
         modals.languageSelector = false;
     }}
 />
+
+<BottomSheet isOpen={modals.applyCode} onClose={() => (modals.applyCode = false)}>
+    <div class="flex flex-col items-center w-full gap-4">
+        <h2 class="text-xl font-bold text-gray-800 text-center mb-4">Apply a code</h2>
+        <input
+            bind:value={redeemCode}
+            placeholder="Enter code"
+            class="w-full rounded-lg border-2 border-purple-200 bg-[#936ff5] bg-opacity-70 px-3 py-2 text-xl font-medium text-white placeholder-gray-200 outline-none focus:border-purple-400" />
+        <button class="w-full py-2 bg-purple-600 text-white rounded" on:click={handleRedeem}>Redeem</button>
+    </div>
+</BottomSheet>
