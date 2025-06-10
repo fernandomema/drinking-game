@@ -133,6 +133,10 @@
     "text": "Descarga la app ahora y empieza a disfrutar de los mejores juegos en grupo.",
     "action": "Descargar ahora"
   },
+  "modes_page": {
+    "title": "Modos de Juego",
+    "description": "Descubre todos los modos de juego disponibles en Tragos Locos."
+  },
   "banners": {
     "streak": "¡Llevas {days} días en racha! Llega a 15 para obtener una semana de Premium gratis."
   },
