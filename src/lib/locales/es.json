@@ -3,6 +3,7 @@
   "select_play_mode": "Como vamos a jugar?",
   "adjust_settings": "Que vamos a ajustar?",
   "player_name": "Nombre del/a jugador/a",
+  "related_modes": "Modos relacionados",
   "explore_modes": "Explorar más modos",
   "modes": {
     "preparty": {
