@@ -118,7 +118,7 @@ import '$lib/Shuffle';
       <p class="text-gray-700">{$_(`modes.${modeKey}.description`)}</p>
     </header>
 
-    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center my-8">
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center my-8 mb-24">
       <div>
         <div class="text-xl">⏱️</div>
         <div class="text-sm text-gray-500">Duración</div>
@@ -142,25 +142,84 @@ import '$lib/Shuffle';
     </section>
 
     {#if examples.length > 0}
-    <section class="my-8">
-      <h2 class="text-2xl font-bold mb-4 text-center">Ejemplos de tarjetas</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500 pb-1">Ejemplos de tarjetas</h2>
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-600 to-pink-500 mx-auto mt-2 rounded-full"></div>
+        <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Aquí tienes algunas de las tarjetas que encontrarás en el modo {$_(`modes.${modeKey}.title`)}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {#each examples as card, index}
-          <div class="p-4 border rounded-lg shadow">
-            <p>{@html card}</p>
+          <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <div class="flex items-start">
+              <div class="bg-purple-100 rounded-full p-3 mr-4 flex-shrink-0">
+                <span class="text-xl">{index === 0 ? '🍸' : index === 1 ? '🎮' : index === 2 ? '🎯' : '🔥'}</span>
+              </div>
+              <div>
+                <p class="text-gray-800 leading-relaxed">{@html card}</p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">Tarjeta de ejemplo</span>
+              <span class="text-sm font-medium text-purple-600">#{index + 1}</span>
+            </div>
           </div>
         {/each}
       </div>
     </section>
     {/if}
 
+    <!-- Call to Action -->
+    <div class="my-16 bg-gradient-to-br from-purple-600 to-pink-500 rounded-2xl shadow-xl overflow-hidden">
+      <div class="relative p-8 md:p-12">
+        <!-- Fondo decorativo -->
+        <div class="absolute inset-0 bg-[url('/tiles/christmas-colour.webp')] opacity-10 mix-blend-overlay"></div>
+        
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">¿Listo para empezar a jugar?</h2>
+            <p class="text-white/90 text-lg max-w-xl">Descarga ahora y disfruta de {$_(`modes.${modeKey}.title`)} y muchos más modos de juego con tus amigos. ¡La diversión está garantizada!</p>
+            
+            <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+              <!-- Estadísticas atractivas -->
+              <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg flex items-center">
+                <span class="text-2xl mr-2">🎮</span>
+                <div>
+                  <span class="block text-white font-bold text-xl">{Object.keys(modes).length}+</span>
+                  <span class="text-white/80 text-sm">Modos de juego</span>
+                </div>
+              </div>
+              
+              <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg flex items-center">
+                <span class="text-2xl mr-2">🔥</span>
+                <div>
+                  <span class="block text-white font-bold text-xl">1000+</span>
+                  <span class="text-white/80 text-sm">Preguntas y retos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center md:text-right">
+            <a 
+              href="/" 
+              class="inline-flex items-center px-8 py-4 text-lg font-bold text-purple-700 bg-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Descargar App
+            </a>
+            <p class="text-white/80 text-sm mt-3">Disponible para iOS, Android y Web</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {#if relatedModes.length > 0}
-    <RelatedModes modesList={relatedModes} />
+        <RelatedModes modesList={relatedModes} />
     {/if}
 
-    <div class="text-center my-12">
-      <a href="/" class="bg-purple-600 text-white px-6 py-3 rounded-lg">Descargar App</a>
-    </div>
   </div>
 {:else}
   <p class="text-center mt-20">Modo no encontrado</p>
