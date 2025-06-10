@@ -190,6 +190,20 @@ export const modes: { [key: string]: Mode } = {
                 players
             });
         }
+    },
+    cascade: {
+        menuPriority: MenuPriority.GeneralMode,
+        icon: '/cascade.png',
+        isPublic: true,
+        isFeatured: false,
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            return getModeQuestions(questions, {
+                gameMode: 'cascade',
+                mode: 'cascade',
+                locale,
+                players
+            });
+        }
     }
 }
 
@@ -198,7 +212,7 @@ function getModeQuestions(questions: Question[], options: {
     players?: any[],
     teams?: Team[],
     gameMode: Tag
-    mode: 'basic' | 'compound' | 'progressive'
+    mode: 'basic' | 'compound' | 'progressive' | 'cascade'
 }): Question[] {
     questions.map((question, index) => {
         question.index = index;
@@ -287,6 +301,17 @@ function getModeQuestions(questions: Question[], options: {
         });
 
         return finalQuestions;
+    } else if (options.mode === 'cascade') {
+        let cascadeQuestions = questions.filter((question) => {
+            if (!question.tags?.includes('cascade')) return false;
+            if (options.locale && !question.locales[options.locale]) return false;
+            return true;
+        });
+        cascadeQuestions = fillPlaceholders(cascadeQuestions, {
+            players: options.players,
+            locale: options.locale
+        });
+        return cascadeQuestions;
     }
     return [];
 }
