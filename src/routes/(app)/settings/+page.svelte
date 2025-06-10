@@ -10,14 +10,28 @@
     import Featurebase from "$lib/components/Featurebase.svelte";
     import BottomSheet from "$lib/components/BottomSheet.svelte";
     import LanguageSelector from "$lib/components/BottomSheets/LanguageSelector.svelte";
+    import { requestNotificationPermission, getRemindersEnabled, setRemindersEnabled, cancelReminders, scheduleDailyReminder } from '$lib/utils/reminders';
 
     let titleCentered = true;
     let titleStopedAnimating = false;
+
+    let remindersEnabled = getRemindersEnabled();
 
     const modals = {
         suggestQuestion: false,
         sendFeedback: false,
         languageSelector: false
+    };
+
+    const toggleReminders = async () => {
+        remindersEnabled = !remindersEnabled;
+        setRemindersEnabled(remindersEnabled);
+        if (remindersEnabled) {
+            await requestNotificationPermission();
+            await scheduleDailyReminder();
+        } else {
+            await cancelReminders();
+        }
     };
 
     onMount(async () => {
@@ -61,6 +75,16 @@
                     <div class="text-3xl">Language</div>
                 </div>
             </button>
+
+            <div class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
+                <div class="flex w-full flex-col justify-center text-left">
+                    <div class="text-3xl">Daily reminders</div>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="sr-only peer" bind:checked={remindersEnabled} on:change={toggleReminders} />
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-[#794fea] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"></div>
+                </label>
+            </div>
         </div>
     {/if}
 </PageContainer>

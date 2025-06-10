@@ -1,4 +1,5 @@
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
+import { scheduleDailyReminder } from './utils/reminders';
 
 export const getUserId = () => {
     let userId = localStorage.getItem('userId');
@@ -21,6 +22,7 @@ export const incrementDaysPlayed = (): number => {
         localStorage.setItem('premium', 'true');
     }
 
+    scheduleDailyReminder();
     return days.length;
 };
 

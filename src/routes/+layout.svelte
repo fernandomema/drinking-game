@@ -5,6 +5,7 @@
     import { PUBLIC_UMAMI_WEBSITE_ID	} from '$lib/config';
     import { OriginChecker } from '$lib/OriginChecker';
     import { page } from '$app/stores';
+    import { requestNotificationPermission } from '$lib/utils/reminders';
 
     import { App } from '@capacitor/app';
     import { browser } from '$app/environment';
@@ -37,6 +38,8 @@
           }
         })
       }
+
+      await requestNotificationPermission()
     })
     
     $: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : ''
