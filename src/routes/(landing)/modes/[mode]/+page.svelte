@@ -64,6 +64,8 @@ import '$lib/Shuffle';
         stats.category = 'Estacional';
       } else if (mode.menuPriority === 2) {
         stats.category = 'Especial';
+      } else if (mode.menuPriority === 3) {
+        stats.category = 'Beta';
       }
       try {
         const allQuestions: any[] = questions;

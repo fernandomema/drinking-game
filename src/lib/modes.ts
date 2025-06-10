@@ -11,6 +11,7 @@ enum MenuPriority {
     GeneralMode = 0,
     SeasonalMode = 1,
     SpecialMode = 2,
+    BetaMode = 3,
 }
 
 export type Mode = {
@@ -80,7 +81,7 @@ export const modes: { [key: string]: Mode } = {
         }
     },
     progressive: {
-        menuPriority: MenuPriority.GeneralMode,
+        menuPriority: MenuPriority.BetaMode,
         icon: '/crown.png',
         isPublic: true,
         isFeatured: false,
@@ -178,7 +179,7 @@ export const modes: { [key: string]: Mode } = {
         }
     },
     duel: {
-        menuPriority: MenuPriority.GeneralMode,
+        menuPriority: MenuPriority.BetaMode,
         icon: '/duel.png',
         isPublic: true,
         isFeatured: false,
@@ -192,7 +193,7 @@ export const modes: { [key: string]: Mode } = {
         }
     },
     cascade: {
-        menuPriority: MenuPriority.GeneralMode,
+        menuPriority: MenuPriority.BetaMode,
         icon: '/cascade.png',
         isPublic: true,
         isFeatured: false,
