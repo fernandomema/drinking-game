@@ -116,6 +116,10 @@
       "title": "Hot",
       "description": "Orientado a preguntas más perversas, ¿listo para revelar tus secretos más intimos?"
     },
+    "progressive": {
+      "title": "Progresivo",
+      "description": "Comienza con retos ligeros y aumenta la intensidad poco a poco para que la fiesta no pare."
+    },
     "teams": {
       "title": "Equipos",
       "description": "¿Demasiados jugadores? ¡Hagamos equipos y juguemos! La mejor manera de jugar con mucha gente."
