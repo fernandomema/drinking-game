@@ -82,7 +82,7 @@ function getModeStats(modeKey: string) {
         if (modeKey === 'christmas') stats.color = 'from-red-500/20 to-green-500/20';
         // Contar tarjetas del modo
         try {
-            const allQuestions: any[] = require('$lib/questions').questions;
+            const allQuestions: any[] = questions;
             stats.totalCards = allQuestions.filter((q: any) => q.tags && q.tags.includes(modeKey)).length;
         } catch {}
     }
