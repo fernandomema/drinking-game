@@ -22,9 +22,7 @@ export const getLocale = async (): Promise<string> => {
 
 export const setLocale = async (newLocale: any): Promise<void> => {
     return new Promise((resolve) => {
-        locale.subscribe(() => {
-            locale.set(locale);
-            resolve();
-        });
+        locale.set(newLocale);
+        resolve();
     });
 }
