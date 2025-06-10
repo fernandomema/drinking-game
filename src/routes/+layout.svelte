@@ -4,11 +4,13 @@
     import '../app.css';
     import { PUBLIC_UMAMI_WEBSITE_ID	} from '$lib/config';
     import { OriginChecker } from '$lib/OriginChecker';
-    import { page } from '$app/stores';
+import { page } from '$app/stores';
 
     import { App } from '@capacitor/app';
     import { browser } from '$app/environment';
-    import { getLocale } from '$lib/locales';
+import { getLocale } from '$lib/locales';
+import { loadUserInfo } from '$lib/UserInfo';
+import { loadPlayers, loadTeams } from '$lib/PlayerStorage';
     
     if (browser) {
         App.addListener('backButton', async () => {
@@ -17,6 +19,9 @@
     }
 
     onMount(async () => {
+      await loadUserInfo();
+      await loadPlayers();
+      await loadTeams();
       const lang = await getLocale()
       document.documentElement.setAttribute('lang', lang)
 

@@ -50,8 +50,10 @@
         });
         input.$on('play', () => {
             if (players.length > 0) {
-                sessionStorage.setItem('players', JSON.stringify(players));
-                window.location.replace('/select-mode');
+                import('$lib/PlayerStorage').then(async ({ setPlayers }) => {
+                    await setPlayers(players);
+                    window.location.replace('/select-mode');
+                });
             }
         });
     });

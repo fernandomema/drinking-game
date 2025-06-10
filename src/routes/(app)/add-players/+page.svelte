@@ -5,6 +5,7 @@
     import AddPlayerInput from "$lib/components/AddPlayerInput.svelte";
     import { goto } from "$app/navigation";
     import { _ } from "$lib/locales";
+    import { loadPlayers, getPlayers, setPlayers } from "$lib/PlayerStorage";
 
     let titleCentered = true;
     let titleStopedAnimating = false;
@@ -13,7 +14,8 @@
     let players: any[] = [];
 
     onMount(async () => {
-        players = JSON.parse(sessionStorage.getItem('players') || '[]');
+        await loadPlayers();
+        players = getPlayers();
         const AppSys = (await import('@capacitor/app')).App;
         AppSys.addListener('backButton', (data: any) => {
             AppSys.exitApp();
@@ -25,9 +27,9 @@
         titleStopedAnimating = true;
     });
 
-    const play = () => {
+    const play = async () => {
         if (players.length > 0) {
-            sessionStorage.setItem('players', JSON.stringify(players));
+            await setPlayers(players);
             goto('/select-mode');
         }
     };

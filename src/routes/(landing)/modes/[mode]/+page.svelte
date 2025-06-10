@@ -8,6 +8,7 @@ import Footer from '$lib/components/Footer.svelte';
 import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
 import { questions } from '$lib/questions';
 import '$lib/Shuffle';
+import { loadPlayers, getPlayers } from '$lib/PlayerStorage';
   let modeKey: string = '';
   let mode: Mode | null = null;
   let examples: string[] = [];
@@ -45,7 +46,8 @@ import '$lib/Shuffle';
         'Ejemplo de tarjeta 4'
       ];
     }
-    const players = JSON.parse(sessionStorage.getItem('players') || '[]');
+    await loadPlayers();
+    const players = getPlayers();
     return (mode?.pickCards(questions, locale, players) || []).map(card => card.locales[locale]).slice(2, 6);
   }
 

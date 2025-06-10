@@ -1,34 +1,53 @@
-import {v4 as uuidv4} from 'uuid';
+import { Preferences } from '@capacitor/preferences';
+import { v4 as uuidv4 } from 'uuid';
 
-export const getUserId = () => {
-    let userId = localStorage.getItem('userId');
-    if (!userId) {
-        userId = uuidv4();
-        localStorage.setItem('userId', userId);
+let userId = '';
+let days: string[] = [];
+let premium = false;
+
+export const loadUserInfo = async () => {
+    if (typeof window === 'undefined') return;
+
+    const legacyUserId = localStorage.getItem('userId');
+    const legacyDays = localStorage.getItem('daysPlayed');
+    const legacyPremium = localStorage.getItem('premium');
+
+    if (legacyUserId) await Preferences.set({ key: 'userId', value: legacyUserId });
+    if (legacyDays) await Preferences.set({ key: 'daysPlayed', value: legacyDays });
+    if (legacyPremium) await Preferences.set({ key: 'premium', value: legacyPremium });
+
+    if (legacyUserId || legacyDays || legacyPremium) {
+        localStorage.removeItem('userId');
+        localStorage.removeItem('daysPlayed');
+        localStorage.removeItem('premium');
     }
-    return userId;
-}
+
+    const { value: storedId } = await Preferences.get({ key: 'userId' });
+    userId = storedId || uuidv4();
+    if (!storedId) await Preferences.set({ key: 'userId', value: userId });
+
+    const { value: storedDays } = await Preferences.get({ key: 'daysPlayed' });
+    days = storedDays ? JSON.parse(storedDays) : [];
+
+    const { value: storedPremium } = await Preferences.get({ key: 'premium' });
+    premium = storedPremium === 'true';
+};
+
+export const getUserId = () => userId;
 
 export const incrementDaysPlayed = (): number => {
-    const days: string[] = JSON.parse(localStorage.getItem('daysPlayed') || '[]');
     const today = new Date().toISOString().slice(0, 10);
     if (!days.includes(today)) {
         days.push(today);
-        localStorage.setItem('daysPlayed', JSON.stringify(days));
+        Preferences.set({ key: 'daysPlayed', value: JSON.stringify(days) });
     }
-
     if (days.length >= 15) {
-        localStorage.setItem('premium', 'true');
+        premium = true;
+        Preferences.set({ key: 'premium', value: 'true' });
     }
-
     return days.length;
 };
 
-export const isPremiumUser = (): boolean => {
-    return localStorage.getItem('premium') === 'true';
-};
+export const isPremiumUser = (): boolean => premium;
 
-export const getDaysPlayed = (): number => {
-    const days: string[] = JSON.parse(localStorage.getItem('daysPlayed') || '[]');
-    return days.length;
-};
+export const getDaysPlayed = (): number => days.length;

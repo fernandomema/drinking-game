@@ -15,6 +15,7 @@
     import { shareApp } from '$lib/utils/Share';
     import type { Team } from '$lib/types/Team';
     import { _ } from '$lib/locales';
+    import { loadPlayers, getPlayers, loadTeams, getTeams } from '$lib/PlayerStorage';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -31,14 +32,16 @@
     let teams: Team[] = [];
     let umami: umami.umami | undefined;
 
-	onMount(async () => {
-        players = JSON.parse(sessionStorage.getItem('players') || '[]');
+        onMount(async () => {
+        await loadPlayers();
+        players = getPlayers();
         if (!players || players.length == 0) goto('/select-mode');
         locale = await getLocale();
         filteredQuestions = modes[mode].pickCards(questions, locale, players);
-        teams = JSON.parse(localStorage.getItem('teams') || '[]');
+        await loadTeams();
+        teams = getTeams();
         umami = window.umami;
-	});
+        });
 
 	let swipe: (direction?: 'left' | 'right') => void;
     let undoSwipe: () => void;
