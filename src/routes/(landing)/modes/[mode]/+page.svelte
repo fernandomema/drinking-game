@@ -1,11 +1,12 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { type Mode, modes } from '$lib/modes';
-  import { _, getLocale } from '$lib/locales';
-  import { onMount } from 'svelte';
+import { _, getLocale } from '$lib/locales';
+import { onMount } from 'svelte';
 import RelatedModes from '$lib/components/RelatedModes.svelte';
 import Footer from '$lib/components/Footer.svelte';
 import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
+import { questions } from '$lib/questions';
 import '$lib/Shuffle';
   let modeKey: string = '';
   let mode: Mode | null = null;
@@ -45,7 +46,7 @@ import '$lib/Shuffle';
       ];
     }
     const players = JSON.parse(sessionStorage.getItem('players') || '[]');
-    return (mode?.pickCards(require('$lib/questions').questions, locale, players) || []).map(card => card.locales[locale]).slice(2, 6);
+    return (mode?.pickCards(questions, locale, players) || []).map(card => card.locales[locale]).slice(2, 6);
   }
 
   function getModeStats(modeKey: string) {
@@ -65,7 +66,7 @@ import '$lib/Shuffle';
         stats.category = 'Especial';
       }
       try {
-        const allQuestions: any[] = require('$lib/questions').questions;
+        const allQuestions: any[] = questions;
         stats.totalCards = allQuestions.filter((q: any) => q.tags && q.tags.includes(modeKey)).length;
       } catch {}
     }
