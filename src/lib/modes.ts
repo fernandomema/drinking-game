@@ -79,6 +79,20 @@ export const modes: { [key: string]: Mode } = {
             });
         }
     },
+    progressive: {
+        menuPriority: MenuPriority.GeneralMode,
+        icon: '/crown.png',
+        isPublic: true,
+        isFeatured: true,
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            return getModeQuestions(questions, {
+                gameMode: 'preparty',
+                mode: 'progressive',
+                locale,
+                players
+            });
+        }
+    },
     teams: {
         menuPriority: MenuPriority.GeneralMode,
         icon: '/teams.png',
@@ -170,7 +184,7 @@ function getModeQuestions(questions: Question[], options: {
     players?: any[],
     teams?: Team[],
     gameMode: Tag
-    mode: 'basic' | 'compound'
+    mode: 'basic' | 'compound' | 'progressive'
 }): Question[] {
     questions.map((question, index) => {
         question.index = index;
@@ -208,7 +222,7 @@ function getModeQuestions(questions: Question[], options: {
         const eventQuestion = getEventQuestions(questions, {quantity: 1, mode: options.gameMode, locale: options.locale})[0];
         let commonQuestions = getCommonQuestions(questions, {quantity: 20, mode: options.gameMode, locale: options.locale});
         let finalQuestions = randomizeQuestions([...drinkIfQuestions, ...commonQuestions]);
-    
+
         appendEventQuestions(finalQuestions, eventQuestion, options.players);
         generateNextQuestions(finalQuestions);
 
@@ -216,10 +230,51 @@ function getModeQuestions(questions: Question[], options: {
             players: options.players,
             locale: options.locale
         });
-    
+
+        return finalQuestions;
+    } else if (options.mode === 'progressive') {
+        const drinkIfQuestions = getDrinkIfQuestions(questions, {quantity: 9, mode: options.gameMode, locale: options.locale});
+        const eventQuestions = getEventQuestions(questions, {quantity: 3, mode: options.gameMode, locale: options.locale, excludeEnd: true});
+        let commonQuestions = getCommonQuestions(questions, {quantity: 18, mode: options.gameMode, locale: options.locale});
+
+        const phase1 = randomizeQuestions([
+            ...drinkIfQuestions.splice(0, 2),
+            ...commonQuestions.splice(0, 8)
+        ]);
+
+        const phase2 = randomizeQuestions([
+            ...drinkIfQuestions.splice(0, 3),
+            ...commonQuestions.splice(0, 6)
+        ]);
+        const midEvent = eventQuestions.shift();
+        if (midEvent) {
+            appendEventQuestions(phase2, midEvent, options.players);
+        }
+
+        const phase3 = randomizeQuestions([
+            ...drinkIfQuestions.splice(0, 4),
+            ...commonQuestions.splice(0, 4)
+        ]);
+        const lateEvent1 = eventQuestions.shift();
+        if (lateEvent1) {
+            appendEventQuestions(phase3, lateEvent1, options.players);
+        }
+        const lateEvent2 = eventQuestions.shift();
+        if (lateEvent2) {
+            appendEventQuestions(phase3, lateEvent2, options.players);
+        }
+
+        let finalQuestions = [...phase1, ...phase2, ...phase3];
+
+        generateNextQuestions(finalQuestions);
+        finalQuestions = fillPlaceholders(finalQuestions, {
+            players: options.players,
+            locale: options.locale
+        });
+
         return finalQuestions;
     }
-    return [];  
+    return [];
 }
 
 function getDrinkIfQuestions(questions: Question[], params: {quantity: number, mode?: Tag, locale?: string}): Question[] {
@@ -250,12 +305,13 @@ function getCommonQuestions(questions: Question[], params: {quantity: number, mo
     return commonQuestions;
 }
 
-function getEventQuestions(questions: Question[], params: {quantity: number, mode?: Tag, locale?: string}): Question[] {
+function getEventQuestions(questions: Question[], params: {quantity: number, mode?: Tag, locale?: string, excludeEnd?: boolean}): Question[] {
     let eventQuestions = randomizeQuestions(questions);
     eventQuestions = eventQuestions.filter((question) => {
         if (!question.tags?.includes('event')) return false;
         if (params.mode && !question.tags.includes(params.mode)) return false;
         if (params.locale && !question.locales[params.locale]) return false;
+        if (params.excludeEnd && question.end) return false;
         return true;
     });
     if (params.quantity) {
