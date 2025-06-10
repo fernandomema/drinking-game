@@ -141,6 +141,27 @@ export const modes: { [key: string]: Mode } = {
             });
         },
         isEnabled: () => false
+    },
+    resurrectionFest: {
+        menuPriority: MenuPriority.SeasonalMode,
+        icon: '/resurrectionfest.png',
+        isPublic: true,
+        isFeatured: false,
+        isEnabled: () => {
+            const date = new Date();
+            const year = date.getFullYear();
+            const start = new Date(year, 5, 24); // June 24
+            const end = new Date(year, 5, 30, 23, 59, 59, 999);
+            return date >= start && date <= end;
+        },
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            return getModeQuestions(questions, {
+                gameMode: 'resurrectionFest',
+                mode: 'basic',
+                locale,
+                players
+            });
+        }
     }
 }
 
