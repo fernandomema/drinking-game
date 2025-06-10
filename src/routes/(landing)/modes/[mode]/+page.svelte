@@ -3,20 +3,25 @@
   import { type Mode, modes } from '$lib/modes';
   import { _, getLocale } from '$lib/locales';
   import { onMount } from 'svelte';
+  import RelatedModes from '$lib/components/RelatedModes.svelte';
+  import '$lib/Shuffle';
   let modeKey: string = '';
   let mode: Mode | null = null;
   let examples: string[] = [];
   let modeStats = {
     duration: '30-60 min',
     players: '3+ jugadores',
-    category: 'General'
+    category: 'General',
+    totalCards: 0
   };
+  let relatedModes: [string, Mode][] = [];
 
   $: {
     const $pageVal = $page;
     modeKey = $pageVal.params.mode;
     mode = modes[modeKey];
     modeStats = getModeStats(modeKey);
+    relatedModes = getRelatedModes(modeKey);
   }
 
   $: if (modeKey && mode) {
@@ -63,6 +68,16 @@
       } catch {}
     }
     return stats;
+  }
+
+  function getRelatedModes(currentKey: string): [string, Mode][] {
+    const current = modes[currentKey];
+    if (!current) return [];
+    let pool = Object.entries(modes).filter(([key, m]) => key !== currentKey && (m.isPublic ?? true) && m.menuPriority === current.menuPriority);
+    if (pool.length < 3) {
+      pool = Object.entries(modes).filter(([key, m]) => key !== currentKey && (m.isPublic ?? true));
+    }
+    return pool.sort(() => Math.random() - 0.5).slice(0, 3);
   }
 </script>
 
@@ -116,6 +131,10 @@
         {/each}
       </div>
     </section>
+    {/if}
+
+    {#if relatedModes.length > 0}
+    <RelatedModes modesList={relatedModes} />
     {/if}
 
     <div class="text-center my-12">

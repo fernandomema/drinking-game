@@ -3,6 +3,7 @@
   "select_play_mode": "Let's select a mode to play!",
   "adjust_settings": "What are we going to adjust?",
   "player_name": "Player name",
+  "related_modes": "Related modes",
   "explore_modes": "Explore more modes",
   "modes": {
     "preparty": {
