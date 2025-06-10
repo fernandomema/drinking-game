@@ -1,25 +1,40 @@
 <script lang="ts">
-	import { onMount, createEventDispatcher } from 'svelte';
-	import { DragGesture, type FullGestureState } from '@use-gesture/vanilla';
-	import type { CardData, Direction, SwipeEventData } from '.';
-	import Card from './Card.svelte';
-    import { invokeVideoAd } from '$lib/Applixir';
+import { onMount, createEventDispatcher } from 'svelte';
+import { DragGesture, type FullGestureState } from '@use-gesture/vanilla';
+import type { CardData, Direction, SwipeEventData } from '.';
+import Card from './Card.svelte';
+import { invokeVideoAd } from '$lib/Applixir';
+import { browser } from '$app/environment';
+import { ttsEnabled } from '$lib/stores/tts';
+import { get } from 'svelte/store';
 
 	let container: HTMLElement;
 	let eventDispatcher = createEventDispatcher();
 
-	let card1: HTMLElement, card2: HTMLElement;
+let card1: HTMLElement, card2: HTMLElement;
 	let card1Data: CardData, card2Data: CardData;
 
 	export let lastStatus: any;
 
 	let cardIndex = 0;
-	let topCard: HTMLElement;
-	let currentZ = 100000;
+let topCard: HTMLElement;
+let currentZ = 100000;
 
-	onMount(async () => {
-		card1Data = cardData(cardIndex++);
-		card2Data = cardData(cardIndex++);
+function speakCurrent() {
+        if (!browser || !get(ttsEnabled)) return;
+        const data = topCard === card1 ? card1Data : card2Data;
+        const text = data?.question;
+        if (!text) return;
+        const tmp = document.createElement('div');
+        tmp.innerHTML = text as string;
+        const plain = tmp.textContent || tmp.innerText || '';
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(plain));
+}
+
+        onMount(async () => {
+                card1Data = cardData(cardIndex++);
+                card2Data = cardData(cardIndex++);
 
 		[card1, card2].forEach(function (el) {
 			el.style.zIndex = currentZ.toString();
@@ -33,9 +48,10 @@
 			});
 		});
 
-		topCard = card1;
-		container.classList.remove('hidden');
-	});
+                topCard = card1;
+                container.classList.remove('hidden');
+                speakCurrent();
+        });
 
 	const cardSwiped = (el: HTMLElement, velocity: [number, number], movement: [number, number]) => {
 		lastStatus = { 
@@ -91,14 +107,15 @@
 				localStorage.setItem('seenCounts', JSON.stringify(seenCounts));
 			}
 
-			el.classList.remove('transition-transform', 'duration-300');
-			el.style.transform = '';
-			if (card1Data === null && card2Data === null) {
-				eventDispatcher('end');
-				invokeVideoAd({});
-			}
-		}, 350);
-	};
+                        el.classList.remove('transition-transform', 'duration-300');
+                        el.style.transform = '';
+                        speakCurrent();
+                        if (card1Data === null && card2Data === null) {
+                                eventDispatcher('end');
+                                invokeVideoAd({});
+                        }
+                }, 350);
+        };
 
 	export const swipe = (direction: Direction = 'right') => {
 		if (thresholdPassed !== 0) return;
@@ -107,13 +124,13 @@
 		cardSwiped(topCard, [dir, 0.1], [dir, 1]);
 	};
 
-	export const undoSwipe = () => {
-		if (lastStatus) {
-			card1Data = lastStatus.card1Data;
-			card2Data = lastStatus.card2Data;
-			cardIndex = lastStatus.cardIndex;
-			topCard = lastStatus.topCard;
-			currentZ = lastStatus.currentZ;
+        export const undoSwipe = () => {
+                if (lastStatus) {
+                        card1Data = lastStatus.card1Data;
+                        card2Data = lastStatus.card2Data;
+                        cardIndex = lastStatus.cardIndex;
+                        topCard = lastStatus.topCard;
+                        currentZ = lastStatus.currentZ;
 
 			[card1, card2].forEach(function (el) {
 				el.style.zIndex = currentZ.toString();
@@ -123,9 +140,10 @@
 				}
 			});
 
-			lastStatus = null;
-		}
-	};
+                        lastStatus = null;
+                        speakCurrent();
+                }
+        };
 
 	export let onSwipe: ((cardInfo: SwipeEventData) => void) | undefined = undefined;
 
