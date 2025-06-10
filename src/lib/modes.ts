@@ -176,6 +176,20 @@ export const modes: { [key: string]: Mode } = {
                 players
             });
         }
+    },
+    duel: {
+        menuPriority: MenuPriority.GeneralMode,
+        icon: '/duel.png',
+        isPublic: true,
+        isFeatured: true,
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            return getModeQuestions(questions, {
+                gameMode: 'duel',
+                mode: 'basic',
+                locale,
+                players
+            });
+        }
     }
 }
 
