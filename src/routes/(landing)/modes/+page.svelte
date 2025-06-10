@@ -10,6 +10,7 @@
   const generalModes = modeEntries.filter(([_, mode]) => mode.menuPriority === 0);
   const seasonalModes = modeEntries.filter(([_, mode]) => mode.menuPriority === 1);
   const specialModes = modeEntries.filter(([_, mode]) => mode.menuPriority === 2);
+  const betaModes = modeEntries.filter(([_, mode]) => mode.menuPriority === 3);
 </script>
 
 <svelte:head>
@@ -202,6 +203,51 @@
                   </svg>
                 </span>
                 <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Especial</span>
+              </div>
+            </div>
+          </a>
+        {/each}
+      </div>
+    </div>
+    {/if}
+
+    <!-- Modos Beta -->
+    {#if betaModes.length > 0}
+    <div class="mb-20">
+      <div class="flex items-center mb-10">
+        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a4 4 0 00-4-4H8.8a4 4 0 00-2.6.9l-.7.7a4 4 0 01-2.6.9H2c-.6.7-.9 1.6-.9 2.6v5" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800">Modos Beta</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {#each betaModes as [key, mode]}
+          <a href={`/modes/${key}/`} class="group">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl border border-yellow-100 h-full flex flex-col">
+              <div class="bg-gradient-to-br from-yellow-400/10 to-orange-400/10 p-6 flex justify-center">
+                <div class="w-24 h-24 relative">
+                  <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full opacity-20 group-hover:opacity-30 transform scale-110 transition-all duration-300"></div>
+                  <img src={mode.icon} alt={$_(`modes.${key}.title`)} class="w-full h-full object-contain relative z-10" />
+                </div>
+              </div>
+
+              <div class="p-6 flex-grow">
+                <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-yellow-600 transition-colors duration-300">{$_(`modes.${key}.title`)}</h3>
+                <p class="text-gray-600">{$_(`modes.${key}.description`)}</p>
+              </div>
+
+              <div class="px-6 pb-6 pt-2 border-t border-gray-100 flex justify-between items-center">
+                <span class="text-sm font-medium text-yellow-600 flex items-center">
+                  Explorar
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Beta</span>
               </div>
             </div>
           </a>

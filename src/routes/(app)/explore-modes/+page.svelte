@@ -18,7 +18,8 @@
     const categorias = [
         { id: "todos", nombre: "Todos" },
         { id: "general", nombre: "General" },
-        { id: "especiales", nombre: "Especiales" }
+        { id: "especiales", nombre: "Especiales" },
+        { id: "beta", nombre: "Beta" }
     ];
 
     onMount(async () => {
@@ -37,6 +38,7 @@
         if (selectedFilter === "todos") return searchMatch;
         if (selectedFilter === "general") return searchMatch && mode.menuPriority === 0;
         if (selectedFilter === "especiales") return searchMatch && (mode.menuPriority === 1 || mode.menuPriority === 2);
+        if (selectedFilter === "beta") return searchMatch && mode.menuPriority === 3;
         
         return searchMatch;
     });
@@ -130,7 +132,7 @@
                         
                         <!-- Pill de categoría (movida a la esquina superior) -->
                         <div class="absolute top-4 left-4 px-3 py-1 text-xs rounded-full bg-black/30 backdrop-blur-sm text-white/90 border border-white/20 z-20 shadow-md">
-                            {mode.menuPriority === 0 ? 'Modo General' : mode.menuPriority === 1 ? 'Estacional' : 'Especial'}
+                            {mode.menuPriority === 0 ? 'Modo General' : mode.menuPriority === 1 ? 'Estacional' : mode.menuPriority === 2 ? 'Especial' : 'Beta'}
                         </div>
                     </div>
                 </a>

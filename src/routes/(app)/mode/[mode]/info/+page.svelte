@@ -74,6 +74,8 @@ function getModeStats(modeKey: string) {
             stats.category = 'Estacional';
         } else if (mode.menuPriority === 2) {
             stats.category = 'Especial';
+        } else if (mode.menuPriority === 3) {
+            stats.category = 'Beta';
         }
         // Color por tipo
         if (modeKey === 'preparty') stats.color = 'from-green-500/20 to-blue-500/20';
