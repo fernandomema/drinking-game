@@ -3,8 +3,27 @@ import { hotQuestions } from "./hotQuestions";
 import { TeamQuestions } from "./TeamQuestions";
 import { BestFriendsQuestions } from "./BestFriendsQuestions";
 import { ResurrectionFestQuestions } from "./ResurrectionFestQuestions";
+import { DuelQuestions } from "./DuelQuestions";
 
-export type Tag = 'preparty' | '+18' | '+18-light' | 'challenge' | 'groupChallenge' | 'punishment' | 'groupPunishment' | 'reward' | 'drinkIf' | 'vote' | 'truth' | 'event' | 'christmas' | 'crazy' | 'teams' | 'bestFriends' | 'resurrectionFest';
+export type Tag =
+  | 'preparty'
+  | '+18'
+  | '+18-light'
+  | 'challenge'
+  | 'groupChallenge'
+  | 'punishment'
+  | 'groupPunishment'
+  | 'reward'
+  | 'drinkIf'
+  | 'vote'
+  | 'truth'
+  | 'event'
+  | 'christmas'
+  | 'crazy'
+  | 'teams'
+  | 'bestFriends'
+  | 'resurrectionFest'
+  | 'duel';
 
 export type Question = {
     index?: number;
@@ -4903,7 +4922,14 @@ export const questions: Question[] = [{
         en: "Everyone who has tried to learn a language and given up, drink {shots}"
     },
     tags: ["preparty"]
-}, ...BestFriendsQuestions, ...crazyQuestions, ...hotQuestions, ...TeamQuestions, ...ResurrectionFestQuestions];
+},
+  ...DuelQuestions,
+  ...BestFriendsQuestions,
+  ...crazyQuestions,
+  ...hotQuestions,
+  ...TeamQuestions,
+  ...ResurrectionFestQuestions
+];
 
 /*
 

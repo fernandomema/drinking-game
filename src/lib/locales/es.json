@@ -131,6 +131,10 @@
     "resurrectionFest": {
       "title": "Resurrection Fest",
       "description": "Preguntas y retos sobre el festival y el metal para celebrar el Resurrection Fest."
+    },
+    "duel": {
+      "title": "Duelos",
+      "description": "Enfrentamientos 1v1 donde el perdedor bebe."
     }
   },
   "blog": {
