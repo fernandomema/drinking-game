@@ -32,6 +32,10 @@
     "drinkIf": {
       "title": "Drink If",
       "description": "Read the card and drink if it applies to you. Perfect to break the ice."
+    },
+    "resurrectionFest": {
+      "title": "Resurrection Fest",
+      "description": "Metal and festival themed challenges to celebrate the Resurrection Fest."
     }
   },
   "blog": {
