@@ -10,6 +10,7 @@
     import Featurebase from "$lib/components/Featurebase.svelte";
     import BottomSheet from "$lib/components/BottomSheet.svelte";
     import LanguageSelector from "$lib/components/BottomSheets/LanguageSelector.svelte";
+    import { ttsEnabled } from '$lib/stores/tts';
 
     let titleCentered = true;
     let titleStopedAnimating = false;
@@ -59,6 +60,12 @@
             <button on:click={() => modals.languageSelector = true} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
                 <div class="flex w-full flex-col justify-center text-left">
                     <div class="text-3xl">Language</div>
+                </div>
+            </button>
+            <!-- Text to Speech -->
+            <button on:click={() => ttsEnabled.update(v => !v)} class="justify-space-between flex w-full items-center gap-2 rounded-2xl bg-white bg-opacity-10 p-4">
+                <div class="flex w-full flex-col justify-center text-left">
+                    <div class="text-3xl">{ $ttsEnabled ? 'Disable voice' : 'Enable voice' }</div>
                 </div>
             </button>
         </div>
