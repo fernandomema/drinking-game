@@ -178,6 +178,27 @@ export const modes: { [key: string]: Mode } = {
             });
         }
     },
+    sanJuan: {
+        menuPriority: MenuPriority.SeasonalMode,
+        icon: '/preparty.png',
+        isPublic: true,
+        isFeatured: false,
+        isEnabled: () => {
+            const date = new Date();
+            const year = date.getFullYear();
+            const start = new Date(year, 5, 20); // June 20
+            const end = new Date(year, 5, 25, 23, 59, 59, 999);
+            return date >= start && date <= end;
+        },
+        pickCards: (questions: Question[], locale?: string, players?: any[]) => {
+            return getModeQuestions(questions, {
+                gameMode: 'sanJuan',
+                mode: 'basic',
+                locale,
+                players
+            });
+        }
+    },
     duel: {
         menuPriority: MenuPriority.BetaMode,
         icon: '/duel.png',
