@@ -56,11 +56,11 @@
 
 
     <div id="faqs" class="mt-8">
-        <Faqs design="blog" faqs=[
+        <Faqs design="blog" faqs={[
             { title: "¿Qué es Supervivientes 2025?", content: "Es la nueva edición del reality de supervivencia donde varios famosos compiten en una isla remota." },
             { title: "¿Cómo me ayuda Tragos Locos a disfrutar del programa?", content: "La app ofrece retos y preguntas personalizadas para que cada gala sea más divertida." },
             { title: "¿Tragos Locos es gratuita?", content: "Sí, puedes descargar la versión básica sin coste y desbloquear contenido extra desde la app." }
-        ]/>
+        ]} />
     </div>
 
     <div class="bg-orange-600 text-white p-8 rounded-xl text-center space-y-4">
