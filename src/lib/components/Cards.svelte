@@ -10,11 +10,15 @@
     import { goto } from '$app/navigation';
     import { getLocale } from '$lib/locales';
     import BottomSheet from '$lib/components/BottomSheet.svelte';
-    import InGameBanner from './InGameBanner.svelte';
-    import PremiumFeatureBottomSheet from './BottomSheets/PremiumFeatureBottomSheet.svelte';
-    import { shareApp } from '$lib/utils/Share';
-    import type { Team } from '$lib/types/Team';
-    import { _ } from '$lib/locales';
+import InGameBanner from './InGameBanner.svelte';
+import PremiumFeatureBottomSheet from './BottomSheets/PremiumFeatureBottomSheet.svelte';
+import { shareApp } from '$lib/utils/Share';
+import type { Team } from '$lib/types/Team';
+import { _ } from '$lib/locales';
+
+    let castChannel: BroadcastChannel | null = null;
+    let presentationRequest: PresentationRequest | null = null;
+    let currentCardIndex = 0;
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -31,25 +35,30 @@
     let teams: Team[] = [];
     let umami: umami.umami | undefined;
 
-	onMount(async () => {
+    onMount(async () => {
         players = JSON.parse(sessionStorage.getItem('players') || '[]');
         if (!players || players.length == 0) goto('/select-mode');
         locale = await getLocale();
         filteredQuestions = modes[mode].pickCards(questions, locale, players);
+        localStorage.setItem('castQuestions', JSON.stringify(filteredQuestions));
+        localStorage.setItem('castLocale', locale);
         teams = JSON.parse(localStorage.getItem('teams') || '[]');
         umami = window.umami;
-	});
+        castChannel = new BroadcastChannel('cast');
+    });
 
 	let swipe: (direction?: 'left' | 'right') => void;
     let undoSwipe: () => void;
 	let thresholdPassed = 0;
     let lastStatus: any;
 
-	function onSwipe(cardInfo: SwipeEventData) {
-        if (cardInfo?.direction == 'left') {
-            umami?.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
-        }
-	}
+function onSwipe(cardInfo: SwipeEventData) {
+    if (cardInfo?.direction == 'left') {
+        umami?.track('dislike-card', { question: cardInfo?.data?.rawQuestion });
+    }
+    currentCardIndex = cardInfo.index + 1;
+    castChannel?.postMessage({ type: 'card', index: currentCardIndex });
+}
 
 	function cardData(index: number) {
         if (!filteredQuestions[index]) return null;
@@ -61,9 +70,24 @@
 		};
 	}
 
-    function clickShareApp() {
-        shareApp();
-        umami?.track('share-game', {origin: 'context-menu'});
+function clickShareApp() {
+    shareApp();
+    umami?.track('share-game', {origin: 'context-menu'});
+}
+
+    async function startCasting() {
+        if (!('PresentationRequest' in window)) {
+            alert('Casting is not supported on this browser.');
+            return;
+        }
+        try {
+            presentationRequest = new PresentationRequest(['/cast']);
+            await presentationRequest.start();
+            castChannel?.postMessage({ type: 'card', index: currentCardIndex });
+        } catch (err) {
+            console.error(err);
+            alert('Unable to start casting.');
+        }
     }
 </script>
 {#if filteredQuestions && filteredQuestions.length > 0}
@@ -169,7 +193,7 @@
                     <span class="iconify iconify-mask solar--chat-round-dots-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     <span class="text-xl text-gray-700 font-normal ml-2">Suggest a question</span>
                 </button>
-                <button on:click={() => {showContextModal = false; showPremiumModal = true;}} class="flex items-center w-full">
+                <button on:click={() => {showContextModal = false; startCasting();}} class="flex items-center w-full">
                     <span class="iconify iconify-mask solar--screencast-bold-duotone block w-[40px] h-[40px] bg-purple-700"></span>
                     <span class="text-xl text-gray-700 font-normal ml-2">Cast to screen</span>
                 </button>
