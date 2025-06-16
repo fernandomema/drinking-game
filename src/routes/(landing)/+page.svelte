@@ -44,6 +44,7 @@
     <meta property="og:image" content="https://tragos-locos.servitimo.net/og-image.png" />
     <meta property="og:url" content="https://tragos-locos.servitimo.net" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tragos Locos" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={$_('landing.slogan')} />
