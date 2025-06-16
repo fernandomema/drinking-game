@@ -8,51 +8,63 @@
   "modes": {
     "preparty": {
       "title": "PreParty",
-      "description": "Best for animate the party. Light fun for any group."
+      "description": "Best for animate the party. Light fun for any group.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-purple-800 mb-2\">🍹 PreParty Warm-Up</h2><p class=\"text-base text-gray-700\">Kick off the night with quick icebreakers and lighthearted challenges. Perfect to get everyone laughing before the real party starts.</p><p class=\"text-sm text-gray-500 mt-2\">🎉 Works great on mobile. Ideal for any gathering.</p></div>"
     },
     "crazy": {
       "title": "Tragos Locos",
-      "description": "Take your party to the next level. The most daring questions. Only for the brave."
+      "description": "Take your party to the next level. The most daring questions. Only for the brave.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-red-100 via-orange-100 to-yellow-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-red-800 mb-2\">🤪 Crazy Mode</h2><p class=\"text-base text-gray-700\">Wild dares and outrageous questions turn any night into a hilarious memory. Only for the brave who love surprises.</p><p class=\"text-sm text-gray-500 mt-2\">🚀 Best for parties looking to push limits.</p></div>"
     },
     "best-friends": {
       "title": "Best Friends",
-      "description": "Best for playing with close friends. Let's get to know each other better."
+      "description": "Best for playing with close friends. Let's get to know each other better.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-green-100 via-blue-100 to-purple-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-green-800 mb-2\">👯 Best Friends</h2><p class=\"text-base text-gray-700\">Discover secrets and memories with those closest to you. Personal questions spark laughter and strengthen bonds.</p><p class=\"text-sm text-gray-500 mt-2\">💬 Great for small groups that know each other well.</p></div>"
     },
     "hot": {
       "title": "Hot",
-      "description": "Oriented towards the most perverse questions, get ready to reveal your most intimate secrets."
+      "description": "Oriented towards the most perverse questions, get ready to reveal your most intimate secrets.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-pink-100 via-red-100 to-purple-200 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-pink-800 mb-2\">🔥 Hot Mode</h2><p class=\"text-base text-gray-700\">Spicy dares and intimate questions turn up the heat. Perfect for couples or daring groups ready to reveal secrets.</p><p class=\"text-sm text-gray-500 mt-2\">💖 Play responsibly and keep the mood fun.</p></div>"
     },
     "progressive": {
       "title": "Progressive",
-      "description": "Start with lighter challenges and gradually raise the intensity for an escalating party."
+      "description": "Start with lighter challenges and gradually raise the intensity for an escalating party.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-indigo-800 mb-2\">📈 Progressive Mode</h2><p class=\"text-base text-gray-700\">Start with easy challenges and gradually raise the intensity. Perfect for building suspense and energy throughout the night.</p><p class=\"text-sm text-gray-500 mt-2\">⏳ Ideal when you want a smooth escalation.</p></div>"
     },
     "teams": {
       "title": "Teams",
-      "description": "Too many payers? Let's make teams and play! The best way to play with a lot of people."
+      "description": "Too many payers? Let's make teams and play! The best way to play with a lot of people.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-teal-100 via-green-100 to-blue-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-teal-800 mb-2\">🏆 Team Battles</h2><p class=\"text-base text-gray-700\">Split into groups and compete in hilarious challenges. Collaboration and rivalry make huge parties unforgettable.</p><p class=\"text-sm text-gray-500 mt-2\">🤝 Perfect for large gatherings.</p></div>"
     },
     "christmas": {
       "title": "Christmas",
-      "description": "The christmas is here! Let's have fun with chsitmas themed questions."
+      "description": "The christmas is here! Let's have fun with chsitmas themed questions.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-green-100 via-red-100 to-yellow-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-green-800 mb-2\">🎄 Christmas Edition</h2><p class=\"text-base text-gray-700\">Seasonal questions and festive dares to celebrate with holiday cheer. Bring the spirit of Christmas to your party.</p><p class=\"text-sm text-gray-500 mt-2\">🎅 Only available in December.</p></div>"
     },
     "drinkIf": {
       "title": "Drink If",
-      "description": "Read the card and drink if it applies to you. Perfect to break the ice."
+      "description": "Read the card and drink if it applies to you. Perfect to break the ice.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-yellow-800 mb-2\">🥂 Drink If...</h2><p class=\"text-base text-gray-700\">Read a card and drink if it applies to you. Simple rules that guarantee laughs and quick bonding.</p><p class=\"text-sm text-gray-500 mt-2\">🍻 Great as an icebreaker.</p></div>"
     },
     "resurrectionFest": {
       "title": "Resurrection Fest",
-      "description": "Metal and festival themed challenges to celebrate the Resurrection Fest."
+      "description": "Metal and festival themed challenges to celebrate the Resurrection Fest.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-gray-100 via-red-100 to-gray-200 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-red-800 mb-2\">🤘 Resurrection Fest</h2><p class=\"text-base text-gray-700\">Metal vibes and festival-themed challenges for fans of the legendary event. Rock out and drink with fellow metalheads.</p><p class=\"text-sm text-gray-500 mt-2\">🎸 Available during festival dates.</p></div>"
     },
     "sanJuan": {
       "title": "San Juan",
-      "description": "Challenges and questions to celebrate St John's Eve."
+      "description": "Challenges and questions to celebrate St John's Eve.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-purple-800 mb-2\">🔥 St John's Eve Drinking Game</h2><p class=\"text-base text-gray-700\">Celebrate St John's Eve like never before with wild dares, bold questions and lots of fire. Bring the best beach party game to your bonfire and create magical memories.</p><p class=\"text-sm text-gray-500 mt-2\">🌙 Mobile friendly. Perfect for San Juan 2025 celebrations.</p></div>"
     },
     "duel": {
       "title": "Duel",
-      "description": "1v1 challenges. Loser drinks."
+      "description": "1v1 challenges. Loser drinks.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-purple-100 via-indigo-100 to-red-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-purple-800 mb-2\">⚔️ Duel Mode</h2><p class=\"text-base text-gray-700\">Face off one-on-one in quick challenges. Winner boasts, loser drinks. Intense showdowns keep everyone on edge.</p><p class=\"text-sm text-gray-500 mt-2\">🏅 Try it when you want direct competition.</p></div>"
     },
     "cascade": {
       "title": "Cascade Drinking",
-      "description": "One action triggers another. Keep the chain going!"
+      "description": "One action triggers another. Keep the chain going!",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-blue-100 via-cyan-100 to-teal-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-blue-800 mb-2\">💧 Cascade Drinking</h2><p class=\"text-base text-gray-700\">Each action triggers the next in a chain reaction. Keep the flow going and see who breaks first.</p><p class=\"text-sm text-gray-500 mt-2\">🌊 Fun for groups that love momentum.</p></div>"
     }
   },
   "blog": {

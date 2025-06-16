@@ -118,6 +118,7 @@ import '$lib/Shuffle';
       <img src={mode.icon} alt="icono" class="w-24 h-24 mx-auto mb-4" />
       <h1 class="text-3xl font-bold mb-2">{$_(`modes.${modeKey}.title`)}</h1>
       <p class="text-gray-700">{$_(`modes.${modeKey}.description`)}</p>
+      <div class="mt-2">{@html $_(`modes.${modeKey}.seo_html`)}</div>
     </header>
 
     <section class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center my-8 mb-24">

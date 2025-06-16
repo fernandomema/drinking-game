@@ -102,51 +102,63 @@
   "modes": {
     "preparty": {
       "title": "PreFiesta",
-      "description": "La mejor opción para animar la fiesta. ¡Buenas jugadas para cualquier grupo!"
+      "description": "La mejor opción para animar la fiesta. ¡Buenas jugadas para cualquier grupo!",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-purple-800 mb-2\">🍹 PreFiesta para Calentar Motores</h2><p class=\"text-base text-gray-700\">Empieza la noche con preguntas rápidas y retos ligeros que rompen el hielo y animan a todos antes de la fiesta grande.</p><p class=\"text-sm text-gray-500 mt-2\">🎉 Compatible con móviles. Ideal para cualquier reunión.</p></div>"
     },
     "crazy": {
       "title": "Tragos Locos",
-      "description": "Lleva tu fiesta al siguiente nivel. Las preguntas más atrevidas. Solo para los valientes."
+      "description": "Lleva tu fiesta al siguiente nivel. Las preguntas más atrevidas. Solo para los valientes.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-red-100 via-orange-100 to-yellow-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-red-800 mb-2\">🤪 Modo Tragos Locos</h2><p class=\"text-base text-gray-700\">Retos salvajes y preguntas disparatadas que convierten cualquier reunión en un recuerdo épico. Solo para valientes que buscan sorpresas.</p><p class=\"text-sm text-gray-500 mt-2\">🚀 El favorito para fiestas que quieren romper los límites.</p></div>"
     },
     "best-friends": {
       "title": "Best Friends",
-      "description": "Mejor para jugar con amigos cercanos. ¡Vamos a conocernos mejor!"
+      "description": "Mejor para jugar con amigos cercanos. ¡Vamos a conocernos mejor!",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-green-100 via-blue-100 to-purple-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-green-800 mb-2\">👯 Modo Best Friends</h2><p class=\"text-base text-gray-700\">Descubre secretos y anécdotas con tus amigos más cercanos. Preguntas personales que sacan risas y refuerzan la amistad.</p><p class=\"text-sm text-gray-500 mt-2\">💬 Ideal para grupos reducidos que se conocen bien.</p></div>"
     },
     "hot": {
       "title": "Hot",
-      "description": "Orientado a preguntas más perversas, ¿listo para revelar tus secretos más intimos?"
+      "description": "Orientado a preguntas más perversas, ¿listo para revelar tus secretos más intimos?",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-pink-100 via-red-100 to-purple-200 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-pink-800 mb-2\">🔥 Modo Hot</h2><p class=\"text-base text-gray-700\">Desafíos picantes y preguntas íntimas para subir la temperatura. Perfecto para parejas o grupos atrevidos dispuestos a revelar secretos.</p><p class=\"text-sm text-gray-500 mt-2\">💖 Juega con responsabilidad y mantén el ambiente divertido.</p></div>"
     },
     "progressive": {
       "title": "Progresivo",
-      "description": "Comienza con retos ligeros y aumenta la intensidad poco a poco para que la fiesta no pare."
+      "description": "Comienza con retos ligeros y aumenta la intensidad poco a poco para que la fiesta no pare.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-indigo-800 mb-2\">📈 Modo Progresivo</h2><p class=\"text-base text-gray-700\">Comienza con retos suaves y sube la intensidad poco a poco. Perfecto para mantener la emoción y la energía durante toda la noche.</p><p class=\"text-sm text-gray-500 mt-2\">⏳ Ideal para una subida gradual de tensión.</p></div>"
     },
     "teams": {
       "title": "Equipos",
-      "description": "¿Demasiados jugadores? ¡Hagamos equipos y juguemos! La mejor manera de jugar con mucha gente."
+      "description": "¿Demasiados jugadores? ¡Hagamos equipos y juguemos! La mejor manera de jugar con mucha gente.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-teal-100 via-green-100 to-blue-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-teal-800 mb-2\">🏆 Competencia por Equipos</h2><p class=\"text-base text-gray-700\">Divídanse en grupos y compitan con desafíos divertidos. La colaboración y la rivalidad hacen que las fiestas grandes sean inolvidables.</p><p class=\"text-sm text-gray-500 mt-2\">🤝 Perfecto para reuniones multitudinarias.</p></div>"
     },
     "christmas": {
       "title": "Navidad",
-      "description": "Mejor para fiestas de Navidad. ¡Veamos preguntas relaccionadas con la nieve!"
+      "description": "Mejor para fiestas de Navidad. ¡Veamos preguntas relaccionadas con la nieve!",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-green-100 via-red-100 to-yellow-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-green-800 mb-2\">🎄 Edición Navideña</h2><p class=\"text-base text-gray-700\">Preguntas temáticas y retos festivos para celebrar con el mejor espíritu navideño. Lleva la magia de la Navidad a tu fiesta.</p><p class=\"text-sm text-gray-500 mt-2\">🎅 Disponible solo en diciembre.</p></div>"
     },
     "drinkIf": {
       "title": "Drink If",
-      "description": "Lee la carta y bebe si se aplica a ti. Perfecto para romper el hielo."
+      "description": "Lee la carta y bebe si se aplica a ti. Perfecto para romper el hielo.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-yellow-800 mb-2\">🥂 Drink If...</h2><p class=\"text-base text-gray-700\">Lee una tarjeta y bebe si te identificas. Reglas sencillas que garantizan risas y rompen el hielo de inmediato.</p><p class=\"text-sm text-gray-500 mt-2\">🍻 Genial para empezar la fiesta.</p></div>"
     },
     "resurrectionFest": {
       "title": "Resurrection Fest",
-      "description": "Preguntas y retos sobre el festival y el metal para celebrar el Resurrection Fest."
+      "description": "Preguntas y retos sobre el festival y el metal para celebrar el Resurrection Fest.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-gray-100 via-red-100 to-gray-200 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-red-800 mb-2\">🤘 Modo Resurrection Fest</h2><p class=\"text-base text-gray-700\">Vibras metaleras y retos inspirados en el famoso festival. Rockea y bebe con otros amantes del metal.</p><p class=\"text-sm text-gray-500 mt-2\">🎸 Disponible en fechas del festival.</p></div>"
     },
     "sanJuan": {
       "title": "San Juan",
-      "description": "Retos y preguntas para celebrar la Noche de San Juan."
+      "description": "Retos y preguntas para celebrar la Noche de San Juan.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-purple-800 mb-2\">🔥 Juego de Tragos para la Noche de San Juan</h2><p class=\"text-base text-gray-700\">Celebra la <strong>Noche de San Juan</strong> como nunca con <span class=\"font-semibold\">retos salvajes</span>, <span class=\"font-semibold\">preguntas atrevidas</span> y <span class=\"font-semibold\">mucho fuego y diversión</span>. Nuestra app <em>Tragos Locos</em> te trae el mejor juego para beber en la playa, frente a la hoguera o donde tú quieras. Ideal para <strong>romper el hielo</strong>, <strong>crear recuerdos épicos</strong> y vivir la noche más mágica del año con tus amigos.</p><p class=\"text-sm text-gray-500 mt-2\">🌙 Compatible con móviles. Perfecto para fiestas en San Juan 2025.</p></div>"
     },
     "duel": {
       "title": "Duelos",
-      "description": "Enfrentamientos 1v1 donde el perdedor bebe."
+      "description": "Enfrentamientos 1v1 donde el perdedor bebe.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-purple-100 via-indigo-100 to-red-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-purple-800 mb-2\">⚔️ Modo Duelos</h2><p class=\"text-base text-gray-700\">Enfréntate en duelos uno contra uno con desafíos rápidos. El ganador presume, el perdedor bebe. Duelos intensos para mantener la tensión.</p><p class=\"text-sm text-gray-500 mt-2\">🏅 Perfecto cuando quieres competencia directa.</p></div>"
     },
     "cascade": {
       "title": "Cascada de Bebida",
-      "description": "Una acción desencadena otra en cadena. ¡No la rompas!"
+      "description": "Una acción desencadena otra en cadena. ¡No la rompas!",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-blue-100 via-cyan-100 to-teal-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-blue-800 mb-2\">💧 Cascada de Bebida</h2><p class=\"text-base text-gray-700\">Cada acción desencadena la siguiente en una reacción en cadena. Mantén el ritmo y ve quién aguanta más.</p><p class=\"text-sm text-gray-500 mt-2\">🌊 Diversión para grupos amantes del ritmo.</p></div>"
     }
   },
   "blog": {
