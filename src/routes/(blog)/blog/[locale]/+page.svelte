@@ -7,14 +7,18 @@
 
     const locale = getLocaleFromString($page.params.locale);
     const posts: PostData[] = BlogUtilities.getPosts(locale);
+    let canonicalUrl: string;
 </script>
 
 <svelte:head>
+    {canonicalUrl = 'https://tragos-locos.servitimo.net/blog/' + locale, ''}
     <title>Blog - Tragos Locos</title>
     <meta name="description" content={$_('blog.description')} />
 
     <meta property="og:title" content="Blog - Tragos Locos" />
     <meta property="og:description" content={$_('blog.description')} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content="https://tragos-locos.servitimo.net/og-image.png" />
     
     <!-- language -->
     <meta property="og:locale" content={locale} />
@@ -27,15 +31,21 @@
         {/if}
     {/each}
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            "headline": "Blog - Tragos Locos",
-            "description": "Blog para mostrar cosas divertidas sobre la aplicación Tragos Locos y más.",
-            "url": "https://tragos-locos.servitimo.net/blog/es"
-        }
-    </script>
+    <link rel="canonical" href={canonicalUrl} />
+
+    {@html `<script type="application/ld+json">${JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "headline": "Blog - Tragos Locos",
+        "description": "Blog para mostrar cosas divertidas sobre la aplicación Tragos Locos y más.",
+        "url": canonicalUrl
+    })}</script>`}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog - Tragos Locos" />
+    <meta name="twitter:description" content={$_('blog.description')} />
+    <meta name="twitter:image" content="https://tragos-locos.servitimo.net/og-image.png" />
+    <meta name="twitter:url" content={canonicalUrl} />
 </svelte:head>
 
 <div class="divide-y divide-gray-200 dark:divide-gray-700">
