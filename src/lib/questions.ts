@@ -3,6 +3,7 @@ import { hotQuestions } from "./hotQuestions";
 import { TeamQuestions } from "./TeamQuestions";
 import { BestFriendsQuestions } from "./BestFriendsQuestions";
 import { ResurrectionFestQuestions } from "./ResurrectionFestQuestions";
+import { SanJuanQuestions } from "./SanJuanQuestions";
 import { DuelQuestions } from "./DuelQuestions";
 import { CascadeQuestions } from "./CascadeQuestions";
 
@@ -24,6 +25,7 @@ export type Tag =
   | 'teams'
   | 'bestFriends'
   | 'resurrectionFest'
+  | 'sanJuan'
   | 'duel'
   | 'cascade'
   | 'cascade-trigger'
@@ -4933,6 +4935,7 @@ export const questions: Question[] = [{
   ...crazyQuestions,
   ...hotQuestions,
   ...TeamQuestions,
+  ...SanJuanQuestions,
   ...ResurrectionFestQuestions,
   ...CascadeQuestions
 ];
