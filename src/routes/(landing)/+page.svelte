@@ -15,6 +15,7 @@
     import Laughts from "$lib/components/landingBlocks/Laughts.svelte";
     import Faqs from "$lib/components/landingBlocks/Faqs.svelte";
     import IphoneMockup from "$lib/components/IphoneMockup.svelte";
+    import FeaturedModes from "$lib/components/landingBlocks/FeaturedModes.svelte";
     
     let isSheetOpen = false;
 
@@ -195,6 +196,8 @@
             </div>
         </div>
     </section>
+
+    <FeaturedModes />
 
     <section class="bg-purple-500 text-white py-16 text-center">
         <div class="max-w-3xl mx-auto px-6">
