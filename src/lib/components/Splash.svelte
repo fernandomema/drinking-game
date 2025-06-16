@@ -20,7 +20,7 @@
 
 
 <div out:fade class="absolute flex h-screen w-screen items-center justify-center bg-[#794fea]" class:in-circle-hesitate={!exitAnimation}>
-    <img src={logo} width="200px" alt="">
+    <img src={logo} width="200px" alt="Tragos Locos logo">
 </div>
 
 <style>

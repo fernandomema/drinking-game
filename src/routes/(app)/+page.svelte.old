@@ -11,7 +11,7 @@
 
     onMount(async () => {
         container.classList.add('bg-[#794fea]', 'animate-circle-in-hesitate', 'flex', 'flex-col', 'items-center', 'justify-center', 'h-dvh', 'w-screen');
-        container.innerHTML = `<img src="/AppImages/ios/128.png" width="200px" alt="" class="absolute top-1/2 -translate-y-1/2">`;
+        container.innerHTML = `<img src="/AppImages/ios/128.png" width="200px" alt="Tragos Locos logo" class="absolute top-1/2 -translate-y-1/2">`;
         await new Promise((resolve) => setTimeout(resolve, 4000));
         container.querySelector('img')?.classList.add('animate-fade-out', 'duration-500', 'relative');
         await new Promise((resolve) => setTimeout(resolve, 500 + 200));
