@@ -106,7 +106,7 @@
                 </div>
                 <div class="flex justify-center items-center my-8">
                     <IphoneMockup>
-                        <img src="/screenshot-3.png" alt="" width="320" height="640" style="box-shadow: 10px 10px 5px 12px rgb(209, 218, 218)" class="rounded rounded-xl border border-4 border-black">
+                        <img src="/screenshot-3.png" alt="Tragos Locos screenshot" width="320" height="640" style="box-shadow: 10px 10px 5px 12px rgb(209, 218, 218)" class="rounded rounded-xl border border-4 border-black">
                     </IphoneMockup>
                 </div>
             </div>

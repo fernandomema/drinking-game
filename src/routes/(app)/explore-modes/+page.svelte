@@ -113,7 +113,7 @@
                             <!-- Icono con efecto de brillo -->
                             <div class="flex items-center justify-center w-20 h-20 rounded-2xl bg-white/15 mb-4 group-hover:scale-110 group-hover:bg-white/25 transition-all duration-500 shadow-lg relative overflow-hidden">
                                 <div class="absolute inset-0 opacity-0 group-hover:opacity-30 bg-gradient-to-r from-transparent via-white/80 to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-1500 ease-in-out"></div>
-                                <img src={mode.icon} alt="" class="w-12 h-12" />
+                                <img src={mode.icon} alt={$_(`modes.${modeKey}.title`)} class="w-12 h-12" />
                             </div>
                             
                             <!-- Contenido centrado con mejor espaciado -->

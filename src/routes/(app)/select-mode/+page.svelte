@@ -74,7 +74,7 @@
                     data-umami-event-mode="{modeKey}"
                 >
                     <div class="flex aspect-square h-[90px] w-[90px] items-center justify-center rounded-full bg-white bg-opacity-10 p-2">
-                        <img in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: (index * 300) + 150 }}  src={mode.icon} alt="" class="h-full w-full animate-rubber-band" />
+                        <img in:fly|global={{ x: index % 2 === 0 ? -200 : 200, duration: 300, delay: (index * 300) + 150 }}  src={mode.icon} alt={$_(`modes.${modeKey}.title`)} class="h-full w-full animate-rubber-band" />
                     </div>
                     <div class="flex w-full flex-col justify-center">
                         <div class="text-3xl">{$_(`modes.${modeKey}.title`)}</div>
