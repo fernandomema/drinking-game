@@ -1,14 +1,12 @@
-export const prerender = false;
-export const ssr = false;
 <script lang="ts">
-import GooseBoard from '$lib/components/GooseBoard.svelte';
-import PageContainer from '$lib/components/PageContainer.svelte';
-import { onMount } from 'svelte';
-import { incrementDaysPlayed } from '$lib/UserInfo';
+    import GooseBoard from '$lib/components/GooseBoard.svelte';
+    import PageContainer from '$lib/components/PageContainer.svelte';
+    import { onMount } from 'svelte';
+    import { incrementDaysPlayed } from '$lib/UserInfo';
 
-onMount(() => {
-    incrementDaysPlayed();
-});
+    onMount(() => {
+        incrementDaysPlayed();
+    });
 </script>
 
 <PageContainer>
