@@ -38,6 +38,10 @@
     <meta name="description" content={$_('landing.description')} />
     <meta name="keywords" content="Tragos Locos, drinking game, party game, fun app, juegos para beber" />
     <link rel="canonical" href="https://tragos-locos.servitimo.net/" />
+    <link rel="alternate" hreflang="es" href="https://tragos-locos.servitimo.net/?locale=es" />
+    <link rel="alternate" hreflang="en" href="https://tragos-locos.servitimo.net/?locale=en" />
+    <meta property="og:locale:alternate" content="es" />
+    <meta property="og:locale:alternate" content="en" />
 
     <meta property="og:title" content={$_('landing.slogan')} />
     <meta property="og:description" content={$_('landing.description')} />

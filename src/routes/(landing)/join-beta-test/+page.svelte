@@ -14,6 +14,10 @@
     <title>Únete al Programa de Testers</title>
     <meta name="description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
     <link rel="canonical" href="{SITE_URL}/join-beta-test/" />
+    <link rel="alternate" hreflang="es" href="{SITE_URL}/join-beta-test/?locale=es" />
+    <link rel="alternate" hreflang="en" href="{SITE_URL}/join-beta-test/?locale=en" />
+    <meta property="og:locale:alternate" content="es" />
+    <meta property="og:locale:alternate" content="en" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
