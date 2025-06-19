@@ -1,4 +1,11 @@
-import { BreadcrumbList, Product, Recipe, WithContext } from "schema-dts"
+import {
+    BreadcrumbList,
+    Product,
+    Recipe,
+    WithContext,
+    Organization,
+    WebSite
+} from "schema-dts"
 
 export class SchemaGenerator {
     public static getBreadcrumbs(items: {name: string, url: string}[]): WithContext<BreadcrumbList> {
@@ -132,5 +139,52 @@ export class SchemaGenerator {
         }
 
         return recipeSchema;
+    }
+
+    public static getOrganization(organization: {
+        name: string,
+        url: string,
+        logo: string,
+        sameAs?: string[]
+    }): WithContext<Organization> {
+        const organizationSchema: WithContext<Organization> = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: organization.name,
+            url: organization.url,
+            logo: organization.logo
+        }
+
+        if (organization.sameAs) {
+            organizationSchema.sameAs = organization.sameAs
+        }
+
+        return organizationSchema
+    }
+
+    public static getWebSite(website: {
+        name: string,
+        url: string,
+        searchUrl?: string
+    }): WithContext<WebSite> {
+        const webSiteSchema: WithContext<WebSite> = {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: website.name,
+            url: website.url
+        }
+
+        if (website.searchUrl) {
+            webSiteSchema.potentialAction = {
+                "@type": "SearchAction",
+                target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: website.searchUrl
+                },
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+        return webSiteSchema
     }
 }
