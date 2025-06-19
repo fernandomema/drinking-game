@@ -19,7 +19,7 @@
     "dev:vite": "vite --host --port 5001",
     "#Utilities": "Various utilities",
     "validate": "svelte-check",
-    "postbuild": "npx svelte-sitemap --domain https://tragos-locos.servitimo.net --ignore '**/play/**' --ignore '**/intro/**' --ignore '**/select-mode/**' --ignore '**/add-players/**' --ignore '**/settings/**'"
+    "postbuild": "npx svelte-sitemap --domain https://tragos-locos.servitimo.net --ignore '**/play/**' --ignore '**/intro/**' --ignore '**/select-mode/**' --ignore '**/add-players/**' --ignore '**/settings/**' --ignore '**/mode/*/info/**'"
   },
   "devDependencies": {
     "@capacitor/cli": "^6.0.0",
