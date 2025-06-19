@@ -212,6 +212,11 @@
       "description": "Are you enjoying the app? We want to see it! Send us your photos and share your best moments with the community. Be part of our story!",
       "button": "Send us your photos!",
       "footer": "Share your most epic moments with us and be part of the community. We're waiting for your photos! \ud83d\udcf8"
+    },
+    "ugc_promo": {
+      "title": "Earn Premium creating content!",
+      "description": "Share your questions, images or videos and receive a free Premium code.",
+      "cta": "Participate now"
     }
   },
   "landingPage": {

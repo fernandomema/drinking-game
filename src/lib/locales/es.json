@@ -212,6 +212,11 @@
       "description": "¿Estás disfrutando de la app? ¡Queremos verlo! Envíanos tus fotos y comparte tus mejores momentos con la comunidad. ¡Sé parte de nuestra historia!",
       "button": "¡Envíanos tus Fotos!",
       "footer": "Comparte tus momentos más épicos con nosotros y sé parte de la comunidad. ¡Estamos esperando tus fotos! \ud83d\udcf8"
+    },
+    "ugc_promo": {
+      "title": "¡Gana Premium creando contenido!",
+      "description": "Comparte tus preguntas, imágenes o videos y recibe un código de Premium gratis.",
+      "cta": "¡Participa ahora!"
     }
   },
   "landingPage": {

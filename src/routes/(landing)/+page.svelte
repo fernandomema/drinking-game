@@ -16,6 +16,7 @@
     import Faqs from "$lib/components/landingBlocks/Faqs.svelte";
     import IphoneMockup from "$lib/components/IphoneMockup.svelte";
     import FeaturedModes from "$lib/components/landingBlocks/FeaturedModes.svelte";
+    import UgcPromo from "$lib/components/landingBlocks/UgcPromo.svelte";
     import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
     import { SITE_URL } from '$lib/config';
     
@@ -241,7 +242,8 @@
         <QuestionsCounters />
     </div>
 
-    <Laughts />
+    <!-- <Laughts /> -->
+    <UgcPromo />
     
     <div class="bg-purple-100">
         <Faqs></Faqs>
@@ -290,6 +292,8 @@
           </div>
         </div>
       </section>
+
+      <UgcPromo />
 
     <section class="bg-pink-100 py-16">
         <div class="container mx-auto text-center">
