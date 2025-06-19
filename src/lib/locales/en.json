@@ -280,7 +280,73 @@
     "copyright": "© 2024 Byte-Bop. All rights reserved."
   },
   "banners": {
-    "streak": "You're on a {days}-day streak! Reach 15 to get one week of Premium free."
+    "streak": "You're on a {days}-day streak! Reach 15 to get one week of Premium free.",
+    "laught": {
+      "message": "Having fun? 🎉",
+      "button": "Like it! ❤️"
+    },
+    "rate": {
+      "message": "Enjoying the app? 🤩",
+      "button": "Rate it! ⭐"
+    },
+    "whatsapp": {
+      "message": "Want to open WhatsApp? 🍻📲",
+      "button": "Open WhatsApp ✅"
+    },
+    "share": {
+      "message": "Share the fun! 🎉",
+      "button": "📢 Share it!"
+    },
+    "premium": {
+      "message1": "Go Premium and unlock exclusive perks! 🚀",
+      "button1": "Go Premium",
+      "message2": "Enjoy more features with Premium! 🌟",
+      "button2": "Upgrade to Premium",
+      "message3": "Want more? Get Premium and enjoy it! 🔥",
+      "button3": "Buy Premium!",
+      "message4": "Limited offer! Go Premium now 🔥",
+      "button4": "Act fast!",
+      "message5": "Improve your experience with Premium.",
+      "button5": "Go to Premium"
+    },
+    "suggest": {
+      "message": "Got a cool question? 💬",
+      "button": "Suggest it! ✍️"
+    },
+    "invite": {
+      "message": "Bring your buddies! 👯‍♂️",
+      "button": "Invite them now 🎉"
+    },
+    "changelog": {
+      "message": "New update! 🚀",
+      "button": "View changes 📲"
+    },
+    "donate": {
+      "message": "Help improve the app! 💸",
+      "button": "Donate now 🙏"
+    },
+    "draw": {
+      "message": "Giveaway in progress! 🎁",
+      "button": "Join now! 🎉"
+    },
+    "event": {
+      "message": "Don't miss the event! 🎤",
+      "button": "Join the event 📅"
+    },
+    "feature": {
+      "message": "Discover the new feature! 🤖",
+      "button": "Try it now ✨"
+    }
+  },
+  "premium_modal": {
+    "title": "Go Premium!",
+    "description": "Get access to all exclusive game features and enjoy an unlimited experience.",
+    "subtitle": "With Premium, you'll get:",
+    "bullet1": "Additional features",
+    "bullet2": "No ads",
+    "bullet3": "And much more...",
+    "buy_button": "Buy Premium",
+    "close_button": "Close"
   },
   "footer": {
     "blog": "Blog",
