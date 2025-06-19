@@ -280,7 +280,73 @@
     "copyright": "© 2024 Byte-Bop. Todos los derechos reservados."
   },
   "banners": {
-    "streak": "¡Llevas {days} días en racha! Llega a 15 para obtener una semana de Premium gratis."
+    "streak": "¡Llevas {days} días en racha! Llega a 15 para obtener una semana de Premium gratis.",
+    "laught": {
+      "message": "¿Te estás divirtiendo? 🎉",
+      "button": "¡Dale like! ❤️"
+    },
+    "rate": {
+      "message": "¿Te mola la app? 🤩",
+      "button": "¡Califícala! ⭐"
+    },
+    "whatsapp": {
+      "message": "¿Quieres abrir WhatsApp? 🍻📲",
+      "button": "¡Abrir WhatsApp! ✅"
+    },
+    "share": {
+      "message": "¡Comparte la diversión! 🎉",
+      "button": "📢 ¡Compártelo!"
+    },
+    "premium": {
+      "message1": "¡Hazte Premium y desbloquea ventajas exclusivas! 🚀",
+      "button1": "¡Hazte Premium!",
+      "message2": "¡Disfruta de más funciones con Premium! 🌟",
+      "button2": "Sube a Premium",
+      "message3": "¿Quieres más? ¡Obtén Premium y disfrútalo! 🔥",
+      "button3": "¡Compra Premium!",
+      "message4": "¡Oferta limitada! Hazte Premium ahora 🔥",
+      "button4": "¡Actúa rápido!",
+      "message5": "Mejora tu experiencia con Premium.",
+      "button5": "Ir a Premium"
+    },
+    "suggest": {
+      "message": "¿Tienes una pregunta chida? 💬",
+      "button": "¡Sugiérela! ✍️"
+    },
+    "invite": {
+      "message": "¡Trae a tus colegas! 👯‍♂️",
+      "button": "Invítalos ya 🎉"
+    },
+    "changelog": {
+      "message": "¡Nueva actualización! 🚀",
+      "button": "Ver cambios 📲"
+    },
+    "donate": {
+      "message": "¡Ayuda a mejorar la app! 💸",
+      "button": "Dona ahora 🙏"
+    },
+    "draw": {
+      "message": "¡Sorteo en marcha! 🎁",
+      "button": "¡Participa ya! 🎉"
+    },
+    "event": {
+      "message": "¡No te pierdas el evento! 🎤",
+      "button": "Únete al evento 📅"
+    },
+    "feature": {
+      "message": "¡Descubre la nueva función! 🤖",
+      "button": "Prúebala ahora ✨"
+    }
+  },
+  "premium_modal": {
+    "title": "¡Hazte Premium!",
+    "description": "Obtén acceso a todas las funciones exclusivas del juego y disfruta de una experiencia sin límites.",
+    "subtitle": "Con Premium, tendrás acceso a:",
+    "bullet1": "Funciones adicionales",
+    "bullet2": "Sin anuncios",
+    "bullet3": "Y mucho más...",
+    "buy_button": "Comprar Premium",
+    "close_button": "Cerrar"
   },
   "footer": {
     "blog": "Blog",
