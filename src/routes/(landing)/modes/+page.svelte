@@ -46,13 +46,13 @@
   <div class="max-w-7xl mx-auto px-4 py-20 relative z-10">
     <div class="text-center">
       <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
-        <span class="block">Descubre Todos Nuestros</span>
+        <span class="block">{$_('modes_page.hero_line1')}</span>
         <span class="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-500">
-          Modos de Juego
+          {$_('modes_page.hero_line2')}
         </span>
       </h1>
       <p class="max-w-2xl mx-auto text-xl text-white/80 mb-8">
-        Desde preguntas atrevidas hasta retos divertidos, encuentra el modo perfecto para cualquier ocasión y compañía.
+        {$_('modes_page.hero_subtitle')}
       </p>
       
       <div class="flex justify-center space-x-4 mb-8">
@@ -92,7 +92,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
-        <h2 class="text-3xl font-bold text-gray-800">Modos Populares</h2>
+        <h2 class="text-3xl font-bold text-gray-800">{$_('modes_page.popular_title')}</h2>
       </div>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -135,7 +135,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
         </div>
-        <h2 class="text-3xl font-bold text-gray-800">Modos Estacionales</h2>
+        <h2 class="text-3xl font-bold text-gray-800">{$_('modes_page.seasonal_title')}</h2>
       </div>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -180,7 +180,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-4-8v.6a3 3 0 01-.9 2.1L12 5.4" />
           </svg>
         </div>
-        <h2 class="text-3xl font-bold text-gray-800">Modos Especiales</h2>
+        <h2 class="text-3xl font-bold text-gray-800">{$_('modes_page.special_title')}</h2>
       </div>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,7 +225,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3" />
           </svg>
         </div>
-        <h2 class="text-3xl font-bold text-gray-800">Modos Beta</h2>
+        <h2 class="text-3xl font-bold text-gray-800">{$_('modes_page.beta_title')}</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -269,8 +269,8 @@
         
         <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div class="text-center md:text-left">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">¿Listo para la diversión?</h2>
-            <p class="text-white/90 text-lg max-w-xl">Descarga ahora y disfruta de todos estos modos de juego y mucho más. ¡La fiesta está a punto de comenzar!</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">{$_('modes_page.cta_title')}</h2>
+            <p class="text-white/90 text-lg max-w-xl">{$_('modes_page.cta_subtitle')}</p>
           </div>
           
           <div>

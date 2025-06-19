@@ -262,7 +262,16 @@
   },
   "modes_page": {
     "title": "Modos de Juego",
-    "description": "Descubre todos los modos de juego disponibles en Tragos Locos."
+    "description": "Descubre todos los modos de juego disponibles en Tragos Locos.",
+    "hero_line1": "Descubre Todos Nuestros",
+    "hero_line2": "Modos de Juego",
+    "hero_subtitle": "Desde preguntas atrevidas hasta retos divertidos, encuentra el modo perfecto para cualquier ocasión y compañía.",
+    "popular_title": "Modos Populares",
+    "seasonal_title": "Modos Estacionales",
+    "special_title": "Modos Especiales",
+    "beta_title": "Modos Beta",
+    "cta_title": "¿Listo para la diversión?",
+    "cta_subtitle": "Descarga ahora y disfruta de todos estos modos de juego y mucho más. ¡La fiesta está a punto de comenzar!"
   },
   "join_beta_test": {
     "meta_title": "Únete al Programa de Testers",
