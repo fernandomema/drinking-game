@@ -243,6 +243,7 @@
     "modes": "Modos",
     "settings": "Ajustes"
   },
+  "end_of_game": "¡Fin del juego!",
   "laughts": {
     "loading": "Cargando...",
     "laught": "¡Ríe!",
@@ -255,6 +256,9 @@
     "title": "¿Listo para comenzar a jugar?",
     "text": "Descarga la app ahora y empieza a disfrutar de los mejores juegos en grupo.",
     "action": "Descargar ahora"
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes"
   },
   "modes_page": {
     "title": "Modos de Juego",
