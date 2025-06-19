@@ -20,7 +20,7 @@
 
     let showDisqus = false;
 
-    const url = "https://tragos-locos.servitimo.net/blog/" + lang + '/' + seoTitle;
+    const url = "https://tragos-locos.servitimo.net/blog/" + lang + '/' + seoTitle + '/';
     const schema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",

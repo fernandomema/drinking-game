@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-    {canonicalUrl = 'https://tragos-locos.servitimo.net/blog/' + locale, ''}
+    {canonicalUrl = 'https://tragos-locos.servitimo.net/blog/' + locale + '/', ''}
     <title>Blog - Tragos Locos</title>
     <meta name="description" content={$_('blog.description')} />
 
