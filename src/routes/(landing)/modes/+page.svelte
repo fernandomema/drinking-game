@@ -17,6 +17,10 @@
   <title>{$_('modes_page.title')} | Tragos Locos</title>
   <meta name="description" content={$_('modes_page.description')} />
   <link rel="canonical" href="https://tragos-locos.servitimo.net/modes/" />
+  <link rel="alternate" hreflang="es" href="https://tragos-locos.servitimo.net/modes/?locale=es" />
+  <link rel="alternate" hreflang="en" href="https://tragos-locos.servitimo.net/modes/?locale=en" />
+  <meta property="og:locale:alternate" content="es" />
+  <meta property="og:locale:alternate" content="en" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     SchemaGenerator.getBreadcrumbs([
       { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },

@@ -91,6 +91,10 @@ import '$lib/Shuffle';
     <title>{$_(`modes.${modeKey}.title`)} | Tragos Locos</title>
     <meta name="description" content={$_(`modes.${modeKey}.description`)} />
     <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+    <link rel="alternate" hreflang="es" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/?locale=es`} />
+    <link rel="alternate" hreflang="en" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/?locale=en`} />
+    <meta property="og:locale:alternate" content="es" />
+    <meta property="og:locale:alternate" content="en" />
     {@html `<script type="application/ld+json">${JSON.stringify(
       SchemaGenerator.getBreadcrumbs([
         { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
