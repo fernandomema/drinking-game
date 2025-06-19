@@ -170,6 +170,21 @@
     "title": "Game Modes",
     "description": "Discover all the game modes available in Tragos Locos."
   },
+  "join_beta_test": {
+    "meta_title": "Join the Testers Program",
+    "meta_description": "Be one of the first to test our app and help us improve.",
+    "header_title": "Join Our Testers Program!",
+    "header_desc": "Be one of the first to test our app and help us improve.",
+    "section1_title": "1. Join our Google Group",
+    "section1_desc": "Access updates, instructions, and news directly from our exclusive group.",
+    "section1_button": "Join the Group",
+    "section2_title": "2. Download the App on Play Store",
+    "section2_desc": "Install our app on your Android device and enjoy the latest features.",
+    "section2_button": "Download App",
+    "thanks_title": "Thanks for being part of our community!",
+    "thanks_desc": "Your help is key to improving our application.",
+    "copyright": "© 2024 Byte-Bop. All rights reserved."
+  },
   "banners": {
     "streak": "You're on a {days}-day streak! Reach 15 to get one week of Premium free."
   },

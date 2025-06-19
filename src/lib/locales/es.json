@@ -260,6 +260,21 @@
     "title": "Modos de Juego",
     "description": "Descubre todos los modos de juego disponibles en Tragos Locos."
   },
+  "join_beta_test": {
+    "meta_title": "Únete al Programa de Testers",
+    "meta_description": "Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.",
+    "header_title": "¡Únete a Nuestro Programa de Testers!",
+    "header_desc": "Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.",
+    "section1_title": "1. Únete a nuestro Grupo de Google",
+    "section1_desc": "Accede a actualizaciones, instrucciones y novedades directamente desde nuestro grupo exclusivo.",
+    "section1_button": "Unirme al Grupo",
+    "section2_title": "2. Descarga la App en Play Store",
+    "section2_desc": "Instala nuestra aplicación en tu dispositivo Android y disfruta de las funciones más recientes.",
+    "section2_button": "Descargar App",
+    "thanks_title": "¡Gracias por ser parte de nuestra comunidad!",
+    "thanks_desc": "Tu ayuda es clave para mejorar nuestra aplicación.",
+    "copyright": "© 2024 Byte-Bop. Todos los derechos reservados."
+  },
   "banners": {
     "streak": "¡Llevas {days} días en racha! Llega a 15 para obtener una semana de Premium gratis."
   },
