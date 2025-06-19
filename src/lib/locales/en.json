@@ -262,7 +262,16 @@
   },
   "modes_page": {
     "title": "Game Modes",
-    "description": "Discover all the game modes available in Tragos Locos."
+    "description": "Discover all the game modes available in Tragos Locos.",
+    "hero_line1": "Discover All Our",
+    "hero_line2": "Game Modes",
+    "hero_subtitle": "From daring questions to fun challenges, find the perfect mode for any occasion and company.",
+    "popular_title": "Popular Modes",
+    "seasonal_title": "Seasonal Modes",
+    "special_title": "Special Modes",
+    "beta_title": "Beta Modes",
+    "cta_title": "Ready for the fun?",
+    "cta_subtitle": "Download now and enjoy all these game modes and much more. The party is about to begin!"
   },
   "join_beta_test": {
     "meta_title": "Join the Testers Program",
