@@ -16,7 +16,20 @@
     import Faqs from "$lib/components/landingBlocks/Faqs.svelte";
     import IphoneMockup from "$lib/components/IphoneMockup.svelte";
     import FeaturedModes from "$lib/components/landingBlocks/FeaturedModes.svelte";
+    import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
+    import { SITE_URL } from '$lib/config';
     
+    const organizationSchema = SchemaGenerator.getOrganization({
+        name: 'Tragos Locos',
+        url: SITE_URL,
+        logo: SITE_URL + '/og-image.png'
+    });
+
+    const websiteSchema = SchemaGenerator.getWebSite({
+        name: 'Tragos Locos',
+        url: SITE_URL
+    });
+
     let isSheetOpen = false;
 
     let locale: string | undefined;
@@ -65,6 +78,8 @@
             "description": "Tragos locos is a drinking party game app designed to elevate your social gatherings with endless fun."
         }
     </script>
+    {@html `<script type="application/ld+json">${JSON.stringify(organizationSchema)}</script>`}
+    {@html `<script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>`}
 </svelte:head>
 
 <div class="bg-gray-50">
