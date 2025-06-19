@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import Footer from '$lib/components/Footer.svelte';
+  import { locales } from '$lib/locales';
   
   // Palabras clave y frases importantes para SEO
   const seoKeywords = [
@@ -28,6 +29,9 @@
     <meta name="description" content="Descubre por qué Tragos Locos es la aplicación de juegos para beber más popular. Con +1000 preguntas y retos, modos temáticos y diseño intuitivo. ¡Descárgala gratis!" />
     <meta name="keywords" content="tragos locos, juegos para beber, party game, app de fiestas, juegos con alcohol, preguntas atrevidas, retos de fiesta, juegos de grupo, aplicación para reuniones" />
     <link rel="canonical" href="https://tragos-locos.servitimo.net/sobre-la-app/" />
+    {#each locales as lang}
+      <link rel="alternate" hreflang={lang} href="https://tragos-locos.servitimo.net/sobre-la-app/?locale={lang}" />
+    {/each}
     
     <!-- Meta tags para Open Graph (Facebook, WhatsApp) -->
     <meta property="og:title" content="Tragos Locos: La Mejor App de Juegos para Fiestas" />

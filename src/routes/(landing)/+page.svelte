@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { _, getLocale } from "$lib/locales";
+    import { _, getLocale, locales } from "$lib/locales";
     import logo from '$lib/images/AppImages/ios/256.png';
     import playstoreBadge from '$lib/images/InstallBanners/PLAYSTORE-black-en.svg';
     import AppstoreBadge from '$lib/images/InstallBanners/APPSTORE-white-en.svg';
@@ -38,6 +38,9 @@
     <meta name="description" content={$_('landing.description')} />
     <meta name="keywords" content="Tragos Locos, drinking game, party game, fun app, juegos para beber" />
     <link rel="canonical" href="https://tragos-locos.servitimo.net" />
+    {#each locales as lang}
+        <link rel="alternate" hreflang={lang} href="https://tragos-locos.servitimo.net/?locale={lang}" />
+    {/each}
 
     <meta property="og:title" content={$_('landing.slogan')} />
     <meta property="og:description" content={$_('landing.description')} />

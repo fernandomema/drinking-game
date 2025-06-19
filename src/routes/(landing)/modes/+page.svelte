@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { _ } from '$lib/locales';
+  import { _, locales } from '$lib/locales';
   import { modes } from '$lib/modes';
   import Footer from '$lib/components/Footer.svelte';
   import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
@@ -17,6 +17,9 @@
   <title>{$_('modes_page.title')} | Tragos Locos</title>
   <meta name="description" content={$_('modes_page.description')} />
   <link rel="canonical" href="https://tragos-locos.servitimo.net/modes/" />
+  {#each locales as lang}
+    <link rel="alternate" hreflang={lang} href="https://tragos-locos.servitimo.net/modes/?locale={lang}" />
+  {/each}
   {@html `<script type="application/ld+json">${JSON.stringify(
     SchemaGenerator.getBreadcrumbs([
       { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },

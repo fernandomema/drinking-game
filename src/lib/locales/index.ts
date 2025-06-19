@@ -4,6 +4,8 @@ import en from './en.json';
 
 export { _ } from 'svelte-i18n';
 
+export const locales = ['en', 'es'];
+
 addMessages('en', en);
 addMessages('es', es);
 

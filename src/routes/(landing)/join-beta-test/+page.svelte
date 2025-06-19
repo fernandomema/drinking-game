@@ -1,6 +1,7 @@
 
-<script>
+<script lang="ts">
     import { onMount } from "svelte";
+    import { locales } from "$lib/locales";
 
     onMount(() => {
         if (window.umami) {
@@ -13,6 +14,9 @@
     <title>Únete al Programa de Testers</title>
     <meta name="description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
     <link rel="canonical" href="https://tragos-locos.servitimo.net/join-beta-test/" />
+    {#each locales as lang}
+        <link rel="alternate" hreflang={lang} href="https://tragos-locos.servitimo.net/join-beta-test/?locale={lang}" />
+    {/each}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">

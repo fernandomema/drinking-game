@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { type Mode, modes } from '$lib/modes';
-import { _, getLocale } from '$lib/locales';
+import { _, getLocale, locales } from '$lib/locales';
 import { onMount } from 'svelte';
 import RelatedModes from '$lib/components/RelatedModes.svelte';
 import Footer from '$lib/components/Footer.svelte';
@@ -91,6 +91,9 @@ import '$lib/Shuffle';
     <title>{$_(`modes.${modeKey}.title`)} | Tragos Locos</title>
     <meta name="description" content={$_(`modes.${modeKey}.description`)} />
     <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+    {#each locales as lang}
+      <link rel="alternate" hreflang={lang} href={`https://tragos-locos.servitimo.net/modes/${modeKey}/?locale=${lang}`} />
+    {/each}
     {@html `<script type="application/ld+json">${JSON.stringify(
       SchemaGenerator.getBreadcrumbs([
         { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
