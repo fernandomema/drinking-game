@@ -17,6 +17,7 @@
   <title>{$_('modes_page.title')} | Tragos Locos</title>
   <meta name="description" content={$_('modes_page.description')} />
   <link rel="canonical" href="https://tragos-locos.servitimo.net/modes/" />
+  <meta name="robots" content="index,follow" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     SchemaGenerator.getBreadcrumbs([
       { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },

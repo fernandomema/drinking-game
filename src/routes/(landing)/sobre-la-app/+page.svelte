@@ -28,6 +28,7 @@
     <meta name="description" content="Descubre por qué Tragos Locos es la aplicación de juegos para beber más popular. Con +1000 preguntas y retos, modos temáticos y diseño intuitivo. ¡Descárgala gratis!" />
     <meta name="keywords" content="tragos locos, juegos para beber, party game, app de fiestas, juegos con alcohol, preguntas atrevidas, retos de fiesta, juegos de grupo, aplicación para reuniones" />
     <link rel="canonical" href="https://tragos-locos.servitimo.net/sobre-la-app/" />
+    <meta name="robots" content="index,follow" />
     
     <!-- Meta tags para Open Graph (Facebook, WhatsApp) -->
     <meta property="og:title" content="Tragos Locos: La Mejor App de Juegos para Fiestas" />

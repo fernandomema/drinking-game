@@ -91,6 +91,7 @@ import '$lib/Shuffle';
     <title>{$_(`modes.${modeKey}.title`)} | Tragos Locos</title>
     <meta name="description" content={$_(`modes.${modeKey}.description`)} />
     <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+    <meta name="robots" content="index,follow" />
     {@html `<script type="application/ld+json">${JSON.stringify(
       SchemaGenerator.getBreadcrumbs([
         { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
