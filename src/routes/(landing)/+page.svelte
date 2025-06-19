@@ -11,6 +11,7 @@
     import Steps from '$lib/components/landingBlocks/Steps.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import { onMount } from "svelte";
+    import { SITE_URL } from "$lib/config";
     import Quiz from "$lib/components/landingBlocks/Quiz.svelte";
     import Laughts from "$lib/components/landingBlocks/Laughts.svelte";
     import Faqs from "$lib/components/landingBlocks/Faqs.svelte";
@@ -37,19 +38,19 @@
     <title>{$_('landing.title')} | {$_('landing.slogan')}</title>
     <meta name="description" content={$_('landing.description')} />
     <meta name="keywords" content="Tragos Locos, drinking game, party game, fun app, juegos para beber" />
-    <link rel="canonical" href="https://tragos-locos.servitimo.net/" />
+    <link rel="canonical" href={`${SITE_URL}/`} />
 
     <meta property="og:title" content={$_('landing.slogan')} />
     <meta property="og:description" content={$_('landing.description')} />
-    <meta property="og:image" content="https://tragos-locos.servitimo.net/og-image.png" />
-    <meta property="og:url" content="https://tragos-locos.servitimo.net" />
+    <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+    <meta property="og:url" content={SITE_URL} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tragos Locos" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={$_('landing.slogan')} />
     <meta name="twitter:description" content={$_('landing.description')} />
-    <meta name="twitter:image" content="https://tragos-locos.servitimo.net/og-image.png" />
+    <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
 
     <script type="application/ld+json">
         {

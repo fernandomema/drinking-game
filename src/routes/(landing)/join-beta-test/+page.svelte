@@ -13,22 +13,22 @@
 <svelte:head>
     <title>Únete al Programa de Testers</title>
     <meta name="description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
-    <link rel="canonical" href="{SITE_URL}/join-beta-test/" />
+    <link rel="canonical" href={`${SITE_URL}/join-beta-test/`} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{SITE_URL}/join-beta-test/">
+    <meta property="og:url" content={`${SITE_URL}/join-beta-test/`}>
     <meta property="og:title" content="Únete al Programa de Testers">
     <meta property="og:description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
-    <meta property="og:image" content="{SITE_URL}/og-image.png">
+    <meta property="og:image" content={`${SITE_URL}/og-image.png`}>
     <meta property="og:site_name" content="Tragos Locos">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{SITE_URL}/join-beta-test/">
+    <meta property="twitter:url" content={`${SITE_URL}/join-beta-test/`}>
     <meta property="twitter:title" content="Únete al Programa de Testers">
     <meta property="twitter:description" content="Sé de los primeros en probar nuestra aplicación y ayúdanos a mejorar.">
-    <meta property="twitter:image" content="{SITE_URL}/og-image.png">
+    <meta property="twitter:image" content={`${SITE_URL}/og-image.png`}>
     <meta name="twitter:site" content="@tu_cuenta">
 
 </svelte:head>

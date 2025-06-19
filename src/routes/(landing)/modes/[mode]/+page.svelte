@@ -8,6 +8,7 @@ import Footer from '$lib/components/Footer.svelte';
 import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
 import { questions } from '$lib/questions';
 import '$lib/Shuffle';
+import { SITE_URL } from '$lib/config';
   let modeKey: string = '';
   let mode: Mode | null = null;
   let examples: string[] = [];
@@ -90,12 +91,12 @@ import '$lib/Shuffle';
   {#if mode}
     <title>{$_(`modes.${modeKey}.title`)} | Tragos Locos</title>
     <meta name="description" content={$_(`modes.${modeKey}.description`)} />
-    <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+    <link rel="canonical" href={`${SITE_URL}/modes/${modeKey}/`} />
     {@html `<script type="application/ld+json">${JSON.stringify(
       SchemaGenerator.getBreadcrumbs([
-        { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
-        { name: $_('modes_page.title'), url: 'https://tragos-locos.servitimo.net/modes/' },
-        { name: $_(`modes.${modeKey}.title`), url: `https://tragos-locos.servitimo.net/modes/${modeKey}/` }
+        { name: 'Tragos Locos', url: `${SITE_URL}/` },
+        { name: $_('modes_page.title'), url: `${SITE_URL}/modes/` },
+        { name: $_(`modes.${modeKey}.title`), url: `${SITE_URL}/modes/${modeKey}/` }
       ])
     )}</script>`}
   {/if}

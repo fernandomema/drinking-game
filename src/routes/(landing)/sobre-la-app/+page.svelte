@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import Footer from '$lib/components/Footer.svelte';
+  import { SITE_URL } from '$lib/config';
   
   // Palabras clave y frases importantes para SEO
   const seoKeywords = [
@@ -27,20 +28,20 @@
     <title>Tragos Locos: La Mejor App de Juegos para Beber y Animar Fiestas</title>
     <meta name="description" content="Descubre por qué Tragos Locos es la aplicación de juegos para beber más popular. Con +1000 preguntas y retos, modos temáticos y diseño intuitivo. ¡Descárgala gratis!" />
     <meta name="keywords" content="tragos locos, juegos para beber, party game, app de fiestas, juegos con alcohol, preguntas atrevidas, retos de fiesta, juegos de grupo, aplicación para reuniones" />
-    <link rel="canonical" href="https://tragos-locos.servitimo.net/sobre-la-app/" />
+    <link rel="canonical" href={`${SITE_URL}/sobre-la-app/`} />
     
     <!-- Meta tags para Open Graph (Facebook, WhatsApp) -->
     <meta property="og:title" content="Tragos Locos: La Mejor App de Juegos para Fiestas" />
     <meta property="og:description" content="La aplicación de juegos para beber #1 con +1000 preguntas y retos. Perfecta para animar cualquier reunión o fiesta. ¡Descárgala gratis!" />
-    <meta property="og:image" content="https://tragos-locos.servitimo.net/og-image.png" />
-    <meta property="og:url" content="https://tragos-locos.servitimo.net/sobre-la-app/" />
+    <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+    <meta property="og:url" content={`${SITE_URL}/sobre-la-app/`} />
     <meta property="og:type" content="website" />
     
     <!-- Meta tags para Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tragos Locos: App #1 de Juegos para Beber" />
     <meta name="twitter:description" content="Anima tus fiestas con la mejor app de juegos para beber. +1000 preguntas, varios modos de juego y totalmente gratis." />
-    <meta name="twitter:image" content="https://tragos-locos.servitimo.net/og-image.png" />
+    <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
 </svelte:head>
 
 <header class="flex items-center w-full bg-white justify-between py-4 px-4 shadow-sm sticky top-0 z-50">

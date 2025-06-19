@@ -3,6 +3,7 @@
   import { modes } from '$lib/modes';
   import Footer from '$lib/components/Footer.svelte';
   import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
+  import { SITE_URL } from '$lib/config';
 
   const modeEntries = Object.entries(modes).filter(([key, mode]) => mode.isPublic ?? true);
   
@@ -16,11 +17,11 @@
 <svelte:head>
   <title>{$_('modes_page.title')} | Tragos Locos</title>
   <meta name="description" content={$_('modes_page.description')} />
-  <link rel="canonical" href="https://tragos-locos.servitimo.net/modes/" />
+  <link rel="canonical" href={`${SITE_URL}/modes/`} />
   {@html `<script type="application/ld+json">${JSON.stringify(
     SchemaGenerator.getBreadcrumbs([
-      { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
-      { name: $_('modes_page.title'), url: 'https://tragos-locos.servitimo.net/modes/' }
+      { name: 'Tragos Locos', url: `${SITE_URL}/` },
+      { name: $_('modes_page.title'), url: `${SITE_URL}/modes/` }
     ])
   )}</script>`}
 </svelte:head>
