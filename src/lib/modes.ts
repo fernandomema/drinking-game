@@ -6,6 +6,7 @@ import { _ } from "$lib/locales";
 import { Team } from "./types/Team";
 import { getRandomizedTeamNames, getRandomTeamName } from "./TeamNames";
 import { getLocaleFromString } from "./types/Locales";
+import { setTeams } from './PlayerStorage';
 
 enum MenuPriority {
     GeneralMode = 0,
@@ -114,7 +115,7 @@ export const modes: { [key: string]: Mode } = {
             randomizedPlayers?.forEach((player, index) => {
                 teams[index % 2].players.push(player);
             });
-            localStorage.setItem('teams', JSON.stringify(teams));
+            setTeams(teams);
             return getModeQuestions(questions, {
                 gameMode: 'teams',
                 mode: 'basic',

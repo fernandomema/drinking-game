@@ -1,7 +1,7 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
     import { App } from '@capacitor/app';
-	import { browser } from '$app/environment';
+        import { browser } from '$app/environment';
     import PageContainer from "$lib/components/PageContainer.svelte";
     import { onMount } from "svelte";
     import { fly } from "svelte/transition";
@@ -13,6 +13,7 @@
     import PremiumFeatureBottomSheet from "$lib/components/BottomSheets/PremiumFeatureBottomSheet.svelte";
     import InGameBanner from "$lib/components/InGameBanner.svelte";
     import { initialize, interstitial, rewardVideo, showConsent } from "$lib/Admob";
+    import { loadPlayers, getPlayers } from "$lib/PlayerStorage";
     
     let titleCentered = true;
     let titleStopedAnimating = false;
@@ -21,6 +22,8 @@
     let showPremiumModal = false;
 
     onMount(async () => {
+        await loadPlayers();
+        playerCount = getPlayers().length;
         await new Promise((resolve) => setTimeout(resolve, 2500));
         titleCentered = false;
         await new Promise((resolve) => setTimeout(resolve, 800));
@@ -34,10 +37,9 @@
     });
 
     if (browser) {
-	    App.addListener('backButton', async () => {
-		    window.history.back();
-	    });
-        playerCount = JSON.parse(sessionStorage.getItem('players') || '[]').length;
+            App.addListener('backButton', async () => {
+                    window.history.back();
+            });
         if (playerCount === 0) goto('/add-players');
     }
 

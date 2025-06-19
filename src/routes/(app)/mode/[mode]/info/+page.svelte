@@ -7,6 +7,7 @@ import { goto } from '$app/navigation';
 import PageContainer from '$lib/components/PageContainer.svelte';
 import { fly, fade } from 'svelte/transition';
     import { questions } from '$lib/questions';
+import { loadPlayers, getPlayers } from '$lib/PlayerStorage';
 
 let modeKey: string = '';
 let mode: Mode|null = null;
@@ -47,8 +48,8 @@ async function getExampleCards(modeKey: string): Promise<string[]> {
             'Ejemplo de tarjeta 4'
         ];
     }
-    const players = JSON.parse(sessionStorage.getItem('players') || '[]');
-    console.log(players);
+    await loadPlayers();
+    const players = getPlayers();
     return (mode?.pickCards(questions, locale, players) || []).map((card) => {
         return card.locales[locale];
     }).slice(2, 6);
