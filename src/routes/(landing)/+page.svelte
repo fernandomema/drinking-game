@@ -37,7 +37,7 @@
     <title>{$_('landing.title')} | {$_('landing.slogan')}</title>
     <meta name="description" content={$_('landing.description')} />
     <meta name="keywords" content="Tragos Locos, drinking game, party game, fun app, juegos para beber" />
-    <link rel="canonical" href="https://tragos-locos.servitimo.net" />
+    <link rel="canonical" href="https://tragos-locos.servitimo.net/" />
 
     <meta property="og:title" content={$_('landing.slogan')} />
     <meta property="og:description" content={$_('landing.description')} />
