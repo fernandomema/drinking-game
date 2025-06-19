@@ -347,6 +347,25 @@
       "button": "Prúebala ahora ✨"
     }
   },
+  "quiz": {
+    "title": "¡Descubre tu modo de fiesta!",
+    "select_option": "Selecciona una opción",
+    "question1": "¿Cuántas personas estarán en la fiesta?",
+    "question1_option1": "De 2 a 5 personas",
+    "question1_option2": "De 6 a 10 personas",
+    "question1_option3": "Más de 10 personas",
+    "question2": "¿Qué tan cómodos se sienten entre ustedes?",
+    "question2_option1": "No nos conocemos mucho",
+    "question2_option2": "Nos conocemos bien, pero no somos muy cercanos",
+    "question2_option3": "Somos muy cercanos y cómodos",
+    "question3": "¿Qué tanto se conocen entre ustedes?",
+    "question3_option1": "Casi no nos conocemos",
+    "question3_option2": "Nos conocemos bien, pero no demasiado",
+    "question3_option3": "Nos conocemos a la perfección",
+    "calculate_button": "Ver mi modo de fiesta",
+    "result_text": "¡El modo ideal para ti es: {mode}!",
+    "try_again": "Volver a intentarlo"
+  },
   "premium_modal": {
     "title": "¡Hazte Premium!",
     "description": "Obtén acceso a todas las funciones exclusivas del juego y disfruta de una experiencia sin límites.",

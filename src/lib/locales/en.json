@@ -338,7 +338,7 @@
       "message": "Giveaway in progress! 🎁",
       "button": "Join now! 🎉"
     },
-    "event": {
+  "event": {
       "message": "Don't miss the event! 🎤",
       "button": "Join the event 📅"
     },
@@ -346,6 +346,25 @@
       "message": "Discover the new feature! 🤖",
       "button": "Try it now ✨"
     }
+  },
+  "quiz": {
+    "title": "Discover your party mode!",
+    "select_option": "Select an option",
+    "question1": "How many people will be at the party?",
+    "question1_option1": "2 to 5 people",
+    "question1_option2": "6 to 10 people",
+    "question1_option3": "More than 10 people",
+    "question2": "How comfortable are you with each other?",
+    "question2_option1": "We barely know each other",
+    "question2_option2": "We know each other well, but we're not very close",
+    "question2_option3": "We're very close and comfortable",
+    "question3": "How well do you know each other?",
+    "question3_option1": "We hardly know each other",
+    "question3_option2": "We know each other well, but not too much",
+    "question3_option3": "We know each other perfectly",
+    "calculate_button": "See my party mode",
+    "result_text": "The ideal mode for you is: {mode}!",
+    "try_again": "Try again"
   },
   "premium_modal": {
     "title": "Go Premium!",
