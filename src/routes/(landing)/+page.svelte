@@ -67,7 +67,7 @@
     <main class="flex w-full flex-wrap justify-center gap-6 p-4 sm:flex-row-reverse md:pt-10">
         <div class="max-w-[640px] px-4">
             
-            <img src={logo} class="h-20 py-4" alt="audiostory app maker">
+            <img src={logo} class="h-20 py-4" alt="Tragos Locos logo">
             <h1 class="pt-2 text-center text-[36px] font-extrabold leading-10 md:text-start md:text-[50px] md:leading-[54px]">
                 {$_("landing.slogan")}
             </h1>
