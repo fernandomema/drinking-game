@@ -99,15 +99,15 @@
     </p>
     <div class="flex justify-center gap-8">
         <div class="w-1/3">
-            <img src="https://via.placeholder.com/300" alt="Fiesta divertida con amigos" class="rounded-lg shadow-2xl mb-4">
+            <img src="https://images.pexels.com/photos/553464/pexels-photo-553464.jpeg" alt="Fiesta divertida con amigos" class="rounded-lg shadow-2xl mb-4">
             <p class="text-center text-white font-bold">Diversión garantizada</p>
         </div>
         <div class="w-1/3">
-            <img src="https://via.placeholder.com/300" alt="Jugadores disfrutando de Tragos Locos" class="rounded-lg shadow-2xl mb-4">
+            <img src="https://images.pexels.com/photos/3326713/pexels-photo-3326713.jpeg" alt="Jugadores disfrutando de Tragos Locos" class="rounded-lg shadow-2xl mb-4">
             <p class="text-center text-white font-bold">Risas sin fin</p>
         </div>
         <div class="w-1/3">
-            <img src="https://via.placeholder.com/300" alt="Reacciones épicas mientras juegas" class="rounded-lg shadow-2xl mb-4">
+            <img src="https://images.pexels.com/photos/165943/pexels-photo-165943.jpeg" alt="Reacciones épicas mientras juegas" class="rounded-lg shadow-2xl mb-4">
             <p class="text-center text-white font-bold">Recuerdos inolvidables</p>
         </div>
     </div>
@@ -162,11 +162,11 @@
     </p>
     <div class="flex justify-between gap-6">
         <div class="w-1/2">
-            <img src="https://via.placeholder.com/300" alt="Momentos divertidos" class="rounded-xl shadow-lg mb-6">
+            <img src="https://images.pexels.com/photos/1303095/pexels-photo-1303095.jpeg" alt="Momentos divertidos" class="rounded-xl shadow-lg mb-6">
             <p class="text-center text-white font-bold">Captura Momentos Divertidos</p>
         </div>
         <div class="w-1/2">
-            <img src="https://via.placeholder.com/300" alt="Recuerdos épicos" class="rounded-xl shadow-lg mb-6">
+            <img src="https://images.pexels.com/photos/1308942/pexels-photo-1308942.jpeg" alt="Recuerdos épicos" class="rounded-xl shadow-lg mb-6">
             <p class="text-center text-white font-bold">Recuerdos que Te Harán Reír</p>
         </div>
     </div>
