@@ -16,6 +16,7 @@
     import type { Team } from '$lib/types/Team';
     import { _ } from '$lib/locales';
     import { OriginChecker } from '$lib/OriginChecker';
+    import { AdManager } from '$lib/AdManager';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -69,12 +70,22 @@
         shareApp();
         umami?.track('share-game', {origin: 'context-menu'});
     }
+
+    function endGame() {
+        ended = true;
+        umami?.track('end-game', { mode });
+        if (OriginChecker.isCrazyGames()) {
+            window.CrazyGames.SDK.game.gameplayStop();
+        }
+        AdManager.showVideoAd();
+    }
+
 </script>
 {#if filteredQuestions && filteredQuestions.length > 0}
     <div class="relative flex h-full w-full items-center justify-center overflow-hidden p-2">
         {#if !ended}
             <div transition:fade={{ duration: 200 }} class="relative flex md:flex-row h-full w-full max-w-xl flex-col gap-2">
-                <CardSwiper bind:swipe bind:undoSwipe bind:thresholdPassed bind:lastStatus {cardData} {onSwipe} on:end={() => ended = true} />
+                <CardSwiper bind:swipe bind:undoSwipe bind:thresholdPassed bind:lastStatus {cardData} {onSwipe} on:end={endGame} />
                 <div class="flex md:flex-col gap-2">
 
                     <button

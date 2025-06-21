@@ -95,7 +95,6 @@
 			el.style.transform = '';
 			if (card1Data === null && card2Data === null) {
 				eventDispatcher('end');
-				invokeVideoAd({});
 			}
 		}, 350);
 	};

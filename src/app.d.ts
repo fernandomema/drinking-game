@@ -25,6 +25,9 @@ declare global {
                 game: {
                     gameplayStart: () => void;
                     gameplayStop: () => void;
+                },
+                ad: {
+                    requestAd: (type: string) => void;
                 }
             }
         }
