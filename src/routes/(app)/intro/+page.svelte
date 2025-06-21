@@ -2,9 +2,18 @@
     import { onMount } from "svelte";
     import PageContainer from "$lib/components/PageContainer.svelte";
     import { goto } from "$app/navigation";
+    import { browser } from '$app/environment';
+    import { OriginChecker } from '$lib/OriginChecker';
     import logo from '$lib/images/AppImages/ios/256.png';
 
     onMount(async () => {
+        if (browser && OriginChecker.isCrazyGames()) {
+            try {
+                await window.CrazyGames.SDK.init();
+            } catch (err) {
+                console.error('CrazyGames SDK init failed', err);
+            }
+        }
         await new Promise((resolve) => setTimeout(resolve, 2500));
         goto('/add-players', { replaceState: true });
     });
