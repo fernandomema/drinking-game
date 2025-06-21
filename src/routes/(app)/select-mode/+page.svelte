@@ -31,6 +31,9 @@
         }
         await initialize();
         showConsent();
+        if (OriginChecker.isCrazyGames()) {
+            window.CrazyGames.SDK.game.gameplayStop();
+        }
     });
 
     if (browser) {

@@ -22,6 +22,10 @@ declare global {
         CrazyGames: {
             SDK: {
                 init: () => void;
+                game: {
+                    gameplayStart: () => void;
+                    gameplayStop: () => void;
+                }
             }
         }
     }

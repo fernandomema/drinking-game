@@ -15,6 +15,7 @@
     import { shareApp } from '$lib/utils/Share';
     import type { Team } from '$lib/types/Team';
     import { _ } from '$lib/locales';
+    import { OriginChecker } from '$lib/OriginChecker';
 
     const mode = $page.params.mode as string;
     let filteredQuestions: Question[] = [];
@@ -38,6 +39,9 @@
         filteredQuestions = modes[mode].pickCards(questions, locale, players);
         teams = JSON.parse(localStorage.getItem('teams') || '[]');
         umami = window.umami;
+        if (OriginChecker.isCrazyGames()) {
+            window.CrazyGames.SDK.game.gameplayStart();
+        }
 	});
 
 	let swipe: (direction?: 'left' | 'right') => void;
