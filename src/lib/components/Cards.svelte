@@ -121,7 +121,9 @@
                     </button>
 
                 </div>
-                <InGameBanner />
+                <div class="md:hidden">
+                    <InGameBanner />
+                </div>
             </div>
 
             {#if thresholdPassed < 0}
