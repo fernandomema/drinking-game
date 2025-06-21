@@ -11,5 +11,12 @@ export class OriginChecker {
     static isProduction = (location: string) => {
         return !OriginChecker.isDev(location);
     }
-    
+
+    static isCrazyGames = () => {
+        if (typeof window === 'undefined' || typeof document === 'undefined') return false;
+        const isIframe = window.self !== window.top;
+        const referrer = document.referrer || '';
+        return isIframe && referrer.includes('crazygames');
+    }
+
 }

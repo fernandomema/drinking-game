@@ -2,8 +2,8 @@
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
 	import { PUBLIC_SENTRY_DSN } from '$lib/config';
-    import { OriginChecker } from '$lib/OriginChecker';
-	import { page } from '$app/stores';
+import { OriginChecker } from '$lib/OriginChecker';
+import { page } from '$app/stores';
 
 	
 
@@ -15,7 +15,12 @@
 	    });
 	}
 
-	export let data
+export let data
+
+let isCrazyGames = false;
+if (browser) {
+    isCrazyGames = OriginChecker.isCrazyGames();
+}
 
 	onMount(async () => {
 		const Sentry = await import('@sentry/capacitor'); 
@@ -33,7 +38,10 @@
 </script>
 
 <svelte:head>
-	<meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="noindex, nofollow" />
+        {#if isCrazyGames}
+            <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+        {/if}
 </svelte:head>
 
 {#key data.url}
