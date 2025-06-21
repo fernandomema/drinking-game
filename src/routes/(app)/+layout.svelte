@@ -54,3 +54,9 @@
 		</div>
 	</div>
 {/key}
+
+<style>
+	:global(body) {
+		overflow: hidden !important;
+	}
+</style>
