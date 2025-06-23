@@ -159,6 +159,11 @@
       "title": "Cascada de Bebida",
       "description": "Una acción desencadena otra en cadena. ¡No la rompas!",
       "seo_html": "<div class=\"p-4 bg-gradient-to-br from-blue-100 via-cyan-100 to-teal-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-blue-800 mb-2\">💧 Cascada de Bebida</h2><p class=\"text-base text-gray-700\">Cada acción desencadena la siguiente en una reacción en cadena. Mantén el ritmo y ve quién aguanta más.</p><p class=\"text-sm text-gray-500 mt-2\">🌊 Diversión para grupos amantes del ritmo.</p></div>"
+    },
+    "russianRoulete": {
+      "title": "Ruleta Rusa",
+      "description": "Turnos para disparar o completar un reto. Las cartas modifican las reglas.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-gray-100 via-red-100 to-gray-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-red-800 mb-2\">🔫 Modo Ruleta Rusa</h2><p class=\"text-base text-gray-700\">Decide entre apretar el gatillo o superar un reto. Las cartas de mejora y castigo elevan la tensión con balas extra y tragos.</p><p class=\"text-sm text-gray-500 mt-2\">☠️ Juega con precaución y bebe responsablemente.</p></div>"
     }
   },
   "blog": {
