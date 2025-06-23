@@ -229,7 +229,7 @@ export const modes: { [key: string]: Mode } = {
     },
     russianRoulete: {
         menuPriority: MenuPriority.SpecialMode,
-        icon: '/revolver.png',
+        icon: '/russianRoulete.png',
         isPublic: true,
         isFeatured: true,
         pickCards: () => [], // No usa preguntas estándar
