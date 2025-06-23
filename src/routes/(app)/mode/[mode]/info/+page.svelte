@@ -98,6 +98,10 @@ onMount(() => {
 });
 </script>
 
+<svelte:head>
+    <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+</svelte:head>
+
 <PageContainer class="relative flex flex-col items-center overflow-auto pb-5 pb-[50px] p-4">
     <!-- Botón de volver -->
     <button 
