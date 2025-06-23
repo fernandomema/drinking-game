@@ -6,6 +6,7 @@ import { onMount } from 'svelte';
 import { goto } from '$app/navigation';
 import PageContainer from '$lib/components/PageContainer.svelte';
 import { fly, fade } from 'svelte/transition';
+import { SchemaGenerator } from '$lib/utils/SchemaGenerator';
     import { questions } from '$lib/questions';
 
 let modeKey: string = '';
@@ -99,7 +100,22 @@ onMount(() => {
 </script>
 
 <svelte:head>
-    <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+    {#if mode}
+        <title>{$_(`modes.${modeKey}.title`)} | Tragos Locos</title>
+        <meta name="description" content={$_(`modes.${modeKey}.description`)} />
+        <link rel="canonical" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/`} />
+        <link rel="alternate" hreflang="es" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/?locale=es`} />
+        <link rel="alternate" hreflang="en" href={`https://tragos-locos.servitimo.net/modes/${modeKey}/?locale=en`} />
+        <meta property="og:locale:alternate" content="es" />
+        <meta property="og:locale:alternate" content="en" />
+        {@html `<script type="application/ld+json">${JSON.stringify(
+            SchemaGenerator.getBreadcrumbs([
+                { name: 'Tragos Locos', url: 'https://tragos-locos.servitimo.net/' },
+                { name: $_('modes_page.title'), url: 'https://tragos-locos.servitimo.net/modes/' },
+                { name: $_(`modes.${modeKey}.title`), url: `https://tragos-locos.servitimo.net/modes/${modeKey}/` }
+            ])
+        )}</script>`}
+    {/if}
 </svelte:head>
 
 <PageContainer class="relative flex flex-col items-center overflow-auto pb-5 pb-[50px] p-4">
