@@ -159,6 +159,11 @@
       "title": "Cascade Drinking",
       "description": "One action triggers another. Keep the chain going!",
       "seo_html": "<div class=\"p-4 bg-gradient-to-br from-blue-100 via-cyan-100 to-teal-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-blue-800 mb-2\">💧 Cascade Drinking</h2><p class=\"text-base text-gray-700\">Each action triggers the next in a chain reaction. Keep the flow going and see who breaks first.</p><p class=\"text-sm text-gray-500 mt-2\">🌊 Fun for groups that love momentum.</p></div>"
+    },
+    "russianRoulete": {
+      "title": "Russian Roulette",
+      "description": "Take turns facing the revolver or doing a challenge. Modifier cards change the odds.",
+      "seo_html": "<div class=\"p-4 bg-gradient-to-br from-gray-100 via-red-100 to-gray-100 rounded-2xl shadow-md\"><h2 class=\"text-2xl font-bold text-red-800 mb-2\">🔫 Russian Roulette</h2><p class=\"text-base text-gray-700\">Take turns risking it all or doing fun challenges. Modifier cards raise the tension with extra bullets and penalties.</p><p class=\"text-sm text-gray-500 mt-2\">☠️ Play carefully and drink responsibly.</p></div>"
     }
   },
   "blog": {

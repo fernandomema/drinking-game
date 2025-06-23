@@ -226,6 +226,13 @@ export const modes: { [key: string]: Mode } = {
                 players
             });
         }
+    },
+    russianRoulete: {
+        menuPriority: MenuPriority.SpecialMode,
+        icon: '/revolver.png',
+        isPublic: true,
+        isFeatured: true,
+        pickCards: () => [], // No usa preguntas estándar
     }
 }
 
