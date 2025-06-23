@@ -601,9 +601,7 @@
 </script>
 
 <PageContainer class="relative flex flex-col items-center overflow-hidden min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
-  <div class="absolute inset-0 bg-[url('/static/cards/icons/revolver.png')] opacity-5 bg-center bg-no-repeat bg-contain z-0 pointer-events-none"></div>
-  
-  <h2 class="text-4xl font-bold mt-6 mb-4 text-center text-red-500 drop-shadow-[0_0_10px_rgba(220,38,38,0.5)] z-10 relative">
+   <h2 class="text-4xl font-bold mt-6 mb-4 text-center text-red-500 drop-shadow-[0_0_10px_rgba(220,38,38,0.5)] z-10 relative">
     <span class="inline-block transform hover:scale-110 transition-transform">R</span>
     <span class="inline-block transform hover:scale-110 transition-transform">u</span>
     <span class="inline-block transform hover:scale-110 transition-transform">l</span>
