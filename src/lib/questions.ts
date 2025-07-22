@@ -103,13 +103,15 @@ export const questions: Question[] = [{
         en: "All who are single drink {shots} shots",
         es: 'Todos los que son solteros beben {shots} shots',
     },
-    tags: ['drinkIf', 'preparty'],
+    icons: 'singles.png',
+    tags: ['drinkIf', 'preparty', 'goose'],
 }, {
     locales: {
         en: "All who are in a relationship drink {shots} shots",
         es: 'Todos los que están en una relación beben {shots} shots',
     },
-    tags: ['drinkIf', 'preparty'],
+    icons: 'relationship.png',
+    tags: ['drinkIf', 'preparty', 'goose'],
 }, {
     locales: {
         en: "Vote who are most (ugly|beautiful|atractive)",
@@ -127,7 +129,8 @@ export const questions: Question[] = [{
         en: '(Last one|First one) to sit on the floor (drink|deals) {shots} shots',
         es: '(El último|El primero) que se siente en el suelo (bebe|reparte) {shots} shots',
     },
-    tags: ['challenge', 'preparty'],
+    icon: 'floor-sit',
+    tags: ['challenge', 'preparty', 'goose'],
 }, {
     locales: {
         en: "{player1}, give {shots} shots to someone you'd like to kiss or slap but don't say wich",
@@ -187,7 +190,8 @@ export const questions: Question[] = [{
         en: "Take a group photo",
         es: "Toma una foto de grupo",
     },
-    tags: ['groupChallenge', 'preparty'],
+    icon: 'take-photo',
+    tags: ['groupChallenge', 'preparty', 'goose'],
 }, {
     locales: {
         en: "{player1} with the present people, who will you fuck, kill and get married to",
